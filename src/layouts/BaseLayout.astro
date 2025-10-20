@@ -1,0 +1,89 @@
+---
+import SEO from '../components/SEO.astro';
+import Navigation from '../components/Navigation.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  keywords?: string;
+  image?: string;
+  type?: 'website' | 'article';
+}
+
+const { title, description, keywords, image, type } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <SEO
+      title={title}
+      description={description}
+      keywords={keywords}
+      image={image}
+      type={type}
+    />
+    
+    <!-- Performance optimizations -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "CallBrownsPainting.com",
+        "url": "https://callbrownspainting.com",
+        "description": "Professional painting services in South Alabama by Barry 'Boomer' Brown",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://your-domain.com/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <Navigation />
+    <slot />
+    
+    <style is:global>
+      /* Modern CSS Reset */
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      
+      html {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        scroll-behavior: smooth;
+      }
+      
+      body {
+        min-height: 100vh;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+      
+      img, picture, video, canvas, svg {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+      
+      /* Performance: Reduce motion for users who prefer it */
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        *, *::before, *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </body>
+</html>
+

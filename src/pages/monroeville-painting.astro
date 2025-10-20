@@ -1,0 +1,497 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SEO from '../components/SEO.astro';
+
+const title = "Professional Painters in Monroeville AL | Residential & Commercial Painting Services";
+const description = "Expert painters in Monroeville, Alabama. Specializing in residential painting, commercial painting, and Monroe County properties. Licensed, insured, and locally owned. Free estimates!";
+const keywords = "painters Monroeville AL, residential painting Monroeville, commercial painting Monroeville, painters near me Monroeville, local painters Monroeville AL, Monroe County painters, CallBrownsPainting.com";
+---
+
+<BaseLayout>
+  <SEO 
+    title={title}
+    description={description}
+    keywords={keywords}
+  />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Professional Painters in Monroeville, Alabama</h1>
+          <p class="hero-subtitle">Expert residential and commercial painting services for Monroeville properties. Specializing in Monroe County homes and businesses with professional results.</p>
+          <div class="hero-buttons">
+            <a href="tel:+1251XXX-XXXX" class="btn btn-primary">Call (251) XXX-XXXX</a>
+            <a href="/contact" class="btn btn-secondary">Get Free Estimate</a>
+          </div>
+        </div>
+        <div class="hero-form">
+          <div class="hero-form-container">
+            <h3>Get Your Free Painting Quote</h3>
+            <form>
+              <input type="text" placeholder="Your Name" required>
+              <input type="email" placeholder="Email Address" required>
+              <input type="tel" placeholder="Phone Number" required>
+              <select required>
+                <option value="">Select Service Type</option>
+                <option value="residential">Residential Painting</option>
+                <option value="commercial">Commercial Painting</option>
+                <option value="interior">Interior Painting</option>
+                <option value="exterior">Exterior Painting</option>
+              </select>
+              <textarea placeholder="Project Details (optional)"></textarea>
+              <button type="submit" class="btn btn-primary">Get Free Quote</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Signals -->
+    <section class="trust-signals">
+      <div class="container">
+        <div class="trust-grid">
+          <div class="trust-item">
+            <div class="trust-icon">🏠</div>
+            <h3>Locally Owned</h3>
+            <p>Serving Monroeville & Monroe County for over 25 years</p>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">⭐</div>
+            <h3>25+ Years Experience</h3>
+            <p>Barry "Boomer" Brown brings decades of expertise</p>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">🛡️</div>
+            <h3>Licensed & Insured</h3>
+            <p>Fully licensed and insured for your protection</p>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">💰</div>
+            <h3>Free Estimates</h3>
+            <p>No obligation, detailed estimates for all projects</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+      <div class="container">
+        <h2>Our Painting Services in Monroeville</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Residential Painting</h3>
+            <p>Complete interior and exterior painting services for Monroeville homes. We handle everything from preparation to final cleanup.</p>
+            <ul>
+              <li>Interior room painting</li>
+              <li>Exterior house painting</li>
+              <li>Cabinet refinishing</li>
+              <li>Color consultation</li>
+            </ul>
+            <a href="/interior-painting" class="btn btn-outline">Learn More</a>
+          </div>
+          <div class="service-card">
+            <h3>Commercial Painting</h3>
+            <p>Professional commercial painting services for Monroeville businesses, offices, and other commercial properties.</p>
+            <ul>
+              <li>Office building painting</li>
+              <li>Retail space painting</li>
+              <li>Church and school painting</li>
+              <li>Industrial painting</li>
+            </ul>
+            <a href="/commercial-painting" class="btn btn-outline">Learn More</a>
+          </div>
+          <div class="service-card">
+            <h3>Monroe County Expertise</h3>
+            <p>We understand Monroeville's unique needs and provide specialized services for Monroe County properties.</p>
+            <ul>
+              <li>Local weather considerations</li>
+              <li>Historic home painting</li>
+              <li>Community relationships</li>
+              <li>Personalized service</li>
+            </ul>
+            <a href="/about" class="btn btn-outline">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose">
+      <div class="container">
+        <h2>Why Choose CallBrownsPainting.com in Monroeville?</h2>
+        <div class="why-grid">
+          <div class="why-item">
+            <h3>Local Knowledge</h3>
+            <p>We understand Monroeville's unique climate and architectural styles. Our team knows the best paint products for Alabama's weather conditions.</p>
+          </div>
+          <div class="why-item">
+            <h3>Community Focus</h3>
+            <p>We're committed to serving the Monroeville community with quality work and fair pricing for Monroe County residents.</p>
+          </div>
+          <div class="why-item">
+            <h3>Commercial Experience</h3>
+            <p>We have extensive experience painting commercial properties, offices, and industrial facilities in Monroeville.</p>
+          </div>
+          <div class="why-item">
+            <h3>Quality Materials</h3>
+            <p>We use only premium paints and materials that stand up to Alabama's challenging weather conditions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="service-areas">
+      <div class="container">
+        <h2>We Serve Monroeville & Surrounding Areas</h2>
+        <div class="areas-grid">
+          <div class="area-item">
+            <h3>Monroeville</h3>
+            <p>Downtown, residential areas, and commercial properties</p>
+          </div>
+          <div class="area-item">
+            <h3>Evergreen</h3>
+            <p>Cross-county painting services</p>
+          </div>
+          <div class="area-item">
+            <h3>Repton</h3>
+            <p>Residential properties and small businesses</p>
+          </div>
+          <div class="area-item">
+            <h3>Castleberry</h3>
+            <p>Residential and commercial properties</p>
+          </div>
+          <div class="area-item">
+            <h3>Lenox</h3>
+            <p>Cross-county painting services</p>
+          </div>
+          <div class="area-item">
+            <h3>Brewton</h3>
+            <p>Commercial and residential properties</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ready to Transform Your Monroeville Property?</h2>
+        <p>Contact CallBrownsPainting.com today for your free estimate. We're ready to bring 25+ years of painting expertise to your Monroeville home or business.</p>
+        <div class="cta-buttons">
+          <a href="tel:+1251XXX-XXXX" class="btn btn-primary">Call (251) XXX-XXXX</a>
+          <a href="/contact" class="btn btn-secondary">Get Free Estimate</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .hero {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    color: white;
+    padding: 4rem 0;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-form {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  }
+
+  .hero-form-container h3 {
+    color: #1e3a8a;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .hero-form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero-form-container input,
+  .hero-form-container select,
+  .hero-form-container textarea {
+    padding: 0.75rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+
+  .hero-form-container input:focus,
+  .hero-form-container select:focus,
+  .hero-form-container textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+  }
+
+  .trust-signals {
+    padding: 4rem 0;
+    background: #f8fafc;
+  }
+
+  .trust-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .trust-item {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+
+  .trust-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .trust-item h3 {
+    color: #1e3a8a;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+  }
+
+  .services-section {
+    padding: 4rem 0;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid #e5e7eb;
+  }
+
+  .service-card h3 {
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .service-card ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .service-card li {
+    margin-bottom: 0.5rem;
+    color: #4b5563;
+  }
+
+  .why-choose {
+    padding: 4rem 0;
+    background: #f8fafc;
+  }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .why-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+
+  .why-item h3 {
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+
+  .service-areas {
+    padding: 4rem 0;
+  }
+
+  .areas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .area-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #3b82f6;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+
+  .area-item h3 {
+    color: #1e3a8a;
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+  }
+
+  .cta-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    color: white;
+    text-align: center;
+  }
+
+  .cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .cta-section p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+  }
+
+  .btn-primary {
+    background: #f59e0b;
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background: #d97706;
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: white;
+    border-color: white;
+  }
+
+  .btn-secondary:hover {
+    background: white;
+    color: #1e3a8a;
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: #3b82f6;
+    border-color: #3b82f6;
+  }
+
+  .btn-outline:hover {
+    background: #3b82f6;
+    color: white;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  h2 {
+    text-align: center;
+    color: #1e3a8a;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .hero-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+
+    .hero-buttons {
+      justify-content: center;
+    }
+
+    .trust-grid,
+    .services-grid,
+    .why-grid,
+    .areas-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>

@@ -1,0 +1,314 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Painting Services - CallBrownsPainting.com"
+  description="Professional interior and exterior painting services in Brewton, Evergreen, Atmore, Monroeville, Bay Minette, Foley, Fairhope, Daphne, Spanish Fort, Gulf Shores, Orange Beach and surrounding South Alabama areas."
+  keywords="interior painting Brewton AL, exterior painting South Alabama, residential painting Conecuh County, commercial painting Escambia County, house painting Baldwin County"
+>
+  <main>
+    <section class="services-hero">
+      <div class="container">
+        <h1>Professional Painting Services</h1>
+        <p class="lead">
+          Complete interior and exterior painting services for homes, businesses, churches, schools, and gymnasiums throughout South Alabama.
+        </p>
+      </div>
+    </section>
+
+    <section class="services-content">
+      <div class="container">
+        <div class="services-grid">
+          <article class="service-card">
+            <h2>Interior Painting</h2>
+            <p>
+              Transform your indoor spaces with professional interior painting services. We specialize in:
+            </p>
+            <ul>
+              <li>Living rooms, bedrooms, and kitchens</li>
+              <li>Bathrooms and utility rooms</li>
+              <li>Ceilings and trim work</li>
+              <li>Cabinet refinishing</li>
+              <li>Color consultation</li>
+            </ul>
+            <p>
+              Our interior painting services use premium paints and proven techniques to create beautiful, 
+              long-lasting results that enhance your home's comfort and value.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <h2>Exterior Painting</h2>
+            <p>
+              Protect and beautify your property with our exterior painting services:
+            </p>
+            <ul>
+              <li>House siding and trim</li>
+              <li>Deck and porch painting</li>
+              <li>Fence and gate painting</li>
+              <li>Garage doors and shutters</li>
+              <li>Weather-resistant coatings</li>
+            </ul>
+            <p>
+              Alabama's coastal climate requires special attention to exterior painting. We use weather-resistant 
+              paints and proper preparation techniques to ensure lasting protection.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <h2>Commercial Painting</h2>
+            <p>
+              Professional painting services for businesses and institutions:
+            </p>
+            <ul>
+              <li>Office buildings and retail spaces</li>
+              <li>Churches and religious facilities</li>
+              <li>Schools and educational buildings</li>
+              <li>Gymnasiums and sports facilities</li>
+              <li>Restaurants and hospitality venues</li>
+            </ul>
+            <p>
+              We work around your business schedule to minimize disruption while delivering professional 
+              results that enhance your property's appearance and value.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <h2>Residential Painting</h2>
+            <p>
+              Complete home painting solutions for South Alabama homeowners:
+            </p>
+            <ul>
+              <li>New home painting</li>
+              <li>Home renovation projects</li>
+              <li>Seasonal touch-ups</li>
+              <li>Pressure washing preparation</li>
+              <li>Stain and finish work</li>
+            </ul>
+            <p>
+              From single rooms to entire home makeovers, we provide comprehensive residential painting 
+              services that meet your needs and budget.
+            </p>
+          </article>
+        </div>
+
+        <section class="service-areas">
+          <h2>Service Areas</h2>
+          <p>
+            CallBrownsPainting.com proudly serves the following South Alabama communities:
+          </p>
+          <div class="areas-grid">
+            <div class="area-column">
+              <h3>Conecuh County</h3>
+              <ul>
+                <li>Brewton</li>
+                <li>Evergreen</li>
+                <li>Flomaton</li>
+              </ul>
+            </div>
+            <div class="area-column">
+              <h3>Escambia County</h3>
+              <ul>
+                <li>Atmore</li>
+                <li>Monroeville</li>
+                <li>Bay Minette</li>
+                <li>Loxley</li>
+                <li>Stapleton</li>
+                <li>Robertsdale</li>
+                <li>Summerdale</li>
+              </ul>
+            </div>
+            <div class="area-column">
+              <h3>Baldwin County</h3>
+              <ul>
+                <li>Foley</li>
+                <li>Silver Hill</li>
+                <li>Fairhope</li>
+                <li>Daphne</li>
+                <li>Spanish Fort</li>
+                <li>Gulf Shores</li>
+                <li>Orange Beach</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="cta-section">
+          <h2>Ready to Get Started?</h2>
+          <p>
+            Contact Barry "Boomer" Brown today for a free estimate on your painting project. 
+            We serve all of South Alabama with professional, reliable painting services.
+          </p>
+          <a href="/contact" class="btn btn-primary">Get Free Estimate</a>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .services-hero {
+      padding: 4rem 0 2rem;
+      text-align: center;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+
+    .services-hero h1 {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      margin-bottom: 1rem;
+    }
+
+    .lead {
+      font-size: 1.3rem;
+      max-width: 800px;
+      margin: 0 auto;
+      opacity: 0.95;
+    }
+
+    .services-content {
+      padding: 3rem 0 5rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    .service-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-left: 4px solid #667eea;
+    }
+
+    .service-card h2 {
+      color: #667eea;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .service-card p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .service-card ul {
+      margin: 1rem 0;
+      padding-left: 1.5rem;
+    }
+
+    .service-card li {
+      margin-bottom: 0.5rem;
+      color: #555;
+    }
+
+    .service-areas {
+      background: #f8f9fa;
+      padding: 3rem 2rem;
+      border-radius: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .service-areas h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #333;
+    }
+
+    .service-areas > p {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #555;
+    }
+
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+
+    .area-column h3 {
+      color: #667eea;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .area-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .area-column li {
+      padding: 0.5rem 0;
+      color: #555;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .area-column li:last-child {
+      border-bottom: none;
+    }
+
+    .cta-section {
+      text-align: center;
+      padding: 3rem 0;
+    }
+
+    .cta-section h2 {
+      color: #333;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    .cta-section p {
+      color: #555;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 768px) {
+      .services-hero {
+        padding: 3rem 0 1.5rem;
+      }
+
+      .services-content {
+        padding: 2rem 0 3rem;
+      }
+
+      .service-card {
+        padding: 1.5rem;
+      }
+
+      .service-areas {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+</BaseLayout>
+
