@@ -1,13 +1,25 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ServiceSchema from '../components/ServiceSchema.astro';
+import RelatedServices from '../components/RelatedServices.astro';
 ---
 
 <BaseLayout
   title="Painting Services - CallBrownsPainting.com"
-  description="Professional interior and exterior painting services in Brewton, Evergreen, Atmore, Monroeville, Bay Minette, Foley, Fairhope, Daphne, Spanish Fort, Gulf Shores, Orange Beach and surrounding South Alabama areas."
+  description="Complete painting service overview: interior, exterior, commercial, cabinet refinishing, and drywall repair. Serving 15+ South Alabama cities with 25+ years experience. Free estimates available."
   keywords="interior painting Brewton AL, exterior painting South Alabama, residential painting Conecuh County, commercial painting Escambia County, house painting Baldwin County"
 >
   <main>
+    <!-- Service Schema -->
+    <ServiceSchema 
+      serviceName="Complete Painting Services"
+      serviceDescription="Professional interior and exterior painting services for residential and commercial properties throughout South Alabama. Complete solutions including interior painting, exterior painting, commercial painting, cabinet refinishing, drywall repair, and color consultation."
+      serviceUrl="https://callbrownspainting.com/services"
+      serviceType="Painting Services"
+      priceRange="$$"
+      serviceImage="https://callbrownspainting.com/assets/painting-services-overview.jpg"
+    />
+
     <section class="services-hero">
       <div class="container">
         <h1>Professional Painting Services</h1>
@@ -133,6 +145,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </div>
           </div>
         </section>
+
+        <!-- Related Services and Locations -->
+        <RelatedServices 
+          currentService="/services"
+          showLocations={true}
+          showServices={false}
+          showBlog={true}
+        />
 
         <section class="cta-section">
           <h2>Ready to Get Started?</h2>
@@ -311,4 +331,5 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     }
   </style>
 </BaseLayout>
+
 

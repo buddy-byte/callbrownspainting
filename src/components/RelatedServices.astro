@@ -1,0 +1,363 @@
+---
+export interface Props {
+  currentService?: string;
+  currentLocation?: string;
+  showLocations?: boolean;
+  showServices?: boolean;
+  showBlog?: boolean;
+}
+
+const {
+  currentService = '',
+  currentLocation = '',
+  showLocations = true,
+  showServices = true,
+  showBlog = true
+} = Astro.props;
+
+// Service data with SEO-optimized anchor text
+const services = [
+  {
+    name: 'Interior Painting',
+    url: '/interior-painting',
+    description: 'Professional interior painting services',
+    keywords: ['interior painting', 'house painting', 'room painting']
+  },
+  {
+    name: 'Exterior Painting',
+    url: '/exterior-painting',
+    description: 'Expert exterior painting and weather protection',
+    keywords: ['exterior painting', 'house painting', 'weather protection']
+  },
+  {
+    name: 'Commercial Painting',
+    url: '/commercial-painting',
+    description: 'Commercial and business painting solutions',
+    keywords: ['commercial painting', 'business painting', 'office painting']
+  },
+  {
+    name: 'All Services',
+    url: '/services',
+    description: 'Complete painting service overview',
+    keywords: ['painting services', 'all services', 'complete painting']
+  }
+];
+
+// Location data
+const locations = [
+  { name: 'Brewton', url: '/brewton-painting', county: 'Escambia' },
+  { name: 'Mobile', url: '/mobile-painting', county: 'Mobile' },
+  { name: 'Fairhope', url: '/fairhope-painting', county: 'Baldwin' },
+  { name: 'Daphne', url: '/daphne-painting', county: 'Baldwin' },
+  { name: 'Gulf Shores', url: '/gulf-shores-painting', county: 'Baldwin' },
+  { name: 'Orange Beach', url: '/orange-beach-painting', county: 'Baldwin' },
+  { name: 'Foley', url: '/foley-painting', county: 'Baldwin' },
+  { name: 'Bay Minette', url: '/bay-minette-painting', county: 'Baldwin' },
+  { name: 'Atmore', url: '/atmore-painting', county: 'Escambia' },
+  { name: 'Evergreen', url: '/evergreen-painting', county: 'Conecuh' },
+  { name: 'Monroeville', url: '/monroeville-painting', county: 'Monroe' },
+  { name: 'Saraland', url: '/saraland-painting', county: 'Mobile' },
+  { name: 'Creola', url: '/creola-painting', county: 'Mobile' },
+  { name: 'Theodore', url: '/theodore-painting', county: 'Mobile' }
+];
+
+// Blog posts
+const blogPosts = [
+  {
+    title: 'Essential Painting Tips for Alabama Homes',
+    url: '/blog/essential-painting-tips-alabama',
+    description: 'Expert advice for painting in Alabama\'s climate'
+  },
+  {
+    title: 'How to Choose the Right Paint Finish',
+    url: '/blog/paint-finish-guide',
+    description: 'Complete guide to paint finishes and their uses'
+  }
+];
+
+// Filter out current service/location
+const filteredServices = services.filter(service => 
+  service.url !== currentService && service.name !== currentService
+);
+
+const filteredLocations = locations.filter(location => 
+  location.url !== currentLocation && location.name !== currentLocation
+);
+---
+
+<div class="related-content">
+  {showServices && filteredServices.length > 0 && (
+    <section class="related-services">
+      <h3>Related Painting Services</h3>
+      <div class="services-grid">
+        {filteredServices.map(service => (
+          <div class="service-item">
+            <h4>
+              <a href={service.url} title={service.description}>
+                {service.name}
+              </a>
+            </h4>
+            <p>{service.description}</p>
+            <a href={service.url} class="learn-more">
+              Learn More →
+            </a>
+          </div>
+        ))}
+      </div>
+    </section>
+  )}
+
+  {showLocations && filteredLocations.length > 0 && (
+    <section class="related-locations">
+      <h3>Areas We Serve</h3>
+      <div class="locations-grid">
+        {filteredLocations.slice(0, 8).map(location => (
+          <div class="location-item">
+            <a href={location.url} title={`Professional painting services in ${location.name}, ${location.county} County`}>
+              {location.name}
+            </a>
+            <span class="county">{location.county} County</span>
+          </div>
+        ))}
+        {filteredLocations.length > 8 && (
+          <div class="location-item view-all">
+            <a href="/contact" title="View all service areas">
+              View All Areas →
+            </a>
+          </div>
+        )}
+      </div>
+    </section>
+  )}
+
+  {showBlog && blogPosts.length > 0 && (
+    <section class="related-blog">
+      <h3>Painting Tips & Resources</h3>
+      <div class="blog-grid">
+        {blogPosts.map(post => (
+          <div class="blog-item">
+            <h4>
+              <a href={post.url} title={post.description}>
+                {post.title}
+              </a>
+            </h4>
+            <p>{post.description}</p>
+            <a href={post.url} class="read-more">
+              Read Article →
+            </a>
+          </div>
+        ))}
+        <div class="blog-item view-all">
+          <a href="/blog" title="View all painting tips and articles">
+            View All Articles →
+          </a>
+        </div>
+      </div>
+    </section>
+  )}
+</div>
+
+<style>
+  .related-content {
+    background: #f8fafc;
+    padding: 3rem 0;
+    margin: 3rem 0;
+  }
+
+  .related-content section {
+    margin-bottom: 3rem;
+  }
+
+  .related-content section:last-child {
+    margin-bottom: 0;
+  }
+
+  .related-content h3 {
+    color: #1e3a8a;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .service-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .service-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+
+  .service-item h4 {
+    margin-bottom: 1rem;
+  }
+
+  .service-item h4 a {
+    color: #1e3a8a;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .service-item h4 a:hover {
+    color: #3b82f6;
+  }
+
+  .service-item p {
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .learn-more {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .learn-more:hover {
+    color: #1e3a8a;
+  }
+
+  .locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .location-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .location-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .location-item a {
+    color: #1e3a8a;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .location-item a:hover {
+    color: #3b82f6;
+  }
+
+  .county {
+    color: #6b7280;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .view-all {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    color: white;
+  }
+
+  .view-all a {
+    color: white;
+    font-weight: 600;
+  }
+
+  .view-all a:hover {
+    color: #f59e0b;
+  }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .blog-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .blog-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+
+  .blog-item h4 {
+    margin-bottom: 1rem;
+  }
+
+  .blog-item h4 a {
+    color: #1e3a8a;
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  .blog-item h4 a:hover {
+    color: #3b82f6;
+  }
+
+  .blog-item p {
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .read-more {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .read-more:hover {
+    color: #1e3a8a;
+  }
+
+  @media (max-width: 768px) {
+    .services-grid,
+    .locations-grid,
+    .blog-grid {
+      grid-template-columns: 1fr;
+      padding: 0 1rem;
+    }
+
+    .related-content {
+      padding: 2rem 0;
+    }
+
+    .related-content h3 {
+      font-size: 1.5rem;
+    }
+  }
+</style>

@@ -1,0 +1,401 @@
+---
+// Boomer Brown profile data
+const boomerProfile = {
+  name: "Barry 'Boomer' Brown",
+  title: "Owner & Lead Painter",
+  experience: "25+ Years",
+  location: "Brewton, Alabama",
+  specialties: [
+    "Interior Painting",
+    "Exterior Painting", 
+    "Commercial Painting",
+    "Drywall Repair",
+    "Color Consultation"
+  ],
+  certifications: [
+    "Licensed Painting Contractor",
+    "Fully Insured & Bonded",
+    "OSHA Certified",
+    "Alabama State Licensed"
+  ],
+  bio: "Barry 'Boomer' Brown has been serving South Alabama with professional painting services for over 25 years. Based in Brewton, Alabama, Boomer brings decades of expertise to every project, from small residential touch-ups to large commercial renovations. His attention to detail and commitment to quality has earned him a reputation as one of the most trusted painters in Conecuh, Escambia, and Baldwin Counties.",
+  philosophy: "Every project deserves the same level of care and attention, whether it's a single room or an entire commercial building. We use only the highest quality materials and proven techniques to ensure lasting results that exceed our customers' expectations.",
+  image: "/images/team/boomer-brown.jpg"
+};
+---
+
+<div class="boomer-profile">
+  <div class="container">
+    <div class="profile-header">
+      <h2>Meet Barry "Boomer" Brown</h2>
+      <p class="profile-subtitle">Owner & Lead Painter with 25+ Years of Experience</p>
+    </div>
+
+    <div class="profile-content">
+      <div class="profile-image">
+        <img src={boomerProfile.image} alt={boomerProfile.name} />
+        <div class="experience-badge">
+          <span class="years">{boomerProfile.experience}</span>
+          <span class="label">Experience</span>
+        </div>
+      </div>
+
+      <div class="profile-details">
+        <div class="profile-info">
+          <h3>{boomerProfile.name}</h3>
+          <p class="title">{boomerProfile.title}</p>
+          <p class="location">📍 {boomerProfile.location}</p>
+        </div>
+
+        <div class="bio-section">
+          <h4>About Boomer</h4>
+          <p>{boomerProfile.bio}</p>
+        </div>
+
+        <div class="philosophy-section">
+          <h4>Our Philosophy</h4>
+          <blockquote>"{boomerProfile.philosophy}"</blockquote>
+        </div>
+
+        <div class="specialties-section">
+          <h4>Specialties</h4>
+          <div class="specialties-grid">
+            {boomerProfile.specialties.map((specialty) => (
+              <div class="specialty-item">
+                <span class="specialty-icon">✓</span>
+                <span>{specialty}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="certifications-section">
+          <h4>Certifications & Licensing</h4>
+          <div class="certifications-grid">
+            {boomerProfile.certifications.map((cert) => (
+              <div class="cert-item">
+                <span class="cert-icon">🛡️</span>
+                <span>{cert}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="profile-cta">
+          <h4>Ready to Work with Boomer?</h4>
+          <p>Get a free estimate from Alabama's most experienced painting contractor</p>
+          <div class="cta-buttons">
+            <a href="tel:+12512374545" class="btn btn-primary">Call (251) 237-4545</a>
+            <a href="/contact" class="btn btn-secondary">Get Free Estimate</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Team Section -->
+    <div class="team-section">
+      <h3>Our Professional Team</h3>
+      <p>Boomer leads a team of skilled professionals who share his commitment to quality and customer satisfaction.</p>
+      <div class="team-grid">
+        <div class="team-member">
+          <img src="/images/team/team-photo.jpg" alt="Browns Painting Team" />
+          <h4>Professional Crew</h4>
+          <p>Experienced painters and craftsmen dedicated to delivering exceptional results on every project.</p>
+        </div>
+        <div class="team-member">
+          <img src="/images/equipment/browns-painting-truck.jpg" alt="Professional Equipment" />
+          <h4>Professional Equipment</h4>
+          <p>State-of-the-art tools and equipment to handle projects of any size with precision and efficiency.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .boomer-profile {
+    padding: 4rem 0;
+    background: #f8fafc;
+  }
+
+  .profile-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .profile-header h2 {
+    font-size: 2.5rem;
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  .profile-subtitle {
+    font-size: 1.25rem;
+    color: #6b7280;
+  }
+
+  .profile-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  .profile-image {
+    position: relative;
+    text-align: center;
+  }
+
+  .profile-image img {
+    width: 100%;
+    max-width: 400px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+
+  .experience-badge {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #3b82f6, #1e3a8a);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+
+  .experience-badge .years {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .experience-badge .label {
+    font-size: 0.875rem;
+    opacity: 0.9;
+  }
+
+  .profile-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .profile-info h3 {
+    font-size: 2rem;
+    color: #1e3a8a;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+
+  .profile-info .title {
+    font-size: 1.25rem;
+    color: #3b82f6;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .profile-info .location {
+    color: #6b7280;
+    font-size: 1rem;
+  }
+
+  .bio-section h4,
+  .philosophy-section h4,
+  .specialties-section h4,
+  .certifications-section h4,
+  .profile-cta h4 {
+    color: #1e3a8a;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  .bio-section p {
+    color: #374151;
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+
+  .philosophy-section blockquote {
+    background: white;
+    padding: 1.5rem;
+    border-left: 4px solid #3b82f6;
+    border-radius: 8px;
+    font-style: italic;
+    color: #374151;
+    margin: 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+
+  .specialties-grid,
+  .certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .specialty-item,
+  .cert-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+
+  .specialty-icon {
+    color: #10b981;
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+
+  .cert-icon {
+    font-size: 1.25rem;
+  }
+
+  .profile-cta {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+  }
+
+  .profile-cta h4 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .profile-cta p {
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .team-section {
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+
+  .team-section h3 {
+    color: #1e3a8a;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .team-section p {
+    color: #6b7280;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .team-member {
+    text-align: center;
+  }
+
+  .team-member img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+
+  .team-member h4 {
+    color: #1e3a8a;
+    margin-bottom: 0.5rem;
+  }
+
+  .team-member p {
+    color: #6b7280;
+    font-size: 0.875rem;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+  }
+
+  .btn-primary {
+    background: #f59e0b;
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background: #d97706;
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: white;
+    border-color: white;
+  }
+
+  .btn-secondary:hover {
+    background: white;
+    color: #1e3a8a;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .profile-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .profile-image img {
+      height: 400px;
+    }
+
+    .specialties-grid,
+    .certifications-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .team-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

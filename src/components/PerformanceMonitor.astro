@@ -1,0 +1,216 @@
+---
+// Performance monitoring component for Core Web Vitals
+---
+
+<script>
+  // Core Web Vitals monitoring
+  function initPerformanceMonitoring() {
+    // Only run in production
+    if (import.meta.env.DEV) return;
+
+    // Load web-vitals library
+    import('https://unpkg.com/web-vitals@3/dist/web-vitals.umd.js').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+      
+      // Largest Contentful Paint (LCP)
+      getLCP((metric) => {
+        console.log('LCP:', metric);
+        sendToAnalytics('LCP', metric.value, metric.rating);
+      });
+
+      // First Input Delay (FID)
+      getFID((metric) => {
+        console.log('FID:', metric);
+        sendToAnalytics('FID', metric.value, metric.rating);
+      });
+
+      // Cumulative Layout Shift (CLS)
+      getCLS((metric) => {
+        console.log('CLS:', metric);
+        sendToAnalytics('CLS', metric.value, metric.rating);
+      });
+
+      // First Contentful Paint (FCP)
+      getFCP((metric) => {
+        console.log('FCP:', metric);
+        sendToAnalytics('FCP', metric.value, metric.rating);
+      });
+
+      // Time to First Byte (TTFB)
+      getTTFB((metric) => {
+        console.log('TTFB:', metric);
+        sendToAnalytics('TTFB', metric.value, metric.rating);
+      });
+    });
+
+    // Image loading performance
+    monitorImagePerformance();
+    
+    // Resource loading performance
+    monitorResourcePerformance();
+  }
+
+  function sendToAnalytics(metricName, value, rating) {
+    // Send to Google Analytics 4
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'web_vitals', {
+        metric_name: metricName,
+        metric_value: Math.round(value),
+        metric_rating: rating,
+        event_category: 'Performance'
+      });
+    }
+
+    // Send to custom analytics endpoint
+    fetch('/api/analytics', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        metric: metricName,
+        value: value,
+        rating: rating,
+        timestamp: Date.now(),
+        url: window.location.href,
+        userAgent: navigator.userAgent
+      })
+    }).catch(err => console.log('Analytics error:', err));
+  }
+
+  function monitorImagePerformance() {
+    const images = document.querySelectorAll('img');
+    let loadedImages = 0;
+    const totalImages = images.length;
+    const startTime = performance.now();
+
+    images.forEach((img, index) => {
+      const imageStartTime = performance.now();
+      
+      img.addEventListener('load', () => {
+        const loadTime = performance.now() - imageStartTime;
+        loadedImages++;
+        
+        // Log slow loading images
+        if (loadTime > 1000) {
+          console.warn(`Slow image: ${img.src} took ${loadTime.toFixed(2)}ms`);
+        }
+
+        // All images loaded
+        if (loadedImages === totalImages) {
+          const totalTime = performance.now() - startTime;
+          console.log(`All images loaded in ${totalTime.toFixed(2)}ms`);
+          
+          // Send to analytics
+          sendToAnalytics('IMAGE_LOAD_TIME', totalTime, totalTime < 2000 ? 'good' : 'needs-improvement');
+        }
+      });
+
+      img.addEventListener('error', () => {
+        console.error(`Failed to load image: ${img.src}`);
+        sendToAnalytics('IMAGE_ERROR', 1, 'poor');
+      });
+    });
+  }
+
+  function monitorResourcePerformance() {
+    // Monitor resource loading times
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        if (entry.entryType === 'resource') {
+          const loadTime = entry.responseEnd - entry.startTime;
+          
+          // Log slow resources
+          if (loadTime > 2000) {
+            console.warn(`Slow resource: ${entry.name} took ${loadTime.toFixed(2)}ms`);
+          }
+
+          // Monitor specific resource types
+          if (entry.name.includes('.webp')) {
+            sendToAnalytics('WEBP_LOAD_TIME', loadTime, loadTime < 1000 ? 'good' : 'needs-improvement');
+          }
+        }
+      });
+    });
+
+    observer.observe({ entryTypes: ['resource'] });
+  }
+
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPerformanceMonitoring);
+  } else {
+    initPerformanceMonitoring();
+  }
+</script>
+
+<style>
+  /* Performance monitoring styles (hidden by default) */
+  .performance-debug {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 12px;
+    z-index: 10000;
+    display: none;
+  }
+
+  .performance-debug.show {
+    display: block;
+  }
+
+  .performance-debug .metric {
+    margin: 2px 0;
+  }
+
+  .performance-debug .good {
+    color: #4ade80;
+  }
+
+  .performance-debug .needs-improvement {
+    color: #fbbf24;
+  }
+
+  .performance-debug .poor {
+    color: #f87171;
+  }
+</style>
+
+<!-- Debug panel (only visible in development) -->
+<div class="performance-debug" id="performanceDebug">
+  <div class="metric">LCP: <span id="lcpValue">-</span> <span id="lcpRating">-</span></div>
+  <div class="metric">FID: <span id="fidValue">-</span> <span id="fidRating">-</span></div>
+  <div class="metric">CLS: <span id="clsValue">-</span> <span id="clsRating">-</span></div>
+  <div class="metric">Images: <span id="imageCount">-</span></div>
+  <div class="metric">Load Time: <span id="imageLoadTime">-</span></div>
+</div>
+
+<script>
+  // Debug panel functionality
+  function updateDebugPanel(metricName, value, rating) {
+    const element = document.getElementById(metricName.toLowerCase() + 'Value');
+    const ratingElement = document.getElementById(metricName.toLowerCase() + 'Rating');
+    
+    if (element && ratingElement) {
+      element.textContent = Math.round(value);
+      ratingElement.textContent = rating;
+      ratingElement.className = rating;
+    }
+  }
+
+  // Override sendToAnalytics to also update debug panel
+  const originalSendToAnalytics = sendToAnalytics;
+  sendToAnalytics = function(metricName, value, rating) {
+    originalSendToAnalytics(metricName, value, rating);
+    updateDebugPanel(metricName, value, rating);
+  };
+
+  // Show debug panel in development
+  if (import.meta.env.DEV) {
+    document.getElementById('performanceDebug').classList.add('show');
+  }
+</script>

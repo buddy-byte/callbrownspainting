@@ -1,0 +1,876 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ServiceSchema from '../components/ServiceSchema.astro';
+
+const title = "Professional House Painter Services | Expert Residential & Commercial Painting";
+const description = "Professional house painter services for residential and commercial properties. Expert interior and exterior painting, cabinet refinishing, drywall repair, and color consultation. Licensed, insured, and locally trusted.";
+const keywords = "house painter, professional house painting, residential painting services, commercial painting contractor, interior painting, exterior painting, cabinet refinishing, drywall repair, color consultation, painting contractor near me";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  keywords={keywords}
+>
+  <main>
+    <!-- Service Schema -->
+    <ServiceSchema
+      serviceName="Professional House Painting Services"
+      serviceDescription="Comprehensive house painting services for residential and commercial properties throughout South Alabama. Expert interior and exterior painting, cabinet refinishing, drywall repair, and color consultation with 25+ years of experience."
+      serviceUrl="https://callbrownspainting.com/house-painter"
+      serviceType="House Painting"
+      priceRange="$$"
+      serviceImage="https://callbrownspainting.com/assets/house-painting-service.jpg"
+    />
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Professional House Painter Services</h1>
+          <p class="hero-subtitle">Transform your home or business with expert house painting services. From interior makeovers to exterior protection, we deliver exceptional results with 25+ years of experience and family-owned reliability.</p>
+          <div class="hero-buttons">
+            <a href="tel:+1251-237-4545" class="btn btn-primary">Call (251) 237-4545</a>
+            <a href="/contact" class="btn btn-secondary">Get Free Estimate</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="/images/gallery/house-painting-hero.jpg" alt="Professional house painting services" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Signals -->
+    <section class="trust-signals">
+      <div class="container">
+        <div class="trust-grid">
+          <div class="trust-item">
+            <div class="trust-icon">🏠</div>
+            <h3>Family-Owned & Operated</h3>
+            <p>Brown's Painting LLC has been serving South Alabama for over 25 years with family values and local expertise.</p>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">⭐</div>
+            <h3>25+ Years Experience</h3>
+            <p>Barry "Boomer" Brown brings decades of professional painting expertise to every project.</p>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">🛡️</div>
+            <h3>Licensed & Insured</h3>
+            <p>Fully licensed and insured for residential and commercial work throughout Alabama.</p>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">💰</div>
+            <h3>Free Estimates</h3>
+            <p>No-obligation, detailed estimates for all house painting projects.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comprehensive House Painting Services -->
+    <section class="services-overview">
+      <div class="container">
+        <h2>Complete House Painting Solutions</h2>
+        <p class="section-intro">Whether you're refreshing a single room or transforming your entire property, our comprehensive house painting services cover every aspect of residential and commercial painting needs.</p>
+        
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Interior House Painting</h3>
+            <p>Transform your living spaces with professional interior painting services. We handle everything from single rooms to complete home makeovers.</p>
+            <ul>
+              <li>Living room and bedroom painting</li>
+              <li>Kitchen and bathroom painting</li>
+              <li>Ceiling and trim work</li>
+              <li>Color consultation and selection</li>
+              <li>Low-VOC and eco-friendly options</li>
+            </ul>
+            <a href="/interior-painting" class="btn btn-outline">Learn More About Interior Painting</a>
+          </div>
+
+          <div class="service-card">
+            <h3>Exterior House Painting</h3>
+            <p>Protect and beautify your home's exterior with weather-resistant painting solutions designed for Alabama's climate.</p>
+            <ul>
+              <li>Siding and trim painting</li>
+              <li>Deck and porch refinishing</li>
+              <li>Pressure washing and prep work</li>
+              <li>Weather-resistant finishes</li>
+              <li>Coastal home protection</li>
+            </ul>
+            <a href="/exterior-painting" class="btn btn-outline">Learn More About Exterior Painting</a>
+          </div>
+
+          <div class="service-card">
+            <h3>Cabinet Refinishing</h3>
+            <p>Give your kitchen or bathroom cabinets a fresh look with professional refinishing services that deliver factory-quality results.</p>
+            <ul>
+              <li>Kitchen cabinet refinishing</li>
+              <li>Bathroom vanity painting</li>
+              <li>Degreasing and sanding</li>
+              <li>Sprayed topcoats for smooth finish</li>
+              <li>Hardware replacement options</li>
+            </ul>
+            <a href="/interior-painting" class="btn btn-outline">Learn More About Cabinet Work</a>
+          </div>
+
+          <div class="service-card">
+            <h3>Drywall Repair & Preparation</h3>
+            <p>Ensure flawless paint results with comprehensive drywall repair and surface preparation services.</p>
+            <ul>
+              <li>Hole and crack repair</li>
+              <li>Texture matching</li>
+              <li>Caulking and sealing</li>
+              <li>Sanding and priming</li>
+              <li>Popcorn ceiling removal</li>
+            </ul>
+            <a href="/interior-painting" class="btn btn-outline">Learn More About Drywall Services</a>
+          </div>
+
+          <div class="service-card">
+            <h3>Commercial Painting</h3>
+            <p>Professional painting services for businesses, offices, and commercial properties with minimal disruption scheduling.</p>
+            <ul>
+              <li>Office building painting</li>
+              <li>Retail space updates</li>
+              <li>Industrial facility painting</li>
+              <li>After-hours scheduling</li>
+              <li>Commercial-grade finishes</li>
+            </ul>
+            <a href="/commercial-painting" class="btn btn-outline">Learn More About Commercial Painting</a>
+          </div>
+
+          <div class="service-card">
+            <h3>Color Consultation</h3>
+            <p>Make confident color choices with professional color consultation services that consider your home's architecture and lighting.</p>
+            <ul>
+              <li>Basic color guidance (free)</li>
+              <li>Full color consultations</li>
+              <li>Sample application</li>
+              <li>Architectural considerations</li>
+              <li>Lighting analysis</li>
+            </ul>
+            <a href="/contact" class="btn btn-outline">Schedule Color Consultation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Professional House Painters -->
+    <section class="why-choose-professional">
+      <div class="container">
+        <h2>Why Choose Professional House Painters Over DIY?</h2>
+        <div class="why-grid">
+          <div class="why-item">
+            <h3>Expert Surface Preparation</h3>
+            <p>Professional house painters understand that 80% of a quality paint job is proper preparation. We handle cleaning, sanding, priming, and repair work that DIY projects often skip, ensuring your paint job lasts years longer.</p>
+          </div>
+          <div class="why-item">
+            <h3>Professional-Grade Materials</h3>
+            <p>We use premium paints and materials from Sherwin-Williams, Benjamin Moore, and PPG that aren't available to consumers. These products offer better coverage, durability, and color retention than retail options.</p>
+          </div>
+          <div class="why-item">
+            <h3>Time and Efficiency</h3>
+            <p>What takes a homeowner weeks to complete, our experienced team can finish in days. We have the tools, techniques, and manpower to work efficiently while maintaining quality standards.</p>
+          </div>
+          <div class="why-item">
+            <h3>Safety and Insurance</h3>
+            <p>Professional house painters are trained in ladder safety, lead paint handling, and proper ventilation. We're fully insured, so you're protected from liability and property damage.</p>
+          </div>
+          <div class="why-item">
+            <h3>Color and Design Expertise</h3>
+            <p>Our experience helps you avoid costly color mistakes. We understand how colors work together, how lighting affects appearance, and what works best for your home's style and architecture.</p>
+          </div>
+          <div class="why-item">
+            <h3>Warranty Protection</h3>
+            <p>Professional house painters stand behind their work with warranties on both labor and materials. If issues arise, we'll return to fix them at no additional cost.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- House Painting Process -->
+    <section class="painting-process">
+      <div class="container">
+        <h2>Our Professional House Painting Process</h2>
+        <p class="section-intro">Our systematic approach ensures consistent, high-quality results on every house painting project, from initial consultation to final cleanup.</p>
+        
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <h3>Free Consultation & Estimate</h3>
+            <p>We visit your property to assess the scope of work, discuss your vision, and provide a detailed written estimate. This includes color recommendations, timeline, and material specifications.</p>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <h3>Surface Preparation</h3>
+            <p>Thorough cleaning, sanding, and repair work ensures proper paint adhesion. We handle drywall repairs, caulking, and priming as needed for a flawless finish.</p>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <h3>Protection & Setup</h3>
+            <p>We protect your furniture, flooring, and landscaping with professional-grade coverings. Our team sets up work areas to minimize disruption to your daily routine.</p>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <h3>Professional Application</h3>
+            <p>Using proven techniques and premium materials, we apply paint with precision. Our experienced painters ensure even coverage and clean lines throughout your project.</p>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">5</div>
+            <h3>Quality Inspection</h3>
+            <p>We conduct a thorough walkthrough with you to ensure every detail meets our high standards. Any touch-ups or adjustments are completed before project completion.</p>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">6</div>
+            <h3>Cleanup & Warranty</h3>
+            <p>Complete cleanup of work areas and disposal of materials. We provide warranty information and maintenance tips to help your paint job last for years.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location-Specific Services -->
+    <section class="location-services">
+      <div class="container">
+        <h2>House Painting Services Throughout South Alabama</h2>
+        <p class="section-intro">We proudly serve homeowners and businesses across multiple counties in South Alabama, bringing professional house painting expertise to your community.</p>
+        
+        <div class="location-grid">
+          <div class="location-group">
+            <h3>Baldwin County</h3>
+            <div class="location-links">
+              <a href="/daphne-painting">Daphne House Painting</a>
+              <a href="/fairhope-painting">Fairhope House Painting</a>
+              <a href="/foley-painting">Foley House Painting</a>
+              <a href="/gulf-shores-painting">Gulf Shores House Painting</a>
+              <a href="/orange-beach-painting">Orange Beach House Painting</a>
+              <a href="/spanish-fort-painting">Spanish Fort House Painting</a>
+            </div>
+          </div>
+          
+          <div class="location-group">
+            <h3>Mobile County</h3>
+            <div class="location-links">
+              <a href="/mobile-painting">Mobile House Painting</a>
+              <a href="/saraland-painting">Saraland House Painting</a>
+              <a href="/creola-painting">Creola House Painting</a>
+              <a href="/theodore-painting">Theodore House Painting</a>
+            </div>
+          </div>
+          
+          <div class="location-group">
+            <h3>Escambia County</h3>
+            <div class="location-links">
+              <a href="/brewton-painting">Brewton House Painting</a>
+              <a href="/atmore-painting">Atmore House Painting</a>
+              <a href="/flomaton-painting">Flomaton House Painting</a>
+            </div>
+          </div>
+          
+          <div class="location-group">
+            <h3>Monroe County</h3>
+            <div class="location-links">
+              <a href="/monroeville-painting">Monroeville House Painting</a>
+              <a href="/evergreen-painting">Evergreen House Painting</a>
+              <a href="/repton-painting">Repton House Painting</a>
+            </div>
+          </div>
+          
+          <div class="location-group">
+            <h3>Conecuh County</h3>
+            <div class="location-links">
+              <a href="/castleberry-painting">Castleberry House Painting</a>
+              <a href="/lenox-painting">Lenox House Painting</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Paint Types and Finishes -->
+    <section class="paint-types">
+      <div class="container">
+        <h2>Professional Paint Types and Finishes</h2>
+        <p class="section-intro">We use only premium paints and finishes selected for their durability, appearance, and suitability for Alabama's climate conditions.</p>
+        
+        <div class="paint-grid">
+          <div class="paint-card">
+            <h3>Interior Paints</h3>
+            <ul>
+              <li><strong>Flat/Matte:</strong> Perfect for ceilings and low-traffic areas</li>
+              <li><strong>Eggshell:</strong> Subtle sheen, ideal for living rooms and bedrooms</li>
+              <li><strong>Satin:</strong> Easy to clean, great for kitchens and bathrooms</li>
+              <li><strong>Semi-Gloss:</strong> Durable finish for trim and high-traffic areas</li>
+              <li><strong>Low-VOC:</strong> Healthier options for families and sensitive individuals</li>
+            </ul>
+          </div>
+          
+          <div class="paint-card">
+            <h3>Exterior Paints</h3>
+            <ul>
+              <li><strong>Acrylic Latex:</strong> Flexible, weather-resistant, perfect for Alabama humidity</li>
+              <li><strong>Elastomeric:</strong> Stretches with temperature changes, prevents cracking</li>
+              <li><strong>Masonry Paint:</strong> Specialized for brick, stucco, and concrete surfaces</li>
+              <li><strong>Metal Paint:</strong> Rust-inhibiting formulas for metal surfaces</li>
+              <li><strong>Coastal Grade:</strong> Salt-air resistant for beach properties</li>
+            </ul>
+          </div>
+          
+          <div class="paint-card">
+            <h3>Specialty Finishes</h3>
+            <ul>
+              <li><strong>Cabinet Paint:</strong> Hard, durable finish for kitchen and bathroom cabinets</li>
+              <li><strong>Deck Stain:</strong> Penetrating or film-forming options for outdoor wood</li>
+              <li><strong>Primer:</strong> High-quality primers for proper adhesion and coverage</li>
+              <li><strong>Caulk:</strong> Professional-grade sealants for gaps and joints</li>
+              <li><strong>Clear Coats:</strong> Protective finishes for wood and metal surfaces</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cost and Investment -->
+    <section class="cost-investment">
+      <div class="container">
+        <h2>House Painting Investment and Value</h2>
+        <p class="section-intro">Professional house painting is one of the most cost-effective ways to increase your property's value and curb appeal.</p>
+        
+        <div class="cost-grid">
+          <div class="cost-item">
+            <h3>Return on Investment</h3>
+            <p>Professional house painting typically provides a 60-70% return on investment when selling your home. A fresh paint job can increase your home's value by thousands of dollars.</p>
+          </div>
+          
+          <div class="cost-item">
+            <h3>Cost Factors</h3>
+            <p>House painting costs vary based on square footage, surface condition, paint quality, and project complexity. We provide detailed estimates with no hidden fees.</p>
+          </div>
+          
+          <div class="cost-item">
+            <h3>Long-term Savings</h3>
+            <p>Professional preparation and quality materials mean your paint job lasts 2-3 times longer than DIY projects, saving money over time.</p>
+          </div>
+          
+          <div class="cost-item">
+            <h3>Financing Options</h3>
+            <p>We accept cash, check, and major credit cards. Payment plans may be available for larger projects - ask about options during your estimate.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+      <div class="container">
+        <h2>Frequently Asked Questions About House Painting</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3>How long does a typical house painting project take?</h3>
+            <p>Interior projects typically take 1-3 days depending on the number of rooms and complexity. Exterior projects take 3-5 days depending on size, weather, and preparation needs. We provide detailed timelines during your estimate.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What's the difference between professional and DIY house painting?</h3>
+            <p>Professional house painters use premium materials, proper preparation techniques, and years of experience to ensure lasting results. DIY projects often skip crucial steps like surface prep and use lower-quality materials, leading to shorter lifespans and potential problems.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do you provide color consultation services?</h3>
+            <p>Yes! We offer basic color guidance at no charge and full color consultation services. Our experience helps you choose colors that work with your home's architecture, lighting, and personal style.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What paint brands do you use?</h3>
+            <p>We use professional-grade paints from Sherwin-Williams, Benjamin Moore, and PPG. These brands offer superior coverage, durability, and color retention compared to retail options.</p>
+          </div>
+          <div class="faq-item">
+            <h3>How do you protect my furniture and belongings?</h3>
+            <p>We use professional-grade plastic sheeting, drop cloths, and masking tape to protect all surfaces. We move light furniture as needed and ensure complete protection of your valuable items.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Can you match existing paint colors?</h3>
+            <p>Yes, we can match most existing paint colors using professional color-matching tools. This is especially useful for touch-ups and additions to your home.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do you offer warranties on your work?</h3>
+            <p>Yes, we provide workmanship warranties on our labor and standard manufacturer warranties on materials. Specific warranty terms are outlined in your project proposal.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What happens if it rains during exterior painting?</h3>
+            <p>We monitor weather closely and adjust our schedule accordingly. If rain or high humidity would compromise quality, we pause work and resume at the first safe opportunity.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do you handle lead paint safely?</h3>
+            <p>For homes built before 1978, we follow lead-safe work practices and containment procedures. We discuss lead paint considerations during your estimate if applicable.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Can you paint different types of surfaces?</h3>
+            <p>Yes, we paint wood siding, brick, stucco, metal, drywall, and more. Each surface requires specific preparation and paint types, which we handle with appropriate techniques and materials.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ready to Transform Your Home with Professional House Painting?</h2>
+        <p>Contact Brown's Painting LLC today for your free estimate. Let our 25+ years of experience and family-owned reliability bring your vision to life.</p>
+        <div class="cta-buttons">
+          <a href="tel:+1251-237-4545" class="btn btn-primary">Call (251) 237-4545</a>
+          <a href="/contact" class="btn btn-secondary">Get Free Estimate</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .hero {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    color: white;
+    padding: 4rem 0;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    line-height: 1.6;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-image {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  .trust-signals {
+    padding: 4rem 0;
+    background: #f8fafc;
+  }
+
+  .trust-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .trust-item {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+
+  .trust-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .trust-item h3 {
+    color: #1e3a8a;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+  }
+
+  .services-overview {
+    padding: 4rem 0;
+  }
+
+  .section-intro {
+    font-size: 1.125rem;
+    color: #4b5563;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid #e5e7eb;
+  }
+
+  .service-card h3 {
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .service-card ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .service-card li {
+    margin-bottom: 0.5rem;
+    color: #4b5563;
+  }
+
+  .why-choose-professional {
+    padding: 4rem 0;
+    background: #f8fafc;
+  }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .why-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+
+  .why-item h3 {
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+
+  .painting-process {
+    padding: 4rem 0;
+  }
+
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .process-step {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    text-align: center;
+    position: relative;
+  }
+
+  .step-number {
+    width: 60px;
+    height: 60px;
+    background: #3b82f6;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 auto 1rem;
+  }
+
+  .process-step h3 {
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+
+  .location-services {
+    padding: 4rem 0;
+    background: #f8fafc;
+  }
+
+  .location-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .location-group {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+
+  .location-group h3 {
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+
+  .location-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .location-links a {
+    color: #3b82f6;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e5e7eb;
+    transition: color 0.3s ease;
+  }
+
+  .location-links a:hover {
+    color: #1e3a8a;
+  }
+
+  .paint-types {
+    padding: 4rem 0;
+  }
+
+  .paint-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .paint-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+
+  .paint-card h3 {
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+
+  .paint-card ul {
+    margin: 0;
+    padding-left: 1.5rem;
+  }
+
+  .paint-card li {
+    margin-bottom: 0.75rem;
+    color: #4b5563;
+    line-height: 1.5;
+  }
+
+  .cost-investment {
+    padding: 4rem 0;
+    background: #f8fafc;
+  }
+
+  .cost-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .cost-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+
+  .cost-item h3 {
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+
+  .faq {
+    padding: 4rem 0;
+    background: #f8fafc;
+  }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .faq-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-left: 4px solid #3b82f6;
+  }
+
+  .faq-item h3 {
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+
+  .faq-item p {
+    color: #4b5563;
+    line-height: 1.6;
+  }
+
+  .cta-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    color: white;
+    text-align: center;
+  }
+
+  .cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .cta-section p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+  }
+
+  .btn-primary {
+    background: #f59e0b;
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background: #d97706;
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: white;
+    border-color: white;
+  }
+
+  .btn-secondary:hover {
+    background: white;
+    color: #1e3a8a;
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: #3b82f6;
+    border-color: #3b82f6;
+  }
+
+  .btn-outline:hover {
+    background: #3b82f6;
+    color: white;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  h2 {
+    text-align: center;
+    color: #1e3a8a;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .hero-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+
+    .hero-buttons {
+      justify-content: center;
+    }
+
+    .trust-grid,
+    .services-grid,
+    .why-grid,
+    .process-steps,
+    .location-grid,
+    .paint-grid,
+    .cost-grid,
+    .faq-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>

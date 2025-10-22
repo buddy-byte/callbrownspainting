@@ -1,0 +1,65 @@
+---
+// CSS Loading component for critical and non-critical CSS optimization
+export interface Props {
+  criticalCSS?: string;
+  nonCriticalCSS?: string;
+}
+
+const { criticalCSS, nonCriticalCSS } = Astro.props;
+---
+
+<!-- Critical CSS - Inline for immediate rendering -->
+<style set:html={criticalCSS}></style>
+
+<!-- Non-Critical CSS - Loaded asynchronously -->
+<script>
+  // Function to load CSS asynchronously
+  function loadCSS(href, callback) {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = href;
+    link.media = 'print';
+    link.onload = function() {
+      this.media = 'all';
+      if (callback) callback();
+    };
+    link.onerror = function() {
+      console.warn('Failed to load CSS:', href);
+    };
+    document.head.appendChild(link);
+  }
+
+  // Function to preload CSS
+  function preloadCSS(href) {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'style';
+    link.href = href;
+    link.onload = function() {
+      this.rel = 'stylesheet';
+    };
+    document.head.appendChild(link);
+  }
+
+  // Load non-critical CSS after page load
+  document.addEventListener('DOMContentLoaded', function() {
+    // Preload non-critical CSS
+    if (typeof window !== 'undefined' && window.location.pathname) {
+      const nonCriticalPath = '/src/styles/non-critical.css';
+      preloadCSS(nonCriticalPath);
+    }
+  });
+
+  // Fallback: Load non-critical CSS after a delay
+  setTimeout(function() {
+    if (typeof window !== 'undefined') {
+      const nonCriticalPath = '/src/styles/non-critical.css';
+      loadCSS(nonCriticalPath);
+    }
+  }, 100);
+</script>
+
+<!-- Fallback for users with JavaScript disabled -->
+<noscript>
+  <link rel="stylesheet" href="/src/styles/non-critical.css">
+</noscript>

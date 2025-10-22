@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import BoomerProfile from '../components/BoomerProfile.astro';
 ---
 
 <BaseLayout
@@ -40,10 +41,48 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </p>
 
           <h2>Why Choose CallBrownsPainting.com</h2>
-          <ul>
-            <li><strong>25+ Years Experience:</strong> Decades of professional painting expertise in South Alabama</li>
-            <li><strong>Local Knowledge:</strong> Understanding of Alabama's coastal climate and painting challenges</li>
-            <li><strong>Quality Materials:</strong> Premium paints and supplies for lasting results</li>
+          
+          <!-- Trust Signals Grid -->
+          <div class="trust-signals-grid">
+            <div class="trust-card">
+              <div class="trust-icon">🏆</div>
+              <h3>25+ Years Experience</h3>
+              <p>Decades of professional painting expertise in South Alabama</p>
+              <div class="trust-badge">Proven Track Record</div>
+            </div>
+            <div class="trust-card">
+              <div class="trust-icon">🛡️</div>
+              <h3>Licensed & Insured</h3>
+              <p>Fully licensed and insured for your protection and peace of mind</p>
+              <div class="trust-badge">Fully Protected</div>
+            </div>
+            <div class="trust-card">
+              <div class="trust-icon">⭐</div>
+              <h3>5-Star Rated</h3>
+              <p>Consistently high customer ratings and positive reviews</p>
+              <div class="trust-badge">Customer Approved</div>
+            </div>
+            <div class="trust-card">
+              <div class="trust-icon">💯</div>
+              <h3>100% Satisfaction</h3>
+              <p>We stand behind our work with a complete satisfaction guarantee</p>
+              <div class="trust-badge">Quality Assured</div>
+            </div>
+            <div class="trust-card">
+              <div class="trust-icon">🏠</div>
+              <h3>Local Knowledge</h3>
+              <p>Understanding of Alabama's coastal climate and painting challenges</p>
+              <div class="trust-badge">Climate Expert</div>
+            </div>
+            <div class="trust-card">
+              <div class="trust-icon">🎨</div>
+              <h3>Premium Materials</h3>
+              <p>High-quality paints and supplies for lasting, beautiful results</p>
+              <div class="trust-badge">Top Quality</div>
+            </div>
+          </div>
+
+          <ul class="additional-benefits">
             <li><strong>Reliable Service:</strong> On-time completion and professional communication</li>
             <li><strong>Comprehensive Coverage:</strong> Interior and exterior painting for all property types</li>
             <li><strong>Free Estimates:</strong> No-obligation quotes for all projects</li>
@@ -51,6 +90,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </article>
       </div>
     </section>
+
+    <!-- Boomer Profile Section -->
+    <BoomerProfile />
   </main>
 
   <style>
@@ -117,6 +159,67 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     .about-content strong {
       color: #667eea;
+    }
+
+    /* Trust Signals Grid */
+    .trust-signals-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .trust-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      border-left: 4px solid #3b82f6;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .trust-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .trust-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .trust-card h3 {
+      color: #1f2937;
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .trust-card p {
+      color: #6b7280;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .trust-badge {
+      background: #3b82f6;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: inline-block;
+    }
+
+    .additional-benefits {
+      margin-top: 2rem;
+      background: #f8fafc;
+      padding: 1.5rem;
+      border-radius: 8px;
+      border-left: 4px solid #10b981;
     }
   </style>
 </BaseLayout>

@@ -1,0 +1,203 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Service Areas - Brown's Painting LLC | South Alabama"
+  description="Brown's Painting serves Escambia, Baldwin, Mobile, Monroe, and Conecuh Counties across South Alabama. Professional painting services in Brewton, Fairhope, Mobile, and surrounding areas."
+  keywords="painting service areas Alabama, Escambia County painters, Baldwin County painters, Mobile County painters, Monroe County painters, Conecuh County painters"
+>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Service Areas - South Alabama</h1>
+        <p class="lead">
+          Brown's Painting LLC proudly serves South Alabama with professional painting services. 
+          Currently expanding from Brewton to cover all major counties and cities.
+        </p>
+      </div>
+    </section>
+
+    <section class="counties-section">
+      <div class="container">
+        <h2>Counties We Serve</h2>
+        
+        <div class="counties-grid">
+          <div class="county-card">
+            <h3>Escambia County</h3>
+            <p>Currently serving with immediate expansion plans</p>
+            <ul>
+              <li><a href="/brewton-painting">Brewton</a></li>
+              <li><a href="/atmore-painting">Atmore</a></li>
+              <li><a href="/flomaton-painting">Flomaton</a></li>
+            </ul>
+          </div>
+
+          <div class="county-card">
+            <h3>Baldwin County</h3>
+            <p>Eastern Shore and coastal areas</p>
+            <ul>
+              <li><a href="/fairhope-painting">Fairhope</a></li>
+              <li><a href="/daphne-painting">Daphne</a></li>
+              <li><a href="/gulf-shores-painting">Gulf Shores</a></li>
+              <li><a href="/orange-beach-painting">Orange Beach</a></li>
+            </ul>
+          </div>
+
+          <div class="county-card">
+            <h3>Mobile County</h3>
+            <p>Mobile metro area and surrounding communities</p>
+            <ul>
+              <li><a href="/mobile-painting">Mobile</a></li>
+              <li><a href="/saraland-painting">Saraland</a></li>
+              <li><a href="/theodore-painting">Theodore</a></li>
+              <li><a href="/creola-painting">Creola</a></li>
+            </ul>
+          </div>
+
+          <div class="county-card">
+            <h3>Monroe County</h3>
+            <p>Coming soon - expansion planned</p>
+            <ul>
+              <li><a href="/monroeville-painting">Monroeville</a></li>
+            </ul>
+          </div>
+
+          <div class="county-card">
+            <h3>Conecuh County</h3>
+            <p>Coming soon - expansion planned</p>
+            <ul>
+              <li><a href="/evergreen-painting">Evergreen</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ready to Get Started?</h2>
+        <p>Contact us today for a free estimate on your painting project.</p>
+        <a href="/contact" class="btn btn-primary">Get Free Estimate</a>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 3rem 0 2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      margin-bottom: 1.5rem;
+    }
+
+    .lead {
+      font-size: clamp(1.1rem, 2vw, 1.3rem);
+      margin-bottom: 2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .counties-section {
+      padding: 3rem 0;
+    }
+
+    .counties-section h2 {
+      text-align: center;
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      margin-bottom: 3rem;
+      color: #333;
+    }
+
+    .counties-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .county-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-left: 4px solid #667eea;
+    }
+
+    .county-card h3 {
+      color: #667eea;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .county-card p {
+      color: #6b7280;
+      margin-bottom: 1.5rem;
+    }
+
+    .county-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .county-card li {
+      margin-bottom: 0.5rem;
+    }
+
+    .county-card a {
+      color: #3b82f6;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .county-card a:hover {
+      color: #1d4ed8;
+      text-decoration: underline;
+    }
+
+    .cta-section {
+      background: #f8fafc;
+      padding: 3rem 0;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .cta-section p {
+      font-size: 1.125rem;
+      color: #6b7280;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: #667eea;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</BaseLayout>

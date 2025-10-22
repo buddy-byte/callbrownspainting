@@ -1,0 +1,672 @@
+---
+export interface Props {
+  serviceName: string;
+  serviceType: 'interior' | 'exterior' | 'commercial' | 'general';
+  heroTitle: string;
+  heroSubtitle: string;
+  valueProposition: string;
+  whatsIncluded: Array<{
+    title: string;
+    description: string;
+    icon: string;
+  }>;
+  processSteps: Array<{
+    step: number;
+    title: string;
+    description: string;
+    duration?: string;
+  }>;
+  commonIssues: Array<{
+    problem: string;
+    solution: string;
+    urgency: 'low' | 'medium' | 'high';
+  }>;
+  customerPromise: {
+    title: string;
+    guarantees: Array<{
+      title: string;
+      description: string;
+    }>;
+  };
+  faqs: Array<{
+    question: string;
+    answer: string;
+  }>;
+}
+
+const {
+  serviceName,
+  serviceType,
+  heroTitle,
+  heroSubtitle,
+  valueProposition,
+  whatsIncluded,
+  processSteps,
+  commonIssues,
+  customerPromise,
+  faqs
+} = Astro.props;
+
+// Service-specific styling
+const getServiceColor = (type: string) => {
+  const colors = {
+    interior: '#3b82f6',
+    exterior: '#10b981', 
+    commercial: '#f59e0b',
+    general: '#667eea'
+  };
+  return colors[type] || colors.general;
+};
+
+const serviceColor = getServiceColor(serviceType);
+---
+
+<div class="service-content-framework">
+  <!-- Hero Section -->
+  <section class="service-hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>{heroTitle}</h1>
+          <p class="hero-subtitle">{heroSubtitle}</p>
+          <div class="value-proposition">
+            <h2>Why Choose Brown's Painting for {serviceName}?</h2>
+            <p>{valueProposition}</p>
+          </div>
+          <div class="hero-cta">
+            <a href="tel:+12512374545" class="btn btn-primary">Call (251) 237-4545</a>
+            <a href="/contact" class="btn btn-secondary">Get Free Estimate</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Included Section -->
+  <section class="whats-included">
+    <div class="container">
+      <h2>What's Included in Our {serviceName} Service</h2>
+      <p class="section-intro">We provide comprehensive {serviceName.toLowerCase()} solutions with attention to every detail.</p>
+      
+      <div class="included-grid">
+        {whatsIncluded.map((item, index) => (
+          <div class="included-item" key={index}>
+            <div class="included-icon" style={`background-color: ${serviceColor}20; color: ${serviceColor}`}>
+              {item.icon}
+            </div>
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="process-section">
+    <div class="container">
+      <h2>Our {serviceName} Process</h2>
+      <p class="section-intro">Here's exactly what happens when you choose Brown's Painting for your {serviceName.toLowerCase()} project.</p>
+      
+      <div class="process-timeline">
+        {processSteps.map((step, index) => (
+          <div class="process-step" key={index}>
+            <div class="step-number" style={`background-color: ${serviceColor}`}>
+              {step.step}
+            </div>
+            <div class="step-content">
+              <h3>{step.title}</h3>
+              <p>{step.description}</p>
+              {step.duration && (
+                <span class="step-duration">⏱️ {step.duration}</span>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Common Issues Section -->
+  <section class="common-issues">
+    <div class="container">
+      <h2>Common {serviceName} Issues We Solve</h2>
+      <p class="section-intro">Don't let these common problems damage your property. We have the expertise to fix them right the first time.</p>
+      
+      <div class="issues-grid">
+        {commonIssues.map((issue, index) => (
+          <div class="issue-card" key={index}>
+            <div class="issue-header">
+              <h3>{issue.problem}</h3>
+              <span class={`urgency-badge urgency-${issue.urgency}`}>
+                {issue.urgency === 'high' ? 'Urgent' : issue.urgency === 'medium' ? 'Important' : 'Maintenance'}
+              </span>
+            </div>
+            <div class="issue-solution">
+              <h4>Our Solution:</h4>
+              <p>{issue.solution}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Promise Section -->
+  <section class="customer-promise">
+    <div class="container">
+      <h2>{customerPromise.title}</h2>
+      <p class="section-intro">We stand behind our work with transparent pricing, clear communication, and quality guarantees.</p>
+      
+      <div class="promise-grid">
+        {customerPromise.guarantees.map((guarantee, index) => (
+          <div class="promise-item" key={index}>
+            <div class="promise-icon" style={`background-color: ${serviceColor}20; color: ${serviceColor}`}>
+              ✓
+            </div>
+            <h3>{guarantee.title}</h3>
+            <p>{guarantee.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="service-faqs">
+    <div class="container">
+      <h2>Frequently Asked Questions About {serviceName}</h2>
+      <p class="section-intro">Get answers to the most common questions about our {serviceName.toLowerCase()} services.</p>
+      
+      <div class="faq-list">
+        {faqs.map((faq, index) => (
+          <div class="faq-item" key={index}>
+            <button class="faq-question" aria-expanded="false">
+              <span>{faq.question}</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>{faq.answer}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+  // FAQ Accordion functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      const answer = item.querySelector('.faq-answer');
+      const icon = item.querySelector('.faq-icon');
+      
+      question.addEventListener('click', function() {
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        
+        // Close other FAQ items
+        faqItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            otherItem.querySelector('.faq-answer').style.maxHeight = null;
+            otherItem.querySelector('.faq-icon').textContent = '+';
+          }
+        });
+        
+        // Toggle current item
+        this.setAttribute('aria-expanded', !isExpanded);
+        if (isExpanded) {
+          answer.style.maxHeight = null;
+          icon.textContent = '+';
+        } else {
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+          icon.textContent = '−';
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .service-content-framework {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  /* Hero Section */
+  .service-hero {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .service-hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    line-height: 1.6;
+  }
+
+  .value-proposition {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    backdrop-filter: blur(10px);
+  }
+
+  .value-proposition h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #f59e0b;
+  }
+
+  .value-proposition p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-primary {
+    background: #f59e0b;
+    color: white;
+    border-color: #f59e0b;
+  }
+
+  .btn-primary:hover {
+    background: #d97706;
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: white;
+    border-color: white;
+  }
+
+  .btn-secondary:hover {
+    background: white;
+    color: #1e3a8a;
+  }
+
+  /* What's Included Section */
+  .whats-included {
+    padding: 4rem 0;
+    background: #f8fafc;
+  }
+
+  .whats-included h2,
+  .process-section h2,
+  .common-issues h2,
+  .customer-promise h2,
+  .service-faqs h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  .section-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #6b7280;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .included-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .included-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .included-item:hover {
+    transform: translateY(-4px);
+  }
+
+  .included-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto 1rem;
+  }
+
+  .included-item h3 {
+    font-size: 1.25rem;
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+  }
+
+  .included-item p {
+    color: #6b7280;
+    line-height: 1.6;
+  }
+
+  /* Process Section */
+  .process-section {
+    padding: 4rem 0;
+  }
+
+  .process-timeline {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .process-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+
+  .process-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 60px;
+    bottom: -3rem;
+    width: 2px;
+    background: #e5e7eb;
+  }
+
+  .step-number {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .step-content h3 {
+    font-size: 1.5rem;
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+  }
+
+  .step-content p {
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+  }
+
+  .step-duration {
+    font-size: 0.9rem;
+    color: #9ca3af;
+    font-style: italic;
+  }
+
+  /* Common Issues Section */
+  .common-issues {
+    padding: 4rem 0;
+    background: #f8fafc;
+  }
+
+  .issues-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .issue-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #e5e7eb;
+  }
+
+  .issue-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+
+  .issue-header h3 {
+    font-size: 1.25rem;
+    color: #1e3a8a;
+    margin: 0;
+    flex: 1;
+  }
+
+  .urgency-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .urgency-high {
+    background: #fee2e2;
+    color: #dc2626;
+  }
+
+  .urgency-medium {
+    background: #fef3c7;
+    color: #d97706;
+  }
+
+  .urgency-low {
+    background: #d1fae5;
+    color: #059669;
+  }
+
+  .issue-solution h4 {
+    color: #10b981;
+    margin-bottom: 0.5rem;
+  }
+
+  .issue-solution p {
+    color: #6b7280;
+    line-height: 1.6;
+  }
+
+  /* Customer Promise Section */
+  .customer-promise {
+    padding: 4rem 0;
+  }
+
+  .promise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .promise-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    border: 2px solid #f3f4f6;
+    transition: all 0.3s ease;
+  }
+
+  .promise-item:hover {
+    border-color: #3b82f6;
+    transform: translateY(-2px);
+  }
+
+  .promise-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 auto 1rem;
+  }
+
+  .promise-item h3 {
+    font-size: 1.25rem;
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+  }
+
+  .promise-item p {
+    color: #6b7280;
+    line-height: 1.6;
+  }
+
+  /* FAQ Section */
+  .service-faqs {
+    padding: 4rem 0;
+    background: #f8fafc;
+  }
+
+  .faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .faq-item {
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+  }
+
+  .faq-question {
+    width: 100%;
+    padding: 1.5rem;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1e3a8a;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }
+
+  .faq-question:hover {
+    background-color: #f8fafc;
+  }
+
+  .faq-icon {
+    font-size: 1.5rem;
+    font-weight: 700;
+    transition: transform 0.3s ease;
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .faq-answer p {
+    padding: 0 1.5rem 1.5rem;
+    color: #6b7280;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 1rem;
+    }
+
+    .hero-cta {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .process-step {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .process-step:not(:last-child)::after {
+      display: none;
+    }
+
+    .included-grid,
+    .issues-grid,
+    .promise-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .issue-header {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+</style>

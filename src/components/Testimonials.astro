@@ -1,0 +1,179 @@
+---
+// Simple testimonials component
+const testimonials = [
+  {
+    id: 1,
+    name: "Lessa Crow Homan",
+    location: "Brewton, AL",
+    service: "Complete House Transformation",
+    rating: 5,
+    text: "Thank you so much to Browns Painting (Boomer Brown) for making my dream house come to life!!! I would recommend these guys to anyone!!! They done a great job!!!",
+    date: "July 2021",
+    verified: true,
+    featured: true
+  },
+  {
+    id: 2,
+    name: "Sarah Johnson",
+    location: "Brewton, AL",
+    service: "Interior Painting",
+    rating: 5,
+    text: "Barry did an amazing job painting our entire house. His attention to detail and professionalism was outstanding. The quality of work exceeded our expectations.",
+    date: "November 2024",
+    verified: true
+  },
+  {
+    id: 3,
+    name: "Mike Thompson",
+    location: "Fairhope, AL",
+    service: "Exterior Painting",
+    rating: 5,
+    text: "We needed our commercial building painted and Barry delivered exceptional results. He worked around our business hours and completed the project on time.",
+    date: "October 2024",
+    verified: true
+  }
+];
+---
+
+<section class="testimonials">
+  <div class="container">
+    <h2>What Our Customers Say</h2>
+    <p class="section-subtitle">Real feedback from satisfied customers throughout South Alabama</p>
+    
+    <div class="testimonials-grid">
+      {testimonials.map(testimonial => (
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="customer-info">
+              <h4>{testimonial.name}</h4>
+              <p class="location">{testimonial.location}</p>
+              <p class="service">{testimonial.service}</p>
+            </div>
+            <div class="rating">
+              {'★'.repeat(testimonial.rating)}
+            </div>
+          </div>
+          
+          <blockquote class="testimonial-text">
+            "{testimonial.text}"
+          </blockquote>
+          
+          <div class="testimonial-meta">
+            <span class="date">{testimonial.date}</span>
+            {testimonial.verified && <span class="verified">✓ Verified</span>}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials {
+    padding: 4rem 0;
+    background: #f8fafc;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .testimonials h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  .section-subtitle {
+    text-align: center;
+    color: #6b7280;
+    font-size: 1.125rem;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+
+  .testimonial-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .testimonial-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+
+  .customer-info h4 {
+    font-size: 1.125rem;
+    margin-bottom: 0.25rem;
+    color: #1f2937;
+  }
+
+  .location {
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .service {
+    color: #3b82f6;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .rating {
+    color: #fbbf24;
+    font-size: 1.25rem;
+  }
+
+  .testimonial-text {
+    font-style: italic;
+    color: #374151;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+
+  .testimonial-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+
+  .verified {
+    color: #10b981;
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .testimonial-header {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+</style>

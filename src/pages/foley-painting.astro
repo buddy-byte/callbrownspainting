@@ -4,7 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout
   title="Painting Services in Foley AL - CallBrownsPainting.com"
-  description="Professional painting services in Foley AL by Barry 'Boomer' Brown. Coastal home painting, deck staining, vacation rental repainting. Serving Foley and Baldwin County with 25+ years experience."
+  description="Foley painting specialists: coastal home painting, deck staining, vacation rental maintenance. Expert in Baldwin County's unique coastal climate and agricultural properties. Free estimates."
   keywords="painting contractor Foley AL, coastal home painting Foley AL, deck staining Foley AL, vacation rental repainting Foley AL, painters in Foley AL, Baldwin County painting contractors"
 >
   <main>
@@ -175,7 +175,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     }
 
     .city-hero {
-      padding: 6rem 0 4rem;
+      padding: 3rem 0 2rem;
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       color: white;
       text-align: center;
@@ -211,8 +211,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     }
 
     .btn-primary {
-      background: #ff6b35;
-      color: white;
+      background: white;
+      color: #667eea;
       font-weight: 700;
     }
 
@@ -228,13 +228,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     }
 
     .city-services {
-      padding: 5rem 0;
+      padding: 2rem 0;
     }
 
     .city-services h2 {
       text-align: center;
       font-size: clamp(2rem, 4vw, 2.5rem);
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
       color: #333;
     }
 
@@ -242,7 +242,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
-      margin-bottom: 4rem;
+      margin-bottom: 2rem;
     }
 
     .service-card {
@@ -279,7 +279,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       background: #f8f9fa;
       padding: 3rem 2rem;
       border-radius: 1rem;
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
     }
 
     .foley-specialties h2 {
@@ -311,7 +311,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     }
 
     .foley-areas {
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
     }
 
     .foley-areas h2 {
@@ -357,7 +357,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       background: white;
       padding: 3rem 2rem;
       border-radius: 1rem;
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
       text-align: center;
     }
 
@@ -378,10 +378,43 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       color: #667eea;
       font-weight: 600;
     }
+  .faq {
+    padding: 2rem 0;
+    background: #f8fafc;
+  }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .faq-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-left: 4px solid #3b82f6;
+  }
+
+  .faq-item h3 {
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+
+  .faq-item p {
+    color: #4b5563;
+    line-height: 1.6;
+  }
+
+
 
     .cta-section {
       text-align: center;
-      padding: 3rem 0;
+      padding: 2rem 0;
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       color: white;
       border-radius: 1rem;
@@ -404,7 +437,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       }
 
       .city-services {
-        padding: 3rem 0;
+        padding: 2rem 0;
       }
 
       .service-card {
@@ -417,4 +450,5 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     }
   </style>
 </BaseLayout>
+
 

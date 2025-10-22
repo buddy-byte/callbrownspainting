@@ -1,6 +1,10 @@
 ---
 import SEO from '../components/SEO.astro';
 import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import PerformanceMonitor from '../components/PerformanceMonitor.astro';
+import MobilePerformanceMonitor from '../components/MobilePerformanceMonitor.astro';
+import CSSLoader from '../components/CSSLoader.astro';
 
 export interface Props {
   title: string;
@@ -31,24 +35,105 @@ const { title, description, keywords, image, type } = Astro.props;
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "CallBrownsPainting.com",
-        "url": "https://callbrownspainting.com",
-        "description": "Professional painting services in South Alabama by Barry 'Boomer' Brown",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://your-domain.com/search?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
+        "@type": [
+          "HousePainter",
+          "HomeAndConstructionBusiness",
+          "LocalBusiness"
+        ],
+        "@id": "https://callbrownspainting.com/#business",
+        "name": "Brown's Painting LLC",
+        "alternateName": "Brown's Painting",
+        "url": "https://callbrownspainting.com/",
+        "image": [
+          "https://callbrownspainting.com/assets/hero.jpg",
+          "https://callbrownspainting.com/assets/crew.jpg",
+          "https://callbrownspainting.com/assets/exterior-finish.jpg"
+        ],
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://callbrownspainting.com/assets/logo.png",
+          "width": 600,
+          "height": 200
+        },
+        "slogan": "Family-Owned. Locally Trusted.",
+        "description": "Family-owned and operated, Brown's Painting LLC provides professional residential and commercial painting services across South Alabama – interior, exterior, cabinets, drywall repair, deck & fence staining, pressure washing, and more.",
+        "founder": "Barry \"Boomer\" Brown",
+        "telephone": "+1-251-237-4545",
+        "email": "hello@callbrownspainting.com",
+        "priceRange": "$$",
+        "paymentAccepted": "Cash, Check, Credit Card, Debit Card",
+        "currenciesAccepted": "USD",
+        "foundingDate": "2018",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Brewton",
+          "addressRegion": "AL",
+          "postalCode": "36426",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "31.1052",
+          "longitude": "-87.0722"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+            "opens": "07:00",
+            "closes": "16:00"
+          }
+        ],
+        "knowsAbout": [
+          "interior painting","exterior painting","cabinet painting","drywall repair",
+          "pressure washing","deck staining","fence staining","popcorn ceiling removal",
+          "color consultation","low-VOC paints","coastal humidity paint systems"
+        ],
+        "areaServed": [
+          { "@type": "Place", "name": "Brewton, AL", "sameAs": "https://www.wikidata.org/wiki/Q79620" },
+          { "@type": "Place", "name": "Evergreen, AL", "sameAs": "https://www.wikidata.org/wiki/Q79624" },
+          { "@type": "Place", "name": "Atmore, AL", "sameAs": "https://www.wikidata.org/wiki/Q79683" },
+          { "@type": "Place", "name": "Flomaton, AL", "sameAs": "https://www.wikidata.org/wiki/Q66848" },
+          { "@type": "Place", "name": "Bay Minette, AL", "sameAs": "https://www.wikidata.org/wiki/Q79775" },
+          { "@type": "Place", "name": "Loxley, AL", "sameAs": "https://www.wikidata.org/wiki/Q67581" },
+          { "@type": "Place", "name": "Robertsdale, AL", "sameAs": "https://www.wikidata.org/wiki/Q79264" },
+          { "@type": "Place", "name": "Summerdale, AL", "sameAs": "https://www.wikidata.org/wiki/Q66937" },
+          { "@type": "Place", "name": "Foley, AL", "sameAs": "https://www.wikidata.org/wiki/Q79265" },
+          { "@type": "Place", "name": "Fairhope, AL", "sameAs": "https://www.wikidata.org/wiki/Q79502" },
+          { "@type": "Place", "name": "Spanish Fort, AL", "sameAs": "https://www.wikidata.org/wiki/Q79945" },
+          { "@type": "Place", "name": "Daphne, AL", "sameAs": "https://www.wikidata.org/wiki/Q79461" },
+          { "@type": "Place", "name": "Orange Beach, AL", "sameAs": "https://www.wikidata.org/wiki/Q79603" },
+          { "@type": "Place", "name": "Gulf Shores, AL", "sameAs": "https://www.wikidata.org/wiki/Q79669" },
+          { "@type": "Place", "name": "Mobile, AL", "sameAs": "https://www.wikidata.org/wiki/Q79875" },
+          { "@type": "Place", "name": "Saraland, AL", "sameAs": "https://www.wikidata.org/wiki/Q79259" },
+          { "@type": "Place", "name": "Creola, AL", "sameAs": "https://www.wikidata.org/wiki/Q79266" },
+          { "@type": "Place", "name": "Theodore, AL", "sameAs": "https://www.wikidata.org/wiki/Q1268805" },
+          { "@type": "Place", "name": "Monroeville, AL", "sameAs": "https://www.wikidata.org/wiki/Q79496" },
+          { "@type": "Place", "name": "Repton, AL" },
+          { "@type": "AdministrativeArea", "name": "Monroe County, AL", "sameAs": "https://www.wikidata.org/wiki/Q501060" },
+          { "@type": "AdministrativeArea", "name": "Conecuh County, AL", "sameAs": "https://www.wikidata.org/wiki/Q487716" },
+          { "@type": "AdministrativeArea", "name": "Escambia County, AL", "sameAs": "https://www.wikidata.org/wiki/Q487744" },
+          { "@type": "AdministrativeArea", "name": "Mobile County, AL", "sameAs": "https://www.wikidata.org/wiki/Q495738" },
+          { "@type": "AdministrativeArea", "name": "Baldwin County, AL", "sameAs": "https://www.wikidata.org/wiki/Q156163" }
+        ],
+        "sameAs": [
+          "REPLACE_WITH_FACEBOOK_URL",
+          "REPLACE_WITH_INSTAGRAM_URL",
+          "REPLACE_WITH_YOUTUBE_URL",
+          "REPLACE_WITH_LINKEDIN_URL",
+          "REPLACE_WITH_TIKTOK_URL"
+        ]
       }
     </script>
   </head>
   <body>
     <Navigation />
     <slot />
+    <Footer />
     
+    <!-- Critical CSS - Inline for immediate rendering -->
     <style is:global>
-      /* Modern CSS Reset */
+      /* Critical CSS for Above-the-Fold Content */
       *, *::before, *::after {
         box-sizing: border-box;
         margin: 0;
@@ -72,6 +157,184 @@ const { title, description, keywords, image, type } = Astro.props;
         height: auto;
       }
       
+      /* Navigation - Critical Above-the-Fold */
+      .main-nav {
+        background: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        padding: 1rem 0;
+      }
+      
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        text-decoration: none;
+      }
+      
+      .logo-image {
+        height: 40px;
+        width: auto;
+      }
+      
+      .logo-text {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #667eea;
+      }
+      
+      .phone-number {
+        margin-left: auto;
+        margin-right: 2rem;
+      }
+      
+      .phone-number a {
+        color: #ff6b35;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
+      
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+      }
+      
+      .nav-links a {
+        color: #333;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+      
+      /* Hero Section - Critical Above-the-Fold */
+      .hero {
+        background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        color: white;
+        padding: 4rem 0;
+        text-align: center;
+      }
+      
+      .hero h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+      }
+      
+      .hero p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+      .cta-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      
+      .btn {
+        display: inline-block;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+      }
+      
+      .btn-primary {
+        background: #f59e0b;
+        color: white;
+      }
+      
+      .btn-secondary {
+        background: transparent;
+        color: white;
+        border-color: white;
+      }
+      
+      /* Trust Signals - Critical Above-the-Fold */
+      .trust-signals {
+        background: #f8fafc;
+        padding: 3rem 0;
+      }
+      
+      .trust-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+      
+      .trust-item {
+        text-align: center;
+        padding: 2rem;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      }
+      
+      .trust-item h3 {
+        color: #1e3a8a;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      
+      .trust-item p {
+        color: #6b7280;
+        line-height: 1.6;
+      }
+      
+      /* Mobile Responsive - Critical */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          gap: 1rem;
+        }
+        
+        .nav-links {
+          gap: 1rem;
+        }
+        
+        .hero h1 {
+          font-size: 2rem;
+        }
+        
+        .hero p {
+          font-size: 1.125rem;
+        }
+        
+        .cta-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+        
+        .trust-grid {
+          grid-template-columns: 1fr;
+          padding: 0 1rem;
+        }
+      }
+      
       /* Performance: Reduce motion for users who prefer it */
       @media (prefers-reduced-motion: reduce) {
         html {
@@ -83,7 +346,12 @@ const { title, description, keywords, image, type } = Astro.props;
           transition-duration: 0.01ms !important;
         }
       }
-    </style>
+          </style>
+          
+    
+          <!-- Performance Monitoring -->
+          <PerformanceMonitor />
+          <MobilePerformanceMonitor />
   </body>
 </html>
 

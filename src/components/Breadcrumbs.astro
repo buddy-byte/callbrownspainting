@@ -1,0 +1,105 @@
+---
+export interface Props {
+  items: Array<{
+    name: string;
+    url: string;
+    current?: boolean;
+  }>;
+}
+
+const { items } = Astro.props;
+
+// Always start with home
+const breadcrumbItems = [
+  { name: 'Home', url: '/', current: false },
+  ...items
+];
+---
+
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol class="breadcrumb-list">
+    {breadcrumbItems.map((item, index) => (
+      <li class="breadcrumb-item">
+        {index > 0 && (
+          <span class="breadcrumb-separator" aria-hidden="true">›</span>
+        )}
+        {item.current ? (
+          <span class="breadcrumb-current" aria-current="page">
+            {item.name}
+          </span>
+        ) : (
+          <a href={item.url} class="breadcrumb-link" title={`Go to ${item.name}`}>
+            {item.name}
+          </a>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>
+
+<style>
+  .breadcrumbs {
+    background: #f8fafc;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .breadcrumb-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .breadcrumb-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+  }
+
+  .breadcrumb-separator {
+    color: #6b7280;
+    margin: 0 0.75rem;
+    font-weight: 500;
+  }
+
+  .breadcrumb-link {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .breadcrumb-link:hover {
+    color: #1e3a8a;
+    text-decoration: underline;
+  }
+
+  .breadcrumb-current {
+    color: #6b7280;
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .breadcrumbs {
+      padding: 0.75rem 0;
+    }
+
+    .breadcrumb-list {
+      padding: 0 1rem;
+    }
+
+    .breadcrumb-item {
+      font-size: 0.8rem;
+    }
+
+    .breadcrumb-separator {
+      margin: 0 0.5rem;
+    }
+  }
+</style>

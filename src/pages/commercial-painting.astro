@@ -1,325 +1,213 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ServiceSchema from '../components/ServiceSchema.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import RelatedServices from '../components/RelatedServices.astro';
+import ServiceContentFramework from '../components/ServiceContentFramework.astro';
 ---
 
 <BaseLayout
   title="Commercial Painting Services - CallBrownsPainting.com"
-  description="Professional commercial painting services in Brewton, Atmore, Fairhope, Daphne, Spanish Fort, Foley, Gulf Shores and all South Alabama areas. Churches, schools, gymnasiums, office buildings, restaurants."
+  description="Commercial painting specialists: churches, schools, gymnasiums, office buildings. Minimal disruption scheduling, high-traffic areas, commercial-grade finishes. Serving Mobile, Baldwin, and Escambia counties."
   keywords="commercial painting Brewton AL, church painting Atmore AL, school painting Fairhope AL, gymnasium painting Daphne AL, office building painting Spanish Fort AL, restaurant painting Foley AL"
 >
   <main>
-    <section class="service-hero">
-      <div class="container">
-        <h1>Professional Commercial Painting Services</h1>
-        <p class="lead">
-          Complete commercial painting solutions for businesses, churches, schools, and institutions throughout South Alabama. 
-          We work around your schedule to minimize disruption while delivering professional results.
-        </p>
-        <div class="cta-buttons">
-          <a href="/contact" class="btn btn-primary">Get Free Estimate</a>
-          <a href="#services" class="btn btn-secondary">View Services</a>
-        </div>
-      </div>
-    </section>
+    <!-- Breadcrumbs -->
+    <Breadcrumbs items={[
+      { name: 'Services', url: '/services' },
+      { name: 'Commercial Painting', url: '/commercial-painting', current: true }
+    ]} />
+    
+    <!-- Service Schema -->
+    <ServiceSchema 
+      serviceName="Commercial Painting Services"
+      serviceDescription="Professional commercial painting services for businesses, churches, schools, and institutions throughout South Alabama. Specializing in minimal disruption scheduling, high-traffic areas, and commercial-grade finishes."
+      serviceUrl="https://callbrownspainting.com/commercial-painting"
+      serviceType="Commercial Painting"
+      priceRange="$$"
+      serviceImage="https://callbrownspainting.com/assets/commercial-painting-service.jpg"
+    />
 
-    <section id="services" class="services-detailed">
-      <div class="container">
-        <h2>Commercial Painting Services We Offer</h2>
-        
-        <div class="service-grid">
-          <article class="service-item">
-            <h3>Office Buildings & Retail Spaces</h3>
-            <p>
-              Professional painting services for office buildings, retail stores, and commercial spaces. 
-              We use commercial-grade paints and efficient techniques to minimize business disruption.
-            </p>
-            <ul>
-              <li>Office interior painting</li>
-              <li>Retail store makeovers</li>
-              <li>Lobby and reception areas</li>
-              <li>Conference room painting</li>
-              <li>After-hours scheduling</li>
-            </ul>
-          </article>
-
-          <article class="service-item">
-            <h3>Churches & Religious Facilities</h3>
-            <p>
-              Specialized painting services for churches, temples, and religious facilities. 
-              We understand the unique needs and scheduling requirements of religious organizations.
-            </p>
-            <ul>
-              <li>Sanctuary painting</li>
-              <li>Fellowship hall painting</li>
-              <li>Sunday school rooms</li>
-              <li>Church office painting</li>
-              <li>Flexible scheduling</li>
-            </ul>
-          </article>
-
-          <article class="service-item">
-            <h3>Schools & Educational Buildings</h3>
-            <p>
-              Educational facility painting services for schools, colleges, and learning centers. 
-              We work around academic schedules and use safe, durable materials.
-            </p>
-            <ul>
-              <li>Classroom painting</li>
-              <li>Gymnasium painting</li>
-              <li>Cafeteria painting</li>
-              <li>Administrative offices</li>
-              <li>Summer break scheduling</li>
-            </ul>
-          </article>
-
-          <article class="service-item">
-            <h3>Restaurants & Hospitality</h3>
-            <p>
-              Restaurant and hospitality painting services designed for high-traffic environments. 
-              We use durable, easy-to-clean paints perfect for food service areas.
-            </p>
-            <ul>
-              <li>Dining room painting</li>
-              <li>Kitchen area painting</li>
-              <li>Bar and lounge areas</li>
-              <li>Hotel room painting</li>
-              <li>Quick turnaround times</li>
-            </ul>
-          </article>
-        </div>
-
-        <section class="service-areas">
-          <h2>Commercial Painting Service Areas</h2>
-          <p>
-            We provide professional commercial painting services throughout South Alabama:
-          </p>
-          
-          <div class="areas-grid">
-            <div class="area-column">
-              <h3>Baldwin County Commercial</h3>
-              <ul>
-                <li>Fairhope - Office buildings and retail spaces</li>
-                <li>Daphne - Churches and religious facilities</li>
-                <li>Spanish Fort - Schools and educational buildings</li>
-                <li>Foley - Restaurants and hospitality venues</li>
-                <li>Gulf Shores - Hotels and vacation rentals</li>
-                <li>Orange Beach - Resort and tourism facilities</li>
-              </ul>
-            </div>
-            
-            <div class="area-column">
-              <h3>Escambia County Commercial</h3>
-              <ul>
-                <li>Brewton - Churches, schools, and businesses</li>
-                <li>Atmore - Office buildings and retail spaces</li>
-                <li>Flomaton - Community facilities and businesses</li>
-              </ul>
-            </div>
-            
-            <div class="area-column">
-              <h3>Conecuh County Commercial</h3>
-              <ul>
-                <li>Evergreen - Schools and community buildings</li>
-                <li>Monroeville - Churches and business facilities</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section class="cta-section">
-          <h2>Ready for Professional Commercial Painting?</h2>
-          <p>
-            Contact Barry "Boomer" Brown today for a free estimate on your commercial painting project. 
-            We specialize in working with businesses, churches, schools, and institutions throughout South Alabama.
-          </p>
-          <a href="/contact" class="btn btn-primary">Get Free Commercial Painting Estimate</a>
-        </section>
-      </div>
-    </section>
+    <!-- Service Content Framework -->
+    <ServiceContentFramework
+      serviceName="Commercial Painting"
+      serviceType="commercial"
+      heroTitle="Professional Commercial Painting Services"
+      heroSubtitle="Complete commercial painting solutions for businesses, churches, schools, and institutions throughout South Alabama. We work around your schedule to minimize disruption while delivering professional results."
+      valueProposition="With 25+ years of experience in commercial painting, we understand the unique challenges of painting businesses, churches, schools, and institutions. Our flexible scheduling, commercial-grade materials, and professional techniques ensure minimal disruption to your operations while delivering exceptional results that enhance your property's value and appearance."
+      whatsIncluded={[
+        {
+          title: "Flexible Scheduling",
+          description: "We work around your business hours, including evenings and weekends, to minimize disruption to your operations.",
+          icon: "⏰"
+        },
+        {
+          title: "Commercial-Grade Materials",
+          description: "High-quality paints and finishes designed for high-traffic areas and commercial environments.",
+          icon: "🏢"
+        },
+        {
+          title: "Church & School Specialists",
+          description: "Expert knowledge of painting requirements for religious and educational facilities.",
+          icon: "⛪"
+        },
+        {
+          title: "Gymnasium & Sports Facilities",
+          description: "Specialized painting for gymnasiums, locker rooms, and sports facilities with durable finishes.",
+          icon: "🏟️"
+        },
+        {
+          title: "Office Building Painting",
+          description: "Professional interior and exterior painting for office buildings and corporate facilities.",
+          icon: "🏢"
+        },
+        {
+          title: "Restaurant & Retail",
+          description: "Commercial painting for restaurants, retail stores, and hospitality businesses.",
+          icon: "🍽️"
+        }
+      ]}
+      processSteps={[
+        {
+          step: 1,
+          title: "Free Consultation & Assessment",
+          description: "We visit your facility to assess the project scope, discuss your requirements, and provide a detailed written estimate with timeline.",
+          duration: "45-60 minutes"
+        },
+        {
+          step: 2,
+          title: "Schedule Coordination",
+          description: "We work with your team to create a painting schedule that minimizes disruption to your business operations.",
+          duration: "1-2 days"
+        },
+        {
+          step: 3,
+          title: "Site Preparation & Protection",
+          description: "We protect all furniture, equipment, and areas not being painted, and set up work zones to maintain safety.",
+          duration: "1-2 days"
+        },
+        {
+          step: 4,
+          title: "Surface Preparation",
+          description: "We thoroughly prepare all surfaces including cleaning, sanding, and priming to ensure optimal paint adhesion.",
+          duration: "1-3 days"
+        },
+        {
+          step: 5,
+          title: "Professional Painting",
+          description: "Our skilled painters apply commercial-grade paints using professional techniques for consistent, durable results.",
+          duration: "2-7 days"
+        },
+        {
+          step: 6,
+          title: "Quality Inspection & Cleanup",
+          description: "We conduct a thorough quality inspection with your team, then clean up completely and remove all protection materials.",
+          duration: "1-2 hours"
+        }
+      ]}
+      commonIssues={[
+        {
+          problem: "Business Disruption During Painting",
+          solution: "We offer flexible scheduling including evenings, weekends, and phased approaches to minimize disruption to your operations.",
+          urgency: "high"
+        },
+        {
+          problem: "High-Traffic Area Wear",
+          solution: "We use commercial-grade paints and finishes specifically designed for high-traffic areas and frequent cleaning.",
+          urgency: "high"
+        },
+        {
+          problem: "Inconsistent Color Matching",
+          solution: "We use professional color matching techniques and maintain detailed records for future touch-ups and maintenance.",
+          urgency: "medium"
+        },
+        {
+          problem: "Safety Compliance Issues",
+          solution: "We follow all safety protocols and regulations for commercial painting, including proper ventilation and containment.",
+          urgency: "high"
+        },
+        {
+          problem: "Paint Failure in Humid Conditions",
+          solution: "We use moisture-resistant primers and paints specifically designed for Alabama's high humidity climate.",
+          urgency: "medium"
+        },
+        {
+          problem: "Long-Term Maintenance Planning",
+          solution: "We provide detailed maintenance schedules and recommendations to extend the life of your commercial paint job.",
+          urgency: "low"
+        }
+      ]}
+      customerPromise={{
+        title: "Our 100% Risk-Free Quality Guarantee",
+        guarantees: [
+          {
+            title: "Satisfaction Guarantee",
+            description: "If you're not completely satisfied with our work, we'll return to fix any issues at no additional cost."
+          },
+          {
+            title: "Minimal Disruption Promise",
+            description: "We work around your schedule and minimize disruption to your business operations throughout the project."
+          },
+          {
+            title: "Licensed & Insured",
+            description: "Fully licensed and insured for commercial work, providing protection for your business and property."
+          },
+          {
+            title: "Professional Cleanup",
+            description: "We clean up completely after each work session and maintain a clean, professional work environment."
+          },
+          {
+            title: "Commercial-Grade Materials",
+            description: "We use only high-quality commercial paints and materials designed for durability and performance."
+          },
+          {
+            title: "Timely Completion",
+            description: "We stick to our schedule and complete your project on time, every time, with minimal disruption."
+          }
+        ]
+      }}
+      faqs={[
+        {
+          question: "How do you minimize disruption to our business?",
+          answer: "We offer flexible scheduling including evenings, weekends, and phased approaches. We also work in sections to keep parts of your facility operational while others are being painted."
+        },
+        {
+          question: "What types of commercial facilities do you paint?",
+          answer: "We paint churches, schools, gymnasiums, office buildings, retail stores, restaurants, medical facilities, and other commercial properties throughout South Alabama."
+        },
+        {
+          question: "Do you work around our business hours?",
+          answer: "Yes! We can work evenings, weekends, or during off-hours to minimize disruption to your normal business operations."
+        },
+        {
+          question: "What paint brands do you use for commercial work?",
+          answer: "We use commercial-grade paints from Sherwin-Williams, Benjamin Moore, and PPG, specifically designed for high-traffic areas and commercial environments."
+        },
+        {
+          question: "How long does a commercial painting project take?",
+          answer: "Project duration depends on size and complexity. Small offices may take 2-3 days, while large facilities like schools or churches may take 1-2 weeks. We provide detailed timelines during your free estimate."
+        },
+        {
+          question: "Do you provide maintenance schedules?",
+          answer: "Yes, we provide detailed maintenance recommendations and schedules to help extend the life of your commercial paint job and plan for future touch-ups."
+        },
+        {
+          question: "Are you licensed and insured for commercial work?",
+          answer: "Yes, we are fully licensed and insured for commercial painting work, providing protection for your business and property."
+        },
+        {
+          question: "How much does commercial painting cost?",
+          answer: "Commercial painting costs vary based on facility size, complexity, and requirements. We provide free, detailed estimates with no obligation. Most small offices range from $2,000-5,000, while large facilities may cost $10,000-50,000 or more."
+        }
+      ]}
+    />
+    
+    <!-- Related Services and Locations -->
+    <RelatedServices 
+      currentService="/commercial-painting"
+      showLocations={true}
+      showServices={true}
+      showBlog={true}
+    />
   </main>
-
-  <style>
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
-    .service-hero {
-      padding: 6rem 0 4rem;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      text-align: center;
-    }
-
-    .service-hero h1 {
-      font-size: clamp(2.5rem, 5vw, 3.5rem);
-      margin-bottom: 1.5rem;
-    }
-
-    .lead {
-      font-size: clamp(1.1rem, 2vw, 1.5rem);
-      margin-bottom: 2rem;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .cta-buttons {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 1rem 2rem;
-      border-radius: 0.5rem;
-      text-decoration: none;
-      font-weight: 600;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .btn-primary {
-      background: white;
-      color: #667eea;
-    }
-
-    .btn-secondary {
-      background: rgba(255, 255, 255, 0.2);
-      color: white;
-      border: 2px solid white;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    .services-detailed {
-      padding: 5rem 0;
-    }
-
-    .services-detailed h2 {
-      text-align: center;
-      font-size: clamp(2rem, 4vw, 2.5rem);
-      margin-bottom: 3rem;
-      color: #333;
-    }
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-bottom: 4rem;
-    }
-
-    .service-item {
-      background: white;
-      padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      border-left: 4px solid #667eea;
-    }
-
-    .service-item h3 {
-      color: #667eea;
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
-    }
-
-    .service-item p {
-      margin-bottom: 1rem;
-      line-height: 1.6;
-      color: #555;
-    }
-
-    .service-item ul {
-      margin: 1rem 0;
-      padding-left: 1.5rem;
-    }
-
-    .service-item li {
-      margin-bottom: 0.5rem;
-      color: #555;
-    }
-
-    .service-areas {
-      margin-bottom: 3rem;
-    }
-
-    .service-areas h2 {
-      text-align: center;
-      margin-bottom: 2rem;
-      color: #333;
-    }
-
-    .service-areas > p {
-      text-align: center;
-      margin-bottom: 2rem;
-      color: #555;
-    }
-
-    .areas-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-
-    .area-column h3 {
-      color: #667eea;
-      margin-bottom: 1rem;
-      font-size: 1.2rem;
-    }
-
-    .area-column ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .area-column li {
-      padding: 0.5rem 0;
-      color: #555;
-      border-bottom: 1px solid #e0e0e0;
-    }
-
-    .area-column li:last-child {
-      border-bottom: none;
-    }
-
-    .cta-section {
-      text-align: center;
-      padding: 3rem 0;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      border-radius: 1rem;
-    }
-
-    .cta-section h2 {
-      margin-bottom: 1rem;
-      font-size: 2rem;
-    }
-
-    .cta-section p {
-      margin-bottom: 2rem;
-      font-size: 1.1rem;
-      opacity: 0.95;
-    }
-
-    @media (max-width: 768px) {
-      .service-hero {
-        padding: 4rem 0 2rem;
-      }
-
-      .services-detailed {
-        padding: 3rem 0;
-      }
-
-      .service-item {
-        padding: 1.5rem;
-      }
-    }
-  </style>
 </BaseLayout>
-

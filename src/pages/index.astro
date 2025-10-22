@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectGallery from '../components/ProjectGallery.astro';
+import Testimonials from '../components/Testimonials.astro';
 
 // SEO Keywords for CallBrownsPainting.com
 const keywords = 'painting contractor Brewton AL, residential painting Conecuh County, commercial painting Escambia County, interior painting Baldwin County, exterior painting South Alabama, house painter Evergreen AL, painting services Atmore AL, professional painter Monroeville AL, painting contractor Bay Minette AL, house painting Foley AL, commercial painter Fairhope AL, residential painter Daphne AL, painting services Spanish Fort AL, house painter Gulf Shores AL, painting contractor Orange Beach AL';
@@ -16,759 +18,804 @@ const keywords = 'painting contractor Brewton AL, residential painting Conecuh C
       <div class="container">
         <div class="hero-content">
           <div class="hero-text">
-            <h1>Professional Painting Services in South Alabama</h1>
-            <p class="lead">
-              Barry "Boomer" Brown brings 25+ years of painting expertise to Brewton, Conecuh, Escambia, and Baldwin Counties. Quality interior and exterior painting for homes, businesses, churches, schools, and gymnasiums.
-            </p>
-            <div class="hero-cta">
-              <a href="tel:+1234567890" class="btn btn-primary">Call Now: (251) XXX-XXXX</a>
-              <a href="/contact" class="btn btn-secondary">Get Free Estimate</a>
-            </div>
-          </div>
-          <div class="hero-form">
-            <div class="quote-form">
-              <h3>Get Your Free Painting Estimate</h3>
-              <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="tel" placeholder="Phone Number" required>
-                <input type="email" placeholder="Email Address" required>
-                <select required>
-                  <option value="">Select Service Type</option>
-                  <option value="interior">Interior Painting</option>
-                  <option value="exterior">Exterior Painting</option>
-                  <option value="commercial">Commercial Painting</option>
-                  <option value="both">Both Interior & Exterior</option>
-                </select>
-                <textarea placeholder="Project Details (Optional)"></textarea>
-                <button type="submit" class="btn btn-form">Get Free Estimate</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Trust Signals Section -->
-    <section class="trust-signals">
-      <div class="container">
-        <div class="trust-grid">
-          <div class="trust-item">
-            <div class="trust-icon">🏠</div>
-            <h3>Locally Owned & Operated</h3>
-            <p>Based in Brewton, Alabama</p>
-          </div>
-          <div class="trust-item">
-            <div class="trust-icon">⭐</div>
-            <h3>25+ Years Experience</h3>
-            <p>Professional painting expertise</p>
-          </div>
-          <div class="trust-item">
-            <div class="trust-icon">🛡️</div>
-            <h3>Licensed & Insured</h3>
-            <p>Fully protected and bonded</p>
-          </div>
-          <div class="trust-item">
-            <div class="trust-icon">💰</div>
-            <h3>Free Estimates</h3>
-            <p>No-obligation quotes</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="features">
-      <div class="container">
-        <h2>Our Painting Services</h2>
-        <div class="feature-grid">
-          <article class="feature-card">
-            <div class="feature-icon">🏠</div>
-            <h3>Interior Painting</h3>
-            <p>Transform your indoor spaces with professional interior painting services. We specialize in humidity-resistant paints perfect for Alabama's climate.</p>
-            <a href="/interior-painting" class="feature-link">Learn More →</a>
-          </article>
-          <article class="feature-card">
-            <div class="feature-icon">🏡</div>
-            <h3>Exterior Painting</h3>
-            <p>Protect and beautify your property with weather-resistant exterior painting. Specialized solutions for coastal and inland properties.</p>
-            <a href="/exterior-painting" class="feature-link">Learn More →</a>
-          </article>
-          <article class="feature-card">
-            <div class="feature-icon">🏢</div>
-            <h3>Commercial Painting</h3>
-            <p>Complete commercial painting solutions for businesses, churches, schools, and institutions. We work around your schedule.</p>
-            <a href="/commercial-painting" class="feature-link">Learn More →</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Extensive SEO Content Section -->
-    <section class="content">
-      <div class="container">
-        <article>
-          <h2>Professional Painting Services in South Alabama</h2>
-          <p>
-            CallBrownsPainting.com is your trusted local painting contractor serving Brewton, Conecuh County, Escambia County, and Baldwin County. 
-            With over 25 years of experience, Barry "Boomer" Brown specializes in both interior and exterior painting for residential and commercial properties.
-          </p>
-          <p>
-            Our comprehensive painting services include homes, businesses, churches, schools, and gymnasiums throughout South Alabama. 
-            We serve communities including Evergreen, Flomaton, Atmore, Monroeville, Bay Minette, Loxley, Stapleton, Robertsdale, 
-            Summerdale, Foley, Silver Hill, Fairhope, Daphne, Spanish Fort, Gulf Shores, and Orange Beach.
-          </p>
-          <p>
-            Whether you need interior painting to refresh your home's appearance or exterior painting to protect your property from Alabama's 
-            coastal weather, our professional team delivers quality results on time and within budget. We use premium paints and proven techniques 
-            to ensure lasting beauty and protection for your investment.
-          </p>
-        </article>
-
-        <!-- Service Areas Detailed -->
-        <div class="service-areas-detailed">
-          <h2>Painting Services by County and City</h2>
-          
-          <div class="county-section">
-            <h3>Baldwin County Painting Services</h3>
-            <p>Baldwin County is Alabama's fastest-growing county, and we provide comprehensive painting services throughout this coastal region. Our Baldwin County painting services include:</p>
-            <ul>
-              <li><strong>Fairhope Painting:</strong> Interior painting, exterior painting, and drywall repair services for Eastern Shore properties</li>
-              <li><strong>Daphne Painting:</strong> Professional painters specializing in residential and commercial properties</li>
-              <li><strong>Foley Painting:</strong> Deck staining, coastal home painting, and vacation rental repainting</li>
-              <li><strong>Gulf Shores Painting:</strong> Beach house painting, salt air damage repair, and same-day painting services</li>
-              <li><strong>Orange Beach Painting:</strong> Vacation rental repainting and coastal weather-resistant finishes</li>
-              <li><strong>Bay Minette Painting:</strong> Farm and barn painting, agricultural property maintenance</li>
-              <li><strong>Spanish Fort Painting:</strong> Residential and commercial painting for Eastern Shore communities</li>
-              <li><strong>Loxley Painting:</strong> Rural property painting and farm building maintenance</li>
-            </ul>
-          </div>
-
-          <div class="county-section">
-            <h3>Escambia County Painting Services</h3>
-            <p>Based in Brewton, Alabama, we provide expert painting services throughout Escambia County. Our Escambia County painting services include:</p>
-            <ul>
-              <li><strong>Brewton Painting:</strong> House painting, commercial painting, and smoke damage repair services</li>
-              <li><strong>Atmore Painting:</strong> Residential painting, commercial painting, and epoxy floor coating</li>
-              <li><strong>Flomaton Painting:</strong> Interior painting, exterior painting, and drywall repair</li>
-              <li><strong>Uriah Painting:</strong> Residential properties and small business painting services</li>
-            </ul>
-          </div>
-
-          <div class="county-section">
-            <h3>Conecuh County Painting Services</h3>
-            <p>We extend our painting expertise to Conecuh County communities, providing quality residential and commercial painting services:</p>
-            <ul>
-              <li><strong>Evergreen Painting:</strong> Home painting, exterior painting, and commercial repaint services</li>
-              <li><strong>Monroeville Painting:</strong> Residential and commercial painting for Monroe County area</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Painting Services by Type -->
-        <div class="services-by-type">
-          <h2>Complete Painting Services for Every Need</h2>
-          
-          <div class="service-type">
-            <h3>Interior Painting Services</h3>
-            <p>Transform your indoor spaces with our professional interior painting services. We specialize in:</p>
-            <ul>
-              <li><strong>Residential Interior Painting:</strong> Living rooms, bedrooms, kitchens, bathrooms, and hallways</li>
-              <li><strong>Commercial Interior Painting:</strong> Offices, retail spaces, restaurants, and medical facilities</li>
-              <li><strong>Cabinet Refinishing:</strong> Kitchen cabinets, bathroom vanities, and built-in storage</li>
-              <li><strong>Drywall Repair:</strong> Crack repair, hole patching, and texture matching</li>
-              <li><strong>Color Consultation:</strong> Professional color selection and design advice</li>
-              <li><strong>Humidity-Resistant Paints:</strong> Specialized paints for Alabama's humid climate</li>
-            </ul>
-          </div>
-
-          <div class="service-type">
-            <h3>Exterior Painting Services</h3>
-            <p>Protect and beautify your property with our comprehensive exterior painting services:</p>
-            <ul>
-              <li><strong>House Exterior Painting:</strong> Complete home exterior makeovers</li>
-              <li><strong>Siding and Trim Work:</strong> Vinyl, wood, and composite siding painting</li>
-              <li><strong>Deck and Porch Painting:</strong> Deck staining and porch restoration</li>
-              <li><strong>Coastal Weather Protection:</strong> Salt-air resistant paints for beach properties</li>
-              <li><strong>Farm and Barn Painting:</strong> Agricultural building maintenance and restoration</li>
-              <li><strong>Weather-Resistant Finishes:</strong> Paints designed for Alabama's challenging climate</li>
-            </ul>
-          </div>
-
-          <div class="service-type">
-            <h3>Commercial Painting Services</h3>
-            <p>Professional commercial painting solutions for businesses and institutions:</p>
-            <ul>
-              <li><strong>Office Building Painting:</strong> Corporate offices and professional buildings</li>
-              <li><strong>Church and School Painting:</strong> Religious and educational facility painting</li>
-              <li><strong>Gymnasium Painting:</strong> Sports facilities and recreational buildings</li>
-              <li><strong>Retail Space Painting:</strong> Stores, restaurants, and shopping centers</li>
-              <li><strong>Industrial Painting:</strong> Warehouses, manufacturing facilities, and industrial buildings</li>
-              <li><strong>Epoxy Floor Coating:</strong> Garage floors, basements, and commercial spaces</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Why Choose Us Detailed -->
-        <div class="why-choose-detailed">
-          <h2>Why Choose CallBrownsPainting.com for Your Painting Project?</h2>
-          
-          <div class="benefit-section">
-            <h3>25+ Years of Professional Experience</h3>
-            <p>Barry "Boomer" Brown brings over two decades of painting expertise to every project. Our extensive experience includes:</p>
-            <ul>
-              <li>Residential painting for thousands of South Alabama homes</li>
-              <li>Commercial painting for businesses, churches, schools, and gymnasiums</li>
-              <li>Specialized coastal painting for Gulf Shores and Orange Beach properties</li>
-              <li>Agricultural painting for farms and barns throughout Baldwin County</li>
-              <li>Emergency repair services for smoke damage and water damage restoration</li>
-            </ul>
-          </div>
-
-          <div class="benefit-section">
-            <h3>Local Knowledge and Expertise</h3>
-            <p>As a locally owned and operated business, we understand the unique challenges of painting in South Alabama:</p>
-            <ul>
-              <li><strong>Climate Expertise:</strong> We know how Alabama's humidity affects paint performance</li>
-              <li><strong>Coastal Specialization:</strong> Salt-air resistant paints and techniques for beach properties</li>
-              <li><strong>Architectural Knowledge:</strong> Experience with historic homes, modern construction, and commercial buildings</li>
-              <li><strong>Local Regulations:</strong> Understanding of building codes and permit requirements</li>
-              <li><strong>Community Relationships:</strong> Trusted by local businesses, churches, and homeowners</li>
-            </ul>
-          </div>
-
-          <div class="benefit-section">
-            <h3>Quality Materials and Workmanship</h3>
-            <p>We use only premium paints and materials to ensure lasting results:</p>
-            <ul>
-              <li><strong>Premium Paint Brands:</strong> Sherwin Williams, Benjamin Moore, and other top-quality brands</li>
-              <li><strong>Weather-Resistant Finishes:</strong> Paints specifically designed for Alabama's climate</li>
-              <li><strong>Proper Surface Preparation:</strong> Thorough cleaning, sanding, and priming</li>
-              <li><strong>Professional Application:</strong> Expert techniques for smooth, even coverage</li>
-              <li><strong>Quality Control:</strong> Detailed inspection and touch-up services</li>
-            </ul>
-          </div>
-
-          <div class="benefit-section">
-            <h3>Licensed, Insured, and Reliable</h3>
-            <p>Your protection and peace of mind are our priorities:</p>
-            <ul>
-              <li><strong>Fully Licensed:</strong> Licensed painting contractor in Alabama</li>
-              <li><strong>Comprehensive Insurance:</strong> Liability and workers' compensation coverage</li>
-              <li><strong>Bonded:</strong> Additional protection for your investment</li>
-              <li><strong>Reliable Scheduling:</strong> We show up on time and complete projects as promised</li>
-              <li><strong>Clean Work Areas:</strong> We protect your property and clean up thoroughly</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- FAQ Section -->
-        <div class="faq-section">
-          <h2>Frequently Asked Questions About Painting Services</h2>
-          
-          <div class="faq-item">
-            <h3>How much does interior painting cost in South Alabama?</h3>
-            <p>Interior painting costs vary based on room size, surface condition, and paint quality. We provide free, detailed estimates for all projects. Typical interior painting ranges from $3-7 per square foot depending on complexity and materials.</p>
-          </div>
-
-          <div class="faq-item">
-            <h3>What's the best paint for Alabama's humid climate?</h3>
-            <p>We recommend moisture-resistant paints specifically designed for humid climates. Our preferred brands include Sherwin Williams Duration and Benjamin Moore Aura, which provide excellent adhesion and durability in Alabama's humidity.</p>
-          </div>
-
-          <div class="faq-item">
-            <h3>How long does exterior painting take?</h3>
-            <p>Most exterior painting projects take 3-7 days depending on home size and weather conditions. We work efficiently while ensuring proper drying time between coats. Weather delays are factored into our timeline estimates.</p>
-          </div>
-
-          <div class="faq-item">
-            <h3>Do you provide free estimates?</h3>
-            <p>Yes! We provide comprehensive, no-obligation estimates for all painting projects. Our estimates include detailed breakdowns of materials, labor, and timeline. Contact us today to schedule your free estimate.</p>
-          </div>
-
-          <div class="faq-item">
-            <h3>What areas do you serve?</h3>
-            <p>We serve Brewton, Conecuh County, Escambia County, and Baldwin County. This includes Fairhope, Daphne, Foley, Gulf Shores, Orange Beach, Bay Minette, Spanish Fort, Atmore, Flomaton, Evergreen, Monroeville, and surrounding communities.</p>
-          </div>
-
-          <div class="faq-item">
-            <h3>Do you work around my schedule?</h3>
-            <p>Absolutely! We understand that painting projects need to fit into your life. We work around your schedule, including evenings and weekends when necessary. For commercial projects, we can work after hours to minimize business disruption.</p>
-          </div>
-        </div>
-
-        <!-- Contact Information -->
-        <div class="contact-info-section">
-          <h2>Contact CallBrownsPainting.com Today</h2>
-          <p>Ready to transform your property with professional painting services? Contact Barry "Boomer" Brown today for your free estimate.</p>
-          
-          <div class="contact-methods">
-            <div class="contact-method">
-              <h3>Call Us</h3>
-              <p><strong>(251) XXX-XXXX</strong></p>
-              <p>Available 7 days a week for estimates and emergency services</p>
-            </div>
+            <h1>Quality, <span class="highlight">It's What We Do!</span></h1>
             
-            <div class="contact-method">
-              <h3>Get Free Estimate</h3>
-              <p>Schedule your no-obligation estimate online or by phone</p>
-              <a href="/contact" class="btn btn-primary">Request Estimate</a>
+            <div class="phone-number">
+              <span class="phone-label">Call Brown's Painting Today at</span>
+              <a href="tel:+12512374545" class="phone-link">(251) 237-4545</a>
             </div>
-            
-            <div class="contact-method">
-              <h3>Service Areas</h3>
-              <p>Brewton, Conecuh County, Escambia County, Baldwin County</p>
-              <p>Fairhope, Daphne, Foley, Gulf Shores, Orange Beach, Bay Minette, Spanish Fort, Atmore, Flomaton, Evergreen, Monroeville</p>
+          </div>
+          
+          <div class="hero-image">
+            <div class="image-container">
+              <div class="image-overlay">
+                <div class="service-badges">
+                  <div class="service-badge">Interior Painting</div>
+                  <div class="service-badge">Exterior Painting</div>
+                  <div class="service-badge">Commercial</div>
+                </div>
+                <div class="cta-center">
+                  <a href="/contact" class="btn btn-primary">
+                    <span class="btn-icon">📋</span>
+                    Get A Free Quote
+                  </a>
+                </div>
+                <div class="image-text">
+                  <h3>Professional Painting Services</h3>
+                  <p>Serving South Alabama Since 1999</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Call to Action -->
-    <section id="contact" class="cta">
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
       <div class="container">
-        <h2>Ready for Professional Painting Services?</h2>
-        <p>Contact Barry "Boomer" Brown today for a free estimate on your interior or exterior painting project.</p>
-        <a href="/contact" class="btn btn-primary">Get Free Estimate</a>
+        <div class="horizontal-layout">
+          <div class="content-left">
+            <h2>Why Choose Brown's Painting?</h2>
+            <p class="subtitle">25+ years of trusted service across South Alabama</p>
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon">⭐</div>
+                <div class="feature-text">
+                  <h4>25+ Years Experience</h4>
+                  <p>Decades of proven expertise in residential and commercial painting</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">🛡️</div>
+                <div class="feature-text">
+                  <h4>100% Satisfaction Guarantee</h4>
+                  <p>We stand behind our work with a complete satisfaction guarantee</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">🏠</div>
+                <div class="feature-text">
+                  <h4>Family Owned & Operated</h4>
+                  <p>Local business with personal attention to every project</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-right">
+            <div class="stats-box">
+              <div class="stat-item">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Projects Completed</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Satisfaction Rate</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">25+</div>
+                <div class="stat-label">Years Experience</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+      <div class="container">
+        <div class="horizontal-layout">
+          <div class="content-left">
+            <h2>Our Painting Services</h2>
+            <p class="subtitle">Complete painting solutions for your home or business</p>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-icon">🏠</div>
+                <div class="service-text">
+                  <h4>Interior Painting</h4>
+                  <p>Transform your living spaces with professional interior painting services. We handle everything from prep work to final cleanup.</p>
+                </div>
+              </div>
+              <div class="service-item">
+                <div class="service-icon">🏡</div>
+                <div class="service-text">
+                  <h4>Exterior Painting</h4>
+                  <p>Protect and beautify your home's exterior with our weather-resistant paint solutions designed for Alabama's climate.</p>
+                </div>
+              </div>
+              <div class="service-item">
+                <div class="service-icon">🏢</div>
+                <div class="service-text">
+                  <h4>Commercial Painting</h4>
+                  <p>Professional painting services for businesses, offices, and commercial properties with minimal disruption.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-right">
+            <div class="service-image-large">
+              <div class="image-placeholder">🎨</div>
+              <div class="image-overlay">
+                <h3>Professional Results</h3>
+                <p>Every project completed to the highest standards</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Gallery -->
+    <ProjectGallery />
+
+    <!-- Testimonials -->
+    <Testimonials />
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ready to Transform Your Property?</h2>
+        <p>Contact Brown's Painting LLC today for your free estimate. We serve all of South Alabama with professional, reliable service.</p>
+        <div class="cta-buttons">
+          <a href="/contact" class="btn btn-primary">Get Free Estimate</a>
+          <a href="tel:+12512374545" class="btn btn-secondary">Call (251) 237-4545</a>
+        </div>
       </div>
     </section>
   </main>
+</BaseLayout>
 
-  <style>
-    /* Container */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
+<style>
+  /* Hero Section - A-Grade Design */
+  .hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #3b82f6 100%);
+    color: white;
+    padding: 3rem 0 2rem;
+    position: relative;
+    overflow: hidden;
+  }
 
-    /* Hero Section - Service Scaler Style */
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(59, 130, 246, 0.2) 0%, transparent 50%);
+    opacity: 0.6;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="0.5" fill="white" opacity="0.05"/><circle cx="75" cy="75" r="0.5" fill="white" opacity="0.05"/><circle cx="50" cy="10" r="0.3" fill="white" opacity="0.03"/><circle cx="10" cy="60" r="0.3" fill="white" opacity="0.03"/><circle cx="90" cy="40" r="0.3" fill="white" opacity="0.03"/><circle cx="30" cy="70" r="0.2" fill="white" opacity="0.02"/><circle cx="70" cy="30" r="0.2" fill="white" opacity="0.02"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.4;
+  }
+
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    min-height: 350px;
+  }
+
+  .hero-text {
+    max-width: 700px;
+    text-align: center;
+  }
+
+
+  .hero h1 {
+    font-size: clamp(3rem, 5vw, 4rem);
+    font-weight: 800;
+    margin-bottom: 2rem;
+    line-height: 1.1;
+    color: white;
+  }
+
+  .highlight {
+    color: #fbbf24;
+    position: relative;
+  }
+
+  .highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #fbbf24;
+    border-radius: 2px;
+  }
+
+  .lead {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 400;
+  }
+
+
+  .phone-number {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .cta-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 2rem 0;
+  }
+
+  .phone-label {
+    font-weight: 500;
+  }
+
+  .phone-link {
+    color: #fbbf24;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.125rem;
+  }
+
+  .phone-link:hover {
+    color: #f59e0b;
+    text-decoration: underline;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.25rem 2.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #1f2937;
+    box-shadow: 
+      0 8px 25px rgba(251, 191, 36, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .btn-primary:hover::before {
+    left: 100%;
+  }
+
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    transform: translateY(-3px);
+    box-shadow: 
+      0 12px 35px rgba(251, 191, 36, 0.6),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  }
+
+  .btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  .btn-icon {
+    font-size: 1.25rem;
+  }
+
+
+  .hero-image {
+    position: relative;
+  }
+
+  .image-container {
+    background: 
+      linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #1d4ed8 100%),
+      url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500"><defs><pattern id="paint" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="40" height="40" fill="rgba(255,255,255,0.05)"/><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.08)"/><circle cx="30" cy="30" r="1" fill="rgba(255,255,255,0.08)"/></pattern></defs><rect width="400" height="500" fill="url(%23paint)"/></svg>');
+    border-radius: 24px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+      0 25px 50px rgba(0, 0, 0, 0.3),
+      0 0 0 1px rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .image-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+      0 35px 70px rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(255, 255, 255, 0.2);
+  }
+
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(30, 64, 175, 0.8) 0%, rgba(59, 130, 246, 0.6) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+
+  .service-badges {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .service-badge {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.1) 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .service-badge:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.15) 100%);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  .image-text {
+    text-align: center;
+    color: white;
+  }
+
+  .image-text h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+
+  .image-text p {
+    font-size: 1.125rem;
+    opacity: 0.9;
+    font-weight: 500;
+  }
+
+  /* Hero Form */
+  .hero-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .quote-form h3 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .quote-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .quote-form input,
+  .quote-form select,
+  .quote-form textarea {
+    padding: 0.75rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s;
+  }
+
+  .quote-form input:focus,
+  .quote-form select:focus,
+  .quote-form textarea:focus {
+    outline: none;
+    border-color: #667eea;
+  }
+
+  .quote-form textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+
+  .btn-form {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Services Section */
+  .services {
+    padding: 4rem 0;
+    background: #f8fafc;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .services h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  .section-subtitle {
+    text-align: center;
+    color: #6b7280;
+    font-size: 1.125rem;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .service-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  .service-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .service-badges {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .service-badge {
+    background: #3b82f6;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: #667eea;
+    border: 2px solid #667eea;
+  }
+
+  .btn-outline:hover {
+    background: #667eea;
+    color: white;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  .cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Mobile Responsive - A-Grade */
+  @media (max-width: 768px) {
     .hero {
-      padding: 4rem 0;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
+      padding: 6rem 0 4rem;
     }
 
     .hero-content {
-      display: grid;
-      grid-template-columns: 1fr 400px;
+      grid-template-columns: 1fr;
       gap: 3rem;
-      align-items: center;
+      text-align: center;
     }
 
     .hero-text {
-      text-align: left;
+      max-width: 100%;
     }
 
     .hero h1 {
-      font-size: clamp(2.5rem, 5vw, 3.5rem);
-      font-weight: 700;
+      font-size: 2.5rem;
       margin-bottom: 1.5rem;
-      line-height: 1.2;
     }
 
-    .lead {
-      font-size: clamp(1.1rem, 2vw, 1.3rem);
-      margin-bottom: 2rem;
-      opacity: 0.95;
-      line-height: 1.6;
-    }
-
-    .hero-cta {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .hero-form {
-      background: white;
-      padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    }
-
-    .quote-form h3 {
-      color: #333;
-      margin-bottom: 1.5rem;
-      font-size: 1.5rem;
-      text-align: center;
-    }
-
-    .quote-form form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .quote-form input,
-    .quote-form select,
-    .quote-form textarea {
-      padding: 0.75rem;
-      border: 2px solid #e0e0e0;
-      border-radius: 0.5rem;
-      font-size: 1rem;
-      font-family: inherit;
-      transition: border-color 0.3s;
-    }
-
-    .quote-form input:focus,
-    .quote-form select:focus,
-    .quote-form textarea:focus {
-      outline: none;
-      border-color: #667eea;
-    }
-
-    .quote-form textarea {
-      resize: vertical;
-      min-height: 80px;
-    }
-
-    /* Buttons */
-    .btn {
-      display: inline-block;
-      padding: 1rem 2rem;
-      border-radius: 0.5rem;
-      text-decoration: none;
-      font-weight: 600;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    .btn-primary {
-      background: #ff6b35;
-      color: white;
-      font-weight: 700;
-    }
-
-    .btn-secondary {
-      background: rgba(255, 255, 255, 0.2);
-      color: white;
-      border: 2px solid white;
-    }
-
-    .btn-form {
-      background: #667eea;
-      color: white;
-      font-weight: 700;
-      padding: 1rem;
-      width: 100%;
-    }
-
-    /* Trust Signals Section */
-    .trust-signals {
-      padding: 3rem 0;
-      background: white;
-    }
-
-    .trust-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 2rem;
-    }
-
-    .trust-item {
-      text-align: center;
-      padding: 1.5rem;
-    }
-
-    .trust-icon {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    .trust-item h3 {
-      color: #333;
-      margin-bottom: 0.5rem;
-      font-size: 1.2rem;
-    }
-
-    .trust-item p {
-      color: #666;
-      font-size: 0.9rem;
-    }
-
-    /* Features Section */
-    .features {
-      padding: 5rem 0;
-      background: #f8f9fa;
-    }
-
-    .features h2 {
-      text-align: center;
-      font-size: clamp(2rem, 4vw, 2.5rem);
-      margin-bottom: 3rem;
-      color: #333;
-    }
-
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-
-    .feature-card {
-      background: white;
-      padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    }
-
-    .feature-card h3 {
-      color: #667eea;
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
-    }
-
-    /* Content Section */
-    .content {
-      padding: 5rem 0;
-    }
-
-    .content article {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .content h2 {
-      font-size: clamp(1.8rem, 3vw, 2.2rem);
-      margin-bottom: 1.5rem;
-      color: #333;
-    }
-
-    .content p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      margin-bottom: 1.5rem;
-      color: #555;
-    }
-
-    /* Service Areas Detailed */
-    .service-areas-detailed {
-      margin: 4rem 0;
-    }
-
-    .county-section {
-      background: white;
-      padding: 2rem;
-      margin: 2rem 0;
-      border-radius: 12px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-      border-left: 4px solid #667eea;
-    }
-
-    .county-section h3 {
-      color: #667eea;
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .county-section ul {
-      margin: 1rem 0;
-      padding-left: 1.5rem;
-    }
-
-    .county-section li {
-      margin-bottom: 0.5rem;
-      color: #555;
-    }
-
-    /* Services by Type */
-    .services-by-type {
-      margin: 4rem 0;
-    }
-
-    .service-type {
-      background: #f8f9fa;
-      padding: 2rem;
-      margin: 2rem 0;
-      border-radius: 12px;
-      border: 1px solid #e5e7eb;
-    }
-
-    .service-type h3 {
-      color: #667eea;
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .service-type ul {
-      margin: 1rem 0;
-      padding-left: 1.5rem;
-    }
-
-    .service-type li {
-      margin-bottom: 0.5rem;
-      color: #555;
-    }
-
-    /* Why Choose Us Detailed */
-    .why-choose-detailed {
-      margin: 4rem 0;
-    }
-
-    .benefit-section {
-      background: white;
-      padding: 2rem;
-      margin: 2rem 0;
-      border-radius: 12px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    }
-
-    .benefit-section h3 {
-      color: #667eea;
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .benefit-section ul {
-      margin: 1rem 0;
-      padding-left: 1.5rem;
-    }
-
-    .benefit-section li {
-      margin-bottom: 0.5rem;
-      color: #555;
-    }
-
-    /* FAQ Section */
-    .faq-section {
-      margin: 4rem 0;
-    }
-
-    .faq-item {
-      background: white;
-      padding: 2rem;
-      margin: 1.5rem 0;
-      border-radius: 12px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-      border-left: 4px solid #667eea;
-    }
-
-    .faq-item h3 {
-      color: #667eea;
-      font-size: 1.25rem;
-      margin-bottom: 1rem;
-    }
-
-    .faq-item p {
-      color: #555;
-      line-height: 1.6;
-    }
-
-    /* Contact Info Section */
-    .contact-info-section {
-      margin: 4rem 0;
-      background: #f8f9fa;
-      padding: 3rem;
-      border-radius: 12px;
-    }
-
-    .contact-methods {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .contact-method {
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    }
-
-    .contact-method h3 {
-      color: #667eea;
-      font-size: 1.25rem;
-      margin-bottom: 1rem;
-    }
-
-    .contact-method p {
-      color: #555;
-      margin-bottom: 1rem;
-    }
-
-    /* CTA Section */
-    .cta {
-      padding: 5rem 0;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      text-align: center;
-    }
-
-    .cta h2 {
-      font-size: clamp(2rem, 4vw, 2.5rem);
-      margin-bottom: 1rem;
-    }
-
-    .cta p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      opacity: 0.95;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .hero-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        text-align: center;
-      }
-
-      .hero-text {
-        text-align: center;
-      }
-
-      .hero-form {
-        max-width: 400px;
-        margin: 0 auto;
-      }
-
-      .hero-cta {
+      .phone-number {
         justify-content: center;
+        margin-top: 1rem;
       }
 
-      .trust-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .feature-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .features,
-      .content,
-      .cta {
-        padding: 3rem 0;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .trust-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-cta {
-        flex-direction: column;
-        align-items: center;
+      .cta-center {
+        padding: 1rem 0;
       }
 
       .btn {
         width: 100%;
         max-width: 300px;
+        justify-content: center;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+      }
+
+      .image-container {
+        height: 350px;
+      }
+
+      .service-badges {
+        justify-content: center;
+      }
+
+      .image-text h3 {
+        font-size: 1.5rem;
+      }
+
+      .image-text p {
+        font-size: 1rem;
       }
     }
-  </style>
-</BaseLayout>
 
+    @media (max-width: 480px) {
+      .hero {
+        padding: 4rem 0 3rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+
+  /* Horizontal Layout Sections */
+  .why-choose-us {
+    background: #f8fafc;
+    padding: 5rem 0;
+  }
+
+  .services {
+    background: white;
+    padding: 5rem 0;
+  }
+
+  .horizontal-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .content-left h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1f2937;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
+    color: #6b7280;
+    font-weight: 500;
+    margin-bottom: 2.5rem;
+  }
+
+  .features-list, .services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .feature-item, .service-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .feature-icon, .service-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+    margin-top: 0.5rem;
+  }
+
+  .feature-text h4, .service-text h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+  }
+
+  .feature-text p, .service-text p {
+    color: #6b7280;
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+
+  .stats-box {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    padding: 3rem;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+  }
+
+  .stat-item {
+    margin-bottom: 2rem;
+  }
+
+  .stat-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fbbf24;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .service-image-large {
+    height: 400px;
+    background: linear-gradient(135deg, #1f2937, #374151);
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .image-placeholder {
+    font-size: 6rem;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    padding: 2rem;
+    color: white;
+    text-align: center;
+  }
+
+  .image-overlay h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .image-overlay p {
+    font-size: 1rem;
+    opacity: 0.9;
+  }
+
+  @media (max-width: 768px) {
+    .horizontal-layout {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    
+    .content-left h2 {
+      font-size: 2rem;
+    }
+    
+    .stats-box {
+      padding: 2rem;
+    }
+    
+    .service-image-large {
+      height: 300px;
+    }
+  }
+</style>

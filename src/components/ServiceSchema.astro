@@ -1,0 +1,103 @@
+---
+// Service schema data
+export interface ServiceSchemaProps {
+  serviceName: string;
+  serviceDescription: string;
+  serviceUrl: string;
+  serviceType: string;
+  priceRange?: string;
+  areaServed?: string[];
+  serviceImage?: string;
+}
+
+const { 
+  serviceName, 
+  serviceDescription, 
+  serviceUrl, 
+  serviceType, 
+  priceRange = "$$",
+  areaServed = ["Brewton, AL", "Evergreen, AL", "Atmore, AL", "Flomaton, AL", "Bay Minette, AL", "Loxley, AL", "Robertsdale, AL", "Summerdale, AL", "Foley, AL", "Fairhope, AL", "Spanish Fort, AL", "Daphne, AL", "Orange Beach, AL", "Gulf Shores, AL", "Mobile, AL", "Monroeville, AL"],
+  serviceImage = "https://callbrownspainting.com/assets/service-default.jpg"
+} = Astro.props;
+
+// Generate area served objects
+const areaServedObjects = areaServed.map(area => ({
+  "@type": "Place",
+  "name": area
+}));
+---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{serviceName}",
+  "description": "{serviceDescription}",
+  "url": "{serviceUrl}",
+  "image": "{serviceImage}",
+  "provider": {
+    "@type": "HousePainter",
+    "@id": "https://callbrownspainting.com/#business",
+    "name": "Brown's Painting LLC",
+    "alternateName": "Brown's Painting",
+    "url": "https://callbrownspainting.com/",
+    "telephone": "+1-251-237-4545",
+    "email": "hello@callbrownspainting.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Brewton",
+      "addressRegion": "AL",
+      "postalCode": "36426",
+      "addressCountry": "US"
+    },
+    "founder": "Barry \"Boomer\" Brown",
+    "foundingDate": "2018",
+    "slogan": "Family-Owned. Locally Trusted."
+  },
+  "serviceType": "{serviceType}",
+  "areaServed": {areaServedObjects},
+  "offers": {
+    "@type": "Offer",
+    "priceRange": "{priceRange}",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "validFrom": "2024-01-01",
+    "validThrough": "2025-12-31"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Painting Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Interior Painting",
+          "description": "Professional interior painting services for residential and commercial properties"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Exterior Painting",
+          "description": "Weather-resistant exterior painting for homes and businesses"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Commercial Painting",
+          "description": "Complete commercial painting solutions for businesses and institutions"
+        }
+      }
+    ]
+  },
+  "category": "Painting Services",
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Homeowners and Business Owners"
+  }
+}
+</script>

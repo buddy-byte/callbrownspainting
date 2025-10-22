@@ -1,0 +1,149 @@
+---
+export interface Props {
+  location?: string;
+  specialty?: string;
+  years?: number;
+}
+
+const { 
+  location = "South Alabama", 
+  specialty = "painting", 
+  years = 25 
+} = Astro.props;
+
+// Generate unique content based on location and specialty
+const getExperienceContent = (loc: string, spec: string, yrs: number) => {
+  const experiences = {
+    "Brewton": {
+      title: "Local Brewton Painting Expertise",
+      content: `With ${yrs}+ years serving Brewton and Escambia County, we understand the unique challenges of historic downtown properties, high humidity, and seasonal weather patterns that affect local homes.`
+    },
+    "Mobile": {
+      title: "Mobile Area Painting Specialists", 
+      content: `Our ${yrs}+ years of Mobile County experience includes everything from historic downtown restoration to modern waterfront homes, with expertise in coastal paint systems and hurricane-resistant finishes.`
+    },
+    "Fairhope": {
+      title: "Eastern Shore Painting Experts",
+      content: `${yrs}+ years of specialized experience serving Fairhope and the Eastern Shore, including vacation rental properties, beach homes, and the unique architectural styles of Baldwin County.`
+    },
+    "Gulf Shores": {
+      title: "Gulf Coast Painting Specialists",
+      content: `Over ${yrs} years of Gulf Shores painting experience, specializing in salt air damage repair, vacation rental maintenance, and beach house protection systems that withstand coastal weather.`
+    },
+    "Daphne": {
+      title: "Daphne Community Painting Leaders",
+      content: `${yrs}+ years serving Daphne and surrounding areas, with deep knowledge of local architectural styles, humidity management, and the specific needs of Eastern Shore homeowners.`
+    },
+    "Orange Beach": {
+      title: "Orange Beach Painting Veterans",
+      content: `Our ${yrs}+ years of Orange Beach experience includes vacation rental repainting, beach house maintenance, and same-day service for property managers who need reliable, quality work.`
+    },
+    "Foley": {
+      title: "Foley Area Painting Professionals",
+      content: `${yrs}+ years of Foley painting expertise, specializing in farm and barn painting, agricultural properties, and the unique maintenance needs of Baldwin County's rural communities.`
+    },
+    "Atmore": {
+      title: "Atmore Community Painting Experts",
+      content: `With ${yrs}+ years serving Atmore and Escambia County, we understand the challenges of historic properties, industrial areas, and the specific paint needs of this growing community.`
+    },
+    "Evergreen": {
+      title: "Evergreen Painting Specialists",
+      content: `${yrs}+ years of Conecuh County painting experience, including rural home painting, agricultural building maintenance, and the specific challenges of small-town property management.`
+    },
+    "Monroeville": {
+      title: "Monroeville Area Painting Leaders",
+      content: `Our ${yrs}+ years serving Monroeville and Monroe County includes everything from historic downtown properties to modern subdivisions, with expertise in both residential and commercial painting.`
+    },
+    "default": {
+      title: "South Alabama Painting Experience",
+      content: `${yrs}+ years of professional ${spec} experience across South Alabama, with deep knowledge of local climate challenges, architectural styles, and community needs.`
+    }
+  };
+
+  return experiences[loc] || experiences["default"];
+};
+
+const experience = getExperienceContent(location, specialty, years);
+---
+
+<div class="experience-section">
+  <h3>{experience.title}</h3>
+  <p>{experience.content}</p>
+  
+  <div class="experience-highlights">
+    <div class="highlight-item">
+      <strong>{years}+ Years</strong>
+      <span>Local Experience</span>
+    </div>
+    <div class="highlight-item">
+      <strong>Licensed & Insured</strong>
+      <span>Professional Standards</span>
+    </div>
+    <div class="highlight-item">
+      <strong>Family-Owned</strong>
+      <span>Personal Service</span>
+    </div>
+  </div>
+</div>
+
+<style>
+  .experience-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    border-left: 4px solid #3b82f6;
+  }
+
+  .experience-section h3 {
+    color: #1e3a8a;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  .experience-section p {
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  .experience-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .highlight-item {
+    text-align: center;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .highlight-item strong {
+    display: block;
+    color: #1e3a8a;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .highlight-item span {
+    color: #6b7280;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .experience-section {
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .experience-highlights {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

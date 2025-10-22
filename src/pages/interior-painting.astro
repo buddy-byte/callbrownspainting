@@ -1,26 +1,200 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ServiceSchema from '../components/ServiceSchema.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import RelatedServices from '../components/RelatedServices.astro';
+import ServiceContentFramework from '../components/ServiceContentFramework.astro';
 ---
 
 <BaseLayout
   title="Interior Painting Services - CallBrownsPainting.com"
-  description="Professional interior painting services in Brewton, Daphne, Fairhope, Foley, Gulf Shores, Orange Beach, Atmore, Evergreen, Monroeville and all South Alabama areas. Cabinet refinishing, drywall repair, humidity-resistant paint."
+  description="Expert interior painting specialists: cabinet refinishing, drywall repair, humidity-resistant paints. Serving Daphne, Fairhope, Gulf Shores, Mobile, and all South Alabama. Free color consultation included."
   keywords="interior painting Daphne AL, cabinet refinishing Fairhope AL, drywall repair Brewton AL, humidity resistant paint Eastern Shore AL, interior painters Gulf Shores AL, home painting Orange Beach AL"
 >
   <main>
-    <section class="service-hero">
-      <div class="container">
-        <h1>Professional Interior Painting Services</h1>
-        <p class="lead">
-          Transform your indoor spaces with expert interior painting services throughout South Alabama. 
-          From Daphne to Gulf Shores, we deliver humidity-resistant, long-lasting results.
-        </p>
-        <div class="cta-buttons">
-          <a href="/contact" class="btn btn-primary">Get Free Estimate</a>
-          <a href="#services" class="btn btn-secondary">View Services</a>
-        </div>
-      </div>
-    </section>
+    <!-- Breadcrumbs -->
+    <Breadcrumbs items={[
+      { name: 'Services', url: '/services' },
+      { name: 'Interior Painting', url: '/interior-painting', current: true }
+    ]} />
+    
+    <!-- Service Schema -->
+    <ServiceSchema 
+      serviceName="Interior Painting Services"
+      serviceDescription="Professional interior painting services for residential and commercial properties throughout South Alabama. Specializing in humidity-resistant paints, cabinet refinishing, drywall repair, and color consultation."
+      serviceUrl="https://callbrownspainting.com/interior-painting"
+      serviceType="Interior Painting"
+      priceRange="$$"
+      serviceImage="https://callbrownspainting.com/assets/interior-painting-service.jpg"
+    />
+
+    <!-- Service Content Framework -->
+    <ServiceContentFramework
+      serviceName="Interior Painting"
+      serviceType="interior"
+      heroTitle="Professional Interior Painting Services"
+      heroSubtitle="Transform your indoor spaces with expert interior painting services throughout South Alabama. From Daphne to Gulf Shores, we deliver humidity-resistant, long-lasting results."
+      valueProposition="With 25+ years of experience in South Alabama's unique climate, we understand the challenges of interior painting in high-humidity environments. Our specialized techniques and premium materials ensure your interior paint job will look beautiful and last for years to come."
+      whatsIncluded={[
+        {
+          title: "Color Consultation",
+          description: "Expert color advice tailored to your space, lighting, and personal style preferences.",
+          icon: "🎨"
+        },
+        {
+          title: "Surface Preparation",
+          description: "Thorough cleaning, sanding, and priming to ensure perfect paint adhesion and longevity.",
+          icon: "🔧"
+        },
+        {
+          title: "Cabinet Refinishing",
+          description: "Professional cabinet painting and refinishing with factory-quality results.",
+          icon: "🏠"
+        },
+        {
+          title: "Drywall Repair",
+          description: "Complete drywall patching, texture matching, and surface preparation services.",
+          icon: "🔨"
+        },
+        {
+          title: "Humidity-Resistant Paints",
+          description: "Specialized paint systems designed for Alabama's coastal climate and high humidity.",
+          icon: "💧"
+        },
+        {
+          title: "Cleanup & Protection",
+          description: "Complete cleanup and protection of your furniture and belongings throughout the project.",
+          icon: "🧹"
+        }
+      ]}
+      processSteps={[
+        {
+          step: 1,
+          title: "Free Consultation & Estimate",
+          description: "We visit your home to assess the project, discuss your vision, and provide a detailed written estimate with no hidden costs.",
+          duration: "30-45 minutes"
+        },
+        {
+          step: 2,
+          title: "Color Selection & Planning",
+          description: "Our color consultation helps you choose the perfect colors, and we create a detailed project timeline that works with your schedule.",
+          duration: "1-2 hours"
+        },
+        {
+          step: 3,
+          title: "Surface Preparation",
+          description: "We protect your furniture and floors, then thoroughly prepare all surfaces including cleaning, sanding, and priming where needed.",
+          duration: "1-2 days"
+        },
+        {
+          step: 4,
+          title: "Professional Painting",
+          description: "Our skilled painters apply premium paints using professional techniques, ensuring smooth, even coverage and crisp lines.",
+          duration: "2-4 days"
+        },
+        {
+          step: 5,
+          title: "Quality Inspection & Cleanup",
+          description: "We conduct a thorough quality inspection with you, then clean up completely and remove all protection materials.",
+          duration: "1-2 hours"
+        }
+      ]}
+      commonIssues={[
+        {
+          problem: "Paint Peeling in High Humidity",
+          solution: "We use moisture-resistant primers and paints specifically designed for Alabama's coastal climate, plus proper ventilation techniques.",
+          urgency: "high"
+        },
+        {
+          problem: "Mold and Mildew Growth",
+          solution: "We apply anti-microbial paints and ensure proper surface preparation to prevent future mold and mildew issues.",
+          urgency: "high"
+        },
+        {
+          problem: "Poor Color Coverage",
+          solution: "Our professional surface preparation and high-quality paints ensure even coverage and true color representation.",
+          urgency: "medium"
+        },
+        {
+          problem: "Cabinet Paint Chipping",
+          solution: "We use specialized cabinet paints and proper preparation techniques for durable, long-lasting cabinet finishes.",
+          urgency: "medium"
+        },
+        {
+          problem: "Drywall Imperfections Showing",
+          solution: "We repair and smooth all drywall issues before painting, ensuring a flawless final appearance.",
+          urgency: "low"
+        },
+        {
+          problem: "Color Fading Over Time",
+          solution: "We use high-quality, fade-resistant paints with proper UV protection to maintain color vibrancy.",
+          urgency: "low"
+        }
+      ]}
+      customerPromise={{
+        title: "Our 100% Risk-Free Quality Guarantee",
+        guarantees: [
+          {
+            title: "Satisfaction Guarantee",
+            description: "If you're not completely satisfied with our work, we'll return to fix any issues at no additional cost."
+          },
+          {
+            title: "Transparent Pricing",
+            description: "No hidden fees or surprise charges. Your final bill will match your written estimate exactly."
+          },
+          {
+            title: "Licensed & Insured",
+            description: "Fully licensed and insured for your protection and peace of mind on every project."
+          },
+          {
+            title: "Clean Work Environment",
+            description: "We protect your belongings and clean up completely, leaving your home spotless."
+          },
+          {
+            title: "Quality Materials",
+            description: "We use only premium paints and materials from trusted brands like Sherwin-Williams and Benjamin Moore."
+          },
+          {
+            title: "Timely Completion",
+            description: "We stick to our schedule and complete your project on time, every time."
+          }
+        ]
+      }}
+      faqs={[
+        {
+          question: "How long does an interior painting project take?",
+          answer: "Most interior projects take 2-5 days depending on the size and complexity. A single room typically takes 1-2 days, while a whole house interior may take 3-5 days. We provide a detailed timeline during your free estimate."
+        },
+        {
+          question: "Do you move furniture and protect my belongings?",
+          answer: "Yes! We move light furniture as needed and protect all your belongings with professional drop cloths and plastic sheeting. We also cover floors, fixtures, and any items that can't be moved."
+        },
+        {
+          question: "What paint brands do you use?",
+          answer: "We use premium paints from Sherwin-Williams, Benjamin Moore, and PPG. For South Alabama's humidity, we often recommend specific moisture-resistant and anti-microbial paint systems."
+        },
+        {
+          question: "Can you help me choose colors?",
+          answer: "Absolutely! Color consultation is included with every interior painting project. We'll help you choose colors that work with your lighting, furniture, and personal style."
+        },
+        {
+          question: "Do you repair drywall before painting?",
+          answer: "Yes, we include drywall repair and surface preparation in our interior painting service. This includes patching holes, smoothing imperfections, and ensuring surfaces are ready for paint."
+        },
+        {
+          question: "What if I'm not happy with the results?",
+          answer: "We stand behind our work with a 100% satisfaction guarantee. If you're not completely happy, we'll return to fix any issues at no additional cost to you."
+        },
+        {
+          question: "Do you work around my schedule?",
+          answer: "Yes, we work around your schedule and can often accommodate evening or weekend work if needed. We'll discuss timing during your free estimate."
+        },
+        {
+          question: "How much does interior painting cost?",
+          answer: "Interior painting costs vary based on room size, surface condition, and paint quality. We provide free, detailed estimates with no obligation. Most single rooms range from $300-800, while whole house interiors typically cost $2,000-8,000."
+        }
+      ]}
+    />
 
     <section id="services" class="services-detailed">
       <div class="container">
@@ -156,6 +330,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </div>
           </div>
         </section>
+
+        <!-- Related Services and Locations -->
+        <RelatedServices 
+          currentService="/interior-painting"
+          showLocations={true}
+          showServices={true}
+          showBlog={true}
+        />
 
         <section class="cta-section">
           <h2>Ready for Professional Interior Painting?</h2>
@@ -393,4 +575,5 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     }
   </style>
 </BaseLayout>
+
 

@@ -1,0 +1,405 @@
+---
+// Mobile-optimized navigation component
+---
+
+<nav class="main-nav" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <a href="/" class="logo" aria-label="Brown's Painting - Home">
+      <img src="/images/logo/browns-painting-logo.png" alt="Brown's Painting" class="logo-image" />
+      <span class="logo-text">Brown's Painting</span>
+    </a>
+    
+    <div class="phone-number">
+      <a href="tel:+12512374545" aria-label="Call us at 251-237-4545">
+        (251) 237-4545
+      </a>
+    </div>
+    
+    <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
+    
+    <div class="nav-links" id="nav-links">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/about" class="nav-link">About</a>
+      
+      <div class="dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+          Services
+          <span class="dropdown-arrow">▼</span>
+        </button>
+        <div class="dropdown-content">
+          <a href="/interior-painting" title="Professional interior painting services">Interior Painting</a>
+          <a href="/exterior-painting" title="Expert exterior painting and weather protection">Exterior Painting</a>
+          <a href="/commercial-painting" title="Commercial and business painting solutions">Commercial Painting</a>
+          <a href="/house-painter" title="Complete house painting services">House Painter</a>
+          <a href="/services" title="View all painting services">All Services</a>
+        </div>
+      </div>
+      
+      <div class="dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+          Service Areas
+          <span class="dropdown-arrow">▼</span>
+        </button>
+        <div class="dropdown-content">
+          <div class="dropdown-section">
+            <h4>Baldwin County</h4>
+            <a href="/fairhope-painting" title="Painting services in Fairhope, AL">Fairhope</a>
+            <a href="/daphne-painting" title="Painting services in Daphne, AL">Daphne</a>
+            <a href="/gulf-shores-painting" title="Painting services in Gulf Shores, AL">Gulf Shores</a>
+            <a href="/orange-beach-painting" title="Painting services in Orange Beach, AL">Orange Beach</a>
+          </div>
+          <div class="dropdown-section">
+            <h4>Mobile County</h4>
+            <a href="/mobile-painting" title="Painting services in Mobile, AL">Mobile</a>
+            <a href="/saraland-painting" title="Painting services in Saraland, AL">Saraland</a>
+            <a href="/theodore-painting" title="Painting services in Theodore, AL">Theodore</a>
+          </div>
+          <div class="dropdown-section">
+            <h4>Other Areas</h4>
+            <a href="/brewton-painting" title="Painting services in Brewton, AL">Brewton</a>
+            <a href="/atmore-painting" title="Painting services in Atmore, AL">Atmore</a>
+            <a href="/contact" title="View all service areas">All Areas</a>
+          </div>
+        </div>
+      </div>
+      
+      <a href="/blog" class="nav-link">Blog</a>
+      <a href="/contact" class="nav-link">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  // Mobile navigation functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    
+    // Mobile menu toggle
+    if (mobileToggle && navLinks) {
+      mobileToggle.addEventListener('click', function() {
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !isExpanded);
+        navLinks.classList.toggle('active');
+        
+        // Update hamburger animation
+        this.classList.toggle('active');
+      });
+    }
+    
+    // Dropdown functionality for mobile
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        const dropdown = this.nextElementSibling;
+        
+        // Close other dropdowns
+        dropdownToggles.forEach(otherToggle => {
+          if (otherToggle !== this) {
+            otherToggle.setAttribute('aria-expanded', 'false');
+            otherToggle.nextElementSibling.classList.remove('active');
+          }
+        });
+        
+        // Toggle current dropdown
+        this.setAttribute('aria-expanded', !isExpanded);
+        dropdown.classList.toggle('active');
+      });
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!mobileToggle.contains(e.target) && !navLinks.contains(e.target)) {
+        mobileToggle.setAttribute('aria-expanded', 'false');
+        navLinks.classList.remove('active');
+        mobileToggle.classList.remove('active');
+      }
+    });
+    
+    // Close mobile menu on escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        mobileToggle.setAttribute('aria-expanded', 'false');
+        navLinks.classList.remove('active');
+        mobileToggle.classList.remove('active');
+      }
+    });
+  });
+</script>
+
+<style>
+  /* Mobile Navigation Styles */
+  .main-nav {
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0.75rem 0;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    min-height: 44px;
+  }
+
+  .logo-image {
+    height: 32px;
+    width: auto;
+  }
+
+  .logo-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #667eea;
+  }
+
+  .phone-number {
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+
+  .phone-number a {
+    color: #ff6b35;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    width: 24px;
+    height: 18px;
+    position: relative;
+  }
+
+  .hamburger span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #333;
+    border-radius: 1px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+
+  .hamburger span:nth-child(1) {
+    margin-bottom: 6px;
+  }
+
+  .hamburger span:nth-child(2) {
+    margin-bottom: 6px;
+  }
+
+  .mobile-menu-toggle.active .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .mobile-menu-toggle.active .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu-toggle.active .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-link {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+  }
+
+  .nav-link:hover {
+    background-color: #f8f9fa;
+    color: #667eea;
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown-toggle {
+    background: none;
+    border: none;
+    color: #333;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    min-height: 44px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+  }
+
+  .dropdown-toggle:hover {
+    background-color: #f8f9fa;
+    color: #667eea;
+  }
+
+  .dropdown-arrow {
+    font-size: 0.75rem;
+    transition: transform 0.3s ease;
+  }
+
+  .dropdown-toggle[aria-expanded="true"] .dropdown-arrow {
+    transform: rotate(180deg);
+  }
+
+  .dropdown-content {
+    display: none;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .dropdown-content.active {
+    display: block;
+  }
+
+  .dropdown-section {
+    margin-bottom: 1rem;
+  }
+
+  .dropdown-section:last-child {
+    margin-bottom: 0;
+  }
+
+  .dropdown-section h4 {
+    color: #1e3a8a;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .dropdown-content a {
+    color: #333;
+    padding: 0.5rem 0.75rem;
+    text-decoration: none;
+    display: block;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+
+  .dropdown-content a:hover {
+    background-color: white;
+    color: #667eea;
+    transform: translateX(4px);
+  }
+
+  /* Desktop styles */
+  @media (min-width: 768px) {
+    .mobile-menu-toggle {
+      display: none;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-direction: row;
+      position: static;
+      background: none;
+      box-shadow: none;
+      padding: 0;
+      border-top: none;
+    }
+
+    .dropdown-content {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 300px;
+      background: white;
+      border: 1px solid #e5e7eb;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-toggle {
+      width: auto;
+    }
+  }
+
+  /* Focus indicators for accessibility */
+  .mobile-menu-toggle:focus,
+  .nav-link:focus,
+  .dropdown-toggle:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
+</style>

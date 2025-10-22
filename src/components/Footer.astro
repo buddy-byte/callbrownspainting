@@ -1,0 +1,528 @@
+---
+// Enhanced 4-column footer with comprehensive internal linking
+const currentYear = new Date().getFullYear();
+
+// Services Column - All painting services
+const services = [
+  { name: 'Interior Painting', url: '/interior-painting', description: 'Professional interior painting services' },
+  { name: 'Exterior Painting', url: '/exterior-painting', description: 'Expert exterior painting and weather protection' },
+  { name: 'Commercial Painting', url: '/commercial-painting', description: 'Commercial and business painting solutions' },
+  { name: 'Cabinet Refinishing', url: '/interior-painting#cabinet', description: 'Kitchen and bathroom cabinet painting' },
+  { name: 'Drywall Repair', url: '/interior-painting#drywall', description: 'Professional drywall patching and repair' },
+  { name: 'Pressure Washing', url: '/exterior-painting#pressure-washing', description: 'Exterior cleaning and preparation' },
+  { name: 'Deck Staining', url: '/exterior-painting#deck-staining', description: 'Deck and fence staining services' },
+  { name: 'All Services', url: '/services', description: 'Complete painting service overview' }
+];
+
+// Locations Column - All service areas
+const locations = [
+  { name: 'Fairhope', url: '/fairhope-painting', county: 'Baldwin' },
+  { name: 'Daphne', url: '/daphne-painting', county: 'Baldwin' },
+  { name: 'Gulf Shores', url: '/gulf-shores-painting', county: 'Baldwin' },
+  { name: 'Orange Beach', url: '/orange-beach-painting', county: 'Baldwin' },
+  { name: 'Foley', url: '/foley-painting', county: 'Baldwin' },
+  { name: 'Bay Minette', url: '/bay-minette-painting', county: 'Baldwin' },
+  { name: 'Mobile', url: '/mobile-painting', county: 'Mobile' },
+  { name: 'Saraland', url: '/saraland-painting', county: 'Mobile' },
+  { name: 'Creola', url: '/creola-painting', county: 'Mobile' },
+  { name: 'Theodore', url: '/theodore-painting', county: 'Mobile' },
+  { name: 'Brewton', url: '/brewton-painting', county: 'Escambia' },
+  { name: 'Atmore', url: '/atmore-painting', county: 'Escambia' },
+  { name: 'Evergreen', url: '/evergreen-painting', county: 'Conecuh' },
+  { name: 'Monroeville', url: '/monroeville-painting', county: 'Monroe' }
+];
+
+// Company Column - Business information and resources
+const companyLinks = [
+  { name: 'About Us', url: '/about', description: 'Learn about Brown\'s Painting LLC' },
+  { name: 'Our Team', url: '/about#team', description: 'Meet our professional painting team' },
+  { name: 'Contact', url: '/contact', description: 'Get in touch for a free estimate' },
+  { name: 'Blog', url: '/blog', description: 'Painting tips and home improvement advice' },
+  { name: 'Gallery', url: '/gallery', description: 'View our recent painting projects' },
+  { name: 'Testimonials', url: '/testimonials', description: 'Read customer reviews and feedback' },
+  { name: 'Sitemap', url: '/sitemap', description: 'Complete site navigation' },
+  { name: 'Privacy Policy', url: '/privacy', description: 'Our privacy policy and data protection' }
+];
+
+// Emergency Column - Quick contact and urgent services
+const emergencyServices = [
+  { name: 'Emergency Painting', url: '/emergency-painting', description: '24/7 emergency painting services' },
+  { name: 'Storm Damage Repair', url: '/emergency-painting#storm-damage', description: 'Post-storm painting and restoration' },
+  { name: 'Water Damage Repair', url: '/emergency-painting#water-damage', description: 'Water damage painting solutions' },
+  { name: 'Fire Damage Painting', url: '/emergency-painting#fire-damage', description: 'Smoke damage cleanup and restoration' },
+  { name: 'Property Sale Prep', url: '/emergency-painting#property-sale', description: 'Urgent painting for real estate closings' },
+  { name: 'Same-Day Service', url: '/emergency-painting#same-day', description: 'Urgent same-day painting services' }
+];
+
+// Recent blog posts
+const recentPosts = [
+  { title: 'Essential Painting Tips for Alabama Homes', url: '/blog/essential-painting-tips-alabama' },
+  { title: 'How to Choose the Right Paint Finish', url: '/blog/paint-finish-guide' },
+  { title: 'Preparing Your Home for Painting', url: '/blog/preparing-home-for-painting' },
+  { title: 'Coastal Home Painting Guide', url: '/blog/coastal-home-painting-guide' }
+];
+---
+
+<footer class="footer">
+  <div class="footer-content">
+    <!-- Company Header -->
+    <div class="footer-header">
+      <div class="company-branding">
+        <h3>Brown's Painting LLC</h3>
+        <p class="tagline">Family-Owned. Locally Trusted.</p>
+        <p class="description">
+          Professional painting services across South Alabama. 
+          Interior, exterior, commercial, and specialty painting 
+          with 25+ years of experience.
+        </p>
+      </div>
+      
+      <div class="contact-info">
+        <div class="contact-item">
+          <strong>📞 Phone:</strong>
+          <a href="tel:+12512374545" title="Call Brown's Painting">(251) 237-4545</a>
+        </div>
+        <div class="contact-item">
+          <strong>📧 Email:</strong>
+          <a href="mailto:hello@callbrownspainting.com" title="Email Brown's Painting">hello@callbrownspainting.com</a>
+        </div>
+        <div class="contact-item">
+          <strong>📍 Service Area:</strong>
+          <span>South Alabama</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4-Column Footer Layout -->
+    <div class="footer-main">
+      <!-- Column 1: Services -->
+      <div class="footer-column">
+        <h4>Painting Services</h4>
+        <ul>
+          {services.map(service => (
+            <li>
+              <a href={service.url} title={service.description}>
+                {service.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Column 2: Service Areas -->
+      <div class="footer-column">
+        <h4>Service Areas</h4>
+        <div class="location-grid">
+          {locations.map(location => (
+            <div class="location-item">
+              <a href={location.url} title={`Professional painting services in ${location.name}, ${location.county} County`}>
+                {location.name}
+              </a>
+              <span class="county">{location.county} County</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Column 3: Company & Resources -->
+      <div class="footer-column">
+        <h4>Company & Resources</h4>
+        <ul>
+          {companyLinks.map(link => (
+            <li>
+              <a href={link.url} title={link.description}>
+                {link.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+        
+        <div class="blog-section">
+          <h5>Recent Articles</h5>
+          <ul>
+            {recentPosts.map(post => (
+              <li>
+                <a href={post.url} title={post.title}>
+                  {post.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <!-- Column 4: Emergency Services -->
+      <div class="footer-column emergency-column">
+        <h4>Emergency Services</h4>
+        <ul>
+          {emergencyServices.map(service => (
+            <li>
+              <a href={service.url} title={service.description} class="emergency-link">
+                {service.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+        
+        <div class="emergency-contact">
+          <h5>Need Immediate Help?</h5>
+          <div class="emergency-cta">
+            <a href="tel:+12512374545" class="btn btn-emergency">
+              Call Now: (251) 237-4545
+            </a>
+            <p class="emergency-note">Available 7 days a week for emergency services</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="footer-bottom">
+      <div class="footer-bottom-content">
+        <div class="copyright">
+          <p>&copy; {currentYear} Brown's Painting LLC. All rights reserved.</p>
+          <p>Licensed & Insured in Alabama | Family-Owned Since 2018</p>
+        </div>
+        
+        <div class="footer-links">
+          <a href="/privacy" title="Privacy Policy">Privacy Policy</a>
+          <a href="/terms" title="Terms of Service">Terms of Service</a>
+          <a href="/sitemap" title="Sitemap">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: #1e3a8a;
+    color: white;
+    padding: 4rem 0 2rem;
+    margin-top: 4rem;
+  }
+
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .footer-main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  /* Footer Header */
+  .footer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #374151;
+  }
+
+  .company-branding h3 {
+    color: white;
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+
+  .company-branding .tagline {
+    color: #f59e0b;
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+
+  .company-branding .description {
+    color: #e5e7eb;
+    line-height: 1.6;
+    margin-bottom: 0;
+    max-width: 400px;
+  }
+
+  /* Footer Columns */
+  .footer-column h4,
+  .footer-column h5 {
+    color: white;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+
+  .footer-column h4 {
+    font-size: 1.25rem;
+    border-bottom: 2px solid #3b82f6;
+    padding-bottom: 0.5rem;
+  }
+
+  .footer-column h5 {
+    font-size: 1rem;
+    color: #f59e0b;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+
+  .tagline {
+    color: #f59e0b;
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+
+  .description {
+    color: #e5e7eb;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .contact-info {
+    space-y: 1rem;
+  }
+
+  .contact-item {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .contact-item strong {
+    color: #f59e0b;
+    font-size: 0.875rem;
+  }
+
+  .contact-item a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .contact-item a:hover {
+    color: #f59e0b;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-section li {
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-section a {
+    color: #e5e7eb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+  }
+
+  .footer-section a:hover {
+    color: #f59e0b;
+  }
+
+  /* Location Grid */
+  .location-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .location-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .location-item a {
+    color: #e5e7eb;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .location-item a:hover {
+    color: #f59e0b;
+  }
+
+  .county {
+    color: #9ca3af;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+
+  /* Emergency Column */
+  .emergency-column {
+    background: rgba(239, 68, 68, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+  }
+
+  .emergency-link {
+    color: #fca5a5 !important;
+    font-weight: 500;
+  }
+
+  .emergency-link:hover {
+    color: #f59e0b !important;
+  }
+
+  .emergency-contact {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(239, 68, 68, 0.2);
+  }
+
+  .btn-emergency {
+    background: #ef4444;
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-bottom: 0.5rem;
+  }
+
+  .btn-emergency:hover {
+    background: #dc2626;
+  }
+
+  .emergency-note {
+    color: #fca5a5;
+    font-size: 0.875rem;
+    text-align: center;
+    margin: 0;
+  }
+
+  .blog-section {
+    margin-top: 2rem;
+  }
+
+  .blog-section ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .blog-section a {
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid #374151;
+    padding-top: 2rem;
+  }
+
+  .footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .copyright p {
+    margin: 0;
+    color: #9ca3af;
+    font-size: 0.875rem;
+  }
+
+  .copyright p:first-child {
+    font-weight: 500;
+    color: #e5e7eb;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .footer-links a {
+    color: #9ca3af;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.3s ease;
+  }
+
+  .footer-links a:hover {
+    color: #f59e0b;
+  }
+
+  @media (max-width: 1024px) {
+    .footer-main {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .footer-header {
+      flex-direction: column;
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .location-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer {
+      padding: 3rem 0 2rem;
+    }
+
+    .footer-main {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .footer-header {
+      text-align: left;
+    }
+
+    .company-branding .description {
+      max-width: 100%;
+    }
+
+    .location-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .emergency-column {
+      padding: 1rem;
+    }
+
+    .footer-bottom-content {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .footer-links {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer-content {
+      padding: 0 1rem;
+    }
+
+    .location-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .btn-emergency {
+      padding: 1rem;
+      font-size: 1rem;
+    }
+  }
+</style>

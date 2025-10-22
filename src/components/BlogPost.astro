@@ -1,0 +1,320 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  publishDate: string;
+  author: string;
+  readTime: string;
+  featuredImage: string;
+  category: string;
+  tags: string[];
+  content: any;
+}
+
+const { 
+  title, 
+  description, 
+  publishDate, 
+  author, 
+  readTime, 
+  featuredImage, 
+  category, 
+  tags, 
+  content 
+} = Astro.props;
+
+const formattedDate = new Date(publishDate).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+---
+
+<article class="blog-post">
+  <!-- Article Schema -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "{title}",
+      "description": "{description}",
+      "author": {
+        "@type": "Person",
+        "name": "{author}",
+        "jobTitle": "Founder & Lead Painter",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Brown's Painting LLC",
+          "url": "https://callbrownspainting.com"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Brown's Painting LLC",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://callbrownspainting.com/images/logo/browns-painting-logo.png"
+        }
+      },
+      "datePublished": "{publishDate}",
+      "dateModified": "{publishDate}",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://callbrownspainting.com/blog/{title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://callbrownspainting.com{featuredImage}",
+        "width": 1200,
+        "height": 630
+      },
+      "articleSection": "{category}",
+      "keywords": "{tags.join(', ')}"
+    }
+  </script>
+
+  <!-- Featured Image -->
+  <div class="featured-image">
+    <img src={featuredImage} alt={title} />
+  </div>
+
+  <!-- Article Header -->
+  <header class="article-header">
+    <div class="article-meta">
+      <span class="category">{category}</span>
+      <span class="publish-date">{formattedDate}</span>
+      <span class="read-time">{readTime} read</span>
+    </div>
+    <h1 class="article-title">{title}</h1>
+    <p class="article-description">{description}</p>
+    <div class="article-author">
+      <span>By {author}</span>
+    </div>
+  </header>
+
+  <!-- Article Content -->
+  <div class="article-content">
+    <slot />
+  </div>
+
+  <!-- Article Footer -->
+  <footer class="article-footer">
+    <div class="tags">
+      {tags.map(tag => (
+        <span class="tag">#{tag}</span>
+      ))}
+    </div>
+    
+    <div class="cta-section">
+      <h3>Ready to Transform Your Home?</h3>
+      <p>Get a free estimate from Brown's Painting LLC and see how professional painting can enhance your property.</p>
+      <div class="cta-buttons">
+        <a href="/contact" class="btn btn-primary">Get Free Estimate</a>
+        <a href="tel:+1251-237-4545" class="btn btn-secondary">Call (251) 237-4545</a>
+      </div>
+    </div>
+  </footer>
+</article>
+
+<style>
+  .blog-post {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+
+  .featured-image {
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .featured-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  .article-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .article-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+
+  .category {
+    background: #3b82f6;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-weight: 600;
+  }
+
+  .article-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .article-description {
+    font-size: 1.125rem;
+    color: #4b5563;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+
+  .article-author {
+    color: #6b7280;
+    font-size: 0.875rem;
+  }
+
+  .article-content {
+    line-height: 1.7;
+    color: #374151;
+  }
+
+  .article-content h2 {
+    font-size: 1.875rem;
+    font-weight: 600;
+    color: #1e3a8a;
+    margin: 2rem 0 1rem;
+  }
+
+  .article-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1e3a8a;
+    margin: 1.5rem 0 0.75rem;
+  }
+
+  .article-content p {
+    margin-bottom: 1rem;
+  }
+
+  .article-content ul, .article-content ol {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .article-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  .article-content blockquote {
+    border-left: 4px solid #3b82f6;
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #4b5563;
+  }
+
+  .article-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .tag {
+    background: #f3f4f6;
+    color: #374151;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+  }
+
+  .cta-section {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .cta-section h3 {
+    color: #1e3a8a;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .cta-section p {
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+  }
+
+  .btn-primary {
+    background: #f59e0b;
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background: #d97706;
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: #3b82f6;
+    border-color: #3b82f6;
+  }
+
+  .btn-secondary:hover {
+    background: #3b82f6;
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    .blog-post {
+      padding: 1rem;
+    }
+
+    .article-title {
+      font-size: 2rem;
+    }
+
+    .article-meta {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>

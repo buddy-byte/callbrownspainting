@@ -1,0 +1,232 @@
+---
+// Mobile-specific performance monitoring for Core Web Vitals
+---
+
+<script>
+  // Mobile Core Web Vitals monitoring
+  function initMobilePerformanceMonitoring() {
+    // Only run on mobile devices
+    if (window.innerWidth > 1024) return;
+
+    // LCP (Largest Contentful Paint) monitoring
+    function measureLCP() {
+      try {
+        const observer = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          
+          // Report LCP if it's under 2.5s (good), 2.5-4s (needs improvement), over 4s (poor)
+          const lcp = lastEntry.startTime;
+          const lcpRating = lcp <= 2500 ? 'good' : lcp <= 4000 ? 'needs-improvement' : 'poor';
+          
+          console.log(`Mobile LCP: ${lcp.toFixed(2)}ms (${lcpRating})`);
+          
+          // Send to analytics if available
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'mobile_lcp', {
+              'event_category': 'Core Web Vitals',
+              'event_label': lcpRating,
+              'value': Math.round(lcp)
+            });
+          }
+        });
+        
+        observer.observe({ entryTypes: ['largest-contentful-paint'] });
+      } catch (e) {
+        console.warn('LCP monitoring not supported:', e);
+      }
+    }
+
+    // FID (First Input Delay) monitoring
+    function measureFID() {
+      try {
+        const observer = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry) => {
+            const fid = entry.processingStart - entry.startTime;
+            const fidRating = fid <= 100 ? 'good' : fid <= 300 ? 'needs-improvement' : 'poor';
+            
+            console.log(`Mobile FID: ${fid.toFixed(2)}ms (${fidRating})`);
+            
+            // Send to analytics if available
+            if (typeof gtag !== 'undefined') {
+              gtag('event', 'mobile_fid', {
+                'event_category': 'Core Web Vitals',
+                'event_label': fidRating,
+                'value': Math.round(fid)
+              });
+            }
+          });
+        });
+        
+        observer.observe({ entryTypes: ['first-input'] });
+      } catch (e) {
+        console.warn('FID monitoring not supported:', e);
+      }
+    }
+
+    // CLS (Cumulative Layout Shift) monitoring
+    function measureCLS() {
+      try {
+        let clsValue = 0;
+        const observer = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry) => {
+            if (!entry.hadRecentInput) {
+              clsValue += entry.value;
+            }
+          });
+          
+          const clsRating = clsValue <= 0.1 ? 'good' : clsValue <= 0.25 ? 'needs-improvement' : 'poor';
+          console.log(`Mobile CLS: ${clsValue.toFixed(4)} (${clsRating})`);
+          
+          // Send to analytics if available
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'mobile_cls', {
+              'event_category': 'Core Web Vitals',
+              'event_label': clsRating,
+              'value': Math.round(clsValue * 1000)
+            });
+          }
+        });
+        
+        observer.observe({ entryTypes: ['layout-shift'] });
+      } catch (e) {
+        console.warn('CLS monitoring not supported:', e);
+      }
+    }
+
+    // FCP (First Contentful Paint) monitoring
+    function measureFCP() {
+      try {
+        const observer = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry) => {
+            const fcp = entry.startTime;
+            const fcpRating = fcp <= 1800 ? 'good' : fcp <= 3000 ? 'needs-improvement' : 'poor';
+            
+            console.log(`Mobile FCP: ${fcp.toFixed(2)}ms (${fcpRating})`);
+            
+            // Send to analytics if available
+            if (typeof gtag !== 'undefined') {
+              gtag('event', 'mobile_fcp', {
+                'event_category': 'Core Web Vitals',
+                'event_label': fcpRating,
+                'value': Math.round(fcp)
+              });
+            }
+          });
+        });
+        
+        observer.observe({ entryTypes: ['paint'] });
+      } catch (e) {
+        console.warn('FCP monitoring not supported:', e);
+      }
+    }
+
+    // TTFB (Time to First Byte) monitoring
+    function measureTTFB() {
+      try {
+        const navigation = performance.getEntriesByType('navigation')[0];
+        if (navigation) {
+          const ttfb = navigation.responseStart - navigation.requestStart;
+          const ttfbRating = ttfb <= 800 ? 'good' : ttfb <= 1800 ? 'needs-improvement' : 'poor';
+          
+          console.log(`Mobile TTFB: ${ttfb.toFixed(2)}ms (${ttfbRating})`);
+          
+          // Send to analytics if available
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'mobile_ttfb', {
+              'event_category': 'Core Web Vitals',
+              'event_label': ttfbRating,
+              'value': Math.round(ttfb)
+            });
+          }
+        }
+      } catch (e) {
+        console.warn('TTFB monitoring not supported:', e);
+      }
+    }
+
+    // Mobile-specific optimizations
+    function optimizeForMobile() {
+      // Preload critical resources
+      const criticalResources = [
+        '/src/styles/mobile-optimization.css',
+        '/images/logo/browns-painting-logo.png'
+      ];
+
+      criticalResources.forEach(resource => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = resource;
+        link.as = resource.endsWith('.css') ? 'style' : 'image';
+        document.head.appendChild(link);
+      });
+
+      // Optimize images for mobile
+      const images = document.querySelectorAll('img');
+      images.forEach(img => {
+        // Add loading="lazy" to non-critical images
+        if (!img.hasAttribute('loading')) {
+          img.setAttribute('loading', 'lazy');
+        }
+        
+        // Add decoding="async" for better performance
+        if (!img.hasAttribute('decoding')) {
+          img.setAttribute('decoding', 'async');
+        }
+      });
+
+      // Optimize touch interactions
+      const touchElements = document.querySelectorAll('a, button, input, select, textarea');
+      touchElements.forEach(element => {
+        // Ensure minimum touch target size
+        const rect = element.getBoundingClientRect();
+        if (rect.width < 44 || rect.height < 44) {
+          element.style.minWidth = '44px';
+          element.style.minHeight = '44px';
+        }
+      });
+    }
+
+    // Initialize all monitoring
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        measureLCP();
+        measureFID();
+        measureCLS();
+        measureFCP();
+        measureTTFB();
+        optimizeForMobile();
+      });
+    } else {
+      measureLCP();
+      measureFID();
+      measureCLS();
+      measureFCP();
+      measureTTFB();
+      optimizeForMobile();
+    }
+
+    // Report mobile performance summary
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const perfData = performance.getEntriesByType('navigation')[0];
+        if (perfData) {
+          const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
+          const domContentLoaded = perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart;
+          
+          console.log(`Mobile Performance Summary:`);
+          console.log(`- Load Time: ${loadTime.toFixed(2)}ms`);
+          console.log(`- DOM Content Loaded: ${domContentLoaded.toFixed(2)}ms`);
+          console.log(`- Connection Type: ${navigator.connection?.effectiveType || 'unknown'}`);
+          console.log(`- Device Memory: ${navigator.deviceMemory || 'unknown'}GB`);
+        }
+      }, 1000);
+    });
+  }
+
+  // Initialize mobile performance monitoring
+  initMobilePerformanceMonitoring();
+</script>

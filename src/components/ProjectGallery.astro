@@ -1,0 +1,193 @@
+---
+// Simple project gallery with clean layout
+const projects = [
+  {
+    id: 1,
+    title: "Complete House Transformation",
+    customer: "Lessa Crow Homan",
+    location: "Brewton, AL",
+    service: "Exterior Painting & Renovation",
+    year: "2021",
+    description: "Complete exterior transformation including siding, shutters, and landscaping updates.",
+    testimonial: "Thank you so much to Browns Painting (Boomer Brown) for making my dream house come to life!!! I would recommend these guys to anyone!!! They done a great job!!!",
+    featured: true
+  },
+  {
+    id: 2,
+    title: "Commercial Building Exterior",
+    location: "Brewton, AL", 
+    service: "Commercial Painting",
+    year: "2024",
+    description: "Professional exterior painting of commercial building using boom lift access.",
+    features: [
+      "High-reach boom lift operation",
+      "Commercial-grade paint application",
+      "Professional safety protocols",
+      "Minimal business disruption"
+    ]
+  },
+  {
+    id: 3,
+    title: "Crown Molding Detail Work",
+    location: "South Alabama",
+    service: "Interior Painting",
+    year: "2024",
+    description: "Precise crown molding painting requiring careful attention to detail."
+  }
+];
+---
+
+<section class="project-gallery">
+  <div class="container">
+    <h2>Our Recent Work</h2>
+    <p class="section-subtitle">See the quality and attention to detail that sets Brown's Painting apart</p>
+    
+    <div class="projects-grid">
+      {projects.map(project => (
+        <div class="project-card">
+          <div class="project-header">
+            <h3>{project.title}</h3>
+            <div class="project-meta">
+              <span class="location">{project.location}</span>
+              <span class="service">{project.service}</span>
+              <span class="year">{project.year}</span>
+            </div>
+          </div>
+          
+          <p class="project-description">{project.description}</p>
+          
+          {project.features && (
+            <ul class="project-features">
+              {project.features.map(feature => (
+                <li>✓ {feature}</li>
+              ))}
+            </ul>
+          )}
+          
+          {project.testimonial && (
+            <blockquote class="project-testimonial">
+              "{project.testimonial}"
+              {project.customer && <cite>— {project.customer}</cite>}
+            </blockquote>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .project-gallery {
+    padding: 4rem 0;
+    background: white;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .project-gallery h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  .section-subtitle {
+    text-align: center;
+    color: #6b7280;
+    font-size: 1.125rem;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+
+  .project-card {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 4px solid #3b82f6;
+    transition: transform 0.3s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .project-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #1f2937;
+  }
+
+  .project-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .project-meta span {
+    background: #e5e7eb;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.875rem;
+    color: #374151;
+  }
+
+  .project-description {
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .project-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .project-features li {
+    color: #10b981;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .project-testimonial {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #f59e0b;
+    font-style: italic;
+    color: #374151;
+    margin: 0;
+  }
+
+  .project-testimonial cite {
+    display: block;
+    margin-top: 0.5rem;
+    font-style: normal;
+    font-weight: 600;
+    color: #6b7280;
+  }
+
+  @media (max-width: 768px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .project-meta {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+</style>
