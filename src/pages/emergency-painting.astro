@@ -2,108 +2,9 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ServiceSchema from '../components/ServiceSchema.astro';
 
-const title = "Emergency Painting Services | 24/7 Available | Brown's Painting LLC";
-const description = "Emergency painting services available 24/7 in South Alabama. Storm damage repair, water damage restoration, urgent touch-ups. Same-day service available. Call (251) 237-4545 now!";
-const keywords = "emergency painting services, storm damage repair, water damage painting, urgent painting, same day painting, 24/7 painter, emergency painter Alabama, quick painting repair, disaster painting services";
-
-// Emergency service types
-const emergencyServices = [
-  {
-    title: "Storm Damage Repair",
-    description: "Immediate painting repairs after hurricanes, tornadoes, and severe weather",
-    icon: "🌪️",
-    urgency: "high",
-    responseTime: "Same Day"
-  },
-  {
-    title: "Water Damage Restoration",
-    description: "Emergency painting after flooding, leaks, and water damage",
-    icon: "💧",
-    urgency: "high",
-    responseTime: "Within 4 Hours"
-  },
-  {
-    title: "Fire Damage Painting",
-    description: "Smoke damage cleanup and painting restoration services",
-    icon: "🔥",
-    urgency: "high",
-    responseTime: "Same Day"
-  },
-  {
-    title: "Property Sale Prep",
-    description: "Urgent painting for real estate closings and property sales",
-    icon: "🏠",
-    urgency: "medium",
-    responseTime: "24 Hours"
-  },
-  {
-    title: "Insurance Claims",
-    description: "Painting services for insurance claim documentation and repair",
-    icon: "📋",
-    urgency: "medium",
-    responseTime: "24 Hours"
-  },
-  {
-    title: "Event Preparation",
-    description: "Last-minute painting for weddings, parties, and special events",
-    icon: "🎉",
-    urgency: "low",
-    responseTime: "48 Hours"
-  }
-];
-
-// Emergency contact methods
-const contactMethods = [
-  {
-    method: "Phone Call",
-    action: "tel:+12512374545",
-    text: "Call (251) 237-4545",
-    description: "Speak directly with our emergency team",
-    urgency: "immediate"
-  },
-  {
-    method: "Text Message",
-    action: "sms:+12512374545",
-    text: "Text (251) 237-4545",
-    description: "Send photos and get instant response",
-    urgency: "immediate"
-  },
-  {
-    method: "Online Form",
-    action: "#emergency-form",
-    text: "Fill Emergency Form",
-    description: "Detailed emergency service request",
-    urgency: "fast"
-  }
-];
-
-// Emergency testimonials
-const emergencyTestimonials = [
-  {
-    name: "Sarah Mitchell",
-    location: "Gulf Shores, AL",
-    situation: "Hurricane Sally Damage",
-    quote: "Brown's Painting came out the same day after Hurricane Sally damaged our exterior. They had us looking brand new within 48 hours. Incredible service!",
-    rating: 5,
-    responseTime: "Same Day"
-  },
-  {
-    name: "Mike Rodriguez",
-    location: "Mobile, AL",
-    situation: "Water Damage Emergency",
-    quote: "Our basement flooded and ruined the paint. Brown's Painting was here within 4 hours and had everything fixed by the next day. Lifesavers!",
-    rating: 5,
-    responseTime: "4 Hours"
-  },
-  {
-    name: "Jennifer Thompson",
-    location: "Fairhope, AL",
-    situation: "Real Estate Closing",
-    quote: "We needed our house painted for a closing in 2 days. Brown's Painting worked around the clock and delivered perfect results on time. Highly recommend!",
-    rating: 5,
-    responseTime: "48 Hours"
-  }
-];
+const title = "Emergency Painting Services | Water Damage & Smoke Restoration Alabama";
+const description = "Emergency painting services for water damage, smoke damage, storm repairs. Fast response throughout South Alabama. Available 24/7 for urgent needs.";
+const keywords = "emergency painting Alabama, water damage repair, smoke damage painting, storm repair painting";
 ---
 
 <BaseLayout
@@ -112,388 +13,425 @@ const emergencyTestimonials = [
   keywords={keywords}
 >
   <main>
-    <!-- Emergency Service Schema -->
-    <ServiceSchema 
+    <!-- Service Schema -->
+    <ServiceSchema
       serviceName="Emergency Painting Services"
-      serviceDescription="24/7 emergency painting services for storm damage, water damage, fire damage, and urgent painting needs throughout South Alabama. Same-day response available."
+      serviceDescription="Emergency painting services for water damage, smoke damage, storm repairs. Fast response throughout South Alabama. Available 24/7 for urgent needs."
       serviceUrl="https://callbrownspainting.com/emergency-painting"
       serviceType="Emergency Painting"
-      priceRange="$$$"
+      priceRange="$$"
       serviceImage="https://callbrownspainting.com/assets/emergency-painting-service.jpg"
     />
 
-    <!-- Emergency Hero Section -->
-    <section class="emergency-hero">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-background">
+        <div class="hero-slide active" style="background-image: url('/images/hero/hero-1-optimized.jpg')"></div>
+        <div class="hero-slide" style="background-image: url('/images/projects/projects-optimized/interior-painting-2-optimized.jpg')"></div>
+        <div class="hero-slide" style="background-image: url('/images/hero/hero-3-optimized.jpg'); background-position: center top;"></div>
+      </div>
+      
+      <div class="hero-overlay"></div>
+      
+      <div class="hero-trust-badges">
+        <div class="trust-badge">
+          <span class="trust-stars">★★★★★</span>
+          <span class="trust-text">5-Star Reviews</span>
+        </div>
+        <div class="trust-badge">
+          <span class="trust-icon">🏆</span>
+          <span class="trust-text">25+ Years</span>
+        </div>
+        <div class="trust-badge">
+          <span class="trust-icon">📋</span>
+          <span class="trust-text">Licensed & Insured</span>
+        </div>
+        <div class="trust-badge">
+          <span class="trust-icon">✅</span>
+          <span class="trust-text">100% Guaranteed</span>
+        </div>
+      </div>
+
       <div class="container">
         <div class="hero-content">
           <div class="hero-text">
-            <h1>🚨 Emergency Painting Services Available 24/7</h1>
-            <p class="hero-subtitle">When disaster strikes, we're here to help. Professional emergency painting services throughout South Alabama with same-day response.</p>
-            
-            <div class="emergency-cta">
-              <a href="tel:+12512374545" class="btn btn-emergency-primary">
-                📞 Call Now: (251) 237-4545
-              </a>
-              <a href="sms:+12512374545" class="btn btn-emergency-secondary">
-                💬 Text Emergency Details
-              </a>
+            <img src="/images/logo/browns-painting-logo-hat.png" alt="Brown's Painting" class="hero-logo-image" />
+            <h1>Emergency Painting Services</h1>
+            <p class="hero-subtitle">Fast response for water damage, smoke damage, and storm-related painting emergencies</p>
+            <div class="phone-number">
+              <span class="phone-label">Call Us Today at</span>
+              <a href="tel:+12512374545" class="phone-link">(251) 237-4545</a>
             </div>
-
-            <div class="response-time">
-              <div class="time-badge">
-                <span class="time-icon">⚡</span>
-                <span>Same-Day Response Available</span>
-              </div>
-              <div class="time-badge">
-                <span class="time-icon">🕐</span>
-                <span>24/7 Emergency Service</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="hero-image">
-            <div class="emergency-scene">
-              <div class="scene-element storm">🌪️</div>
-              <div class="scene-element house">🏠</div>
-              <div class="scene-element repair">🔧</div>
+            <div class="hero-cta">
+              <a href="/contact" class="btn btn-primary">
+                <span class="btn-icon">📋</span>
+                Get A Free Quote
+              </a>
             </div>
           </div>
         </div>
       </div>
+      
+      <div class="hero-dots">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
+      </div>
     </section>
 
-    <!-- Emergency Services Grid -->
-    <section class="emergency-services">
+    <!-- Services Section -->
+    <section class="services-section">
       <div class="container">
-        <h2>Emergency Painting Services We Handle</h2>
-        <p class="section-subtitle">No matter the emergency, we have the expertise and equipment to restore your property quickly and professionally.</p>
-        
+        <h2>Our Emergency Painting Services</h2>
         <div class="services-grid">
-          {emergencyServices.map(service => (
-            <div class={`service-card ${service.urgency}`}>
-              <div class="service-icon">{service.icon}</div>
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
-              <div class="response-info">
-                <span class="response-time">{service.responseTime}</span>
-                <span class="urgency-level">{service.urgency} priority</span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <!-- Emergency Contact Methods -->
-    <section class="emergency-contact">
-      <div class="container">
-        <h2>How to Reach Us in an Emergency</h2>
-        <p class="section-subtitle">Choose the fastest way to get help for your painting emergency.</p>
-        
-        <div class="contact-methods">
-          {contactMethods.map(method => (
-            <div class={`contact-method ${method.urgency}`}>
-              <div class="method-icon">
-                {method.urgency === 'immediate' ? '🚨' : '⚡'}
-              </div>
-              <h3>{method.method}</h3>
-              <p>{method.description}</p>
-              <a href={method.action} class={`btn btn-${method.urgency}`}>
-                {method.text}
-              </a>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <!-- Emergency Form -->
-    <section class="emergency-form-section" id="emergency-form">
-      <div class="container">
-        <h2>Emergency Service Request Form</h2>
-        <p class="section-subtitle">Fill out this form for detailed emergency service requests. We'll respond within 30 minutes during business hours.</p>
-        
-        <form class="emergency-form">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Full Name *</label>
-              <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone Number *</label>
-              <input type="tel" id="phone" name="phone" required>
-            </div>
+          <div class="service-card">
+            <h3>💧 Water Damage Repair</h3>
+            <p>Quick response to water damage with proper drying, repair, and repainting.</p>
+            <ul>
+              <li>Leak damage repair</li>
+              <li>Flood restoration</li>
+              <li>Ceiling water stains</li>
+              <li>Mold prevention</li>
+            </ul>
           </div>
           
-          <div class="form-row">
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email">
-            </div>
-            <div class="form-group">
-              <label for="location">Property Location *</label>
-              <input type="text" id="location" name="location" placeholder="City, State" required>
-            </div>
+          <div class="service-card">
+            <h3>🔥 Smoke Damage</h3>
+            <p>Professional smoke damage cleanup and painting restoration services.</p>
+            <ul>
+              <li>Smoke odor sealing</li>
+              <li>Soot removal</li>
+              <li>Stain blocking primers</li>
+              <li>Complete repainting</li>
+            </ul>
           </div>
           
-          <div class="form-group">
-            <label for="emergency-type">Type of Emergency *</label>
-            <select id="emergency-type" name="emergency-type" required>
-              <option value="">Select emergency type</option>
-              <option value="storm-damage">Storm Damage</option>
-              <option value="water-damage">Water Damage</option>
-              <option value="fire-damage">Fire/Smoke Damage</option>
-              <option value="property-sale">Property Sale Prep</option>
-              <option value="insurance-claim">Insurance Claim</option>
-              <option value="event-prep">Event Preparation</option>
-              <option value="other">Other Emergency</option>
-            </select>
-          </div>
-          
-          <div class="form-group">
-            <label for="urgency">Urgency Level *</label>
-            <select id="urgency" name="urgency" required>
-              <option value="">Select urgency</option>
-              <option value="immediate">Immediate (Same Day)</option>
-              <option value="urgent">Urgent (24 Hours)</option>
-              <option value="asap">ASAP (48 Hours)</option>
-            </select>
-          </div>
-          
-          <div class="form-group">
-            <label for="description">Emergency Description *</label>
-            <textarea id="description" name="description" rows="4" placeholder="Please describe the emergency situation, damage extent, and any specific requirements..." required></textarea>
-          </div>
-          
-          <div class="form-group">
-            <label for="photos">Upload Photos (Optional)</label>
-            <input type="file" id="photos" name="photos" multiple accept="image/*">
-            <small>Upload photos of the damage to help us assess the situation</small>
-          </div>
-          
-          <button type="submit" class="btn btn-emergency-submit">
-            🚨 Submit Emergency Request
-          </button>
-        </form>
-      </div>
-    </section>
-
-    <!-- Emergency Testimonials -->
-    <section class="emergency-testimonials">
-      <div class="container">
-        <h2>Emergency Response Success Stories</h2>
-        <p class="section-subtitle">See how we've helped South Alabama residents during their most critical moments.</p>
-        
-        <div class="testimonials-grid">
-          {emergencyTestimonials.map(testimonial => (
-            <div class="testimonial-card">
-              <div class="testimonial-header">
-                <div class="customer-info">
-                  <h4>{testimonial.name}</h4>
-                  <p class="location">{testimonial.location}</p>
-                  <p class="situation">{testimonial.situation}</p>
-                </div>
-                <div class="response-time-badge">
-                  <span class="time">{testimonial.responseTime}</span>
-                  <span class="label">Response</span>
-                </div>
-              </div>
-              <blockquote>"{testimonial.quote}"</blockquote>
-              <div class="rating">
-                {'★'.repeat(testimonial.rating)}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <!-- Emergency Guarantee -->
-    <section class="emergency-guarantee">
-      <div class="container">
-        <div class="guarantee-content">
-          <h2>Our Emergency Service Guarantee</h2>
-          <div class="guarantee-features">
-            <div class="guarantee-item">
-              <div class="guarantee-icon">⚡</div>
-              <h3>Same-Day Response</h3>
-              <p>We respond to all emergency calls within 2 hours, 24/7</p>
-            </div>
-            <div class="guarantee-item">
-              <div class="guarantee-icon">🛡️</div>
-              <h3>Fully Insured</h3>
-              <p>Licensed and insured for all emergency painting work</p>
-            </div>
-            <div class="guarantee-item">
-              <div class="guarantee-icon">💯</div>
-              <h3>Quality Assured</h3>
-              <p>Emergency work meets the same high standards as regular projects</p>
-            </div>
-            <div class="guarantee-item">
-              <div class="guarantee-icon">📞</div>
-              <h3>24/7 Availability</h3>
-              <p>Available every day of the year for true emergencies</p>
-            </div>
+          <div class="service-card">
+            <h3>🌪️ Storm Damage</h3>
+            <p>Rapid response for hurricane and storm-related painting damage.</p>
+            <ul>
+              <li>Exterior storm repairs</li>
+              <li>Wind damage painting</li>
+              <li>Emergency weatherproofing</li>
+              <li>Insurance claim support</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Final Emergency CTA -->
-    <section class="final-emergency-cta">
+    <!-- FAQ Section -->
+    <section class="faq-section">
       <div class="container">
-        <div class="cta-content">
-          <h2>Don't Wait - Get Help Now</h2>
-          <p>Every minute counts in an emergency. Contact us immediately for fast, professional emergency painting services.</p>
-          <div class="cta-buttons">
-            <a href="tel:+12512374545" class="btn btn-emergency-primary btn-large">
-              📞 Call (251) 237-4545 Now
-            </a>
-            <a href="sms:+12512374545" class="btn btn-emergency-secondary btn-large">
-              💬 Text Emergency Details
-            </a>
+        <h2>Frequently Asked Questions - Emergency Painting</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <h3>Do you offer 24/7 emergency services?</h3>
+            <p>Yes, we provide emergency response for urgent painting needs related to water damage, smoke damage, or storm damage. Call us at (251) 237-4545 for immediate assistance throughout South Alabama.</p>
           </div>
-          <p class="cta-note">Available 24/7 for true emergencies • Licensed & Insured • Same-day response</p>
+          <div class="faq-item">
+            <h3>Do you work with insurance companies?</h3>
+            <p>Yes, we regularly work with insurance companies and can provide detailed documentation, photos, and estimates for insurance claims. We'll work directly with your adjuster to ensure proper coverage for your painting repairs.</p>
+          </div>
+          <div class="faq-item">
+            <h3>How quickly can you respond?</h3>
+            <p>For emergency situations, we typically respond within 24-48 hours. Time is critical with water and smoke damage, so we prioritize emergency calls to prevent further damage and begin restoration as quickly as possible.</p>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ready for Professional Emergency Painting?</h2>
+        <p>Contact Barry "Boomer" Brown today for a free estimate on your emergency painting project.</p>
+        <a href="/contact" class="btn btn-primary">
+          <span class="btn-icon">📞</span>
+          Get Free Estimate
+        </a>
       </div>
     </section>
   </main>
 </BaseLayout>
 
 <style>
-  /* Emergency Hero Section */
-  .emergency-hero {
-    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
-    color: white;
-    padding: 4rem 0;
-    position: relative;
-    overflow: hidden;
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
   }
 
-  .emergency-hero::before {
-    content: '';
+  /* Hero Section */
+  .hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+
+  .hero-background {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-    opacity: 0.3;
-  }
-
-  .hero-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 3rem;
-    align-items: center;
-    position: relative;
+    width: 100%;
+    height: 100%;
     z-index: 1;
   }
 
-  .hero-text h1 {
-    font-size: 3rem;
+  .hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .hero-slide.active {
+    opacity: 1;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 100%);
+    z-index: 2;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .hero-logo-image {
+    height: 300px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 5vw, 4rem);
     font-weight: 800;
-    margin-bottom: 1.5rem;
+    margin: 0;
+    margin-top: -4rem;
+    margin-bottom: 1rem;
     line-height: 1.1;
+    color: white;
   }
 
   .hero-subtitle {
     font-size: 1.25rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 1.5rem;
     line-height: 1.6;
   }
 
-  .emergency-cta {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
-  }
-
-  .btn-emergency-primary {
-    background: #fbbf24;
-    color: #1f2937;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.125rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.2);
-  }
-
-  .btn-emergency-primary:hover {
-    background: #f59e0b;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-  }
-
-  .btn-emergency-secondary {
-    background: rgba(255,255,255,0.2);
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.125rem;
-    transition: all 0.3s ease;
-    border: 2px solid rgba(255,255,255,0.3);
-  }
-
-  .btn-emergency-secondary:hover {
-    background: rgba(255,255,255,0.3);
-    transform: translateY(-2px);
-  }
-
-  .response-time {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .time-badge {
-    background: rgba(255,255,255,0.2);
-    padding: 0.75rem 1.5rem;
-    border-radius: 25px;
+  .phone-number {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-weight: 600;
-    border: 1px solid rgba(255,255,255,0.3);
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    justify-content: center;
+    margin: 0;
   }
 
-  .time-icon {
+  .phone-label {
+    font-weight: 500;
+  }
+
+  .phone-link {
+    color: #fbbf24;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.125rem;
+  }
+
+  .phone-link:hover {
+    color: #f59e0b;
+    text-decoration: underline;
+  }
+
+  .hero-cta {
+    margin-top: 2rem;
+  }
+
+  .hero-trust-badges {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1.5rem;
+    z-index: 4;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.94rem 1.56rem;
+    background: transparent;
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  .trust-badge:hover {
+    transform: translateY(-2px);
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.9);
+  }
+
+  .trust-badge .trust-icon {
+    font-size: 1.56rem;
+    color: #fbbf24;
+  }
+
+  .trust-badge .trust-stars {
+    font-size: 1.56rem;
+    color: #fbbf24;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  .trust-badge .trust-text {
+    font-size: 1.06rem;
+    font-weight: 600;
+  }
+
+  .hero-dots {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 3;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .dot.active {
+    background: #fbbf24;
+    transform: scale(1.2);
+  }
+
+  .dot:hover {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.25rem 2.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #1f2937;
+    box-shadow: 
+      0 8px 25px rgba(251, 191, 36, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .btn-primary:hover::before {
+    left: 100%;
+  }
+
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    transform: translateY(-3px);
+    box-shadow: 
+      0 12px 35px rgba(251, 191, 36, 0.6),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  }
+
+  .btn-icon {
     font-size: 1.25rem;
   }
 
-  .hero-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  /* Content Sections */
+  .services-section,
+  .faq-section {
+    padding: 5rem 0;
   }
 
-  .emergency-scene {
-    font-size: 4rem;
-    display: flex;
-    gap: 1rem;
-    animation: emergencyPulse 2s ease-in-out infinite;
-  }
-
-  @keyframes emergencyPulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-  }
-
-  /* Emergency Services Grid */
-  .emergency-services {
-    padding: 4rem 0;
+  .services-section {
     background: #f8fafc;
+  }
+
+  .faq-section {
+    background: white;
+  }
+
+  .services-section h2,
+  .faq-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1f2937;
+    margin-bottom: 3rem;
   }
 
   .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 3rem;
   }
@@ -502,406 +440,195 @@ const emergencyTestimonials = [
     background: white;
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    border-left: 4px solid #e5e7eb;
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #3b82f6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
   .service-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-  }
-
-  .service-card.high {
-    border-left-color: #dc2626;
-  }
-
-  .service-card.medium {
-    border-left-color: #f59e0b;
-  }
-
-  .service-card.low {
-    border-left-color: #10b981;
-  }
-
-  .service-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
   }
 
   .service-card h3 {
-    font-size: 1.25rem;
-    font-weight: 700;
+    color: #1e40af;
     margin-bottom: 1rem;
-    color: #1f2937;
+    font-size: 1.5rem;
+    font-weight: 700;
   }
 
   .service-card p {
-    color: #6b7280;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-  }
-
-  .response-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .response-time {
-    background: #3b82f6;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.875rem;
-    font-weight: 600;
-  }
-
-  .urgency-level {
-    color: #6b7280;
-    font-size: 0.875rem;
-    text-transform: capitalize;
-  }
-
-  /* Emergency Contact Methods */
-  .emergency-contact {
-    padding: 4rem 0;
-    background: white;
-  }
-
-  .contact-methods {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-  }
-
-  .contact-method {
-    text-align: center;
-    padding: 2rem;
-    border-radius: 12px;
-    background: #f8fafc;
-    border: 2px solid #e5e7eb;
-    transition: all 0.3s ease;
-  }
-
-  .contact-method.immediate {
-    border-color: #dc2626;
-    background: #fef2f2;
-  }
-
-  .contact-method.fast {
-    border-color: #f59e0b;
-    background: #fffbeb;
-  }
-
-  .method-icon {
-    font-size: 3rem;
     margin-bottom: 1rem;
+    line-height: 1.7;
+    color: #4b5563;
   }
 
-  .contact-method h3 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: #1f2937;
+  .service-card ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
   }
 
-  .contact-method p {
-    color: #6b7280;
-    margin-bottom: 1.5rem;
-  }
-
-  .btn-immediate {
-    background: #dc2626;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-    display: block;
-    transition: all 0.3s ease;
-  }
-
-  .btn-immediate:hover {
-    background: #b91c1c;
-    transform: translateY(-2px);
-  }
-
-  .btn-fast {
-    background: #f59e0b;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-    display: block;
-    transition: all 0.3s ease;
-  }
-
-  .btn-fast:hover {
-    background: #d97706;
-    transform: translateY(-2px);
-  }
-
-  /* Emergency Form */
-  .emergency-form-section {
-    padding: 4rem 0;
-    background: #f8fafc;
-  }
-
-  .emergency-form {
-    background: white;
-    padding: 3rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    margin-top: 2rem;
-  }
-
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .form-group {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .form-group label {
-    font-weight: 600;
+  .service-card li {
     margin-bottom: 0.5rem;
-    color: #374151;
-  }
-
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    padding: 0.75rem;
-    border: 2px solid #e5e7eb;
-    border-radius: 6px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-  }
-
-  .form-group input:focus,
-  .form-group select:focus,
-  .form-group textarea:focus {
-    outline: none;
-    border-color: #3b82f6;
-  }
-
-  .form-group small {
     color: #6b7280;
-    font-size: 0.875rem;
-    margin-top: 0.25rem;
+    line-height: 1.6;
   }
 
-  .btn-emergency-submit {
-    background: #dc2626;
-    color: white;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.125rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    width: 100%;
-  }
-
-  .btn-emergency-submit:hover {
-    background: #b91c1c;
-    transform: translateY(-2px);
-  }
-
-  /* Emergency Testimonials */
-  .emergency-testimonials {
-    padding: 4rem 0;
-    background: white;
-  }
-
-  .testimonials-grid {
+  .faq-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
+    gap: 1.5rem;
     margin-top: 3rem;
   }
 
-  .testimonial-card {
+  .faq-item {
     background: #f8fafc;
     padding: 2rem;
     border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     border-left: 4px solid #3b82f6;
+    transition: transform 0.3s ease;
   }
 
-  .testimonial-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+  .faq-item:hover {
+    transform: translateX(4px);
+  }
+
+  .faq-item h3 {
+    color: #1e40af;
     margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: 700;
   }
 
-  .customer-info h4 {
+  .faq-item p {
+    line-height: 1.7;
+    color: #4b5563;
+    margin: 0;
+  }
+
+  .cta-section {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+  }
+
+  .cta-section h2 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: 800;
+  }
+
+  .cta-section p {
+    margin-bottom: 2rem;
     font-size: 1.125rem;
-    font-weight: 700;
-    color: #1f2937;
-    margin-bottom: 0.25rem;
-  }
-
-  .location {
-    color: #6b7280;
-    font-size: 0.875rem;
-    margin-bottom: 0.25rem;
-  }
-
-  .situation {
-    color: #3b82f6;
-    font-size: 0.875rem;
-    font-weight: 600;
-  }
-
-  .response-time-badge {
-    text-align: center;
-    background: #3b82f6;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.875rem;
-  }
-
-  .response-time-badge .time {
-    display: block;
-    font-weight: 700;
-    font-size: 1rem;
-  }
-
-  .response-time-badge .label {
-    font-size: 0.75rem;
-    opacity: 0.9;
-  }
-
-  .testimonial-card blockquote {
-    font-style: italic;
-    color: #374151;
-    margin-bottom: 1rem;
-    line-height: 1.6;
-  }
-
-  .rating {
-    color: #fbbf24;
-    font-size: 1.25rem;
-  }
-
-  /* Emergency Guarantee */
-  .emergency-guarantee {
-    padding: 4rem 0;
-    background: #1f2937;
-    color: white;
-  }
-
-  .guarantee-content h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 3rem;
-  }
-
-  .guarantee-features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-  }
-
-  .guarantee-item {
-    text-align: center;
-    padding: 2rem;
-  }
-
-  .guarantee-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-
-  .guarantee-item h3 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-  }
-
-  .guarantee-item p {
-    color: #d1d5db;
-    line-height: 1.6;
-  }
-
-  /* Final Emergency CTA */
-  .final-emergency-cta {
-    padding: 4rem 0;
-    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
-    color: white;
-    text-align: center;
-  }
-
-  .cta-content h2 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 1rem;
-  }
-
-  .cta-content p {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
-  }
-
-  .cta-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
-  }
-
-  .btn-large {
-    padding: 1.25rem 2.5rem;
-    font-size: 1.25rem;
-  }
-
-  .cta-note {
-    color: #fbbf24;
-    font-weight: 600;
-    font-size: 1rem;
+    opacity: 0.95;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   /* Mobile Responsive */
   @media (max-width: 768px) {
-    .hero-content {
-      grid-template-columns: 1fr;
-      text-align: center;
+    .hero {
+      height: 70vh;
+      min-height: 500px;
     }
 
-    .hero-text h1 {
+    .hero-logo-image {
+      height: 200px;
+    }
+
+    .hero h1 {
       font-size: 2rem;
+      margin-top: -2rem;
     }
 
-    .emergency-cta {
-      justify-content: center;
+    .hero-subtitle {
+      font-size: 1.1rem;
     }
 
-    .form-row {
+    .hero-trust-badges {
+      top: 1rem;
+      gap: 0.75rem;
+      padding: 0 1rem;
+    }
+
+    .trust-badge {
+      padding: 0.63rem 1.25rem;
+      font-size: 1rem;
+    }
+
+    .trust-badge .trust-icon,
+    .trust-badge .trust-stars {
+      font-size: 1.25rem;
+    }
+
+    .trust-badge .trust-text {
+      font-size: 0.94rem;
+    }
+
+    .services-grid {
       grid-template-columns: 1fr;
     }
 
-    .cta-buttons {
-      flex-direction: column;
-      align-items: center;
+    .btn {
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
     }
 
-    .btn-large {
-      width: 100%;
-      max-width: 300px;
+    .services-section,
+    .faq-section {
+      padding: 3rem 0;
+    }
+
+    .cta-section {
+      padding: 3rem 1.5rem;
     }
   }
 </style>
+
+<script>
+  // Hero Slider Functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.dot');
+    let currentSlide = 0;
+    let slideInterval;
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
+      slides[index].classList.add('active');
+      dots[index].classList.add('active');
+      currentSlide = index;
+    }
+
+    function nextSlide() {
+      const next = (currentSlide + 1) % slides.length;
+      showSlide(next);
+    }
+
+    function startSlider() {
+      slideInterval = setInterval(nextSlide, 5000);
+    }
+
+    function stopSlider() {
+      clearInterval(slideInterval);
+    }
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        showSlide(index);
+        stopSlider();
+        startSlider();
+      });
+    });
+
+    startSlider();
+
+    const hero = document.querySelector('.hero');
+    hero.addEventListener('mouseenter', stopSlider);
+    hero.addEventListener('mouseleave', startSlider);
+  });
+</script>

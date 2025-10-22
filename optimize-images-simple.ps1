@@ -73,3 +73,7 @@ Write-Host "`n💡 Next steps:" -ForegroundColor Yellow
 Write-Host "   1. Your images are now optimized with WebP format" -ForegroundColor White
 Write-Host "   2. The website will automatically use WebP when available" -ForegroundColor White
 Write-Host "   3. Test the website to ensure all images load correctly" -ForegroundColor White
+
+
+
+

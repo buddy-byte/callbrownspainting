@@ -1,0 +1,797 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Painting Services in Daphne AL - CallBrownsPainting.com"
+  description="Expert Eastern Shore painters in Daphne AL: interior painting, exterior painting, cabinet refinishing. Specializing in vacation rental properties and coastal home maintenance. Free estimates available."
+  keywords="painting contractor Daphne AL, interior painting Daphne AL, exterior painting Daphne AL, cabinet refinishing Daphne AL, painters in Daphne AL, Eastern Shore painting contractors"
+>
+  <main>
+        <section class="hero">
+      <div class="hero-background">
+        <div class="hero-slide" style="background-image: url('/images/hero/hero-1-optimized.jpg'); background-position: center center;"></div>
+        <div class="hero-slide" style="background-image: url('/images/hero/hero-2-optimized.jpg'); background-position: center center;"></div>
+        <div class="hero-slide" style="background-image: url('/images/hero/hero-3-optimized.jpg'); background-position: center top;"></div>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <img src="/images/logo/browns-painting-logo-hat.png" alt="Brown's Painting Logo" class="hero-logo-image">
+          <h1>Professional Painting Services in Daphne, AL</h1>
+          <p class="phone-number">Call Us Today at <a href="tel:+12512374545">(251) 237-4545</a></p>
+          <div class="hero-cta">
+            <a href="/contact" class="btn btn-primary">Get Free Estimate</a>
+          </div>
+        </div>
+        <div class="hero-trust-badges">
+          <div class="trust-badge">
+            <div class="trust-stars">â˜…â˜…â˜…â˜…â˜…</div>
+            <div class="trust-text">25+ Years Experience</div>
+          </div>
+          <div class="trust-badge">
+            <div class="trust-text">Licensed & Insured</div>
+          </div>
+          <div class="trust-badge">
+            <div class="trust-text">100% Guaranteed</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </section>
+
+    <section id="services" class="city-services">
+      <div class="container">
+        <h2>Painting Services in Daphne</h2>
+        
+        <div class="services-grid">
+          <article class="service-card">
+            <h3>Interior Painting Daphne</h3>
+            <p>
+              Transform your Daphne home's interior with professional painting services. We specialize in 
+              humidity-resistant paints perfect for the Eastern Shore climate.
+            </p>
+            <ul>
+              <li>Living rooms and bedrooms</li>
+              <li>Kitchen and bathroom painting</li>
+              <li>Cabinet refinishing</li>
+              <li>Drywall repair and preparation</li>
+              <li>Color consultation</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <h3>Exterior Painting Daphne</h3>
+            <p>
+              Protect your Daphne property with professional exterior painting. We use weather-resistant 
+              paints designed for Alabama's coastal climate.
+            </p>
+            <ul>
+              <li>House siding and trim</li>
+              <li>Deck and porch painting</li>
+              <li>Fence and gate painting</li>
+              <li>Garage doors and shutters</li>
+              <li>Weather-resistant coatings</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <h3>Commercial Painting Daphne</h3>
+            <p>
+              Professional commercial painting services for Daphne businesses, offices, and institutions. 
+              We work around your schedule to minimize disruption.
+            </p>
+            <ul>
+              <li>Office buildings</li>
+              <li>Retail spaces</li>
+              <li>Restaurants</li>
+              <li>Medical offices</li>
+              <li>After-hours scheduling</li>
+            </ul>
+          </article>
+        </div>
+
+        <section class="daphne-specialties">
+          <h2>Why Choose CallBrownsPainting.com for Daphne Projects</h2>
+          
+          <div class="specialties-grid">
+            <div class="specialty-item">
+              <h3>Eastern Shore Expertise</h3>
+              <p>
+                We understand the unique challenges of painting in Daphne's Eastern Shore climate. 
+                High humidity and coastal weather require specialized techniques and materials.
+              </p>
+            </div>
+
+            <div class="specialty-item">
+              <h3>Local Knowledge</h3>
+              <p>
+                Based in Brewton, we're familiar with Daphne's neighborhoods, architectural styles, 
+                and local regulations. We know what works best for Eastern Shore properties.
+              </p>
+            </div>
+
+            <div class="specialty-item">
+              <h3>Quality Materials</h3>
+              <p>
+                We use premium paints and materials specifically chosen for Daphne's climate. 
+                Humidity-resistant paints prevent peeling and mold growth.
+              </p>
+            </div>
+
+            <div class="specialty-item">
+              <h3>Reliable Service</h3>
+              <p>
+                Professional communication, on-time completion, and quality workmanship. 
+                We're committed to your satisfaction on every Daphne project.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="daphne-areas">
+          <h2>Daphne Service Areas & Local Expertise</h2>
+          <p>
+            We provide professional painting services throughout Daphne and surrounding Eastern Shore communities. 
+            Our local knowledge of Baldwin County's unique climate and architectural styles ensures superior results.
+          </p>
+          
+          <div class="areas-list">
+            <div class="area-group">
+              <h3>Daphne Neighborhoods We Serve</h3>
+              <ul>
+                <li>Downtown Daphne Historic District</li>
+                <li>Eastern Shore Communities</li>
+                <li>Daphne Point Waterfront</li>
+                <li>Montrose Subdivision</li>
+                <li>Point Clear Estates</li>
+                <li>Magnolia Springs</li>
+                <li>Jubilee Springs</li>
+                <li>Daphne Plantation</li>
+                <li>Eastern Shore Village</li>
+                <li>Bayfront Communities</li>
+                <li>Timber Creek</li>
+                <li>Daphne Commons</li>
+              </ul>
+            </div>
+            
+            <div class="area-group">
+              <h3>Nearby Communities</h3>
+              <ul>
+                <li>Fairhope - 5 minutes</li>
+                <li>Spanish Fort - 10 minutes</li>
+                <li>Mobile - 15 minutes</li>
+                <li>Loxley - 15 minutes</li>
+                <li>Robertsdale - 20 minutes</li>
+                <li>Bay Minette - 25 minutes</li>
+                <li>Foley - 30 minutes</li>
+                <li>Gulf Shores - 45 minutes</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="daphne-local-content">
+          <h2>Why Daphne Homeowners Choose Brown's Painting</h2>
+          
+          <div class="local-expertise">
+            <h3>Eastern Shore Climate Expertise</h3>
+            <p>
+              Daphne's unique position on the Eastern Shore of Mobile Bay creates specific painting challenges. 
+              The high humidity levels (averaging 70-80% year-round) combined with salt air from the bay requires 
+              specialized paint systems and preparation techniques. We understand that standard interior paints 
+              will fail in Daphne's climate, which is why we use moisture-resistant primers and low-VOC paints 
+              specifically formulated for coastal Alabama conditions.
+            </p>
+            
+            <h3>Local Landmarks & Traffic Patterns</h3>
+            <p>
+              Our team is familiar with Daphne's major landmarks and traffic patterns, ensuring efficient project 
+              scheduling. We navigate around peak traffic times on US-98 and I-10, and we're experienced with 
+              the unique access challenges of waterfront properties along Mobile Bay. Whether you're near the 
+              Daphne Civic Center, the Eastern Shore Art Center, or the scenic Bayfront Park, we understand 
+              the local logistics that affect painting projects.
+            </p>
+            
+            <h3>Baldwin County Weather Considerations</h3>
+            <p>
+              Daphne experiences distinct seasonal patterns that impact painting schedules. Spring brings 
+              high humidity and frequent afternoon thunderstorms, while summer heat can cause paint to dry 
+              too quickly. Fall offers the best painting conditions with lower humidity and stable temperatures. 
+              Winter brings occasional freezes that can affect exterior work. We plan all projects around 
+              these weather patterns to ensure optimal results and lasting finishes.
+            </p>
+            
+            <h3>Local Supply Chain Partners</h3>
+            <p>
+              We maintain relationships with local suppliers including Sherwin-Williams in Spanish Fort, 
+              Benjamin Moore dealers in Fairhope, and PPG suppliers in Mobile. This local network ensures 
+              we can quickly source the right materials for your Daphne project, whether you need 
+              humidity-resistant interior paints, salt-air exterior coatings, or specialized primers for 
+              the area's common building materials like Hardie board and traditional wood siding.
+            </p>
+          </div>
+        </section>
+
+        <section class="daphne-faq">
+          <h2>Frequently Asked Questions - Daphne Painting Services</h2>
+          
+          <div class="faq-container">
+            <div class="faq-item">
+              <h3>How does Daphne's humidity affect paint jobs?</h3>
+              <p>
+                Daphne's high humidity levels (70-80% average) can cause paint to dry slowly and develop 
+                adhesion problems. We use moisture-resistant primers and humidity-tolerant paints, plus 
+                we monitor weather conditions carefully. We may use dehumidifiers or fans to control 
+                drying conditions when necessary.
+              </p>
+            </div>
+            
+            <div class="faq-item">
+              <h3>Do you work on waterfront properties in Daphne?</h3>
+              <p>
+                Yes, we have extensive experience with Daphne's waterfront properties along Mobile Bay. 
+                We use salt-air resistant paints and specialized preparation techniques to protect against 
+                the corrosive effects of bay air. We're also experienced with the unique access challenges 
+                of waterfront homes.
+              </p>
+            </div>
+            
+            <div class="faq-item">
+              <h3>What's the best time of year to paint in Daphne?</h3>
+              <p>
+                Fall (October-November) typically offers the best conditions with lower humidity and 
+                stable temperatures. Spring can work but requires careful weather monitoring. We avoid 
+                summer painting when possible due to extreme heat and humidity, and winter work depends 
+                on temperature and moisture levels.
+              </p>
+            </div>
+            
+            <div class="faq-item">
+              <h3>Do you handle historic homes in Daphne's downtown area?</h3>
+              <p>
+                Absolutely. We're experienced with Daphne's historic downtown district and understand 
+                the special considerations for older homes. This includes lead-safe practices for pre-1978 
+                homes, proper preparation of historic materials, and color consultation that respects 
+                the area's architectural heritage.
+              </p>
+            </div>
+            
+            <div class="faq-item">
+              <h3>How do you protect landscaping during exterior painting?</h3>
+              <p>
+                We take special care with Daphne's often extensive landscaping. We use drop cloths, 
+                plastic sheeting, and careful masking to protect plants, shrubs, and flower beds. 
+                We also coordinate with homeowners about any special plants that need extra protection 
+                from paint overspray or equipment.
+              </p>
+            </div>
+            
+            <div class="faq-item">
+              <h3>Do you offer color consultation for Eastern Shore homes?</h3>
+              <p>
+                Yes, we provide color consultation that takes into account Daphne's unique light conditions, 
+                the bay's reflection, and the area's architectural styles. We understand how colors appear 
+                differently in the Eastern Shore's natural light and can recommend palettes that complement 
+                both your home's style and the local environment.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="testimonial-section">
+          <h2>What Daphne Customers Say</h2>
+          <div class="testimonial">
+            <blockquote>
+              "Barry did an excellent job painting our Daphne home. He understood the humidity challenges 
+              of the Eastern Shore and used the right materials. The results are beautiful and lasting."
+            </blockquote>
+            <cite>- Michael R., Daphne Resident</cite>
+          </div>
+        </section>
+
+        <section class="cta-section">
+          <h2>Ready for Professional Painting in Daphne?</h2>
+          <p>
+            Contact Barry "Boomer" Brown today for a free estimate on your Daphne painting project. 
+            We specialize in Eastern Shore properties and understand the local climate challenges.
+          </p>
+          <a href="/contact" class="btn btn-primary">Get Free Daphne Painting Estimate</a>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .hero-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transition: opacity 3s ease-in-out;
+    }
+
+    .hero-slide:first-child {
+      opacity: 1;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 2;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+      color: white;
+      max-width: 1200px;
+      padding: 0 2rem;
+    }
+
+    .hero-text {
+      margin-bottom: 2rem;
+    }
+
+    .hero-logo-image {
+      max-width: 300px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .phone-number {
+      font-size: clamp(1.2rem, 3vw, 1.5rem);
+      margin-bottom: 2rem;
+    }
+
+    .phone-number a {
+      color: #ff6b35;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .hero-cta {
+      margin-bottom: 2rem;
+    }
+
+    .hero-trust-badges {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .trust-badge {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .trust-stars {
+      color: #ffd700;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .trust-text {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .hero-dots {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 0.5rem;
+      z-index: 3;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .dot.active {
+      background: #ff6b35;
+    }
+
+    .lead {
+      font-size: clamp(1.1rem, 2vw, 1.3rem);
+      margin-bottom: 2rem;
+      max-width: 800px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-primary {
+      background: white;
+      color: #667eea;
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      border: 2px solid white;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .city-services {
+      padding: 2rem 0;
+    }
+
+    .city-services h2 {
+      text-align: center;
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      margin-bottom: 2rem;
+      color: #333;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .service-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-left: 4px solid #667eea;
+    }
+
+    .service-card h3 {
+      color: #667eea;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .service-card p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .service-card ul {
+      margin: 1rem 0;
+      padding-left: 1.5rem;
+    }
+
+    .service-card li {
+      margin-bottom: 0.5rem;
+      color: #555;
+    }
+
+    .daphne-specialties {
+      background: #f8fafc;
+      padding: 2rem;
+      border-radius: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .daphne-specialties h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #333;
+    }
+
+    .specialties-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .specialty-item {
+      background: white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+    }
+
+    .specialty-item h3 {
+      color: #667eea;
+      margin-bottom: 1rem;
+    }
+
+    .specialty-item p {
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .daphne-areas {
+      margin-bottom: 2rem;
+    }
+
+    .daphne-areas h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #333;
+    }
+
+    .daphne-areas > p {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #555;
+    }
+
+    .areas-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .area-group h3 {
+      color: #667eea;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .area-group ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .area-group li {
+      padding: 0.5rem 0;
+      color: #555;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .area-group li:last-child {
+      border-bottom: none;
+    }
+
+    .testimonial-section {
+      background: white;
+      padding: 3rem 2rem;
+      border-radius: 1rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .testimonial-section h2 {
+      margin-bottom: 2rem;
+      color: #333;
+    }
+
+    .testimonial blockquote {
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #555;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .testimonial cite {
+      color: #667eea;
+      font-weight: 600;
+    }
+
+    .cta-section {
+      text-align: center;
+      padding: 2rem 0;
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      color: white;
+      border-radius: 1rem;
+    }
+
+    .cta-section h2 {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    .cta-section p {
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+      opacity: 0.95;
+    }
+
+    .daphne-local-content {
+      background: #f8fafc;
+      padding: 3rem 2rem;
+      border-radius: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .daphne-local-content h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #333;
+      font-size: 2rem;
+    }
+
+    .local-expertise h3 {
+      color: #667eea;
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+      font-size: 1.3rem;
+    }
+
+    .local-expertise h3:first-child {
+      margin-top: 0;
+    }
+
+    .local-expertise p {
+      line-height: 1.7;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    .daphne-faq {
+      margin-bottom: 2rem;
+    }
+
+    .daphne-faq h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #333;
+      font-size: 2rem;
+    }
+
+    .faq-container {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .faq-item {
+      background: white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-left: 4px solid #667eea;
+    }
+
+    .faq-item h3 {
+      color: #667eea;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .faq-item p {
+      line-height: 1.6;
+      color: #555;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .city-hero {
+        padding: 4rem 0 2rem;
+      }
+
+      .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+      }
+
+      .hero-text {
+        text-align: center;
+      }
+
+      .hero-image img {
+        height: 300px;
+      }
+
+      .city-services {
+        padding: 2rem 0;
+      }
+
+      .service-card {
+        padding: 1.5rem;
+      }
+
+      .daphne-specialties {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+
+  <script>
+    // Hero carousel functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const slides = document.querySelectorAll('.hero-slide');
+      const dots = document.querySelectorAll('.dot');
+      let currentSlide = 0;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.style.opacity = i === index ? '1' : '0';
+        });
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === index);
+        });
+      }
+
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }
+
+      // Auto-advance slides every 5 seconds
+      setInterval(nextSlide, 5000);
+
+      // Dot navigation
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          currentSlide = index;
+          showSlide(currentSlide);
+        });
+      });
+    });
+  </script>
+</BaseLayout>
+
+
+

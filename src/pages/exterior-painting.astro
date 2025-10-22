@@ -1,213 +1,634 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ServiceSchema from '../components/ServiceSchema.astro';
-import Breadcrumbs from '../components/Breadcrumbs.astro';
-import RelatedServices from '../components/RelatedServices.astro';
-import ServiceContentFramework from '../components/ServiceContentFramework.astro';
+
+const title = "Exterior Painting Services | Coastal Weather-Resistant Painting Alabama";
+const description = "Expert exterior painting services for South Alabama homes. Weather-resistant, salt air protection. Serving Gulf Shores, Orange Beach, Fairhope, Mobile.";
+const keywords = "exterior painting Alabama, coastal painting, weather resistant paint, beach house painting";
 ---
 
 <BaseLayout
-  title="Exterior Painting Services - CallBrownsPainting.com"
-  description="Coastal exterior painting experts: salt air resistant paints, deck staining, weather protection. Specializing in Gulf Shores, Orange Beach, Fairhope beach homes. 25+ years coastal painting experience."
-  keywords="exterior painting Gulf Shores AL, beach house painting Orange Beach AL, deck staining Foley AL, salt air paint damage Orange Beach, coastal home painting contractors, exterior repainting Gulf Shores AL"
+  title={title}
+  description={description}
+  keywords={keywords}
 >
   <main>
-    <!-- Breadcrumbs -->
-    <Breadcrumbs items={[
-      { name: 'Services', url: '/services' },
-      { name: 'Exterior Painting', url: '/exterior-painting', current: true }
-    ]} />
-    
     <!-- Service Schema -->
-    <ServiceSchema 
+    <ServiceSchema
       serviceName="Exterior Painting Services"
-      serviceDescription="Professional exterior painting services for residential and commercial properties throughout South Alabama. Specializing in weather-resistant paints, deck staining, coastal home painting, and salt air damage protection."
+      serviceDescription="Expert exterior painting services for South Alabama homes. Weather-resistant, salt air protection. Serving Gulf Shores, Orange Beach, Fairhope, Mobile."
       serviceUrl="https://callbrownspainting.com/exterior-painting"
       serviceType="Exterior Painting"
       priceRange="$$"
       serviceImage="https://callbrownspainting.com/assets/exterior-painting-service.jpg"
     />
 
-    <!-- Service Content Framework -->
-    <ServiceContentFramework
-      serviceName="Exterior Painting"
-      serviceType="exterior"
-      heroTitle="Professional Exterior Painting Services"
-      heroSubtitle="Protect and beautify your property with expert exterior painting services throughout South Alabama. From Gulf Shores to Brewton, we specialize in coastal and inland weather-resistant solutions."
-      valueProposition="With 25+ years of experience in South Alabama's challenging climate, we understand the unique demands of exterior painting. Our specialized techniques and premium materials ensure your exterior paint job will withstand coastal salt air, intense sun, and high humidity while maintaining its beauty for years to come."
-      whatsIncluded={[
-        {
-          title: "Weather-Resistant Paints",
-          description: "Premium paints specifically designed for Alabama's coastal climate and high humidity conditions.",
-          icon: "🌊"
-        },
-        {
-          title: "Salt Air Protection",
-          description: "Specialized paint systems that resist salt air damage and coastal weather conditions.",
-          icon: "🏖️"
-        },
-        {
-          title: "Deck & Porch Staining",
-          description: "Professional deck staining and porch painting with UV-resistant and moisture-resistant finishes.",
-          icon: "🏠"
-        },
-        {
-          title: "Pressure Washing Prep",
-          description: "Thorough cleaning and surface preparation to ensure optimal paint adhesion and longevity.",
-          icon: "💧"
-        },
-        {
-          title: "Fence & Gate Painting",
-          description: "Complete fence and gate painting services with durable, weather-resistant finishes.",
-          icon: "🚪"
-        },
-        {
-          title: "Coastal Home Specialists",
-          description: "Expert knowledge of beach house painting and vacation rental maintenance requirements.",
-          icon: "🌴"
-        }
-      ]}
-      processSteps={[
-        {
-          step: 1,
-          title: "Free Consultation & Estimate",
-          description: "We visit your property to assess the exterior condition, discuss your vision, and provide a detailed written estimate with no hidden costs.",
-          duration: "30-45 minutes"
-        },
-        {
-          step: 2,
-          title: "Surface Preparation Planning",
-          description: "We create a detailed preparation plan including pressure washing, scraping, sanding, and priming based on your specific exterior materials.",
-          duration: "1-2 hours"
-        },
-        {
-          step: 3,
-          title: "Weather & Schedule Coordination",
-          description: "We monitor weather conditions and schedule your project during optimal painting weather for best results.",
-          duration: "1-2 days"
-        },
-        {
-          step: 4,
-          title: "Surface Preparation",
-          description: "We thoroughly clean, scrape, sand, and prime all surfaces, protecting landscaping and surrounding areas.",
-          duration: "1-3 days"
-        },
-        {
-          step: 5,
-          title: "Professional Painting",
-          description: "Our skilled painters apply premium exterior paints using professional techniques, ensuring even coverage and crisp lines.",
-          duration: "2-5 days"
-        },
-        {
-          step: 6,
-          title: "Quality Inspection & Cleanup",
-          description: "We conduct a thorough quality inspection with you, then clean up completely and remove all protection materials.",
-          duration: "1-2 hours"
-        }
-      ]}
-      commonIssues={[
-        {
-          problem: "Paint Peeling from Salt Air",
-          solution: "We use salt air resistant primers and paints specifically designed for coastal environments, plus proper surface preparation techniques.",
-          urgency: "high"
-        },
-        {
-          problem: "UV Damage and Fading",
-          solution: "We apply UV-resistant paints and finishes that maintain color vibrancy and protect against sun damage.",
-          urgency: "high"
-        },
-        {
-          problem: "Mold and Mildew Growth",
-          solution: "We use anti-microbial paints and ensure proper surface preparation to prevent future mold and mildew issues.",
-          urgency: "high"
-        },
-        {
-          problem: "Deck Stain Failure",
-          solution: "We properly prepare deck surfaces and use high-quality stains designed for foot traffic and weather exposure.",
-          urgency: "medium"
-        },
-        {
-          problem: "Paint Cracking in Heat",
-          solution: "We use flexible paints and proper preparation techniques that expand and contract with temperature changes.",
-          urgency: "medium"
-        },
-        {
-          problem: "Poor Color Coverage",
-          solution: "Our professional surface preparation and high-quality paints ensure even coverage and true color representation.",
-          urgency: "low"
-        }
-      ]}
-      customerPromise={{
-        title: "Our 100% Risk-Free Quality Guarantee",
-        guarantees: [
-          {
-            title: "Satisfaction Guarantee",
-            description: "If you're not completely satisfied with our work, we'll return to fix any issues at no additional cost."
-          },
-          {
-            title: "Weather Warranty",
-            description: "We guarantee our exterior paint jobs against weather-related issues for 5 years."
-          },
-          {
-            title: "Licensed & Insured",
-            description: "Fully licensed and insured for your protection and peace of mind on every project."
-          },
-          {
-            title: "Clean Work Environment",
-            description: "We protect your landscaping and clean up completely, leaving your property spotless."
-          },
-          {
-            title: "Premium Materials",
-            description: "We use only high-quality exterior paints and materials from trusted brands like Sherwin-Williams and Benjamin Moore."
-          },
-          {
-            title: "Timely Completion",
-            description: "We stick to our schedule and complete your project on time, every time."
-          }
-        ]
-      }}
-      faqs={[
-        {
-          question: "How long does an exterior painting project take?",
-          answer: "Most exterior projects take 3-7 days depending on the size and complexity. A single-story home typically takes 3-4 days, while a two-story home may take 5-7 days. We provide a detailed timeline during your free estimate."
-        },
-        {
-          question: "Do you work around weather conditions?",
-          answer: "Yes! We monitor weather closely and schedule your project during optimal painting weather. We avoid painting in high humidity, extreme heat, or when rain is forecasted."
-        },
-        {
-          question: "What paint brands do you use for exterior work?",
-          answer: "We use premium exterior paints from Sherwin-Williams, Benjamin Moore, and PPG. For South Alabama's climate, we often recommend specific weather-resistant and salt air resistant paint systems."
-        },
-        {
-          question: "Can you paint over existing paint?",
-          answer: "In most cases, yes. We'll assess the existing paint condition and prepare surfaces properly. If the existing paint is failing, we may need to remove it first for best results."
-        },
-        {
-          question: "Do you pressure wash before painting?",
-          answer: "Yes, we include pressure washing and surface preparation in our exterior painting service. This ensures proper paint adhesion and removes dirt, mildew, and loose paint."
-        },
-        {
-          question: "What if it rains during the project?",
-          answer: "We monitor weather closely and pause work if rain would compromise quality. We'll resume as soon as conditions are safe and surfaces are dry."
-        },
-        {
-          question: "Do you protect my landscaping?",
-          answer: "Absolutely! We cover and protect all landscaping, outdoor furniture, and surrounding areas. We also clean up completely when the project is finished."
-        },
-        {
-          question: "How much does exterior painting cost?",
-          answer: "Exterior painting costs vary based on home size, surface condition, and paint quality. We provide free, detailed estimates with no obligation. Most single-story homes range from $3,000-6,000, while two-story homes typically cost $5,000-10,000."
-        }
-      ]}
-    />
-    
-    <!-- Related Services and Locations -->
-    <RelatedServices 
-      currentService="/exterior-painting"
-      showLocations={true}
-      showServices={true}
-      showBlog={true}
-    />
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-background">
+        <div class="hero-slide active" style="background-image: url('/images/hero/hero-1-optimized.jpg')"></div>
+        <div class="hero-slide" style="background-image: url('/images/projects/projects-optimized/interior-painting-2-optimized.jpg')"></div>
+        <div class="hero-slide" style="background-image: url('/images/hero/hero-3-optimized.jpg'); background-position: center top;"></div>
+      </div>
+      
+      <div class="hero-overlay"></div>
+      
+      <div class="hero-trust-badges">
+        <div class="trust-badge">
+          <span class="trust-stars">★★★★★</span>
+          <span class="trust-text">5-Star Reviews</span>
+        </div>
+        <div class="trust-badge">
+          <span class="trust-icon">🏆</span>
+          <span class="trust-text">25+ Years</span>
+        </div>
+        <div class="trust-badge">
+          <span class="trust-icon">📋</span>
+          <span class="trust-text">Licensed & Insured</span>
+        </div>
+        <div class="trust-badge">
+          <span class="trust-icon">✅</span>
+          <span class="trust-text">100% Guaranteed</span>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <img src="/images/logo/browns-painting-logo-hat.png" alt="Brown's Painting" class="hero-logo-image" />
+            <h1>Professional Exterior Painting Services</h1>
+            <p class="hero-subtitle">Protect and beautify your property with expert exterior painting throughout South Alabama</p>
+            <div class="phone-number">
+              <span class="phone-label">Call Us Today at</span>
+              <a href="tel:+12512374545" class="phone-link">(251) 237-4545</a>
+            </div>
+            <div class="hero-cta">
+              <a href="/contact" class="btn btn-primary">
+                <span class="btn-icon">📋</span>
+                Get A Free Quote
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-dots">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+      <div class="container">
+        <h2>Our Exterior Painting Services</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>🏠 House Painting</h3>
+            <p>Complete exterior house painting with weather-resistant coatings for Alabama's climate.</p>
+            <ul>
+              <li>Siding painting</li>
+              <li>Trim & fascia</li>
+              <li>Shutters & doors</li>
+              <li>Garage doors</li>
+            </ul>
+          </div>
+          
+          <div class="service-card">
+            <h3>🌊 Coastal Protection</h3>
+            <p>Specialized paint systems designed to withstand salt air and coastal conditions.</p>
+            <ul>
+              <li>Salt air resistant coatings</li>
+              <li>UV protection</li>
+              <li>Moisture barriers</li>
+              <li>Mildew resistance</li>
+            </ul>
+          </div>
+          
+          <div class="service-card">
+            <h3>🪵 Deck & Fence</h3>
+            <p>Professional deck staining and fence painting with long-lasting protection.</p>
+            <ul>
+              <li>Deck staining</li>
+              <li>Fence painting</li>
+              <li>Porch painting</li>
+              <li>Pressure washing included</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <h2>Frequently Asked Questions - Exterior Painting</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <h3>How long does exterior painting last in Alabama?</h3>
+            <p>With proper preparation and premium paint, exterior painting typically lasts 7-10 years in Alabama. Coastal properties may need repainting every 5-7 years due to salt air exposure. We use specialized coatings for coastal areas to maximize longevity.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What's the best time of year for exterior painting?</h3>
+            <p>Spring and fall are ideal for exterior painting in Alabama, with mild temperatures and lower humidity. However, we can paint year-round by monitoring weather conditions and choosing appropriate days for optimal paint curing.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do you include pressure washing?</h3>
+            <p>Yes! Pressure washing is included with all exterior painting projects. Proper surface cleaning is essential for paint adhesion and longevity. We thoroughly clean all surfaces before any painting begins.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ready for Professional Exterior Painting?</h2>
+        <p>Contact Barry "Boomer" Brown today for a free estimate on your exterior painting project.</p>
+        <a href="/contact" class="btn btn-primary">
+          <span class="btn-icon">📞</span>
+          Get Free Estimate
+        </a>
+      </div>
+    </section>
   </main>
 </BaseLayout>
+
+<style>
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* Hero Section */
+  .hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .hero-slide.active {
+    opacity: 1;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 100%);
+    z-index: 2;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .hero-logo-image {
+    height: 300px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 5vw, 4rem);
+    font-weight: 800;
+    margin: 0;
+    margin-top: -4rem;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    color: white;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .phone-number {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .phone-label {
+    font-weight: 500;
+  }
+
+  .phone-link {
+    color: #fbbf24;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.125rem;
+  }
+
+  .phone-link:hover {
+    color: #f59e0b;
+    text-decoration: underline;
+  }
+
+  .hero-cta {
+    margin-top: 2rem;
+  }
+
+  .hero-trust-badges {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1.5rem;
+    z-index: 4;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.94rem 1.56rem;
+    background: transparent;
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  .trust-badge:hover {
+    transform: translateY(-2px);
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.9);
+  }
+
+  .trust-badge .trust-icon {
+    font-size: 1.56rem;
+    color: #fbbf24;
+  }
+
+  .trust-badge .trust-stars {
+    font-size: 1.56rem;
+    color: #fbbf24;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  .trust-badge .trust-text {
+    font-size: 1.06rem;
+    font-weight: 600;
+  }
+
+  .hero-dots {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 3;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .dot.active {
+    background: #fbbf24;
+    transform: scale(1.2);
+  }
+
+  .dot:hover {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.25rem 2.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #1f2937;
+    box-shadow: 
+      0 8px 25px rgba(251, 191, 36, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .btn-primary:hover::before {
+    left: 100%;
+  }
+
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    transform: translateY(-3px);
+    box-shadow: 
+      0 12px 35px rgba(251, 191, 36, 0.6),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  }
+
+  .btn-icon {
+    font-size: 1.25rem;
+  }
+
+  /* Content Sections */
+  .services-section,
+  .faq-section {
+    padding: 5rem 0;
+  }
+
+  .services-section {
+    background: #f8fafc;
+  }
+
+  .faq-section {
+    background: white;
+  }
+
+  .services-section h2,
+  .faq-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1f2937;
+    margin-bottom: 3rem;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #3b82f6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .service-card h3 {
+    color: #1e40af;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .service-card p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    color: #4b5563;
+  }
+
+  .service-card ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .service-card li {
+    margin-bottom: 0.5rem;
+    color: #6b7280;
+    line-height: 1.6;
+  }
+
+  .faq-container {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .faq-item {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #3b82f6;
+    transition: transform 0.3s ease;
+  }
+
+  .faq-item:hover {
+    transform: translateX(4px);
+  }
+
+  .faq-item h3 {
+    color: #1e40af;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .faq-item p {
+    line-height: 1.7;
+    color: #4b5563;
+    margin: 0;
+  }
+
+  .cta-section {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+  }
+
+  .cta-section h2 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: 800;
+  }
+
+  .cta-section p {
+    margin-bottom: 2rem;
+    font-size: 1.125rem;
+    opacity: 0.95;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .hero {
+      height: 70vh;
+      min-height: 500px;
+    }
+
+    .hero-logo-image {
+      height: 200px;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      margin-top: -2rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+    }
+
+    .hero-trust-badges {
+      top: 1rem;
+      gap: 0.75rem;
+      padding: 0 1rem;
+    }
+
+    .trust-badge {
+      padding: 0.63rem 1.25rem;
+      font-size: 1rem;
+    }
+
+    .trust-badge .trust-icon,
+    .trust-badge .trust-stars {
+      font-size: 1.25rem;
+    }
+
+    .trust-badge .trust-text {
+      font-size: 0.94rem;
+    }
+
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .btn {
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
+    }
+
+    .services-section,
+    .faq-section {
+      padding: 3rem 0;
+    }
+
+    .cta-section {
+      padding: 3rem 1.5rem;
+    }
+  }
+</style>
+
+<script>
+  // Hero Slider Functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.dot');
+    let currentSlide = 0;
+    let slideInterval;
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
+      slides[index].classList.add('active');
+      dots[index].classList.add('active');
+      currentSlide = index;
+    }
+
+    function nextSlide() {
+      const next = (currentSlide + 1) % slides.length;
+      showSlide(next);
+    }
+
+    function startSlider() {
+      slideInterval = setInterval(nextSlide, 5000);
+    }
+
+    function stopSlider() {
+      clearInterval(slideInterval);
+    }
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        showSlide(index);
+        stopSlider();
+        startSlider();
+      });
+    });
+
+    startSlider();
+
+    const hero = document.querySelector('.hero');
+    hero.addEventListener('mouseenter', stopSlider);
+    hero.addEventListener('mouseleave', startSlider);
+  });
+</script>

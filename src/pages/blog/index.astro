@@ -1,19 +1,31 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getCollection } from 'astro:content';
-
-const blogPosts = await getCollection('blog', ({ data }) => {
-  return !data.draft;
-});
-
-// Sort by publish date (newest first)
-const sortedPosts = blogPosts.sort((a, b) => 
-  new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
-);
 
 const title = "Painting Tips & Guides - Brown's Painting LLC Blog";
-const description = "Expert painting advice, DIY guides, and home improvement tips from professional painters in South Alabama. Learn about paint finishes, color selection, and more.";
-const keywords = "painting tips, DIY painting, home improvement blog, paint guides, Alabama painting advice, house painting tips";
+const description = "Expert painting advice, DIY guides, and home improvement tips from professional painters in South Alabama.";
+const keywords = "painting tips, DIY painting, home improvement blog, paint guides, Alabama painting advice";
+
+// Blog posts data
+const blogPosts = [
+  {
+    slug: 'essential-painting-tips-alabama',
+    title: 'Essential Painting Tips for Alabama Homeowners',
+    description: 'Expert painting tips for Alabama\'s unique climate. Learn humidity management, paint selection, and preparation techniques.',
+    category: 'Painting Tips',
+    publishDate: '2024-12-15',
+    readTime: '8',
+    featuredImage: '/images/hero/hero-1-optimized.jpg'
+  },
+  {
+    slug: 'paint-finish-guide',
+    title: 'How to Choose the Right Paint Finish: Complete Guide',
+    description: 'Complete guide to choosing paint finishes. Learn the differences between flat, satin, and semi-gloss paints.',
+    category: 'Painting Guide',
+    publishDate: '2024-01-15',
+    readTime: '8',
+    featuredImage: '/images/projects/projects-optimized/interior-painting-2-optimized.jpg'
+  }
+];
 ---
 
 <BaseLayout
@@ -21,414 +33,394 @@ const keywords = "painting tips, DIY painting, home improvement blog, paint guid
   description={description}
   keywords={keywords}
 >
-  <main class="blog-index">
-    <div class="container">
-      <!-- Hero Section -->
-      <section class="blog-hero">
+  <main>
+    <!-- Blog Hero -->
+    <section class="blog-hero">
+      <div class="container">
         <h1>Painting Tips & Expert Guides</h1>
-        <p>Professional painting advice, DIY guides, and home improvement tips from South Alabama's trusted painting experts.</p>
+        <p>Professional painting advice and home improvement tips from South Alabama's trusted experts</p>
         <div class="hero-stats">
           <div class="stat">
-            <span class="stat-number">{sortedPosts.length}</span>
+            <span class="stat-icon">📚</span>
+            <span class="stat-number">{blogPosts.length}</span>
             <span class="stat-label">Expert Articles</span>
           </div>
           <div class="stat">
+            <span class="stat-icon">🏆</span>
             <span class="stat-number">25+</span>
             <span class="stat-label">Years Experience</span>
           </div>
           <div class="stat">
+            <span class="stat-icon">⭐</span>
             <span class="stat-number">500+</span>
             <span class="stat-label">Happy Customers</span>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Featured Post -->
-      {sortedPosts.length > 0 && (
-        <section class="featured-post">
-          <h2>Featured Article</h2>
-          <article class="featured-article">
-            <div class="featured-image">
-              <img src={sortedPosts[0].data.featuredImage} alt={sortedPosts[0].data.title} />
-            </div>
-            <div class="featured-content">
-              <div class="article-meta">
-                <span class="category">{sortedPosts[0].data.category}</span>
-                <span class="publish-date">
-                  {new Date(sortedPosts[0].data.publishDate).toLocaleDateString('en-US', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric'
-                  })}
-                </span>
-                <span class="read-time">{sortedPosts[0].data.readTime} min read</span>
-              </div>
-              <h3><a href={`/blog/${sortedPosts[0].slug}`}>{sortedPosts[0].data.title}</a></h3>
-              <p>{sortedPosts[0].data.description}</p>
-              <div class="article-tags">
-                {sortedPosts[0].data.tags.map(tag => (
-                  <span class="tag">#{tag}</span>
-                ))}
-              </div>
-              <a href={`/blog/${sortedPosts[0].slug}`} class="btn btn-primary">Read Article</a>
-            </div>
-          </article>
-        </section>
-      )}
-
-      <!-- All Posts -->
-      <section class="all-posts">
-        <h2>All Articles</h2>
+    <!-- Blog Posts Grid -->
+    <section class="blog-posts-section">
+      <div class="container">
+        <h2>Latest Articles</h2>
         <div class="posts-grid">
-          {sortedPosts.map((post) => (
+          {blogPosts.map((post) => (
             <article class="post-card">
               <div class="post-image">
-                <img src={post.data.featuredImage} alt={post.data.title} />
+                <img src={post.featuredImage} alt={post.title} />
+                <span class="post-category">{post.category}</span>
               </div>
               <div class="post-content">
                 <div class="post-meta">
-                  <span class="category">{post.data.category}</span>
                   <span class="publish-date">
-                    {new Date(post.data.publishDate).toLocaleDateString('en-US', {
+                    {new Date(post.publishDate).toLocaleDateString('en-US', {
                       year: 'numeric',
                       month: 'long',
                       day: 'numeric'
                     })}
                   </span>
+                  <span class="read-time">📖 {post.readTime} min read</span>
                 </div>
-                <h3><a href={`/blog/${post.slug}`}>{post.data.title}</a></h3>
-                <p>{post.data.description}</p>
-                <div class="post-footer">
-                  <div class="post-tags">
-                    {post.data.tags.slice(0, 3).map(tag => (
-                      <span class="tag">#{tag}</span>
-                    ))}
-                  </div>
-                  <a href={`/blog/${post.slug}`} class="read-more">Read More →</a>
-                </div>
+                <h3><a href={`/blog/${post.slug}`}>{post.title}</a></h3>
+                <p>{post.description}</p>
+                <a href={`/blog/${post.slug}`} class="btn btn-primary">Read Article</a>
               </div>
             </article>
           ))}
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- CTA Section -->
-      <section class="blog-cta">
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
         <h2>Need Professional Painting Services?</h2>
-        <p>Our expert team is ready to help with your next painting project. Get a free estimate today!</p>
-        <div class="cta-buttons">
-          <a href="/contact" class="btn btn-primary">Get Free Estimate</a>
-          <a href="tel:+1251-237-4545" class="btn btn-secondary">Call (251) 237-4545</a>
-        </div>
-      </section>
-    </div>
+        <p>Get expert advice and a free estimate for your next painting project.</p>
+        <a href="/contact" class="btn btn-primary">
+          <span class="btn-icon">📞</span>
+          Get Free Estimate
+        </a>
+      </div>
+    </section>
   </main>
 </BaseLayout>
 
 <style>
-  .blog-index {
-    padding: 2rem 0;
-    background: #f8fafc;
-    min-height: 100vh;
-  }
-
   .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1.5rem;
   }
 
+  /* Blog Hero */
   .blog-hero {
-    text-align: center;
-    padding: 4rem 0;
-    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    padding: 5rem 0 4rem;
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
     color: white;
-    border-radius: 12px;
-    margin-bottom: 4rem;
+    text-align: center;
   }
 
   .blog-hero h1 {
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
     margin-bottom: 1rem;
   }
 
   .blog-hero p {
     font-size: 1.25rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
+    margin-bottom: 3rem;
+    opacity: 0.95;
   }
 
   .hero-stats {
     display: flex;
-    justify-content: center;
     gap: 3rem;
-    margin-top: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .stat {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .stat-icon {
+    font-size: 2rem;
   }
 
   .stat-number {
-    display: block;
     font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
+    font-weight: 800;
+    color: #fbbf24;
   }
 
   .stat-label {
-    font-size: 1rem;
-    opacity: 0.8;
-  }
-
-  .featured-post {
-    margin-bottom: 4rem;
-  }
-
-  .featured-post h2 {
-    color: #1e3a8a;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  .featured-article {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-  }
-
-  .featured-image img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-  }
-
-  .featured-content {
-    padding: 2rem;
-  }
-
-  .article-meta {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
     font-size: 0.875rem;
-    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.9;
   }
 
-  .category {
-    background: #3b82f6;
-    color: white;
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    font-weight: 600;
+  /* Blog Posts Section */
+  .blog-posts-section {
+    padding: 5rem 0;
+    background: #f8fafc;
   }
 
-  .featured-content h3 {
-    color: #1e3a8a;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .featured-content h3 a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .featured-content h3 a:hover {
-    text-decoration: underline;
-  }
-
-  .featured-content p {
-    color: #4b5563;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-  }
-
-  .article-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .tag {
-    background: #f3f4f6;
-    color: #374151;
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    font-size: 0.875rem;
-  }
-
-  .all-posts h2 {
-    color: #1e3a8a;
-    font-size: 2rem;
-    margin-bottom: 2rem;
+  .blog-posts-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1f2937;
+    margin-bottom: 3rem;
   }
 
   .posts-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    margin-bottom: 4rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
   }
 
   .post-card {
     background: white;
-    border-radius: 12px;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
 
   .post-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .post-image {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #e5e7eb;
   }
 
   .post-image img {
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .post-card:hover .post-image img {
+    transform: scale(1.05);
+  }
+
+  .post-category {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: #3b82f6;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    z-index: 2;
   }
 
   .post-content {
-    padding: 1.5rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
   }
 
   .post-meta {
     display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    font-size: 0.875rem;
-    color: #6b7280;
-  }
-
-  .post-content h3 {
-    color: #1e3a8a;
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .post-content h3 a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .post-content h3 a:hover {
-    text-decoration: underline;
-  }
-
-  .post-content p {
-    color: #4b5563;
-    margin-bottom: 1rem;
-    line-height: 1.6;
-  }
-
-  .post-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .post-tags {
-    display: flex;
-    gap: 0.5rem;
-  }
-
-  .read-more {
-    color: #3b82f6;
-    text-decoration: none;
-    font-weight: 600;
-  }
-
-  .read-more:hover {
-    text-decoration: underline;
-  }
-
-  .blog-cta {
-    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-    color: white;
-    padding: 3rem;
-    border-radius: 12px;
-    text-align: center;
-  }
-
-  .blog-cta h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-
-  .blog-cta p {
-    font-size: 1.125rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
-  }
-
-  .cta-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
     flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    color: #6b7280;
+    font-size: 0.875rem;
+  }
+
+  .post-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .post-card h3 a {
+    color: #1f2937;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .post-card h3 a:hover {
+    color: #3b82f6;
+  }
+
+  .post-card p {
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
   }
 
   .btn {
-    display: inline-block;
-    padding: 1rem 2rem;
-    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.875rem 1.75rem;
+    border-radius: 12px;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
+    font-weight: 700;
     transition: all 0.3s ease;
-    border: 2px solid transparent;
+    font-size: 1rem;
   }
 
   .btn-primary {
-    background: #f59e0b;
-    color: white;
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #1f2937;
+    box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
   }
 
   .btn-primary:hover {
-    background: #d97706;
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
     transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(251, 191, 36, 0.4);
   }
 
-  .btn-secondary {
-    background: transparent;
+  .btn-icon {
+    font-size: 1.25rem;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-    border-color: white;
   }
 
-  .btn-secondary:hover {
-    background: white;
-    color: #1e3a8a;
+  .cta-section .container {
+    max-width: 800px;
   }
 
+  .cta-section h2 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+
+  .cta-section p {
+    font-size: 1.25rem !important;
+    opacity: 0.95;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 4rem auto !important;
+    display: block !important;
+  }
+
+  .cta-section .btn {
+    padding: 1.25rem 2.5rem !important;
+    font-size: 1.125rem !important;
+    margin-top: 2rem !important;
+  }
+
+  /* Mobile Responsive */
   @media (max-width: 768px) {
+    .blog-hero {
+      padding: 3rem 0 2rem;
+    }
+
     .blog-hero h1 {
       font-size: 2rem;
     }
 
-    .hero-stats {
-      flex-direction: column;
-      gap: 1rem;
+    .blog-hero p {
+      font-size: 1.1rem;
     }
 
-    .featured-article {
-      grid-template-columns: 1fr;
+    .hero-stats {
+      gap: 2rem;
+      flex-direction: column;
+    }
+
+    .stat {
+      width: 100%;
     }
 
     .posts-grid {
       grid-template-columns: 1fr;
+      gap: 2rem;
     }
 
-    .cta-buttons {
-      flex-direction: column;
-      align-items: center;
+    .post-image {
+      height: 200px;
+    }
+
+    .blog-posts-section,
+    .cta-section {
+      padding: 3rem 0;
+    }
+
+    .blog-posts-section h2 {
+      font-size: 2rem;
+    }
+
+    .cta-section {
+      padding: 3rem 1.5rem;
+    }
+
+    .cta-section h2 {
+      font-size: 2rem;
+    }
+
+    .cta-section p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .cta-section .btn {
+      padding: 1rem 2rem;
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .container {
+      padding: 0 1rem;
+    }
+
+    .post-content {
+      padding: 1.5rem;
+    }
+
+    .post-category {
+      font-size: 0.75rem;
+      padding: 0.375rem 0.75rem;
+    }
+
+    .cta-section {
+      padding: 2.5rem 1rem;
+    }
+
+    .cta-section h2 {
+      font-size: 1.75rem;
+    }
+
+    .cta-section p {
+      font-size: 1rem;
+      margin-bottom: 2rem;
     }
   }
 </style>

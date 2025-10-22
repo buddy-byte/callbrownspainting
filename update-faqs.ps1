@@ -167,3 +167,7 @@ foreach ($page in $locationPages) {
 }
 
 Write-Host "FAQ update process completed!"
+
+
+
+

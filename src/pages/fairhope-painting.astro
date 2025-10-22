@@ -1,613 +1,760 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ServiceSchema from '../components/ServiceSchema.astro';
+
+const title = "House Painter in Fairhope AL | Professional Painting Services Baldwin County";
+const description = "Expert house painters in Fairhope, Alabama. Licensed, insured, locally owned painting contractor.";
+const keywords = "house painter Fairhope AL, painters Fairhope Alabama, Baldwin County painting";
 ---
 
 <BaseLayout
-  title="Painting Services in Fairhope AL - CallBrownsPainting.com"
-  description="Premier Fairhope painters: interior painting, exterior painting, cabinet refinishing. Specializing in Eastern Shore vacation rentals and historic downtown properties. Licensed and insured."
-  keywords="painting contractor Fairhope AL, interior painting Fairhope AL, exterior painting Fairhope AL, cabinet refinishing Fairhope AL, painters in Fairhope AL, Eastern Shore painting contractors"
+  title={title}
+  description={description}
+  keywords={keywords}
 >
   <main>
-    <section class="city-hero">
-      <div class="container">
-        <h1>Professional Painting Services in Fairhope, AL</h1>
-        <p class="lead">
-          Barry "Boomer" Brown brings 25+ years of professional painting expertise to Fairhope and the Eastern Shore. 
-          Quality interior and exterior painting services for homes and businesses.
-        </p>
-        <div class="cta-buttons">
-          <a href="/contact" class="btn btn-primary">Get Free Estimate</a>
-          <a href="#services" class="btn btn-secondary">View Services</a>
+    <!-- Service Schema -->
+    <ServiceSchema
+      serviceName="Professional House Painting Services in Fairhope AL"
+      serviceDescription="Expert house painters in Fairhope, Alabama. Licensed, insured, locally owned painting contractor."
+      serviceUrl="https://callbrownspainting.com/fairhope-painting"
+      serviceType="House Painting"
+      priceRange="$$"
+      serviceImage="https://callbrownspainting.com/assets/fairhope-painting-service.jpg"
+    />
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-background">
+        <div class="hero-slide active" style="background-image: url('/images/hero/hero-1-optimized.jpg')"></div>
+        <div class="hero-slide" style="background-image: url('/images/projects/projects-optimized/interior-painting-2-optimized.jpg')"></div>
+        <div class="hero-slide" style="background-image: url('/images/hero/hero-3-optimized.jpg'); background-position: center top;"></div>
+      </div>
+      
+      <div class="hero-overlay"></div>
+      
+      <div class="hero-trust-badges">
+        <div class="trust-badge">
+          <span class="trust-stars">★★★★★</span>
+          <span class="trust-text">5-Star Reviews</span>
         </div>
+        <div class="trust-badge">
+          <span class="trust-icon">🏆</span>
+          <span class="trust-text">25+ Years</span>
+        </div>
+        <div class="trust-badge">
+          <span class="trust-icon">📋</span>
+          <span class="trust-text">Licensed & Insured</span>
+        </div>
+        <div class="trust-badge">
+          <span class="trust-icon">✅</span>
+          <span class="trust-text">100% Guaranteed</span>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <img src="/images/logo/browns-painting-logo-hat.png" alt="Brown's Painting" class="hero-logo-image" />
+            <h1>Professional Painting Services in Fairhope, AL</h1>
+            <div class="phone-number">
+              <span class="phone-label">Call Us Today at</span>
+              <a href="tel:+12512374545" class="phone-link">(251) 237-4545</a>
+            </div>
+            <div class="hero-cta">
+              <a href="/contact" class="btn btn-primary">
+                <span class="btn-icon">📋</span>
+                Get A Free Quote
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-dots">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
       </div>
     </section>
 
-    <section id="services" class="city-services">
+    <!-- Services Section -->
+    <section class="services-section">
       <div class="container">
-        <h2>Painting Services in Fairhope</h2>
-        
+        <h2>Our Painting Services in Fairhope</h2>
         <div class="services-grid">
-          <article class="service-card">
-            <h3>Interior Painting Fairhope</h3>
-            <p>
-              Transform your Fairhope home's interior with professional painting services. We specialize in 
-              humidity-resistant paints perfect for the Eastern Shore climate.
-            </p>
+          <div class="service-card">
+            <h3>🏠 Interior Painting</h3>
+            <p>Transform your Fairhope home's interior with professional painting services.</p>
             <ul>
               <li>Living rooms and bedrooms</li>
               <li>Kitchen and bathroom painting</li>
               <li>Cabinet refinishing</li>
-              <li>Drywall repair and preparation</li>
-              <li>Color consultation</li>
+              <li>Drywall repair and texturing</li>
+              <li>Trim and molding painting</li>
             </ul>
-          </article>
-
-          <article class="service-card">
-            <h3>Exterior Painting Fairhope</h3>
-            <p>
-              Protect your Fairhope property with professional exterior painting. We use weather-resistant 
-              paints designed for Alabama's coastal climate.
-            </p>
+          </div>
+          
+          <div class="service-card">
+            <h3>🎨 Exterior Painting</h3>
+            <p>Protect your Fairhope property with professional exterior painting designed for Alabama's climate.</p>
             <ul>
               <li>House siding and trim</li>
               <li>Deck and porch painting</li>
-              <li>Fence and gate painting</li>
-              <li>Garage doors and shutters</li>
+              <li>Fence painting and staining</li>
               <li>Weather-resistant coatings</li>
+              <li>Pressure washing included</li>
             </ul>
-          </article>
-
-          <article class="service-card">
-            <h3>Commercial Painting Fairhope</h3>
-            <p>
-              Professional commercial painting services for Fairhope businesses, offices, and institutions. 
-              We work around your schedule to minimize disruption.
-            </p>
+          </div>
+          
+          <div class="service-card">
+            <h3>🏢 Commercial Painting</h3>
+            <p>Professional commercial painting services for Fairhope businesses of all sizes.</p>
             <ul>
               <li>Office buildings</li>
               <li>Retail spaces</li>
-              <li>Restaurants</li>
-              <li>Medical offices</li>
+              <li>Restaurants and hospitality</li>
               <li>After-hours scheduling</li>
+              <li>Minimal business disruption</li>
             </ul>
-          </article>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <section class="fairhope-specialties">
-          <h2>Why Choose CallBrownsPainting.com for Fairhope Projects</h2>
+    <!-- Service Areas Section -->
+    <section class="service-areas-section">
+      <div class="container">
+        <h2>Fairhope Service Areas</h2>
+        <p>Professional painting services throughout Fairhope and surrounding Baldwin County communities.</p>
+        
+        <div class="areas-list">
+          <div class="area-group">
+            <h3>Fairhope Neighborhoods We Serve</h3>
+            <ul>
+              <li>Downtown Fairhope</li>
+              <li>Fairhope Avenue</li>
+              <li>Point Clear</li>
+              <li>Battles Wharf</li>
+              <li>Rock Creek</li>
+              <li>Quail Creek</li>
+              <li>The Bluffs</li>
+              <li>Montrose</li>
+              <li>Barnwell</li>
+            </ul>
+          </div>
           
-          <div class="specialties-grid">
-            <div class="specialty-item">
-              <h3>Eastern Shore Expertise</h3>
-              <p>
-                We understand the unique challenges of painting in Fairhope's Eastern Shore climate. 
-                High humidity and coastal weather require specialized techniques and materials.
-              </p>
-            </div>
-
-            <div class="specialty-item">
-              <h3>Local Knowledge</h3>
-              <p>
-                Based in Brewton, we're familiar with Fairhope's neighborhoods, architectural styles, 
-                and local regulations. We know what works best for Eastern Shore properties.
-              </p>
-            </div>
-
-            <div class="specialty-item">
-              <h3>Quality Materials</h3>
-              <p>
-                We use premium paints and materials specifically chosen for Fairhope's climate. 
-                Humidity-resistant paints prevent peeling and mold growth.
-              </p>
-            </div>
-
-            <div class="specialty-item">
-              <h3>Reliable Service</h3>
-              <p>
-                Professional communication, on-time completion, and quality workmanship. 
-                We're committed to your satisfaction on every Fairhope project.
-              </p>
-            </div>
+          <div class="area-group">
+            <h3>Nearby Communities</h3>
+            <ul>
+              <li>Daphne - 10 minutes</li>
+              <li>Point Clear - 5 minutes</li>
+              <li>Mobile - 25 minutes</li>
+              <li>Gulf Shores - 40 minutes</li>
+            </ul>
           </div>
-        </section>
+        </div>
+      </div>
+    </section>
 
-        <section class="fairhope-areas">
-          <h2>Fairhope Service Areas & Local Expertise</h2>
-          <p>
-            We provide professional painting services throughout Fairhope and surrounding Eastern Shore communities. 
-            Our deep understanding of Fairhope's unique character and climate ensures exceptional results for every project.
-          </p>
-          
-          <div class="areas-list">
-            <div class="area-group">
-              <h3>Fairhope Neighborhoods We Serve</h3>
-              <ul>
-                <li>Downtown Fairhope Historic District</li>
-                <li>Eastern Shore Communities</li>
-                <li>Fairhope Point Waterfront</li>
-                <li>Montrose Subdivision</li>
-                <li>Point Clear Estates</li>
-                <li>Magnolia Springs</li>
-                <li>Jubilee Springs</li>
-                <li>Fairhope Plantation</li>
-                <li>Eastern Shore Village</li>
-                <li>Bayfront Communities</li>
-                <li>Timber Creek</li>
-                <li>Fairhope Commons</li>
-                <li>Grand Hotel Area</li>
-                <li>Mobile Bay Estates</li>
-              </ul>
-            </div>
-            
-            <div class="area-group">
-              <h3>Nearby Communities</h3>
-              <ul>
-                <li>Daphne - 5 minutes</li>
-                <li>Spanish Fort - 10 minutes</li>
-                <li>Mobile - 20 minutes</li>
-                <li>Loxley - 15 minutes</li>
-                <li>Robertsdale - 20 minutes</li>
-                <li>Bay Minette - 25 minutes</li>
-                <li>Foley - 30 minutes</li>
-                <li>Gulf Shores - 45 minutes</li>
-              </ul>
-            </div>
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <h2>Frequently Asked Questions - Fairhope Painting</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <h3>How much does house painting cost in Fairhope?</h3>
+            <p>Painting costs in Fairhope typically range from $2.50 to $4.50 per square foot for interior work and $1.80 to $3.50 per square foot for exterior painting. The final price depends on factors like the size of your home, surface preparation needed, paint quality, and project complexity. We offer free, detailed estimates for all Fairhope area properties.</p>
           </div>
-        </section>
-
-        <section class="fairhope-local-content">
-          <h2>Why Fairhope Homeowners Choose Brown's Painting</h2>
-          
-          <div class="local-expertise">
-            <h3>Fairhope's Unique Eastern Shore Climate</h3>
-            <p>
-              Fairhope's position on the Eastern Shore of Mobile Bay creates specific painting challenges that require 
-              specialized expertise. The town's high humidity levels (averaging 75-85% year-round) combined with 
-              salt air from Mobile Bay demands moisture-resistant paint systems and careful preparation techniques. 
-              We understand that Fairhope's unique microclimate requires paints that can withstand both the bay's 
-              salt air and the area's high humidity, which is why we use specialized primers and coastal-grade 
-              paints specifically formulated for Eastern Shore conditions.
-            </p>
-            
-            <h3>Local Landmarks & Traffic Considerations</h3>
-            <p>
-              Our team is intimately familiar with Fairhope's landmarks and traffic patterns, ensuring efficient 
-              project scheduling. We navigate around peak times on US-98, the Eastern Shore's main thoroughfare, 
-              and we're experienced with the unique access challenges of waterfront properties along Mobile Bay. 
-              Whether you're near the Fairhope Municipal Pier, the Eastern Shore Art Center, the Grand Hotel, 
-              or the scenic Bayfront Park, we understand the local logistics that affect painting projects. 
-              We also work around Fairhope's popular events like the Arts & Crafts Festival and the Christmas 
-              tree lighting to minimize disruption to your project.
-            </p>
-            
-            <h3>Baldwin County Weather Patterns</h3>
-            <p>
-              Fairhope experiences distinct seasonal patterns that significantly impact painting schedules. 
-              Spring brings high humidity and frequent afternoon thunderstorms, while summer heat can cause 
-              paint to dry too quickly and create adhesion problems. Fall typically offers the best painting 
-              conditions with lower humidity and stable temperatures, making it ideal for exterior projects. 
-              Winter brings occasional freezes that can affect exterior work, but interior projects can 
-              continue year-round. We plan all projects around these weather patterns to ensure optimal 
-              results and lasting finishes that can withstand Fairhope's unique climate challenges.
-            </p>
-            
-            <h3>Local Supply Chain & Material Sources</h3>
-            <p>
-              We maintain strong relationships with local suppliers including Sherwin-Williams in Spanish Fort, 
-              Benjamin Moore dealers in Fairhope and Daphne, and PPG suppliers in Mobile. This local network 
-              ensures we can quickly source the right materials for your Fairhope project, whether you need 
-              humidity-resistant interior paints, salt-air exterior coatings, or specialized primers for 
-              the area's common building materials like Hardie board, traditional wood siding, and stucco. 
-              We also work with local hardware stores and paint suppliers to ensure we have access to the 
-              latest products designed for coastal Alabama conditions.
-            </p>
+          <div class="faq-item">
+            <h3>How long does it take to paint a house in Fairhope?</h3>
+            <p>Most residential painting projects in Fairhope take 3-7 days to complete. Interior painting typically takes 2-4 days for an average-sized home, while exterior painting usually requires 3-5 days depending on weather conditions. We'll provide you with a detailed timeline during your free estimate.</p>
           </div>
-        </section>
-
-        <section class="fairhope-faq">
-          <h2>Frequently Asked Questions - Fairhope Painting Services</h2>
-          
-          <div class="faq-container">
-            <div class="faq-item">
-              <h3>How does Fairhope's humidity affect paint jobs?</h3>
-              <p>
-                Fairhope's high humidity levels (75-85% average) can cause paint to dry slowly and develop 
-                adhesion problems. We use moisture-resistant primers and humidity-tolerant paints, plus 
-                we monitor weather conditions carefully. We may use dehumidifiers or fans to control 
-                drying conditions when necessary, and we schedule projects during optimal weather windows.
-              </p>
-            </div>
-            
-            <div class="faq-item">
-              <h3>Do you work on waterfront properties in Fairhope?</h3>
-              <p>
-                Yes, we have extensive experience with Fairhope's waterfront properties along Mobile Bay. 
-                We use salt-air resistant paints and specialized preparation techniques to protect against 
-                the corrosive effects of bay air. We're also experienced with the unique access challenges 
-                of waterfront homes and the special considerations for properties near the Fairhope Municipal Pier.
-              </p>
-            </div>
-            
-            <div class="faq-item">
-              <h3>What's the best time of year to paint in Fairhope?</h3>
-              <p>
-                Fall (October-November) typically offers the best conditions with lower humidity and 
-                stable temperatures. Spring can work but requires careful weather monitoring. We avoid 
-                summer painting when possible due to extreme heat and humidity, and winter work depends 
-                on temperature and moisture levels. We always check the forecast and adjust accordingly.
-              </p>
-            </div>
-            
-            <div class="faq-item">
-              <h3>Do you handle historic homes in Fairhope's downtown area?</h3>
-              <p>
-                Absolutely. We're experienced with Fairhope's historic downtown district and understand 
-                the special considerations for older homes. This includes lead-safe practices for pre-1978 
-                homes, proper preparation of historic materials, and color consultation that respects 
-                the area's architectural heritage and the town's unique character.
-              </p>
-            </div>
-            
-            <div class="faq-item">
-              <h3>How do you protect landscaping during exterior painting?</h3>
-              <p>
-                We take special care with Fairhope's often extensive landscaping, especially in the 
-                historic district and waterfront areas. We use drop cloths, plastic sheeting, and 
-                careful masking to protect plants, shrubs, and flower beds. We also coordinate with 
-                homeowners about any special plants that need extra protection from paint overspray or equipment.
-              </p>
-            </div>
-            
-            <div class="faq-item">
-              <h3>Do you offer color consultation for Eastern Shore homes?</h3>
-              <p>
-                Yes, we provide color consultation that takes into account Fairhope's unique light conditions, 
-                the bay's reflection, and the area's architectural styles. We understand how colors appear 
-                differently in the Eastern Shore's natural light and can recommend palettes that complement 
-                both your home's style and the local environment, including the town's historic character.
-              </p>
-            </div>
+          <div class="faq-item">
+            <h3>Do I need to be home during the painting?</h3>
+            <p>Not necessarily. Many Fairhope homeowners prefer to be away during painting to avoid the inconvenience. We're fully insured and trustworthy, and can work independently once access is arranged. For interior projects, some homeowners prefer to be present initially, but it's entirely your choice.</p>
           </div>
-        </section>
-
-        <section class="testimonial-section">
-          <h2>What Fairhope Customers Say</h2>
-          <div class="testimonial">
-            <blockquote>
-              "Barry did an excellent job painting our Fairhope home. He understood the humidity challenges 
-              of the Eastern Shore and used the right materials. The results are beautiful and lasting."
-            </blockquote>
-            <cite>- Sarah M., Fairhope Resident</cite>
+          <div class="faq-item">
+            <h3>What brands of paint do you use in Fairhope?</h3>
+            <p>We primarily use premium brands like Sherwin-Williams and Benjamin Moore for Fairhope projects. These professional-grade paints offer superior coverage, durability, and color retention - essential for Alabama's humid climate. We can also accommodate specific brand preferences if you have particular requirements.</p>
           </div>
-        </section>
+          <div class="faq-item">
+            <h3>Are you licensed and insured in Baldwin County?</h3>
+            <p>Yes, Brown's Painting is fully licensed and insured to work throughout Baldwin County including Fairhope. We carry comprehensive liability insurance and workers' compensation coverage, protecting both our team and your property. We're happy to provide proof of insurance upon request.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <section class="cta-section">
-          <h2>Ready for Professional Painting in Fairhope?</h2>
-          <p>
-            Contact Barry "Boomer" Brown today for a free estimate on your Fairhope painting project. 
-            We specialize in Eastern Shore properties and understand the local climate challenges.
-          </p>
-          <a href="/contact" class="btn btn-primary">Get Free Fairhope Painting Estimate</a>
-        </section>
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ready for Professional Painting in Fairhope?</h2>
+        <p>Contact Barry "Boomer" Brown today for a free estimate on your Fairhope painting project.</p>
+        <a href="/contact" class="btn btn-primary">
+          <span class="btn-icon">📞</span>
+          Get Free Estimate
+        </a>
       </div>
     </section>
   </main>
+</BaseLayout>
 
-  <style>
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
+<style>
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* Hero Section */
+  .hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .hero-slide.active {
+    opacity: 1;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 100%);
+    z-index: 2;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .hero-logo-image {
+    height: 300px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 5vw, 4rem);
+    font-weight: 800;
+    margin: 0;
+    margin-top: -4rem;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    color: white;
+  }
+
+  .phone-number {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .phone-label {
+    font-weight: 500;
+  }
+
+  .phone-link {
+    color: #fbbf24;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.125rem;
+  }
+
+  .phone-link:hover {
+    color: #f59e0b;
+    text-decoration: underline;
+  }
+
+  .hero-cta {
+    margin-top: 2rem;
+  }
+
+  .hero-trust-badges {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1.5rem;
+    z-index: 4;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.94rem 1.56rem;
+    background: transparent;
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  .trust-badge:hover {
+    transform: translateY(-2px);
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.9);
+  }
+
+  .trust-badge .trust-icon {
+    font-size: 1.56rem;
+    color: #fbbf24;
+  }
+
+  .trust-badge .trust-stars {
+    font-size: 1.56rem;
+    color: #fbbf24;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  .trust-badge .trust-text {
+    font-size: 1.06rem;
+    font-weight: 600;
+  }
+
+  .hero-dots {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 3;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .dot.active {
+    background: #fbbf24;
+    transform: scale(1.2);
+  }
+
+  .dot:hover {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.25rem 2.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #1f2937;
+    box-shadow: 
+      0 8px 25px rgba(251, 191, 36, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .btn-primary:hover::before {
+    left: 100%;
+  }
+
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    transform: translateY(-3px);
+    box-shadow: 
+      0 12px 35px rgba(251, 191, 36, 0.6),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  }
+
+  .btn-icon {
+    font-size: 1.25rem;
+  }
+
+  /* Content Sections */
+  .services-section,
+  .service-areas-section,
+  .faq-section {
+    padding: 5rem 0;
+  }
+
+  .services-section {
+    background: #f8fafc;
+  }
+
+  .service-areas-section {
+    background: white;
+  }
+
+  .faq-section {
+    background: #f8fafc;
+  }
+
+  .services-section h2,
+  .service-areas-section h2,
+  .faq-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+
+  .service-areas-section > .container > p {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #6b7280;
+    font-size: 1.125rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #3b82f6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .service-card h3 {
+    color: #1e40af;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .service-card p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    color: #4b5563;
+  }
+
+  .service-card ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .service-card li {
+    margin-bottom: 0.5rem;
+    color: #6b7280;
+    line-height: 1.6;
+  }
+
+  .areas-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .area-group {
+    background: #f8fafc;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+  }
+
+  .area-group:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-color: #3b82f6;
+  }
+
+  .area-group h3 {
+    color: #1e40af;
+    margin-bottom: 1.5rem;
+    font-size: 1.375rem;
+    font-weight: 700;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #3b82f6;
+  }
+
+  .area-group ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .area-group li {
+    padding: 0.625rem 0;
+    color: #4b5563;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 1.25rem;
+    transition: all 0.2s ease;
+  }
+
+  .area-group li::before {
+    content: "📍";
+    position: absolute;
+    left: 0;
+    font-size: 0.75rem;
+    opacity: 0.6;
+  }
+
+  .area-group li:hover {
+    color: #1e40af;
+    padding-left: 1.5rem;
+  }
+
+  .faq-container {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .faq-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #3b82f6;
+    transition: transform 0.3s ease;
+  }
+
+  .faq-item:hover {
+    transform: translateX(4px);
+  }
+
+  .faq-item h3 {
+    color: #1e40af;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .faq-item p {
+    line-height: 1.7;
+    color: #4b5563;
+    margin: 0;
+  }
+
+  .cta-section {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+  }
+
+  .cta-section h2 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: 800;
+  }
+
+  .cta-section p {
+    margin-bottom: 2rem;
+    font-size: 1.125rem;
+    opacity: 0.95;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .hero {
+      height: 70vh;
+      min-height: 500px;
     }
 
-    .city-hero {
-      padding: 3rem 0 2rem;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      text-align: center;
+    .hero-logo-image {
+      height: 200px;
     }
 
-    .city-hero h1 {
-      font-size: clamp(2.5rem, 5vw, 3.5rem);
-      margin-bottom: 1.5rem;
+    .hero h1 {
+      font-size: 2rem;
+      margin-top: -2rem;
     }
 
-    .lead {
-      font-size: clamp(1.1rem, 2vw, 1.5rem);
-      margin-bottom: 2rem;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
+    .hero-trust-badges {
+      top: 1rem;
+      gap: 0.75rem;
+      padding: 0 1rem;
     }
 
-    .cta-buttons {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
+    .trust-badge {
+      padding: 0.63rem 1.25rem;
+      font-size: 1rem;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 1rem 2rem;
-      border-radius: 0.5rem;
-      text-decoration: none;
-      font-weight: 600;
-      transition: transform 0.2s, box-shadow 0.2s;
+    .trust-badge .trust-icon,
+    .trust-badge .trust-stars {
+      font-size: 1.25rem;
     }
 
-    .btn-primary {
-      background: white;
-      color: #667eea;
-    }
-
-    .btn-secondary {
-      background: rgba(255, 255, 255, 0.2);
-      color: white;
-      border: 2px solid white;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    .city-services {
-      padding: 2rem 0;
-    }
-
-    .city-services h2 {
-      text-align: center;
-      font-size: clamp(2rem, 4vw, 2.5rem);
-      margin-bottom: 2rem;
-      color: #333;
+    .trust-badge .trust-text {
+      font-size: 0.94rem;
     }
 
     .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    .service-card {
-      background: white;
-      padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      border-left: 4px solid #667eea;
-    }
-
-    .service-card h3 {
-      color: #667eea;
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
-    }
-
-    .service-card p {
-      margin-bottom: 1rem;
-      line-height: 1.6;
-      color: #555;
-    }
-
-    .service-card ul {
-      margin: 1rem 0;
-      padding-left: 1.5rem;
-    }
-
-    .service-card li {
-      margin-bottom: 0.5rem;
-      color: #555;
-    }
-
-    .fairhope-specialties {
-      background: #f8f9fa;
-      padding: 3rem 2rem;
-      border-radius: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    .fairhope-specialties h2 {
-      text-align: center;
-      margin-bottom: 2rem;
-      color: #333;
-    }
-
-    .specialties-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-
-    .specialty-item {
-      background: white;
-      padding: 2rem;
-      border-radius: 0.5rem;
-    }
-
-    .specialty-item h3 {
-      color: #667eea;
-      margin-bottom: 1rem;
-    }
-
-    .specialty-item p {
-      line-height: 1.6;
-      color: #555;
-    }
-
-    .fairhope-areas {
-      margin-bottom: 2rem;
-    }
-
-    .fairhope-areas h2 {
-      text-align: center;
-      margin-bottom: 2rem;
-      color: #333;
-    }
-
-    .fairhope-areas > p {
-      text-align: center;
-      margin-bottom: 2rem;
-      color: #555;
+      grid-template-columns: 1fr;
     }
 
     .areas-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-
-    .area-group h3 {
-      color: #667eea;
-      margin-bottom: 1rem;
-      font-size: 1.2rem;
-    }
-
-    .area-group ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .area-group li {
-      padding: 0.5rem 0;
-      color: #555;
-      border-bottom: 1px solid #e0e0e0;
-    }
-
-    .area-group li:last-child {
-      border-bottom: none;
-    }
-
-    .testimonial-section {
-      background: white;
-      padding: 3rem 2rem;
-      border-radius: 1rem;
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-
-    .testimonial-section h2 {
-      margin-bottom: 2rem;
-      color: #333;
-    }
-
-    .testimonial blockquote {
-      font-size: 1.2rem;
-      font-style: italic;
-      color: #555;
-      margin-bottom: 1rem;
-      line-height: 1.6;
-    }
-
-    .testimonial cite {
-      color: #667eea;
-      font-weight: 600;
-    }
-
-    .cta-section {
-      text-align: center;
-      padding: 2rem 0;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      border-radius: 1rem;
-    }
-
-    .cta-section h2 {
-      margin-bottom: 1rem;
-      font-size: 2rem;
-    }
-
-    .cta-section p {
-      margin-bottom: 2rem;
-      font-size: 1.1rem;
-      opacity: 0.95;
-    }
-
-    .fairhope-local-content {
-      background: #f8f9fa;
-      padding: 3rem 2rem;
-      border-radius: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    .fairhope-local-content h2 {
-      text-align: center;
-      margin-bottom: 2rem;
-      color: #333;
-      font-size: 2rem;
-    }
-
-    .local-expertise h3 {
-      color: #667eea;
-      margin-bottom: 1rem;
-      margin-top: 2rem;
-      font-size: 1.3rem;
-    }
-
-    .local-expertise h3:first-child {
-      margin-top: 0;
-    }
-
-    .local-expertise p {
-      line-height: 1.7;
-      color: #555;
-      margin-bottom: 1.5rem;
-    }
-
-    .fairhope-faq {
-      margin-bottom: 2rem;
-    }
-
-    .fairhope-faq h2 {
-      text-align: center;
-      margin-bottom: 2rem;
-      color: #333;
-      font-size: 2rem;
-    }
-
-    .faq-container {
-      display: grid;
+      grid-template-columns: 1fr;
       gap: 1.5rem;
     }
 
-    .faq-item {
-      background: white;
-      padding: 2rem;
-      border-radius: 0.5rem;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      border-left: 4px solid #667eea;
+    .area-group {
+      padding: 1.5rem;
     }
 
-    .faq-item h3 {
-      color: #667eea;
-      margin-bottom: 1rem;
-      font-size: 1.2rem;
+    .area-group h3 {
+      font-size: 1.25rem;
     }
 
-    .faq-item p {
-      line-height: 1.6;
-      color: #555;
-      margin: 0;
+    .btn {
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
     }
 
-    @media (max-width: 768px) {
-      .city-hero {
-        padding: 4rem 0 2rem;
-      }
-
-      .city-services {
-        padding: 2rem 0;
-      }
-
-      .service-card {
-        padding: 1.5rem;
-      }
-
-      .fairhope-specialties {
-        padding: 2rem 1rem;
-      }
+    .services-section,
+    .service-areas-section,
+    .faq-section {
+      padding: 3rem 0;
     }
-  </style>
-</BaseLayout>
 
+    .cta-section {
+      padding: 3rem 1.5rem;
+    }
+  }
+</style>
 
+<script>
+  // Hero Slider Functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.dot');
+    let currentSlide = 0;
+    let slideInterval;
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
+      slides[index].classList.add('active');
+      dots[index].classList.add('active');
+      currentSlide = index;
+    }
+
+    function nextSlide() {
+      const next = (currentSlide + 1) % slides.length;
+      showSlide(next);
+    }
+
+    function startSlider() {
+      slideInterval = setInterval(nextSlide, 5000);
+    }
+
+    function stopSlider() {
+      clearInterval(slideInterval);
+    }
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        showSlide(index);
+        stopSlider();
+        startSlider();
+      });
+    });
+
+    startSlider();
+
+    const hero = document.querySelector('.hero');
+    hero.addEventListener('mouseenter', stopSlider);
+    hero.addEventListener('mouseleave', startSlider);
+  });
+</script>

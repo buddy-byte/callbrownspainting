@@ -2,9 +2,9 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ServiceSchema from '../components/ServiceSchema.astro';
 
-const title = "House Painter in Brewton AL | Professional Painting Services Escambia County";
-const description = "Expert house painters in Brewton, Alabama serving Escambia County since 2010. Specializing in high-humidity paint solutions, smoke damage repair, and commercial painting. Licensed, insured, locally owned.";
-const keywords = "house painter Brewton AL, painters Brewton Alabama, Escambia County painting, Brewton house painting, commercial painters Brewton, smoke damage repair Brewton, local painters Brewton AL, professional painting Brewton";
+const title = "House Painter in Brewton AL | Professional Painting Services";
+const description = "Expert house painters in Brewton, Alabama. Licensed, insured, locally owned.";
+const keywords = "house painter Brewton AL, painters Brewton Alabama";
 ---
 
 <BaseLayout
@@ -16,7 +16,7 @@ const keywords = "house painter Brewton AL, painters Brewton Alabama, Escambia C
     <!-- Service Schema -->
     <ServiceSchema
       serviceName="Professional House Painting Services in Brewton AL"
-      serviceDescription="Expert house painting services for Brewton and Escambia County properties. Specializing in high-humidity paint solutions, smoke damage repair, and commercial painting with 25+ years of local experience."
+      serviceDescription="Expert house painters in Brewton, Alabama. Licensed, insured, locally owned."
       serviceUrl="https://callbrownspainting.com/brewton-painting"
       serviceType="House Painting"
       priceRange="$$"
@@ -25,276 +25,56 @@ const keywords = "house painter Brewton AL, painters Brewton Alabama, Escambia C
 
     <!-- Hero Section -->
     <section class="hero">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1>House Painter in Brewton, Alabama</h1>
-          <p class="hero-subtitle">Serving Escambia, Conecuh, and Monroe Counties Since 2010. Now Serving Mobile and Baldwin County Too! Expert house painting services for Brewton's unique high-humidity climate and historic downtown district.</p>
-          <div class="hero-buttons">
-            <a href="tel:+1251-237-4545" class="btn btn-primary">Call (251) 237-4545</a>
-            <a href="/contact" class="btn btn-secondary">Get Free Estimate</a>
-          </div>
+      <div class="hero-background">
+        <div class="hero-slide active" style="background-image: url('/images/hero/hero-1-optimized.jpg')"></div>
+        <div class="hero-slide" style="background-image: url('/images/projects/projects-optimized/interior-painting-2-optimized.jpg')"></div>
+        <div class="hero-slide" style="background-image: url('/images/hero/hero-3-optimized.jpg'); background-position: center top;"></div>
+      </div>
+      
+      <div class="hero-overlay"></div>
+      
+      <div class="hero-trust-badges">
+        <div class="trust-badge">
+          <span class="trust-stars">★★★★★</span>
+          <span class="trust-text">5-Star Reviews</span>
         </div>
-        <div class="hero-image">
-          <img src="/images/gallery/brewton-painting-hero.jpg" alt="Professional house painting in Brewton Alabama" />
+        <div class="trust-badge">
+          <span class="trust-icon">🏆</span>
+          <span class="trust-text">25+ Years</span>
+        </div>
+        <div class="trust-badge">
+          <span class="trust-icon">📋</span>
+          <span class="trust-text">Licensed & Insured</span>
+        </div>
+        <div class="trust-badge">
+          <span class="trust-icon">✅</span>
+          <span class="trust-text">100% Guaranteed</span>
         </div>
       </div>
-    </section>
 
-    <!-- Local Introduction -->
-    <section class="local-intro">
       <div class="container">
-        <h2>Why Brewton Home and Business Owners Call Brown's Painting</h2>
-        <div class="intro-content">
-          <div class="intro-text">
-            <p>Brewton, Alabama, nestled in the heart of Escambia County, presents unique challenges for house painting that only local professionals truly understand. With our historic downtown district, proximity to the Conecuh River, and the high humidity that characterizes South Alabama, Brewton properties require specialized paint solutions and techniques.</p>
-            
-            <p>As a locally owned and operated painting company, we've been serving Brewton families and businesses since 2010. Our deep understanding of the local climate, architectural styles, and community needs sets us apart from out-of-town contractors who don't grasp the specific challenges of painting in our area.</p>
-          </div>
-          <div class="intro-features">
-            <div class="feature-item">
-              <h3>🏠 Locally Owned Professionals</h3>
-              <p>Strong family values and fast response times for Brewton residents</p>
+        <div class="hero-content">
+          <div class="hero-text">
+            <img src="/images/logo/browns-painting-logo-hat.png" alt="Brown's Painting" class="hero-logo-image" />
+            <h1>Professional Painting Services in Brewton, AL</h1>
+            <div class="phone-number">
+              <span class="phone-label">Call Us Today at</span>
+              <a href="tel:+12512374545" class="phone-link">(251) 237-4545</a>
             </div>
-            <div class="feature-item">
-              <h3>🌡️ Expert Climate Knowledge</h3>
-              <p>Understanding of high heat and humidity environments unique to South Alabama</p>
-            </div>
-            <div class="feature-item">
-              <h3>✅ 100% Satisfaction Guarantee</h3>
-              <p>Standing behind our work with comprehensive warranties</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Service Area Details -->
-    <section class="service-area-details">
-      <div class="container">
-        <h2>Service Area Details</h2>
-        
-        <div class="area-content">
-          <div class="major-routes">
-            <h3>Major Routes We Cover</h3>
-            <p>Our Brewton painting services extend throughout the region via key transportation corridors:</p>
-            <ul>
-              <li><strong>US Highway 31:</strong> Main north-south route connecting Brewton to Atmore and Evergreen</li>
-              <li><strong>Alabama State Route 41:</strong> Direct access to Flomaton and the Florida state line</li>
-              <li><strong>Alabama State Route 29:</strong> Connects Brewton to Monroeville and the Eastern Shore</li>
-              <li><strong>Interstate 65 Access:</strong> Easy reach to Mobile and Baldwin County via Atmore</li>
-              <li><strong>Railroad Corridor:</strong> CSX Transportation line running through downtown Brewton</li>
-            </ul>
-          </div>
-
-          <div class="neighborhoods-served">
-            <h3>Brewton Neighborhoods Served</h3>
-            <p>We provide comprehensive painting services throughout Brewton's diverse residential and commercial areas:</p>
-            <div class="neighborhood-grid">
-              <div class="neighborhood-group">
-                <h4>Historic Downtown</h4>
-                <ul>
-                  <li>Brewton Historic District</li>
-                  <li>St. Joseph's Hospital Area</li>
-                  <li>City Hall District</li>
-                  <li>Railroad Avenue Corridor</li>
-                </ul>
-              </div>
-              <div class="neighborhood-group">
-                <h4>Residential Areas</h4>
-                <ul>
-                  <li>Brewton Hills</li>
-                  <li>Pineview Subdivision</li>
-                  <li>Riverside Drive</li>
-                  <li>College Street Area</li>
-                </ul>
-              </div>
-              <div class="neighborhood-group">
-                <h4>Commercial Districts</h4>
-                <ul>
-                  <li>Douglas Avenue Business District</li>
-                  <li>Brewton Industrial Park</li>
-                  <li>Highway 31 Commercial Strip</li>
-                  <li>Medical District</li>
-                </ul>
-              </div>
-              <div class="neighborhood-group">
-                <h4>Outlying Areas</h4>
-                <ul>
-                  <li>Riverview Community</li>
-                  <li>Brewton Country Club Area</li>
-                  <li>Airport Road Corridor</li>
-                  <li>Rural Escambia County Properties</li>
-                </ul>
-              </div>
+            <div class="hero-cta">
+              <a href="/contact" class="btn btn-primary">
+                <span class="btn-icon">📋</span>
+                Get A Free Quote
+              </a>
             </div>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Local Landmarks & Community -->
-    <section class="local-landmarks">
-      <div class="container">
-        <h2>Brewton Landmarks & Community Connections</h2>
-        <div class="landmarks-content">
-          <div class="landmark-item">
-            <h3>🏛️ Historic Downtown Brewton</h3>
-            <p>Our team has extensive experience working with Brewton's historic downtown buildings, including the beautiful Victorian architecture along Douglas Avenue. We understand the special care required for historic properties and use techniques that preserve the character while providing modern protection.</p>
-          </div>
-          <div class="landmark-item">
-            <h3>🏥 Brewton Medical District</h3>
-            <p>We've painted numerous medical facilities, including the area around D.W. McMillan Memorial Hospital. Our commercial painting services are designed to meet healthcare facility standards while maintaining a welcoming atmosphere for patients and families.</p>
-          </div>
-          <div class="landmark-item">
-            <h3>🎓 Education Facilities</h3>
-            <p>From Brewton City Schools to Jefferson Davis Community College, we understand the unique requirements of educational facilities. Our painting services accommodate academic schedules and create inspiring learning environments.</p>
-          </div>
-          <div class="landmark-item">
-            <h3>🌊 Conecuh River Access</h3>
-            <p>Properties near the Conecuh River face additional moisture challenges. We use specialized paint systems designed to handle the increased humidity and occasional flooding that can affect riverside properties.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Common Paint Issues in Brewton -->
-    <section class="local-paint-issues">
-      <div class="container">
-        <h2>Common Paint Issues in Brewton</h2>
-        <p>Brewton's unique climate and geographic location create specific challenges that require specialized solutions:</p>
-        
-        <div class="issues-grid">
-          <div class="issue-item">
-            <h3>🌡️ High Humidity Problems</h3>
-            <p>Brewton's average humidity of 75-80% can cause paint to blister, peel, and develop mold. We use moisture-resistant primers and breathable paint systems specifically designed for high-humidity environments.</p>
-            <ul>
-              <li>Paint blistering and peeling</li>
-              <li>Mold and mildew growth</li>
-              <li>Poor paint adhesion</li>
-              <li>Color fading from moisture</li>
-            </ul>
-          </div>
-          
-          <div class="issue-item">
-            <h3>🔥 Smoke Damage from Industry</h3>
-            <p>Brewton's proximity to industrial areas and occasional controlled burns can cause smoke damage to exterior paint. We specialize in smoke damage assessment and repair, using specialized cleaning and priming techniques.</p>
-            <ul>
-              <li>Smoke residue on exterior surfaces</li>
-              <li>Discoloration from industrial emissions</li>
-              <li>Acid rain damage</li>
-              <li>Accelerated paint deterioration</li>
-            </ul>
-          </div>
-          
-          <div class="issue-item">
-            <h3>🌪️ Storm Damage</h3>
-            <p>Brewton's location in the hurricane-prone Gulf Coast region means properties face wind, rain, and debris damage. Our storm damage repair services help restore your property quickly and effectively.</p>
-            <ul>
-              <li>Wind-driven debris damage</li>
-              <li>Water infiltration issues</li>
-              <li>Salt air corrosion (from Gulf storms)</li>
-              <li>UV damage from intense sun exposure</li>
-            </ul>
-          </div>
-          
-          <div class="issue-item">
-            <h3>🏚️ Historic Building Challenges</h3>
-            <p>Many Brewton properties feature historic architectural elements that require special care. We understand the requirements for working with older construction materials and techniques.</p>
-            <ul>
-              <li>Lead paint abatement</li>
-              <li>Historic wood restoration</li>
-              <li>Period-appropriate color matching</li>
-              <li>Preservation of architectural details</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Local Supply Chain Partners -->
-    <section class="supply-chain-partners">
-      <div class="container">
-        <h2>Local Supply Chain Partners</h2>
-        <p>We work closely with Brewton and Escambia County businesses to support our local economy while ensuring the highest quality materials for your project:</p>
-        
-        <div class="partners-grid">
-          <div class="partner-category">
-            <h3>🏪 Local Paint Suppliers</h3>
-            <ul>
-              <li><strong>Brewton Paint & Supply:</strong> Our primary supplier for Sherwin-Williams products</li>
-              <li><strong>Atmore Hardware:</strong> Benjamin Moore paint products and specialty tools</li>
-              <li><strong>Flomaton Building Supply:</strong> PPG paints and commercial-grade materials</li>
-            </ul>
-          </div>
-          
-          <div class="partner-category">
-            <h3>🔧 Hardware & Tools</h3>
-            <ul>
-              <li><strong>Brewton Ace Hardware:</strong> Professional painting tools and equipment</li>
-              <li><strong>Escambia County Lumber:</strong> Wood preparation and repair materials</li>
-              <li><strong>Mobile Paint Center:</strong> Specialty coatings and industrial paints</li>
-            </ul>
-          </div>
-          
-          <div class="partner-category">
-            <h3>🏗️ Construction Partners</h3>
-            <ul>
-              <li><strong>Brewton Drywall Services:</strong> Drywall repair and preparation</li>
-              <li><strong>Escambia County Roofing:</strong> Coordinated exterior projects</li>
-              <li><strong>Brewton Electrical:</strong> Safe electrical work around painted surfaces</li>
-            </ul>
-          </div>
-          
-          <div class="partner-category">
-            <h3>🌿 Environmental Services</h3>
-            <ul>
-              <li><strong>Brewton Environmental:</strong> Lead paint testing and abatement</li>
-              <li><strong>Escambia County Waste Management:</strong> Proper disposal of paint materials</li>
-              <li><strong>Local Recycling Centers:</strong> Eco-friendly material disposal</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Weather Impact Section -->
-    <section class="weather-impact">
-      <div class="container">
-        <h2>How Brewton's Weather Affects Your Paint Job</h2>
-        <div class="weather-content">
-          <div class="seasonal-considerations">
-            <h3>🌤️ Seasonal Considerations</h3>
-            <div class="season-grid">
-              <div class="season-item">
-                <h4>Spring (March-May)</h4>
-                <p>Ideal painting season with moderate temperatures and lower humidity. Perfect for exterior projects before summer heat arrives.</p>
-              </div>
-              <div class="season-item">
-                <h4>Summer (June-August)</h4>
-                <p>High heat and humidity require early morning work and specialized paint formulations. We adjust our schedule to protect both workers and paint quality.</p>
-              </div>
-              <div class="season-item">
-                <h4>Fall (September-November)</h4>
-                <p>Excellent conditions for both interior and exterior work. Lower humidity and comfortable temperatures make this our busiest season.</p>
-              </div>
-              <div class="season-item">
-                <h4>Winter (December-February)</h4>
-                <p>Focus on interior projects and preparation for spring. We use this time for detailed planning and material preparation.</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="climate-challenges">
-            <h3>🌡️ Climate-Specific Challenges</h3>
-            <ul>
-              <li><strong>Average Annual Humidity:</strong> 75-80% requires moisture-resistant paint systems</li>
-              <li><strong>Summer Highs:</strong> 90°F+ temperatures demand heat-resistant paint formulations</li>
-              <li><strong>Annual Rainfall:</strong> 60+ inches means excellent drainage and water-resistant coatings are essential</li>
-              <li><strong>Hurricane Season:</strong> June-November requires storm-resistant paint systems</li>
-              <li><strong>Pollen Season:</strong> March-May means frequent cleaning requirements for exterior surfaces</li>
-            </ul>
-          </div>
-        </div>
+      
+      <div class="hero-dots">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
       </div>
     </section>
 
@@ -304,72 +84,98 @@ const keywords = "house painter Brewton AL, painters Brewton Alabama, Escambia C
         <h2>Our Painting Services in Brewton</h2>
         <div class="services-grid">
           <div class="service-card">
-            <h3>Residential House Painting</h3>
-            <p>Specialized painting services for Brewton's historic downtown district and surrounding Escambia County areas. We excel at historic property restoration, high-humidity paint solutions, and modern residential developments.</p>
+            <h3>🏠 Interior Painting</h3>
+            <p>Transform your Brewton home's interior with professional painting services.</p>
             <ul>
-              <li>Historic home restoration</li>
-              <li>Modern residential painting</li>
-              <li>High-humidity paint solutions</li>
-              <li>Storm damage repair</li>
+              <li>Living rooms and bedrooms</li>
+              <li>Kitchen and bathroom painting</li>
+              <li>Cabinet refinishing</li>
+              <li>Drywall repair and texturing</li>
+              <li>Trim and molding painting</li>
             </ul>
-            <a href="/interior-painting" class="btn btn-outline">Learn More</a>
           </div>
           
           <div class="service-card">
-            <h3>Commercial Painting</h3>
-            <p>Professional commercial painting for Brewton businesses, medical facilities, and industrial properties.</p>
+            <h3>🎨 Exterior Painting</h3>
+            <p>Protect your Brewton property with professional exterior painting designed for Alabama's climate.</p>
             <ul>
-              <li>Medical facility painting</li>
-              <li>Retail space updates</li>
-              <li>Industrial facility maintenance</li>
-              <li>Historic building restoration</li>
+              <li>House siding and trim</li>
+              <li>Deck and porch painting</li>
+              <li>Fence painting and staining</li>
+              <li>Weather-resistant coatings</li>
+              <li>Pressure washing included</li>
             </ul>
-            <a href="/commercial-painting" class="btn btn-outline">Learn More</a>
           </div>
           
           <div class="service-card">
-            <h3>Smoke Damage Repair</h3>
-            <p>Specialized smoke damage assessment and repair services for Brewton properties affected by industrial emissions or fire damage.</p>
+            <h3>🏢 Commercial Painting</h3>
+            <p>Professional commercial painting services for Brewton businesses of all sizes.</p>
             <ul>
-              <li>Smoke damage assessment</li>
-              <li>Specialized cleaning techniques</li>
-              <li>Odor elimination</li>
-              <li>Complete restoration</li>
+              <li>Office buildings</li>
+              <li>Retail spaces</li>
+              <li>Restaurants and hospitality</li>
+              <li>After-hours scheduling</li>
+              <li>Minimal business disruption</li>
             </ul>
-            <a href="/contact" class="btn btn-outline">Get Estimate</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Areas Section -->
+    <section class="service-areas-section">
+      <div class="container">
+        <h2>Brewton Service Areas</h2>
+        <p>Professional painting services throughout Brewton and surrounding Escambia County communities.</p>
+        
+        <div class="areas-list">
+          <div class="area-group">
+            <h3>Brewton Neighborhoods We Serve</h3>
+            <ul>
+              <li>Downtown Brewton</li>
+              <li>East Brewton</li>
+              <li>Historic District</li>
+              <li>Belleville</li>
+              <li>Riverview</li>
+            </ul>
+          </div>
+          
+          <div class="area-group">
+            <h3>Nearby Communities</h3>
+            <ul>
+              <li>Atmore - 25 minutes</li>
+              <li>Evergreen - 30 minutes</li>
+              <li>Pensacola - 60 minutes</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq">
+    <section class="faq-section">
       <div class="container">
-        <h2>Frequently Asked Questions About Painting in Brewton</h2>
-        <div class="faq-grid">
+        <h2>Frequently Asked Questions - Brewton Painting</h2>
+        <div class="faq-container">
           <div class="faq-item">
-            <h3>How does Brewton's high humidity affect paint jobs?</h3>
-            <p>Brewton's 75-80% average humidity requires specialized moisture-resistant primers and breathable paint systems. We use products specifically designed for high-humidity environments to prevent blistering, peeling, and mold growth.</p>
+            <h3>How much does house painting cost in Brewton?</h3>
+            <p>Painting costs in Brewton typically range from $2.50 to $4.50 per square foot for interior work and $1.80 to $3.50 per square foot for exterior painting. The final price depends on factors like the size of your home, surface preparation needed, paint quality, and project complexity. We offer free, detailed estimates for all Brewton area properties.</p>
           </div>
           <div class="faq-item">
-            <h3>Do you work with historic downtown Brewton properties?</h3>
-            <p>Yes! We have extensive experience with Brewton's historic downtown buildings. We understand lead paint abatement requirements, historic wood restoration, and period-appropriate color matching for Victorian and other historic architectural styles.</p>
+            <h3>How long does it take to paint a house in Brewton?</h3>
+            <p>Most residential painting projects in Brewton take 3-7 days to complete. Interior painting typically takes 2-4 days for an average-sized home, while exterior painting usually requires 3-5 days depending on weather conditions. We'll provide you with a detailed timeline during your free estimate.</p>
           </div>
           <div class="faq-item">
-            <h3>What's the best time of year to paint in Brewton?</h3>
-            <p>Spring (March-May) and fall (September-November) offer the best conditions with moderate temperatures and lower humidity. We can work year-round but adjust our techniques and schedules for summer heat and winter conditions.</p>
+            <h3>Do I need to be home during the painting?</h3>
+            <p>Not necessarily. Many Brewton homeowners prefer to be away during painting to avoid the inconvenience. We're fully insured and trustworthy, and can work independently once access is arranged. For interior projects, some homeowners prefer to be present initially, but it's entirely your choice.</p>
           </div>
           <div class="faq-item">
-            <h3>Do you handle smoke damage from industrial areas?</h3>
-            <p>Absolutely. We specialize in smoke damage assessment and repair, using specialized cleaning techniques and primers designed to eliminate smoke residue and prevent future problems from industrial emissions.</p>
+            <h3>What brands of paint do you use in Brewton?</h3>
+            <p>We primarily use premium brands like Sherwin-Williams and Benjamin Moore for Brewton projects. These professional-grade paints offer superior coverage, durability, and color retention - essential for Alabama's humid climate. We can also accommodate specific brand preferences if you have particular requirements.</p>
           </div>
           <div class="faq-item">
-            <h3>Are you familiar with Brewton's building codes and regulations?</h3>
-            <p>Yes, we're fully licensed in Alabama and familiar with all local building codes, historic district requirements, and environmental regulations that affect painting projects in Brewton and Escambia County.</p>
-          </div>
-          <div class="faq-item">
-            <h3>Do you work around Brewton's academic schedules?</h3>
-            <p>We understand the importance of working around school schedules and coordinate with Brewton City Schools and Jefferson Davis Community College to minimize disruption to educational activities.</p>
+            <h3>Are you licensed and insured in Escambia County?</h3>
+            <p>Yes, Brown's Painting is fully licensed and insured to work throughout Escambia County including Brewton. We carry comprehensive liability insurance and workers' compensation coverage, protecting both our team and your property. We're happy to provide proof of insurance upon request.</p>
           </div>
         </div>
       </div>
@@ -378,311 +184,304 @@ const keywords = "house painter Brewton AL, painters Brewton Alabama, Escambia C
     <!-- CTA Section -->
     <section class="cta-section">
       <div class="container">
-        <h2>Ready to Transform Your Brewton Property?</h2>
-        <p>Contact Brown's Painting LLC today for your free estimate. We're ready to bring 25+ years of local painting expertise to your Brewton home or business.</p>
-        <div class="cta-buttons">
-          <a href="tel:+1251-237-4545" class="btn btn-primary">Call (251) 237-4545</a>
-          <a href="/contact" class="btn btn-secondary">Get Free Estimate</a>
-        </div>
+        <h2>Ready for Professional Painting in Brewton?</h2>
+        <p>Contact Barry "Boomer" Brown today for a free estimate on your Brewton painting project.</p>
+        <a href="/contact" class="btn btn-primary">
+          <span class="btn-icon">📞</span>
+          Get Free Estimate
+        </a>
       </div>
     </section>
   </main>
 </BaseLayout>
 
 <style>
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* Hero Section */
   .hero {
-    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-    color: white;
-    padding: 2rem 0;
-    min-height: 80vh;
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
     display: flex;
     align-items: center;
+    color: white;
+  }
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .hero-slide.active {
+    opacity: 1;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 100%);
+    z-index: 2;
   }
 
   .hero-content {
-    max-width: 1200px;
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 800px;
     margin: 0 auto;
-    padding: 0 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+    padding: 2rem;
+  }
+
+  .hero-logo-image {
+    height: 300px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0;
   }
 
   .hero h1 {
-    font-size: 3.5rem;
+    font-size: clamp(3rem, 5vw, 4rem);
+    font-weight: 800;
+    margin: 0;
+    margin-top: -4rem;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    color: white;
+  }
+
+  .phone-number {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .phone-label {
+    font-weight: 500;
+  }
+
+  .phone-link {
+    color: #fbbf24;
+    text-decoration: none;
     font-weight: 700;
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
+    font-size: 1.125rem;
   }
 
-  .hero-subtitle {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
-    line-height: 1.6;
+  .phone-link:hover {
+    color: #f59e0b;
+    text-decoration: underline;
   }
 
-  .hero-buttons {
+  .hero-cta {
+    margin-top: 2rem;
+  }
+
+  .hero-trust-badges {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
+    z-index: 4;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
-  .hero-image {
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-  }
-
-  .hero-image img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-  }
-
-  .local-intro {
-    padding: 2rem 0;
-    background: #f8fafc;
-  }
-
-  .intro-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 3rem;
-    align-items: start;
-  }
-
-  .intro-text p {
-    font-size: 1.125rem;
-    line-height: 1.7;
-    color: #4b5563;
-    margin-bottom: 1.5rem;
-  }
-
-  .intro-features {
+  .trust-badge {
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .feature-item {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  }
-
-  .feature-item h3 {
-    color: #1e3a8a;
-    margin-bottom: 0.5rem;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.94rem 1.56rem;
+    background: transparent;
+    color: white;
     font-size: 1.125rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   }
 
-  .service-area-details {
-    padding: 2rem 0;
+  .trust-badge:hover {
+    transform: translateY(-2px);
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.9);
   }
 
-  .area-content {
-    display: grid;
-    gap: 3rem;
+  .trust-badge .trust-icon {
+    font-size: 1.56rem;
+    color: #fbbf24;
   }
 
-  .major-routes h3,
-  .neighborhoods-served h3 {
-    color: #1e3a8a;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+  .trust-badge .trust-stars {
+    font-size: 1.56rem;
+    color: #fbbf24;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   }
 
-  .major-routes ul {
-    margin: 1rem 0;
-    padding-left: 1.5rem;
+  .trust-badge .trust-text {
+    font-size: 1.06rem;
+    font-weight: 600;
   }
 
-  .major-routes li {
-    margin-bottom: 0.5rem;
-    color: #4b5563;
+  .hero-dots {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 3;
   }
 
-  .neighborhood-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 1.5rem;
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
   }
 
-  .neighborhood-group {
-    background: #f8fafc;
-    padding: 1.5rem;
-    border-radius: 8px;
+  .dot.active {
+    background: #fbbf24;
+    transform: scale(1.2);
   }
 
-  .neighborhood-group h4 {
-    color: #1e3a8a;
-    margin-bottom: 1rem;
+  .dot:hover {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.25rem 2.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
     font-size: 1.125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
   }
 
-  .neighborhood-group ul {
-    margin: 0;
-    padding-left: 1.5rem;
+  .btn-primary {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #1f2937;
+    box-shadow: 
+      0 8px 25px rgba(251, 191, 36, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
   }
 
-  .neighborhood-group li {
-    margin-bottom: 0.5rem;
-    color: #4b5563;
-    font-size: 0.875rem;
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
   }
 
-  .local-landmarks {
-    padding: 2rem 0;
-    background: #f8fafc;
+  .btn-primary:hover::before {
+    left: 100%;
   }
 
-  .landmarks-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    transform: translateY(-3px);
+    box-shadow: 
+      0 12px 35px rgba(251, 191, 36, 0.6),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4);
   }
 
-  .landmark-item {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  }
-
-  .landmark-item h3 {
-    color: #1e3a8a;
-    margin-bottom: 1rem;
+  .btn-icon {
     font-size: 1.25rem;
   }
 
-  .local-paint-issues {
-    padding: 2rem 0;
-  }
-
-  .issues-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-
-  .issue-item {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    border-left: 4px solid #3b82f6;
-  }
-
-  .issue-item h3 {
-    color: #1e3a8a;
-    margin-bottom: 1rem;
-    font-size: 1.25rem;
-  }
-
-  .issue-item ul {
-    margin: 1rem 0;
-    padding-left: 1.5rem;
-  }
-
-  .issue-item li {
-    margin-bottom: 0.5rem;
-    color: #4b5563;
-  }
-
-  .supply-chain-partners {
-    padding: 2rem 0;
-    background: #f8fafc;
-  }
-
-  .partners-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-
-  .partner-category {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  }
-
-  .partner-category h3 {
-    color: #1e3a8a;
-    margin-bottom: 1rem;
-    font-size: 1.25rem;
-  }
-
-  .partner-category ul {
-    margin: 0;
-    padding-left: 1.5rem;
-  }
-
-  .partner-category li {
-    margin-bottom: 0.75rem;
-    color: #4b5563;
-    line-height: 1.5;
-  }
-
-  .weather-impact {
-    padding: 2rem 0;
-  }
-
-  .weather-content {
-    display: grid;
-    gap: 3rem;
-  }
-
-  .seasonal-considerations h3,
-  .climate-challenges h3 {
-    color: #1e3a8a;
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .season-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .season-item {
-    background: #f8fafc;
-    padding: 1.5rem;
-    border-radius: 8px;
-  }
-
-  .season-item h4 {
-    color: #1e3a8a;
-    margin-bottom: 0.75rem;
-    font-size: 1.125rem;
-  }
-
-  .climate-challenges ul {
-    margin: 1rem 0;
-    padding-left: 1.5rem;
-  }
-
-  .climate-challenges li {
-    margin-bottom: 0.75rem;
-    color: #4b5563;
-    line-height: 1.5;
+  /* Content Sections */
+  .services-section,
+  .service-areas-section,
+  .faq-section {
+    padding: 5rem 0;
   }
 
   .services-section {
-    padding: 2rem 0;
     background: #f8fafc;
+  }
+
+  .service-areas-section {
+    background: white;
+  }
+
+  .faq-section {
+    background: #f8fafc;
+  }
+
+  .services-section h2,
+  .service-areas-section h2,
+  .faq-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+
+  .service-areas-section > .container > p {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #6b7280;
+    font-size: 1.125rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
   }
 
   .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 3rem;
   }
@@ -691,14 +490,27 @@ const keywords = "house painter Brewton AL, painters Brewton Alabama, Escambia C
     background: white;
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #3b82f6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
   }
 
   .service-card h3 {
-    color: #1e3a8a;
+    color: #1e40af;
     margin-bottom: 1rem;
     font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .service-card p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    color: #4b5563;
   }
 
   .service-card ul {
@@ -708,17 +520,73 @@ const keywords = "house painter Brewton AL, painters Brewton Alabama, Escambia C
 
   .service-card li {
     margin-bottom: 0.5rem;
-    color: #4b5563;
+    color: #6b7280;
+    line-height: 1.6;
   }
 
-  .faq {
-    padding: 2rem 0;
-    background: #f8fafc;
-  }
-
-  .faq-grid {
+  .areas-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .area-group {
+    background: #f8fafc;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+  }
+
+  .area-group:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-color: #3b82f6;
+  }
+
+  .area-group h3 {
+    color: #1e40af;
+    margin-bottom: 1.5rem;
+    font-size: 1.375rem;
+    font-weight: 700;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #3b82f6;
+  }
+
+  .area-group ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .area-group li {
+    padding: 0.625rem 0;
+    color: #4b5563;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 1.25rem;
+    transition: all 0.2s ease;
+  }
+
+  .area-group li::before {
+    content: "📍";
+    position: absolute;
+    left: 0;
+    font-size: 0.75rem;
+    opacity: 0.6;
+  }
+
+  .area-group li:hover {
+    color: #1e40af;
+    padding-left: 1.5rem;
+  }
+
+  .faq-container {
+    display: grid;
     gap: 1.5rem;
     margin-top: 3rem;
   }
@@ -727,134 +595,161 @@ const keywords = "house painter Brewton AL, painters Brewton Alabama, Escambia C
     background: white;
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     border-left: 4px solid #3b82f6;
+    transition: transform 0.3s ease;
+  }
+
+  .faq-item:hover {
+    transform: translateX(4px);
   }
 
   .faq-item h3 {
-    color: #1e3a8a;
+    color: #1e40af;
     margin-bottom: 1rem;
-    font-size: 1.125rem;
-    font-weight: 600;
+    font-size: 1.25rem;
+    font-weight: 700;
   }
 
   .faq-item p {
+    line-height: 1.7;
     color: #4b5563;
-    line-height: 1.6;
+    margin: 0;
   }
 
   .cta-section {
-    padding: 2rem 0;
-    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-    color: white;
     text-align: center;
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
   }
 
   .cta-section h2 {
-    font-size: 2.5rem;
     margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: 800;
   }
 
   .cta-section p {
-    font-size: 1.25rem;
     margin-bottom: 2rem;
-    opacity: 0.9;
+    font-size: 1.125rem;
+    opacity: 0.95;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .cta-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .btn {
-    display: inline-block;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-  }
-
-  .btn-primary {
-    background: #f59e0b;
-    color: white;
-  }
-
-  .btn-primary:hover {
-    background: #d97706;
-    transform: translateY(-2px);
-  }
-
-  .btn-secondary {
-    background: transparent;
-    color: white;
-    border-color: white;
-  }
-
-  .btn-secondary:hover {
-    background: white;
-    color: #1e3a8a;
-  }
-
-  .btn-outline {
-    background: transparent;
-    color: #3b82f6;
-    border-color: #3b82f6;
-  }
-
-  .btn-outline:hover {
-    background: #3b82f6;
-    color: white;
-  }
-
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-  }
-
-  h2 {
-    text-align: center;
-    color: #1e3a8a;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-
+  /* Mobile Responsive */
   @media (max-width: 768px) {
-    .hero-content {
-      grid-template-columns: 1fr;
-      gap: 2rem;
+    .hero {
+      height: 70vh;
+      min-height: 500px;
+    }
+
+    .hero-logo-image {
+      height: 200px;
     }
 
     .hero h1 {
-      font-size: 2.5rem;
+      font-size: 2rem;
+      margin-top: -2rem;
     }
 
-    .hero-subtitle {
+    .hero-trust-badges {
+      top: 1rem;
+      gap: 0.75rem;
+      padding: 0 1rem;
+    }
+
+    .trust-badge {
+      padding: 0.63rem 1.25rem;
       font-size: 1rem;
     }
 
-    .intro-content {
+    .trust-badge .trust-icon,
+    .trust-badge .trust-stars {
+      font-size: 1.25rem;
+    }
+
+    .trust-badge .trust-text {
+      font-size: 0.94rem;
+    }
+
+    .services-grid {
       grid-template-columns: 1fr;
     }
 
-    .neighborhood-grid,
-    .landmarks-content,
-    .issues-grid,
-    .partners-grid,
-    .season-grid,
-    .services-grid,
-    .faq-grid {
+    .areas-list {
       grid-template-columns: 1fr;
+      gap: 1.5rem;
     }
 
-    .cta-buttons {
-      flex-direction: column;
-      align-items: center;
+    .area-group {
+      padding: 1.5rem;
+    }
+
+    .area-group h3 {
+      font-size: 1.25rem;
+    }
+
+    .btn {
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
+    }
+
+    .services-section,
+    .service-areas-section,
+    .faq-section {
+      padding: 3rem 0;
+    }
+
+    .cta-section {
+      padding: 3rem 1.5rem;
     }
   }
 </style>
+
+<script>
+  // Hero Slider Functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.dot');
+    let currentSlide = 0;
+    let slideInterval;
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
+      slides[index].classList.add('active');
+      dots[index].classList.add('active');
+      currentSlide = index;
+    }
+
+    function nextSlide() {
+      const next = (currentSlide + 1) % slides.length;
+      showSlide(next);
+    }
+
+    function startSlider() {
+      slideInterval = setInterval(nextSlide, 5000);
+    }
+
+    function stopSlider() {
+      clearInterval(slideInterval);
+    }
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        showSlide(index);
+        stopSlider();
+        startSlider();
+      });
+    });
+
+    startSlider();
+
+    const hero = document.querySelector('.hero');
+    hero.addEventListener('mouseenter', stopSlider);
+    hero.addEventListener('mouseleave', startSlider);
+  });
+</script>

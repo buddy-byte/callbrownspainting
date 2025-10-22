@@ -1,579 +1,634 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ServiceSchema from '../components/ServiceSchema.astro';
-import Breadcrumbs from '../components/Breadcrumbs.astro';
-import RelatedServices from '../components/RelatedServices.astro';
-import ServiceContentFramework from '../components/ServiceContentFramework.astro';
+
+const title = "Interior Painting Services | Professional House Painters South Alabama";
+const description = "Expert interior painting services in South Alabama. Cabinet refinishing, drywall repair, humidity-resistant paints. Serving Mobile, Daphne, Fairhope, Gulf Shores.";
+const keywords = "interior painting Alabama, cabinet refinishing, drywall repair, house painters";
 ---
 
 <BaseLayout
-  title="Interior Painting Services - CallBrownsPainting.com"
-  description="Expert interior painting specialists: cabinet refinishing, drywall repair, humidity-resistant paints. Serving Daphne, Fairhope, Gulf Shores, Mobile, and all South Alabama. Free color consultation included."
-  keywords="interior painting Daphne AL, cabinet refinishing Fairhope AL, drywall repair Brewton AL, humidity resistant paint Eastern Shore AL, interior painters Gulf Shores AL, home painting Orange Beach AL"
+  title={title}
+  description={description}
+  keywords={keywords}
 >
   <main>
-    <!-- Breadcrumbs -->
-    <Breadcrumbs items={[
-      { name: 'Services', url: '/services' },
-      { name: 'Interior Painting', url: '/interior-painting', current: true }
-    ]} />
-    
     <!-- Service Schema -->
-    <ServiceSchema 
+    <ServiceSchema
       serviceName="Interior Painting Services"
-      serviceDescription="Professional interior painting services for residential and commercial properties throughout South Alabama. Specializing in humidity-resistant paints, cabinet refinishing, drywall repair, and color consultation."
+      serviceDescription="Expert interior painting services in South Alabama. Cabinet refinishing, drywall repair, humidity-resistant paints. Serving Mobile, Daphne, Fairhope, Gulf Shores."
       serviceUrl="https://callbrownspainting.com/interior-painting"
       serviceType="Interior Painting"
       priceRange="$$"
       serviceImage="https://callbrownspainting.com/assets/interior-painting-service.jpg"
     />
 
-    <!-- Service Content Framework -->
-    <ServiceContentFramework
-      serviceName="Interior Painting"
-      serviceType="interior"
-      heroTitle="Professional Interior Painting Services"
-      heroSubtitle="Transform your indoor spaces with expert interior painting services throughout South Alabama. From Daphne to Gulf Shores, we deliver humidity-resistant, long-lasting results."
-      valueProposition="With 25+ years of experience in South Alabama's unique climate, we understand the challenges of interior painting in high-humidity environments. Our specialized techniques and premium materials ensure your interior paint job will look beautiful and last for years to come."
-      whatsIncluded={[
-        {
-          title: "Color Consultation",
-          description: "Expert color advice tailored to your space, lighting, and personal style preferences.",
-          icon: "🎨"
-        },
-        {
-          title: "Surface Preparation",
-          description: "Thorough cleaning, sanding, and priming to ensure perfect paint adhesion and longevity.",
-          icon: "🔧"
-        },
-        {
-          title: "Cabinet Refinishing",
-          description: "Professional cabinet painting and refinishing with factory-quality results.",
-          icon: "🏠"
-        },
-        {
-          title: "Drywall Repair",
-          description: "Complete drywall patching, texture matching, and surface preparation services.",
-          icon: "🔨"
-        },
-        {
-          title: "Humidity-Resistant Paints",
-          description: "Specialized paint systems designed for Alabama's coastal climate and high humidity.",
-          icon: "💧"
-        },
-        {
-          title: "Cleanup & Protection",
-          description: "Complete cleanup and protection of your furniture and belongings throughout the project.",
-          icon: "🧹"
-        }
-      ]}
-      processSteps={[
-        {
-          step: 1,
-          title: "Free Consultation & Estimate",
-          description: "We visit your home to assess the project, discuss your vision, and provide a detailed written estimate with no hidden costs.",
-          duration: "30-45 minutes"
-        },
-        {
-          step: 2,
-          title: "Color Selection & Planning",
-          description: "Our color consultation helps you choose the perfect colors, and we create a detailed project timeline that works with your schedule.",
-          duration: "1-2 hours"
-        },
-        {
-          step: 3,
-          title: "Surface Preparation",
-          description: "We protect your furniture and floors, then thoroughly prepare all surfaces including cleaning, sanding, and priming where needed.",
-          duration: "1-2 days"
-        },
-        {
-          step: 4,
-          title: "Professional Painting",
-          description: "Our skilled painters apply premium paints using professional techniques, ensuring smooth, even coverage and crisp lines.",
-          duration: "2-4 days"
-        },
-        {
-          step: 5,
-          title: "Quality Inspection & Cleanup",
-          description: "We conduct a thorough quality inspection with you, then clean up completely and remove all protection materials.",
-          duration: "1-2 hours"
-        }
-      ]}
-      commonIssues={[
-        {
-          problem: "Paint Peeling in High Humidity",
-          solution: "We use moisture-resistant primers and paints specifically designed for Alabama's coastal climate, plus proper ventilation techniques.",
-          urgency: "high"
-        },
-        {
-          problem: "Mold and Mildew Growth",
-          solution: "We apply anti-microbial paints and ensure proper surface preparation to prevent future mold and mildew issues.",
-          urgency: "high"
-        },
-        {
-          problem: "Poor Color Coverage",
-          solution: "Our professional surface preparation and high-quality paints ensure even coverage and true color representation.",
-          urgency: "medium"
-        },
-        {
-          problem: "Cabinet Paint Chipping",
-          solution: "We use specialized cabinet paints and proper preparation techniques for durable, long-lasting cabinet finishes.",
-          urgency: "medium"
-        },
-        {
-          problem: "Drywall Imperfections Showing",
-          solution: "We repair and smooth all drywall issues before painting, ensuring a flawless final appearance.",
-          urgency: "low"
-        },
-        {
-          problem: "Color Fading Over Time",
-          solution: "We use high-quality, fade-resistant paints with proper UV protection to maintain color vibrancy.",
-          urgency: "low"
-        }
-      ]}
-      customerPromise={{
-        title: "Our 100% Risk-Free Quality Guarantee",
-        guarantees: [
-          {
-            title: "Satisfaction Guarantee",
-            description: "If you're not completely satisfied with our work, we'll return to fix any issues at no additional cost."
-          },
-          {
-            title: "Transparent Pricing",
-            description: "No hidden fees or surprise charges. Your final bill will match your written estimate exactly."
-          },
-          {
-            title: "Licensed & Insured",
-            description: "Fully licensed and insured for your protection and peace of mind on every project."
-          },
-          {
-            title: "Clean Work Environment",
-            description: "We protect your belongings and clean up completely, leaving your home spotless."
-          },
-          {
-            title: "Quality Materials",
-            description: "We use only premium paints and materials from trusted brands like Sherwin-Williams and Benjamin Moore."
-          },
-          {
-            title: "Timely Completion",
-            description: "We stick to our schedule and complete your project on time, every time."
-          }
-        ]
-      }}
-      faqs={[
-        {
-          question: "How long does an interior painting project take?",
-          answer: "Most interior projects take 2-5 days depending on the size and complexity. A single room typically takes 1-2 days, while a whole house interior may take 3-5 days. We provide a detailed timeline during your free estimate."
-        },
-        {
-          question: "Do you move furniture and protect my belongings?",
-          answer: "Yes! We move light furniture as needed and protect all your belongings with professional drop cloths and plastic sheeting. We also cover floors, fixtures, and any items that can't be moved."
-        },
-        {
-          question: "What paint brands do you use?",
-          answer: "We use premium paints from Sherwin-Williams, Benjamin Moore, and PPG. For South Alabama's humidity, we often recommend specific moisture-resistant and anti-microbial paint systems."
-        },
-        {
-          question: "Can you help me choose colors?",
-          answer: "Absolutely! Color consultation is included with every interior painting project. We'll help you choose colors that work with your lighting, furniture, and personal style."
-        },
-        {
-          question: "Do you repair drywall before painting?",
-          answer: "Yes, we include drywall repair and surface preparation in our interior painting service. This includes patching holes, smoothing imperfections, and ensuring surfaces are ready for paint."
-        },
-        {
-          question: "What if I'm not happy with the results?",
-          answer: "We stand behind our work with a 100% satisfaction guarantee. If you're not completely happy, we'll return to fix any issues at no additional cost to you."
-        },
-        {
-          question: "Do you work around my schedule?",
-          answer: "Yes, we work around your schedule and can often accommodate evening or weekend work if needed. We'll discuss timing during your free estimate."
-        },
-        {
-          question: "How much does interior painting cost?",
-          answer: "Interior painting costs vary based on room size, surface condition, and paint quality. We provide free, detailed estimates with no obligation. Most single rooms range from $300-800, while whole house interiors typically cost $2,000-8,000."
-        }
-      ]}
-    />
-
-    <section id="services" class="services-detailed">
-      <div class="container">
-        <h2>Interior Painting Services We Offer</h2>
-        
-        <div class="service-grid">
-          <article class="service-item">
-            <h3>Living Rooms & Bedrooms</h3>
-            <p>
-              Create inviting spaces with professional interior painting. We specialize in color consultation 
-              and premium finishes that enhance your home's comfort and value.
-            </p>
-            <ul>
-              <li>Color consultation and design</li>
-              <li>Wall preparation and priming</li>
-              <li>Premium paint application</li>
-              <li>Trim and molding work</li>
-            </ul>
-          </article>
-
-          <article class="service-item">
-            <h3>Kitchens & Bathrooms</h3>
-            <p>
-              Humidity-resistant painting solutions for high-moisture areas. Perfect for Alabama's coastal climate 
-              with specialized paints that resist mold and mildew.
-            </p>
-            <ul>
-              <li>Moisture-resistant paint systems</li>
-              <li>Cabinet refinishing and painting</li>
-              <li>Bathroom ceiling and wall painting</li>
-              <li>Kitchen cabinet makeovers</li>
-            </ul>
-          </article>
-
-          <article class="service-item">
-            <h3>Drywall Repair & Preparation</h3>
-            <p>
-              Professional drywall repair services before painting. We fix cracks, holes, and imperfections 
-              to ensure smooth, flawless paint application.
-            </p>
-            <ul>
-              <li>Drywall crack repair</li>
-              <li>Hole patching and filling</li>
-              <li>Texture matching</li>
-              <li>Surface preparation</li>
-            </ul>
-          </article>
-
-          <article class="service-item">
-            <h3>Cabinet Refinishing</h3>
-            <p>
-              Transform your kitchen and bathroom cabinets with professional refinishing services. 
-              From Fairhope to Orange Beach, we bring cabinets back to life.
-            </p>
-            <ul>
-              <li>Cabinet painting and staining</li>
-              <li>Hardware replacement</li>
-              <li>Door and drawer refinishing</li>
-              <li>Custom color matching</li>
-            </ul>
-          </article>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-background">
+        <div class="hero-slide active" style="background-image: url('/images/hero/hero-1-optimized.jpg')"></div>
+        <div class="hero-slide" style="background-image: url('/images/projects/projects-optimized/interior-painting-2-optimized.jpg')"></div>
+        <div class="hero-slide" style="background-image: url('/images/hero/hero-3-optimized.jpg'); background-position: center top;"></div>
+      </div>
+      
+      <div class="hero-overlay"></div>
+      
+      <div class="hero-trust-badges">
+        <div class="trust-badge">
+          <span class="trust-stars">★★★★★</span>
+          <span class="trust-text">5-Star Reviews</span>
         </div>
+        <div class="trust-badge">
+          <span class="trust-icon">🏆</span>
+          <span class="trust-text">25+ Years</span>
+        </div>
+        <div class="trust-badge">
+          <span class="trust-icon">📋</span>
+          <span class="trust-text">Licensed & Insured</span>
+        </div>
+        <div class="trust-badge">
+          <span class="trust-icon">✅</span>
+          <span class="trust-text">100% Guaranteed</span>
+        </div>
+      </div>
 
-        <section class="problem-solutions">
-          <h2>Common Interior Painting Problems We Solve</h2>
-          
-          <div class="problem-grid">
-            <div class="problem-item">
-              <h3>Humidity & Moisture Issues</h3>
-              <p>
-                Alabama's coastal humidity can cause paint problems. We use moisture-resistant paints 
-                and proper preparation techniques to prevent peeling and mold growth.
-              </p>
-              <p><strong>Areas:</strong> Eastern Shore (Daphne, Fairhope, Spanish Fort), Coastal areas (Gulf Shores, Orange Beach)</p>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <img src="/images/logo/browns-painting-logo-hat.png" alt="Brown's Painting" class="hero-logo-image" />
+            <h1>Professional Interior Painting Services</h1>
+            <p class="hero-subtitle">Transform your indoor spaces with expert interior painting throughout South Alabama</p>
+            <div class="phone-number">
+              <span class="phone-label">Call Us Today at</span>
+              <a href="tel:+12512374545" class="phone-link">(251) 237-4545</a>
             </div>
-
-            <div class="problem-item">
-              <h3>Paint Peeling & Cracking</h3>
-              <p>
-                Old paint that's peeling or cracking needs professional attention. We strip, prepare, 
-                and repaint with premium materials for lasting results.
-              </p>
-              <p><strong>Areas:</strong> All South Alabama communities</p>
-            </div>
-
-            <div class="problem-item">
-              <h3>Smoke & Water Damage</h3>
-              <p>
-                Professional restoration painting for smoke and water damage. We clean, treat, and repaint 
-                affected areas to restore your home's beauty.
-              </p>
-              <p><strong>Areas:</strong> Brewton, Atmore, Monroeville, Evergreen</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="service-areas">
-          <h2>Interior Painting Service Areas</h2>
-          <p>
-            We provide professional interior painting services throughout South Alabama:
-          </p>
-          
-          <div class="areas-grid">
-            <div class="area-column">
-              <h3>Baldwin County</h3>
-              <ul>
-                <li>Daphne - Interior painting specialists</li>
-                <li>Fairhope - Cabinet refinishing experts</li>
-                <li>Spanish Fort - Drywall repair services</li>
-                <li>Foley - Kitchen and bathroom painting</li>
-                <li>Gulf Shores - Humidity-resistant painting</li>
-                <li>Orange Beach - Coastal home interiors</li>
-                <li>Bay Minette - Residential interior painting</li>
-                <li>Loxley - Farm and home interiors</li>
-              </ul>
-            </div>
-            
-            <div class="area-column">
-              <h3>Escambia County</h3>
-              <ul>
-                <li>Brewton - Professional interior painting</li>
-                <li>Atmore - Residential and commercial interiors</li>
-                <li>Flomaton - Home interior makeovers</li>
-              </ul>
-            </div>
-            
-            <div class="area-column">
-              <h3>Conecuh County</h3>
-              <ul>
-                <li>Evergreen - Interior painting services</li>
-                <li>Monroeville - Professional home painting</li>
-              </ul>
+            <div class="hero-cta">
+              <a href="/contact" class="btn btn-primary">
+                <span class="btn-icon">📋</span>
+                Get A Free Quote
+              </a>
             </div>
           </div>
-        </section>
+        </div>
+      </div>
+      
+      <div class="hero-dots">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
+      </div>
+    </section>
 
-        <!-- Related Services and Locations -->
-        <RelatedServices 
-          currentService="/interior-painting"
-          showLocations={true}
-          showServices={true}
-          showBlog={true}
-        />
+    <!-- Services Section -->
+    <section class="services-section">
+      <div class="container">
+        <h2>Our Interior Painting Services</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>🎨 Color Consultation</h3>
+            <p>Expert color advice tailored to your space, lighting, and personal style preferences.</p>
+            <ul>
+              <li>Professional color matching</li>
+              <li>Sample testing on walls</li>
+              <li>Lighting considerations</li>
+              <li>Trend guidance</li>
+            </ul>
+          </div>
+          
+          <div class="service-card">
+            <h3>🏠 Room Painting</h3>
+            <p>Complete room painting services for every space in your home or business.</p>
+            <ul>
+              <li>Living rooms & bedrooms</li>
+              <li>Kitchens & bathrooms</li>
+              <li>Hallways & staircases</li>
+              <li>Ceiling painting</li>
+            </ul>
+          </div>
+          
+          <div class="service-card">
+            <h3>🔧 Cabinet Refinishing</h3>
+            <p>Professional cabinet painting and refinishing with factory-quality results.</p>
+            <ul>
+              <li>Kitchen cabinet painting</li>
+              <li>Bathroom vanity refinishing</li>
+              <li>Built-in cabinets</li>
+              <li>Hardware updates</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <section class="cta-section">
-          <h2>Ready for Professional Interior Painting?</h2>
-          <p>
-            Contact Barry "Boomer" Brown today for a free estimate on your interior painting project. 
-            We serve all of South Alabama with professional, reliable painting services.
-          </p>
-          <a href="/contact" class="btn btn-primary">Get Free Interior Painting Estimate</a>
-        </section>
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <h2>Frequently Asked Questions - Interior Painting</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <h3>How long does interior painting take?</h3>
+            <p>Most interior painting projects take 2-4 days for an average-sized home. The timeline depends on the size of the space, number of rooms, and amount of prep work required. We provide detailed timelines with every estimate.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do I need to move furniture before painting?</h3>
+            <p>We can help move furniture to the center of rooms and cover it properly. However, we recommend removing small valuables, wall decorations, and delicate items beforehand. We'll take care of protecting your floors and larger furniture.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What type of paint do you use for interior work?</h3>
+            <p>We use premium brands like Sherwin-Williams and Benjamin Moore for interior projects. These paints offer excellent coverage, durability, and are low-VOC for healthier indoor air quality. We can recommend specific paint types based on each room's needs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ready for Professional Interior Painting?</h2>
+        <p>Contact Barry "Boomer" Brown today for a free estimate on your interior painting project.</p>
+        <a href="/contact" class="btn btn-primary">
+          <span class="btn-icon">📞</span>
+          Get Free Estimate
+        </a>
       </div>
     </section>
   </main>
+</BaseLayout>
 
-  <style>
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
+<style>
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* Hero Section */
+  .hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .hero-slide.active {
+    opacity: 1;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 100%);
+    z-index: 2;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .hero-logo-image {
+    height: 300px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 5vw, 4rem);
+    font-weight: 800;
+    margin: 0;
+    margin-top: -4rem;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    color: white;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .phone-number {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .phone-label {
+    font-weight: 500;
+  }
+
+  .phone-link {
+    color: #fbbf24;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.125rem;
+  }
+
+  .phone-link:hover {
+    color: #f59e0b;
+    text-decoration: underline;
+  }
+
+  .hero-cta {
+    margin-top: 2rem;
+  }
+
+  .hero-trust-badges {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1.5rem;
+    z-index: 4;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.94rem 1.56rem;
+    background: transparent;
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  .trust-badge:hover {
+    transform: translateY(-2px);
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.9);
+  }
+
+  .trust-badge .trust-icon {
+    font-size: 1.56rem;
+    color: #fbbf24;
+  }
+
+  .trust-badge .trust-stars {
+    font-size: 1.56rem;
+    color: #fbbf24;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  .trust-badge .trust-text {
+    font-size: 1.06rem;
+    font-weight: 600;
+  }
+
+  .hero-dots {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 3;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .dot.active {
+    background: #fbbf24;
+    transform: scale(1.2);
+  }
+
+  .dot:hover {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.25rem 2.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #1f2937;
+    box-shadow: 
+      0 8px 25px rgba(251, 191, 36, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .btn-primary:hover::before {
+    left: 100%;
+  }
+
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    transform: translateY(-3px);
+    box-shadow: 
+      0 12px 35px rgba(251, 191, 36, 0.6),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  }
+
+  .btn-icon {
+    font-size: 1.25rem;
+  }
+
+  /* Content Sections */
+  .services-section,
+  .faq-section {
+    padding: 5rem 0;
+  }
+
+  .services-section {
+    background: #f8fafc;
+  }
+
+  .faq-section {
+    background: white;
+  }
+
+  .services-section h2,
+  .faq-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1f2937;
+    margin-bottom: 3rem;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #3b82f6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .service-card h3 {
+    color: #1e40af;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .service-card p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    color: #4b5563;
+  }
+
+  .service-card ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .service-card li {
+    margin-bottom: 0.5rem;
+    color: #6b7280;
+    line-height: 1.6;
+  }
+
+  .faq-container {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .faq-item {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #3b82f6;
+    transition: transform 0.3s ease;
+  }
+
+  .faq-item:hover {
+    transform: translateX(4px);
+  }
+
+  .faq-item h3 {
+    color: #1e40af;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .faq-item p {
+    line-height: 1.7;
+    color: #4b5563;
+    margin: 0;
+  }
+
+  .cta-section {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+  }
+
+  .cta-section h2 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: 800;
+  }
+
+  .cta-section p {
+    margin-bottom: 2rem;
+    font-size: 1.125rem;
+    opacity: 0.95;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .hero {
+      height: 70vh;
+      min-height: 500px;
     }
 
-    .service-hero {
-      padding: 6rem 0 4rem;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      text-align: center;
+    .hero-logo-image {
+      height: 200px;
     }
 
-    .service-hero h1 {
-      font-size: clamp(2.5rem, 5vw, 3.5rem);
-      margin-bottom: 1.5rem;
+    .hero h1 {
+      font-size: 2rem;
+      margin-top: -2rem;
     }
 
-    .lead {
-      font-size: clamp(1.1rem, 2vw, 1.5rem);
-      margin-bottom: 2rem;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
+    .hero-subtitle {
+      font-size: 1.1rem;
     }
 
-    .cta-buttons {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
+    .hero-trust-badges {
+      top: 1rem;
+      gap: 0.75rem;
+      padding: 0 1rem;
+    }
+
+    .trust-badge {
+      padding: 0.63rem 1.25rem;
+      font-size: 1rem;
+    }
+
+    .trust-badge .trust-icon,
+    .trust-badge .trust-stars {
+      font-size: 1.25rem;
+    }
+
+    .trust-badge .trust-text {
+      font-size: 0.94rem;
+    }
+
+    .services-grid {
+      grid-template-columns: 1fr;
     }
 
     .btn {
-      display: inline-block;
-      padding: 1rem 2rem;
-      border-radius: 0.5rem;
-      text-decoration: none;
-      font-weight: 600;
-      transition: transform 0.2s, box-shadow 0.2s;
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
     }
 
-    .btn-primary {
-      background: white;
-      color: #667eea;
-    }
-
-    .btn-secondary {
-      background: rgba(255, 255, 255, 0.2);
-      color: white;
-      border: 2px solid white;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    .services-detailed {
-      padding: 5rem 0;
-    }
-
-    .services-detailed h2 {
-      text-align: center;
-      font-size: clamp(2rem, 4vw, 2.5rem);
-      margin-bottom: 3rem;
-      color: #333;
-    }
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-bottom: 4rem;
-    }
-
-    .service-item {
-      background: white;
-      padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      border-left: 4px solid #667eea;
-    }
-
-    .service-item h3 {
-      color: #667eea;
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
-    }
-
-    .service-item p {
-      margin-bottom: 1rem;
-      line-height: 1.6;
-      color: #555;
-    }
-
-    .service-item ul {
-      margin: 1rem 0;
-      padding-left: 1.5rem;
-    }
-
-    .service-item li {
-      margin-bottom: 0.5rem;
-      color: #555;
-    }
-
-    .problem-solutions {
-      background: #f8f9fa;
-      padding: 3rem 2rem;
-      border-radius: 1rem;
-      margin-bottom: 3rem;
-    }
-
-    .problem-solutions h2 {
-      text-align: center;
-      margin-bottom: 2rem;
-      color: #333;
-    }
-
-    .problem-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
-
-    .problem-item {
-      background: white;
-      padding: 2rem;
-      border-radius: 0.5rem;
-    }
-
-    .problem-item h3 {
-      color: #667eea;
-      margin-bottom: 1rem;
-    }
-
-    .problem-item p {
-      margin-bottom: 1rem;
-      line-height: 1.6;
-      color: #555;
-    }
-
-    .service-areas {
-      margin-bottom: 3rem;
-    }
-
-    .service-areas h2 {
-      text-align: center;
-      margin-bottom: 2rem;
-      color: #333;
-    }
-
-    .service-areas > p {
-      text-align: center;
-      margin-bottom: 2rem;
-      color: #555;
-    }
-
-    .areas-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-
-    .area-column h3 {
-      color: #667eea;
-      margin-bottom: 1rem;
-      font-size: 1.2rem;
-    }
-
-    .area-column ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .area-column li {
-      padding: 0.5rem 0;
-      color: #555;
-      border-bottom: 1px solid #e0e0e0;
-    }
-
-    .area-column li:last-child {
-      border-bottom: none;
+    .services-section,
+    .faq-section {
+      padding: 3rem 0;
     }
 
     .cta-section {
-      text-align: center;
-      padding: 3rem 0;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      border-radius: 1rem;
+      padding: 3rem 1.5rem;
+    }
+  }
+</style>
+
+<script>
+  // Hero Slider Functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.dot');
+    let currentSlide = 0;
+    let slideInterval;
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
+      slides[index].classList.add('active');
+      dots[index].classList.add('active');
+      currentSlide = index;
     }
 
-    .cta-section h2 {
-      margin-bottom: 1rem;
-      font-size: 2rem;
+    function nextSlide() {
+      const next = (currentSlide + 1) % slides.length;
+      showSlide(next);
     }
 
-    .cta-section p {
-      margin-bottom: 2rem;
-      font-size: 1.1rem;
-      opacity: 0.95;
+    function startSlider() {
+      slideInterval = setInterval(nextSlide, 5000);
     }
 
-    @media (max-width: 768px) {
-      .service-hero {
-        padding: 4rem 0 2rem;
-      }
-
-      .services-detailed {
-        padding: 3rem 0;
-      }
-
-      .service-item {
-        padding: 1.5rem;
-      }
-
-      .problem-solutions {
-        padding: 2rem 1rem;
-      }
+    function stopSlider() {
+      clearInterval(slideInterval);
     }
-  </style>
-</BaseLayout>
 
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        showSlide(index);
+        stopSlider();
+        startSlider();
+      });
+    });
 
+    startSlider();
+
+    const hero = document.querySelector('.hero');
+    hero.addEventListener('mouseenter', stopSlider);
+    hero.addEventListener('mouseleave', startSlider);
+  });
+</script>

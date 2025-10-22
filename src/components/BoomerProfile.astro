@@ -20,7 +20,7 @@ const boomerProfile = {
   ],
   bio: "Barry 'Boomer' Brown has been serving South Alabama with professional painting services for over 25 years. Based in Brewton, Alabama, Boomer brings decades of expertise to every project, from small residential touch-ups to large commercial renovations. His attention to detail and commitment to quality has earned him a reputation as one of the most trusted painters in Conecuh, Escambia, and Baldwin Counties.",
   philosophy: "Every project deserves the same level of care and attention, whether it's a single room or an entire commercial building. We use only the highest quality materials and proven techniques to ensure lasting results that exceed our customers' expectations.",
-  image: "/images/team/boomer-brown.jpg"
+  image: "/images/boomer-photos/boomer-1-optimized.jpg"
 };
 ---
 
@@ -33,7 +33,7 @@ const boomerProfile = {
 
     <div class="profile-content">
       <div class="profile-image">
-        <img src={boomerProfile.image} alt={boomerProfile.name} />
+        <img src="/images/boomer-photos/boomer-1-optimized.jpg" alt="Barry 'Boomer' Brown" />
         <div class="experience-badge">
           <span class="years">{boomerProfile.experience}</span>
           <span class="label">Experience</span>
@@ -92,20 +92,45 @@ const boomerProfile = {
       </div>
     </div>
 
+    <!-- Family Section -->
+    <div class="family-section">
+      <h3>Family Values & Community</h3>
+      <p>Boomer believes in family values and often brings his grandson Brayden to work, teaching the next generation about quality craftsmanship and community service.</p>
+      <div class="family-grid">
+        <div class="family-member">
+          <img src="/images/boomer-photos/boomer-2-optimized.jpg" alt="Boomer Brown at work" />
+          <h4>Boomer at Work</h4>
+          <p>25+ years of experience and still passionate about every project</p>
+        </div>
+        <div class="family-member">
+          <img src="/images/boomer-photos/boomer-3-optimized.jpg" alt="Boomer with grandson Brayden" />
+          <h4>Family Man</h4>
+          <p>Teaching the next generation about quality work and family values</p>
+        </div>
+        <div class="family-member">
+          <img src="/images/boomer-photos/boomer-4-optimized.jpg" alt="Boomer Brown professional" />
+          <h4>Professional Excellence</h4>
+          <p>Committed to delivering exceptional results for every customer</p>
+        </div>
+      </div>
+    </div>
+
     <!-- Team Section -->
     <div class="team-section">
       <h3>Our Professional Team</h3>
       <p>Boomer leads a team of skilled professionals who share his commitment to quality and customer satisfaction.</p>
       <div class="team-grid">
         <div class="team-member">
-          <img src="/images/team/team-photo.jpg" alt="Browns Painting Team" />
+          <img src="/images/boomer-photos/boomer-5-optimized.jpg" alt="Browns Painting Team" />
           <h4>Professional Crew</h4>
           <p>Experienced painters and craftsmen dedicated to delivering exceptional results on every project.</p>
         </div>
         <div class="team-member">
-          <img src="/images/equipment/browns-painting-truck.jpg" alt="Professional Equipment" />
-          <h4>Professional Equipment</h4>
-          <p>State-of-the-art tools and equipment to handle projects of any size with precision and efficiency.</p>
+          <div class="equipment-placeholder">
+            <span class="equipment-icon">🛠️</span>
+            <h4>Professional Equipment</h4>
+            <p>State-of-the-art tools and equipment to handle projects of any size with precision and efficiency.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -116,6 +141,37 @@ const boomerProfile = {
   .boomer-profile {
     padding: 4rem 0;
     background: #f8fafc;
+    position: relative;
+    z-index: 1;
+    clear: both;
+    overflow: hidden;
+  }
+
+  .boomer-profile * {
+    box-sizing: border-box;
+  }
+
+  .boomer-profile h1,
+  .boomer-profile h2,
+  .boomer-profile h3,
+  .boomer-profile h4,
+  .boomer-profile h5,
+  .boomer-profile h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  .boomer-profile p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .boomer-profile > * {
+    clear: both !important;
+    display: block !important;
   }
 
   .profile-header {
@@ -124,22 +180,26 @@ const boomerProfile = {
   }
 
   .profile-header h2 {
-    font-size: 2.5rem;
-    color: #1e3a8a;
-    margin-bottom: 1rem;
-    font-weight: 700;
+    font-size: 2.5rem !important;
+    color: #1e3a8a !important;
+    margin-bottom: 1rem !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
   }
 
   .profile-subtitle {
-    font-size: 1.25rem;
-    color: #6b7280;
+    font-size: 1.25rem !important;
+    color: #6b7280 !important;
+    line-height: 1.4 !important;
   }
 
   .profile-content {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 3rem;
-    margin-bottom: 4rem;
+    display: grid !important;
+    grid-template-columns: 1fr 2fr !important;
+    gap: 3rem !important;
+    margin-bottom: 4rem !important;
+    clear: both !important;
+    width: 100% !important;
   }
 
   .profile-image {
@@ -148,12 +208,13 @@ const boomerProfile = {
   }
 
   .profile-image img {
-    width: 100%;
-    max-width: 400px;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 100% !important;
+    max-width: 400px !important;
+    height: 500px !important;
+    object-fit: cover !important;
+    border-radius: 12px !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+    display: block !important;
   }
 
   .experience-badge {
@@ -182,28 +243,33 @@ const boomerProfile = {
   }
 
   .profile-details {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem !important;
+    clear: both !important;
+    width: 100% !important;
   }
 
   .profile-info h3 {
-    font-size: 2rem;
-    color: #1e3a8a;
-    margin-bottom: 0.5rem;
-    font-weight: 700;
+    font-size: 2rem !important;
+    color: #1e3a8a !important;
+    margin-bottom: 0.5rem !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
   }
 
   .profile-info .title {
-    font-size: 1.25rem;
-    color: #3b82f6;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
+    font-size: 1.25rem !important;
+    color: #3b82f6 !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.5rem !important;
+    line-height: 1.4 !important;
   }
 
   .profile-info .location {
-    color: #6b7280;
-    font-size: 1rem;
+    color: #6b7280 !important;
+    font-size: 1rem !important;
+    line-height: 1.4 !important;
   }
 
   .bio-section h4,
@@ -211,16 +277,18 @@ const boomerProfile = {
   .specialties-section h4,
   .certifications-section h4,
   .profile-cta h4 {
-    color: #1e3a8a;
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
+    color: #1e3a8a !important;
+    font-size: 1.25rem !important;
+    margin-bottom: 1rem !important;
+    font-weight: 600 !important;
+    line-height: 1.2 !important;
   }
 
   .bio-section p {
-    color: #374151;
-    line-height: 1.6;
-    font-size: 1rem;
+    color: #374151 !important;
+    line-height: 1.6 !important;
+    font-size: 1rem !important;
+    margin-bottom: 1rem !important;
   }
 
   .philosophy-section blockquote {
@@ -236,20 +304,20 @@ const boomerProfile = {
 
   .specialties-grid,
   .certifications-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+    gap: 1rem !important;
   }
 
   .specialty-item,
   .cert-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    background: white;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    background: white !important;
+    padding: 1rem !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
   }
 
   .specialty-icon {
@@ -271,131 +339,238 @@ const boomerProfile = {
   }
 
   .profile-cta h4 {
-    color: white;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    color: white !important;
+    font-size: 1.5rem !important;
+    margin-bottom: 1rem !important;
+    line-height: 1.2 !important;
   }
 
   .profile-cta p {
-    margin-bottom: 2rem;
-    opacity: 0.9;
+    margin-bottom: 2rem !important;
+    opacity: 0.9 !important;
+    line-height: 1.4 !important;
   }
 
   .cta-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: flex !important;
+    gap: 1rem !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+  }
+
+  .family-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%) !important;
+    padding: 3rem !important;
+    border-radius: 12px !important;
+    margin-bottom: 2rem !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05) !important;
+    clear: both !important;
+    width: 100% !important;
+    display: block !important;
+  }
+
+  .family-section h3 {
+    color: #1e3a8a !important;
+    font-size: 1.75rem !important;
+    margin-bottom: 1rem !important;
+    text-align: center !important;
+    line-height: 1.2 !important;
+  }
+
+  .family-section p {
+    color: #6b7280 !important;
+    text-align: center !important;
+    margin-bottom: 2rem !important;
+    font-size: 1.1rem !important;
+    line-height: 1.6 !important;
+  }
+
+  .family-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 2rem !important;
+  }
+
+  .family-member {
+    text-align: center !important;
+    background: white !important;
+    padding: 1.5rem !important;
+    border-radius: 12px !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+    transition: transform 0.3s ease !important;
+  }
+
+  .family-member:hover {
+    transform: translateY(-4px);
+  }
+
+  .family-member img {
+    width: 100% !important;
+    height: 250px !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    margin-bottom: 1rem !important;
+    display: block !important;
+  }
+
+  .family-member h4 {
+    color: #1e3a8a !important;
+    margin-bottom: 0.5rem !important;
+    font-size: 1.25rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .family-member p {
+    color: #6b7280 !important;
+    font-size: 0.9rem !important;
+    margin: 0 !important;
+    line-height: 1.4 !important;
   }
 
   .team-section {
-    background: white;
-    padding: 3rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    background: white !important;
+    padding: 3rem !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05) !important;
+    clear: both !important;
+    width: 100% !important;
+    display: block !important;
   }
 
   .team-section h3 {
-    color: #1e3a8a;
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
-    text-align: center;
+    color: #1e3a8a !important;
+    font-size: 1.75rem !important;
+    margin-bottom: 1rem !important;
+    text-align: center !important;
+    line-height: 1.2 !important;
   }
 
   .team-section p {
-    color: #6b7280;
-    text-align: center;
-    margin-bottom: 2rem;
+    color: #6b7280 !important;
+    text-align: center !important;
+    margin-bottom: 2rem !important;
+    line-height: 1.6 !important;
   }
 
   .team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 2rem !important;
   }
 
   .team-member {
-    text-align: center;
+    text-align: center !important;
   }
 
   .team-member img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 1rem;
+    width: 100% !important;
+    height: 200px !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    margin-bottom: 1rem !important;
+    display: block !important;
+  }
+
+  .equipment-placeholder {
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%) !important;
+    border: 2px dashed #9ca3af !important;
+    border-radius: 8px !important;
+    padding: 2rem !important;
+    text-align: center !important;
+    height: 200px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .equipment-icon {
+    font-size: 3rem !important;
+    margin-bottom: 1rem !important;
+    color: #6b7280 !important;
   }
 
   .team-member h4 {
-    color: #1e3a8a;
-    margin-bottom: 0.5rem;
+    color: #1e3a8a !important;
+    margin-bottom: 0.5rem !important;
+    line-height: 1.2 !important;
   }
 
   .team-member p {
-    color: #6b7280;
-    font-size: 0.875rem;
+    color: #6b7280 !important;
+    font-size: 0.875rem !important;
+    line-height: 1.4 !important;
   }
 
   .btn {
-    display: inline-block;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
+    display: inline-block !important;
+    padding: 1rem 2rem !important;
+    border-radius: 8px !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    transition: all 0.3s ease !important;
+    border: 2px solid transparent !important;
   }
 
   .btn-primary {
-    background: #f59e0b;
-    color: white;
+    background: #f59e0b !important;
+    color: white !important;
   }
 
   .btn-primary:hover {
-    background: #d97706;
-    transform: translateY(-2px);
+    background: #d97706 !important;
+    transform: translateY(-2px) !important;
   }
 
   .btn-secondary {
-    background: transparent;
-    color: white;
-    border-color: white;
+    background: transparent !important;
+    color: white !important;
+    border-color: white !important;
   }
 
   .btn-secondary:hover {
-    background: white;
-    color: #1e3a8a;
+    background: white !important;
+    color: #1e3a8a !important;
   }
 
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+  .boomer-profile .container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 2rem !important;
+    position: relative !important;
+    z-index: 2 !important;
+    clear: both !important;
+    overflow: hidden !important;
   }
 
   @media (max-width: 768px) {
     .profile-content {
-      grid-template-columns: 1fr;
-      gap: 2rem;
+      grid-template-columns: 1fr !important;
+      gap: 2rem !important;
     }
 
     .profile-image img {
-      height: 400px;
+      height: 400px !important;
     }
 
     .specialties-grid,
     .certifications-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr !important;
     }
 
     .cta-buttons {
-      flex-direction: column;
-      align-items: center;
+      flex-direction: column !important;
+      align-items: center !important;
+    }
+
+    .family-grid {
+      grid-template-columns: 1fr !important;
     }
 
     .team-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr !important;
     }
   }
 </style>
+

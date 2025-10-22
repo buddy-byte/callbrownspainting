@@ -10,6 +10,7 @@ const projects = [
     year: "2021",
     description: "Complete exterior transformation including siding, shutters, and landscaping updates.",
     testimonial: "Thank you so much to Browns Painting (Boomer Brown) for making my dream house come to life!!! I would recommend these guys to anyone!!! They done a great job!!!",
+    image: "/images/projects/projects-optimized/project-1.jpg",
     featured: true
   },
   {
@@ -19,6 +20,7 @@ const projects = [
     service: "Commercial Painting",
     year: "2024",
     description: "Professional exterior painting of commercial building using boom lift access.",
+    image: "/images/projects/projects-optimized/project-2.jpg",
     features: [
       "High-reach boom lift operation",
       "Commercial-grade paint application",
@@ -29,10 +31,92 @@ const projects = [
   {
     id: 3,
     title: "Crown Molding Detail Work",
-    location: "South Alabama",
+    location: "Brewton, AL",
     service: "Interior Painting",
     year: "2024",
-    description: "Precise crown molding painting requiring careful attention to detail."
+    description: "Precise crown molding painting requiring careful attention to detail.",
+    image: "/images/projects/projects-optimized/project-3.jpg"
+  },
+  {
+    id: 4,
+    title: "Professional Equipment Operation",
+    location: "Brewton, AL",
+    service: "Commercial Painting",
+    year: "2024",
+    description: "High-reach painting using professional boom lift equipment for commercial projects.",
+    image: "/images/projects/projects-optimized/project-4.jpg"
+  },
+  {
+    id: 5,
+    title: "Quality Interior Work",
+    location: "Brewton, AL",
+    service: "Interior Painting",
+    year: "2024",
+    description: "Detailed interior painting with attention to trim, molding, and finish work.",
+    image: "/images/projects/projects-optimized/project-5.jpg"
+  },
+  {
+    id: 6,
+    title: "Exterior Detail Work",
+    location: "Brewton, AL",
+    service: "Exterior Painting",
+    year: "2024",
+    description: "Professional exterior painting with careful attention to architectural details.",
+    image: "/images/projects/projects-optimized/project-6.jpg"
+  },
+  {
+    id: 7,
+    title: "Commercial Building Renovation",
+    location: "Brewton, AL",
+    service: "Commercial Painting",
+    year: "2024",
+    description: "Complete commercial building exterior renovation with modern paint solutions.",
+    image: "/images/projects/projects-optimized/project-7.jpg"
+  },
+  {
+    id: 8,
+    title: "Residential Exterior Refresh",
+    location: "Brewton, AL",
+    service: "Exterior Painting",
+    year: "2024",
+    description: "Beautiful exterior transformation bringing new life to this residential property.",
+    image: "/images/projects/projects-optimized/project-8.jpg"
+  },
+  {
+    id: 9,
+    title: "Interior Color Consultation",
+    location: "Brewton, AL",
+    service: "Interior Painting",
+    year: "2024",
+    description: "Professional color consultation and interior painting for modern living spaces.",
+    image: "/images/projects/projects-optimized/project-9.jpg"
+  },
+  {
+    id: 10,
+    title: "Detail Trim Work",
+    location: "Brewton, AL",
+    service: "Interior Painting",
+    year: "2024",
+    description: "Precise trim and molding work requiring expert attention to detail.",
+    image: "/images/projects/projects-optimized/project-10.jpg"
+  },
+  {
+    id: 11,
+    title: "Professional Equipment Operation",
+    location: "Brewton, AL",
+    service: "Commercial Painting",
+    year: "2024",
+    description: "High-reach painting using professional boom lift equipment for commercial projects.",
+    image: "/images/projects/projects-optimized/project-11.jpg"
+  },
+  {
+    id: 12,
+    title: "Quality Finish Work",
+    location: "Brewton, AL",
+    service: "Interior Painting",
+    year: "2024",
+    description: "Expert finish work ensuring every detail meets our high quality standards.",
+    image: "/images/projects/projects-optimized/project-12.jpg"
   }
 ];
 ---
@@ -45,31 +129,36 @@ const projects = [
     <div class="projects-grid">
       {projects.map(project => (
         <div class="project-card">
-          <div class="project-header">
-            <h3>{project.title}</h3>
-            <div class="project-meta">
-              <span class="location">{project.location}</span>
-              <span class="service">{project.service}</span>
-              <span class="year">{project.year}</span>
+          <div class="project-image-container">
+            <img src={project.image} alt={project.title} class="project-image" />
+            <div class="project-overlay">
+              <div class="project-meta">
+                <span class="location">{project.location}</span>
+                <span class="service">{project.service}</span>
+                <span class="year">{project.year}</span>
+              </div>
             </div>
           </div>
           
-          <p class="project-description">{project.description}</p>
-          
-          {project.features && (
-            <ul class="project-features">
-              {project.features.map(feature => (
-                <li>✓ {feature}</li>
-              ))}
-            </ul>
-          )}
-          
-          {project.testimonial && (
-            <blockquote class="project-testimonial">
-              "{project.testimonial}"
-              {project.customer && <cite>— {project.customer}</cite>}
-            </blockquote>
-          )}
+          <div class="project-content">
+            <h3>{project.title}</h3>
+            <p class="project-description">{project.description}</p>
+            
+            {project.features && (
+              <ul class="project-features">
+                {project.features.map(feature => (
+                  <li>✓ {feature}</li>
+                ))}
+              </ul>
+            )}
+            
+            {project.testimonial && (
+              <blockquote class="project-testimonial">
+                "{project.testimonial}"
+                {project.customer && <cite>— {project.customer}</cite>}
+              </blockquote>
+            )}
+          </div>
         </div>
       ))}
     </div>
@@ -108,40 +197,75 @@ const projects = [
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
   .project-card {
-    background: #f8fafc;
-    padding: 2rem;
-    border-radius: 12px;
-    border-left: 4px solid #3b82f6;
-    transition: transform 0.3s ease;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
   }
 
   .project-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
   }
 
-  .project-header h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #1f2937;
+  .project-image-container {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+  }
+
+  .project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .project-card:hover .project-image {
+    transform: scale(1.05);
+  }
+
+  .project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem;
   }
 
   .project-meta {
     display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    gap: 0.75rem;
     flex-wrap: wrap;
   }
 
   .project-meta span {
-    background: #e5e7eb;
+    background: rgba(255, 255, 255, 0.9);
     padding: 0.25rem 0.75rem;
     border-radius: 12px;
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     color: #374151;
+    font-weight: 600;
+  }
+
+  .project-content {
+    padding: 1.5rem;
+  }
+
+  .project-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #1f2937;
+    font-weight: 700;
   }
 
   .project-description {
@@ -183,11 +307,28 @@ const projects = [
   @media (max-width: 768px) {
     .projects-grid {
       grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    
+    .project-image-container {
+      height: 200px;
+    }
+    
+    .project-content {
+      padding: 1rem;
+    }
+    
+    .project-content h3 {
+      font-size: 1.125rem;
     }
     
     .project-meta {
-      flex-direction: column;
       gap: 0.5rem;
+    }
+    
+    .project-meta span {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.6rem;
     }
   }
 </style>

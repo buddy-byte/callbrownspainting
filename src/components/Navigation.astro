@@ -33,7 +33,6 @@ import Image from './Image.astro';
     <a href="/" class="logo">
       <div class="logo-text-container">
         <div class="logo-main-text">BROWN'S PAINTING</div>
-        <div class="logo-sub-text">Professional Painting Services</div>
       </div>
     </a>
     
@@ -67,17 +66,32 @@ import Image from './Image.astro';
             <a href="/daphne-painting">Daphne</a>
             <a href="/gulf-shores-painting">Gulf Shores</a>
             <a href="/orange-beach-painting">Orange Beach</a>
+            <a href="/foley-painting">Foley</a>
+            <a href="/bay-minette-painting">Bay Minette</a>
           </div>
           <div class="dropdown-section">
             <h4>Mobile County</h4>
             <a href="/mobile-painting">Mobile</a>
             <a href="/saraland-painting">Saraland</a>
             <a href="/theodore-painting">Theodore</a>
+            <a href="/creola-painting">Creola</a>
+          </div>
+          <div class="dropdown-section">
+            <h4>Conecuh County</h4>
+            <a href="/evergreen-painting">Evergreen</a>
+            <a href="/castleberry-painting">Castleberry</a>
+            <a href="/lenox-painting">Lenox</a>
+            <a href="/repton-painting">Repton</a>
+          </div>
+          <div class="dropdown-section">
+            <h4>Monroe County</h4>
+            <a href="/monroeville-painting">Monroeville</a>
           </div>
         </div>
       </div>
       
       <a href="/blog" class="nav-link">Blog</a>
+      <a href="/faq" class="nav-link">FAQ</a>
       <a href="/contact" class="nav-link">Contact</a>
     </div>
   </div>
@@ -96,6 +110,9 @@ import Image from './Image.astro';
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
   }
 
   .contact-info {
@@ -122,6 +139,10 @@ import Image from './Image.astro';
 
   .contact-item a:hover {
     color: #fbbf24;
+  }
+
+  .top-bar-cta {
+    margin-left: 4rem;
   }
 
   .btn-top {
@@ -153,16 +174,24 @@ import Image from './Image.astro';
   .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 2rem;
   }
 
   .logo {
     text-decoration: none;
     display: flex;
     align-items: center;
+    gap: 1rem;
+    flex: 0 0 auto;
+  }
+
+  .logo-image {
+    height: 120px;
+    width: auto;
   }
 
   .logo-text-container {
@@ -170,11 +199,12 @@ import Image from './Image.astro';
   }
 
   .logo-main-text {
-    font-size: 2.5rem;
-    font-weight: 900;
+    font-size: 2rem;
+    font-weight: 600;
     color: #1f2937;
     line-height: 1;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
+    font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
   }
 
   .logo-sub-text {
@@ -189,6 +219,8 @@ import Image from './Image.astro';
     display: flex;
     gap: 2.5rem;
     align-items: center;
+    flex: 1;
+    justify-content: center;
   }
 
   .nav-link {
@@ -249,6 +281,8 @@ import Image from './Image.astro';
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     padding: 2rem;
     min-width: 350px;
+    max-height: 80vh;
+    overflow-y: auto;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);

@@ -187,3 +187,7 @@
 3. [ ] Create social media posting schedule
 4. [ ] Prepare Week 2 article content
 5. [ ] Set up email list for content promotion
+
+
+
+

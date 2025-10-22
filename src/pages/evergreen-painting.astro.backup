@@ -1,0 +1,603 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SEO from '../components/SEO.astro';
+
+const title = "Evergreen Painters | Historic Property Specialists | Conecuh County";
+const description = "Expert painters in Evergreen, Alabama. Specializing in home painting, exterior painting, and commercial repaint services. Licensed, insured, and locally owned. Free estimates!";
+const keywords = "painters Evergreen AL, home painting Evergreen, exterior painting Evergreen, commercial repaint Evergreen, painters near me Evergreen, local painters Evergreen AL, Conecuh County painters, CallBrownsPainting.com";
+---
+
+<BaseLayout>
+  <SEO 
+    title={title}
+    description={description}
+    keywords={keywords}
+  />
+  
+  <main>
+    <!-- Hero Section -->
+        <section class="hero">
+      <div class="hero-background">
+        <div class="hero-slide" style="background-image: url('/images/hero/hero-1-optimized.jpg'); background-position: center center;"></div>
+        <div class="hero-slide" style="background-image: url('/images/hero/hero-2-optimized.jpg'); background-position: center center;"></div>
+        <div class="hero-slide" style="background-image: url('/images/hero/hero-3-optimized.jpg'); background-position: center top;"></div>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <img src="/images/logo/browns-painting-logo-hat.png" alt="Brown's Painting Logo" class="hero-logo-image">
+          <h1>Professional Painting Services in Evergreen, AL</h1>
+          <p class="phone-number">Call Us Today at <a href="tel:+12512374545">(251) 237-4545</a></p>
+          <div class="hero-cta">
+            <a href="/contact" class="btn btn-primary">Get Free Estimate</a>
+          </div>
+        </div>
+        <div class="hero-trust-badges">
+          <div class="trust-badge">
+            <div class="trust-stars">â˜…â˜…â˜…â˜…â˜…</div>
+            <div class="trust-text">25+ Years Experience</div>
+          </div>
+          <div class="trust-badge">
+            <div class="trust-text">Licensed & Insured</div>
+          </div>
+          <div class="trust-badge">
+            <div class="trust-text">100% Guaranteed</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </section>
+
+    <!-- Trust Signals -->
+    <section class="trust-signals">
+      <div class="container">
+        <div class="trust-grid">
+          <div class="trust-item">
+            <div class="trust-icon">ðŸ </div>
+            <h3>Locally Owned</h3>
+            <p>Serving Evergreen & Conecuh County for over 25 years</p>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">â­</div>
+            <h3>25+ Years Experience</h3>
+            <p>Barry "Boomer" Brown brings decades of expertise</p>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">ðŸ›¡ï¸</div>
+            <h3>Licensed & Insured</h3>
+            <p>Fully licensed and insured for your protection</p>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">ðŸ’°</div>
+            <h3>Free Estimates</h3>
+            <p>No obligation, detailed estimates for all projects</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+      <div class="container">
+        <h2>Our Painting Services in Evergreen</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Home Painting</h3>
+            <p>Professional painting services for Evergreen's historic and modern properties. We specialize in Conecuh County's unique architectural heritage and provide comprehensive solutions for both residential and commercial buildings.</p>
+            <ul>
+              <li>Interior room painting</li>
+              <li>Exterior house painting</li>
+              <li>Cabinet refinishing</li>
+              <li>Color consultation</li>
+            </ul>
+            <a href="/interior-painting" class="btn btn-outline">Learn More</a>
+          </div>
+          <div class="service-card">
+            <h3>Exterior Painting</h3>
+            <p>Protect and beautify your Evergreen property with our exterior painting services. We handle homes and businesses with weather-resistant finishes.</p>
+            <ul>
+              <li>House exterior painting</li>
+              <li>Siding and trim work</li>
+              <li>Deck and porch painting</li>
+              <li>Weather-resistant finishes</li>
+            </ul>
+            <a href="/exterior-painting" class="btn btn-outline">Learn More</a>
+          </div>
+          <div class="service-card">
+            <h3>Commercial Repaint</h3>
+            <p>Professional commercial repaint services for Evergreen businesses, offices, and other commercial properties.</p>
+            <ul>
+              <li>Office building repainting</li>
+              <li>Retail space repainting</li>
+              <li>Industrial facility repainting</li>
+              <li>Maintenance painting</li>
+            </ul>
+            <a href="/commercial-painting" class="btn btn-outline">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose">
+      <div class="container">
+        <h2>Why Choose CallBrownsPainting.com in Evergreen?</h2>
+        <div class="why-grid">
+          <div class="why-item">
+            <h3>Local Expertise</h3>
+            <p>We understand Evergreen's unique climate and architectural styles. Our team knows the best paint products for Alabama's weather conditions.</p>
+          </div>
+          <div class="why-item">
+            <h3>Community Focus</h3>
+            <p>We're committed to serving the Evergreen community with quality work and fair pricing for Conecuh County residents.</p>
+          </div>
+          <div class="why-item">
+            <h3>Commercial Experience</h3>
+            <p>We have extensive experience painting commercial properties, offices, and industrial facilities in Evergreen.</p>
+          </div>
+          <div class="why-item">
+            <h3>Quality Materials</h3>
+            <p>We use only premium paints and materials that stand up to Alabama's challenging weather conditions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="service-areas">
+      <div class="container">
+        <h2>We Serve Evergreen & Surrounding Areas</h2>
+        <div class="areas-grid">
+          <div class="area-item">
+            <h3>Evergreen</h3>
+            <p>Downtown, residential areas, and commercial properties</p>
+          </div>
+          <div class="area-item">
+            <h3>Monroeville</h3>
+            <p>Commercial and residential painting services</p>
+          </div>
+          <div class="area-item">
+            <h3>Repton</h3>
+            <p>Residential properties and small businesses</p>
+          </div>
+          <div class="area-item">
+            <h3>Castleberry</h3>
+            <p>Residential and commercial properties</p>
+          </div>
+          <div class="area-item">
+            <h3>Lenox</h3>
+            <p>Cross-county painting services</p>
+          </div>
+          <div class="area-item">
+            <h3>Brewton</h3>
+            <p>Commercial and residential properties</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FAQ Section -->
+    <section class="faq">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3>Do you offer emergency painting or fast turnaround jobs?</h3>
+            <p>Yes. If you're on a tight deadline or need an emergency painter, we can often schedule rush work for a small additional charge. We prioritize real-estate closings, move-ins, and quick touch-ups.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Are you family-owned?</h3>
+            <p>Yesâ€”Brown's Painting LLC is family-owned and operated in South Alabama. Our name and reputation are on every job.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What areas do you serve?</h3>
+            <p>Baldwin, Mobile, Escambia, Conecuh, and Monroe Countiesâ€”Brewton, Fairhope, Daphne, Spanish Fort, Foley, Gulf Shores, Orange Beach, Bay Minette, Atmore, Evergreen, Monroeville, and nearby communities.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do you provide free estimates?</h3>
+            <p>Yes. We offer free on-site or virtual estimates and clear written proposals.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What paint brands do you use?</h3>
+            <p>Professional-grade systems from Sherwin-Williams, Benjamin Moore, and PPGâ€”specified for South Alabama humidity and coastal salt air when needed.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Are you licensed and insured?</h3>
+            <p>Yes. Brown's Painting LLC is fully licensed and insured in Alabama for residential and light commercial work.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do you offer cabinet refinishing or repainting?</h3>
+            <p>Yesâ€”degrease, sand, prime, and sprayed topcoats for a smooth, durable, factory-style finish.</p>
+          </div>
+          <div class="faq-item">
+            <h3>How long will my project take?</h3>
+            <p>Typical interiors: 1â€“3 days. Full exteriors: 3â€“5 days depending on prep, size, and weather. We confirm timelines before work begins.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do you require a deposit?</h3>
+            <p>Yes. A small deposit (typically 30% or materials cost) reserves your start date and covers supplies. The balance is due at completion after your walk-through.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do you handle drywall repair and surface prep?</h3>
+            <p>Yesâ€”patching, texture match, caulking, sanding, and primer for proper adhesion and a flawless finish.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What payment methods do you accept?</h3>
+            <p>Cash, check, and major credit/debit cards. Secure digital invoices available.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Can you color-match existing paint?</h3>
+            <p>Yes. We can match most colors with professional tinting tools for seamless touch-ups.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What happens if it rains or the weather turns?</h3>
+            <p>We monitor weather closely and adjust scheduling to protect surfaces. If rain or high humidity would compromise quality, we pause and resume at the first safe window.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do you protect landscaping, floors, and furniture?</h3>
+            <p>Absolutely. We mask and cover, move light items as needed, and clean up daily. Final cleanup is part of completion.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do you offer warranties?</h3>
+            <p>Yesâ€”workmanship warranty on labor and standard manufacturer warranties on coatings. Your proposal will outline coverage and term for your project.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do you use low-odor / low-VOC paints?</h3>
+            <p>Yes. On interiors we often specify low- or zero-VOC coatings for healthier indoor air.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Can you help me choose colors or finishes?</h3>
+            <p>Yes. We offer basic color guidance at no charge and can provide full color consultations on request.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do you paint exterior materials like brick, stucco, and metal?</h3>
+            <p>Yesâ€”wood siding, Hardie, brick (including limewash/painted brick), stucco, and metal substrates with the appropriate primers and systems.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do you pressure-wash exteriors before painting?</h3>
+            <p>Yes. We include washing and surface prep to remove chalking, mildew, and salt residue for better adhesion.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do you follow lead-safe practices for older homes?</h3>
+            <p>For homes built before 1978, we follow lead-safe prep and containment best practices and discuss options during your estimate if applicable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ready to Transform Your Evergreen Property?</h2>
+        <p>Contact CallBrownsPainting.com today for your free estimate. We're ready to bring 25+ years of painting expertise to your Evergreen home or business.</p>
+        <div class="cta-buttons">
+          <a href="tel:+12512374545" class="btn btn-primary">Call (251) 237-4545</a>
+          <a href="/contact" class="btn btn-secondary">Get Free Estimate</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .city-hero {
+    padding: 3rem 0 2rem;
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    color: white;
+  }
+
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .hero-text {
+    text-align: left;
+  }
+
+  .hero-image {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  .city-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: 1.5rem;
+  }
+
+  .lead {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    margin-bottom: 2rem;
+    max-width: 800px;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .trust-signals {
+    padding: 2rem 0;
+    background: #f8fafc;
+  }
+
+  .trust-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .trust-item {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+
+  .trust-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .trust-item h3 {
+    color: #1e3a8a;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+  }
+
+  .services-section {
+    padding: 2rem 0;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid #e5e7eb;
+  }
+
+  .service-card h3 {
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .service-card ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .service-card li {
+    margin-bottom: 0.5rem;
+    color: #4b5563;
+  }
+
+  .why-choose {
+    padding: 2rem 0;
+    background: #f8fafc;
+  }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .why-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+
+  .why-item h3 {
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+
+  .service-areas {
+    padding: 2rem 0;
+  }
+
+  .areas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .area-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #3b82f6;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+
+  .area-item h3 {
+    color: #1e3a8a;
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+  }
+  .faq {
+    padding: 2rem 0;
+    background: #f8fafc;
+  }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .faq-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-left: 4px solid #3b82f6;
+  }
+
+  .faq-item h3 {
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+
+  .faq-item p {
+    color: #4b5563;
+    line-height: 1.6;
+  }
+
+
+
+  .cta-section {
+    padding: 2rem 0;
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    color: white;
+    text-align: center;
+  }
+
+  .cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .cta-section p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+  }
+
+  .btn-primary {
+    background: #f59e0b;
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background: #d97706;
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: white;
+    border-color: white;
+  }
+
+  .btn-secondary:hover {
+    background: white;
+    color: #1e3a8a;
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: #3b82f6;
+    border-color: #3b82f6;
+  }
+
+  .btn-outline:hover {
+    background: #3b82f6;
+    color: white;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  h2 {
+    text-align: center;
+    color: #1e3a8a;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .city-hero {
+      padding: 4rem 0 2rem;
+    }
+
+    .hero-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .hero-text {
+      text-align: center;
+    }
+
+    .hero-image img {
+      height: 300px;
+    }
+
+    .cta-buttons {
+      justify-content: center;
+    }
+
+    .trust-grid,
+    .services-grid,
+    .why-grid,
+    .areas-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
+

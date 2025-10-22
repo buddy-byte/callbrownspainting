@@ -1,78 +1,80 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import SEO from '../components/SEO.astro';
+import ServiceSchema from '../components/ServiceSchema.astro';
 
-const title = "Professional Painters in Lenox AL | Local Painting Contractor Barry Brown";
-const description = "Expert painters in Lenox, Alabama. Barry 'Boomer' Brown's home base - professional interior & exterior painting services. Licensed, insured, and locally owned. Free estimates!";
-const keywords = "painters Lenox AL, painting contractor Lenox, Barry Brown painter Lenox, local painters Lenox AL, Escambia County painters Lenox, CallBrownsPainting.com";
+const title = "House Painter in Lenox AL | Professional Painting Services";
+const description = "Expert house painters in Lenox, Alabama. Licensed, insured, locally owned.";
+const keywords = "house painter Lenox AL, painters Lenox Alabama";
 ---
 
-<BaseLayout>
-  <SEO 
-    title={title}
-    description={description}
-    keywords={keywords}
-  />
-  
+<BaseLayout
+  title={title}
+  description={description}
+  keywords={keywords}
+>
   <main>
+    <!-- Service Schema -->
+    <ServiceSchema
+      serviceName="Professional House Painting Services in Lenox AL"
+      serviceDescription="Expert house painters in Lenox, Alabama. Licensed, insured, locally owned."
+      serviceUrl="https://callbrownspainting.com/lenox-painting"
+      serviceType="House Painting"
+      priceRange="$$"
+      serviceImage="https://callbrownspainting.com/assets/lenox-painting-service.jpg"
+    />
+
     <!-- Hero Section -->
     <section class="hero">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1>Professional Painters in Lenox, Alabama</h1>
-          <p class="hero-subtitle">Barry "Boomer" Brown's home base! Expert interior & exterior painting services for Lenox and surrounding Escambia County areas. Your local painting contractor.</p>
-          <div class="hero-buttons">
-            <a href="tel:+12512374545" class="btn btn-primary">Call (251) 237-4545</a>
-            <a href="/contact" class="btn btn-secondary">Get Free Estimate</a>
-          </div>
+      <div class="hero-background">
+        <div class="hero-slide active" style="background-image: url('/images/hero/hero-1-optimized.jpg')"></div>
+        <div class="hero-slide" style="background-image: url('/images/projects/projects-optimized/interior-painting-2-optimized.jpg')"></div>
+        <div class="hero-slide" style="background-image: url('/images/hero/hero-3-optimized.jpg'); background-position: center top;"></div>
+      </div>
+      
+      <div class="hero-overlay"></div>
+      
+      <div class="hero-trust-badges">
+        <div class="trust-badge">
+          <span class="trust-stars">★★★★★</span>
+          <span class="trust-text">5-Star Reviews</span>
         </div>
-        <div class="hero-form">
-          <div class="hero-form-container">
-            <h3>Get Your Free Painting Quote</h3>
-            <form>
-              <input type="text" placeholder="Your Name" required>
-              <input type="email" placeholder="Email Address" required>
-              <input type="tel" placeholder="Phone Number" required>
-              <select required>
-                <option value="">Select Service Type</option>
-                <option value="interior">Interior Painting</option>
-                <option value="exterior">Exterior Painting</option>
-                <option value="commercial">Commercial Painting</option>
-                <option value="residential">Residential Painting</option>
-              </select>
-              <textarea placeholder="Project Details (optional)"></textarea>
-              <button type="submit" class="btn btn-primary">Get Free Quote</button>
-            </form>
+        <div class="trust-badge">
+          <span class="trust-icon">🏆</span>
+          <span class="trust-text">25+ Years</span>
+        </div>
+        <div class="trust-badge">
+          <span class="trust-icon">📋</span>
+          <span class="trust-text">Licensed & Insured</span>
+        </div>
+        <div class="trust-badge">
+          <span class="trust-icon">✅</span>
+          <span class="trust-text">100% Guaranteed</span>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <img src="/images/logo/browns-painting-logo-hat.png" alt="Brown's Painting" class="hero-logo-image" />
+            <h1>Professional Painting Services in Lenox, AL</h1>
+            <div class="phone-number">
+              <span class="phone-label">Call Us Today at</span>
+              <a href="tel:+12512374545" class="phone-link">(251) 237-4545</a>
+            </div>
+            <div class="hero-cta">
+              <a href="/contact" class="btn btn-primary">
+                <span class="btn-icon">📋</span>
+                Get A Free Quote
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Trust Signals -->
-    <section class="trust-signals">
-      <div class="container">
-        <div class="trust-grid">
-          <div class="trust-item">
-            <div class="trust-icon">🏠</div>
-            <h3>Local Resident</h3>
-            <p>Barry "Boomer" Brown lives right here in Lenox</p>
-          </div>
-          <div class="trust-item">
-            <div class="trust-icon">⭐</div>
-            <h3>25+ Years Experience</h3>
-            <p>Decades of painting expertise in Escambia County</p>
-          </div>
-          <div class="trust-item">
-            <div class="trust-icon">🛡️</div>
-            <h3>Licensed & Insured</h3>
-            <p>Fully licensed and insured for your protection</p>
-          </div>
-          <div class="trust-item">
-            <div class="trust-icon">💰</div>
-            <h3>Free Estimates</h3>
-            <p>No obligation, detailed estimates for all projects</p>
-          </div>
-        </div>
+      
+      <div class="hero-dots">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
       </div>
     </section>
 
@@ -82,319 +84,401 @@ const keywords = "painters Lenox AL, painting contractor Lenox, Barry Brown pain
         <h2>Our Painting Services in Lenox</h2>
         <div class="services-grid">
           <div class="service-card">
-            <h3>Residential Painting</h3>
-            <p>Local painting expertise for Lenox and surrounding Escambia County areas. As Barry "Boomer" Brown's home base, we provide personalized service with deep understanding of local architectural styles and community needs.</p>
+            <h3>🏠 Interior Painting</h3>
+            <p>Transform your Lenox home's interior with professional painting services.</p>
             <ul>
-              <li>Interior room painting</li>
-              <li>Exterior house painting</li>
+              <li>Living rooms and bedrooms</li>
+              <li>Kitchen and bathroom painting</li>
               <li>Cabinet refinishing</li>
-              <li>Color consultation</li>
+              <li>Drywall repair and texturing</li>
+              <li>Trim and molding painting</li>
             </ul>
-            <a href="/interior-painting" class="btn btn-outline">Learn More</a>
           </div>
+          
           <div class="service-card">
-            <h3>Commercial Painting</h3>
-            <p>Professional commercial painting services for Lenox businesses and nearby Escambia County properties.</p>
+            <h3>🎨 Exterior Painting</h3>
+            <p>Protect your Lenox property with professional exterior painting designed for Alabama's climate.</p>
             <ul>
-              <li>Office building painting</li>
-              <li>Retail space painting</li>
-              <li>Church and school painting</li>
-              <li>Industrial painting</li>
+              <li>House siding and trim</li>
+              <li>Deck and porch painting</li>
+              <li>Fence painting and staining</li>
+              <li>Weather-resistant coatings</li>
+              <li>Pressure washing included</li>
             </ul>
-            <a href="/commercial-painting" class="btn btn-outline">Learn More</a>
           </div>
+          
           <div class="service-card">
-            <h3>Local Expertise</h3>
-            <p>As a Lenox resident, Barry understands the unique needs of our community and surrounding areas.</p>
+            <h3>🏢 Commercial Painting</h3>
+            <p>Professional commercial painting services for Lenox businesses of all sizes.</p>
             <ul>
-              <li>Local weather considerations</li>
-              <li>Community relationships</li>
-              <li>Quick response times</li>
-              <li>Personalized service</li>
+              <li>Office buildings</li>
+              <li>Retail spaces</li>
+              <li>Restaurants and hospitality</li>
+              <li>After-hours scheduling</li>
+              <li>Minimal business disruption</li>
             </ul>
-            <a href="/about" class="btn btn-outline">Learn More</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="why-choose">
+    <!-- Service Areas Section -->
+    <section class="service-areas-section">
       <div class="container">
-        <h2>Why Choose CallBrownsPainting.com in Lenox?</h2>
-        <div class="why-grid">
-          <div class="why-item">
-            <h3>Local Resident</h3>
-            <p>Barry "Boomer" Brown lives right here in Lenox, so we understand the community and can provide quick, reliable service.</p>
+        <h2>Lenox Service Areas</h2>
+        <p>Professional painting services throughout Lenox and surrounding Conecuh County communities.</p>
+        
+        <div class="areas-list">
+          <div class="area-group">
+            <h3>Lenox Neighborhoods We Serve</h3>
+            <ul>
+              <li>Downtown Lenox</li>
+              <li>North Lenox</li>
+              <li>South Lenox</li>
+            </ul>
           </div>
-          <div class="why-item">
-            <h3>Community Focus</h3>
-            <p>We're invested in the Lenox community and committed to providing quality work for our neighbors.</p>
-          </div>
-          <div class="why-item">
-            <h3>Quick Response</h3>
-            <p>Being local means we can respond quickly to your painting needs and emergency repairs.</p>
-          </div>
-          <div class="why-item">
-            <h3>Local Knowledge</h3>
-            <p>We understand Lenox's climate, architectural styles, and the specific needs of our community.</p>
+          
+          <div class="area-group">
+            <h3>Nearby Communities</h3>
+            <ul>
+              <li>Evergreen - 20 minutes</li>
+              <li>Brewton - 30 minutes</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Service Areas -->
-    <section class="service-areas">
-      <div class="container">
-        <h2>We Serve Lenox & Surrounding Areas</h2>
-        <div class="areas-grid">
-          <div class="area-item">
-            <h3>Lenox</h3>
-            <p>Barry's home base - all residential and commercial areas</p>
-          </div>
-          <div class="area-item">
-            <h3>Brewton</h3>
-            <p>Commercial and residential painting services</p>
-          </div>
-          <div class="area-item">
-            <h3>Atmore</h3>
-            <p>Professional painters and commercial services</p>
-          </div>
-          <div class="area-item">
-            <h3>Flomaton</h3>
-            <p>Residential and commercial properties</p>
-          </div>
-          <div class="area-item">
-            <h3>Evergreen</h3>
-            <p>Cross-county painting services</p>
-          </div>
-          <div class="area-item">
-            <h3>Monroeville</h3>
-            <p>Commercial and residential properties</p>
-          </div>
-        </div>
-      </div>
-    </section>
     <!-- FAQ Section -->
-    <section class="faq">
+    <section class="faq-section">
       <div class="container">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-grid">
+        <h2>Frequently Asked Questions - Lenox Painting</h2>
+        <div class="faq-container">
           <div class="faq-item">
-            <h3>Do you offer emergency painting or fast turnaround jobs?</h3>
-            <p>Yes. If you're on a tight deadline or need an emergency painter, we can often schedule rush work for a small additional charge. We prioritize real-estate closings, move-ins, and quick touch-ups.</p>
+            <h3>How much does house painting cost in Lenox?</h3>
+            <p>Painting costs in Lenox typically range from $2.50 to $4.50 per square foot for interior work and $1.80 to $3.50 per square foot for exterior painting. The final price depends on factors like the size of your home, surface preparation needed, paint quality, and project complexity. We offer free, detailed estimates for all Lenox area properties.</p>
           </div>
           <div class="faq-item">
-            <h3>Are you family-owned?</h3>
-            <p>Yes—Brown's Painting LLC is family-owned and operated in South Alabama. Our name and reputation are on every job.</p>
+            <h3>How long does it take to paint a house in Lenox?</h3>
+            <p>Most residential painting projects in Lenox take 3-7 days to complete. Interior painting typically takes 2-4 days for an average-sized home, while exterior painting usually requires 3-5 days depending on weather conditions. We'll provide you with a detailed timeline during your free estimate.</p>
           </div>
           <div class="faq-item">
-            <h3>What areas do you serve?</h3>
-            <p>Baldwin, Mobile, Escambia, Conecuh, and Monroe Counties—Brewton, Fairhope, Daphne, Spanish Fort, Foley, Gulf Shores, Orange Beach, Bay Minette, Atmore, Evergreen, Monroeville, and nearby communities.</p>
+            <h3>Do I need to be home during the painting?</h3>
+            <p>Not necessarily. Many Lenox homeowners prefer to be away during painting to avoid the inconvenience. We're fully insured and trustworthy, and can work independently once access is arranged. For interior projects, some homeowners prefer to be present initially, but it's entirely your choice.</p>
           </div>
           <div class="faq-item">
-            <h3>Do you provide free estimates?</h3>
-            <p>Yes. We offer free on-site or virtual estimates and clear written proposals.</p>
+            <h3>What brands of paint do you use in Lenox?</h3>
+            <p>We primarily use premium brands like Sherwin-Williams and Benjamin Moore for Lenox projects. These professional-grade paints offer superior coverage, durability, and color retention - essential for Alabama's humid climate. We can also accommodate specific brand preferences if you have particular requirements.</p>
           </div>
           <div class="faq-item">
-            <h3>What paint brands do you use?</h3>
-            <p>Professional-grade systems from Sherwin-Williams, Benjamin Moore, and PPG—specified for South Alabama humidity and coastal salt air when needed.</p>
-          </div>
-          <div class="faq-item">
-            <h3>Are you licensed and insured?</h3>
-            <p>Yes. Brown's Painting LLC is fully licensed and insured in Alabama for residential and light commercial work.</p>
-          </div>
-          <div class="faq-item">
-            <h3>Do you offer cabinet refinishing or repainting?</h3>
-            <p>Yes—degrease, sand, prime, and sprayed topcoats for a smooth, durable, factory-style finish.</p>
-          </div>
-          <div class="faq-item">
-            <h3>How long will my project take?</h3>
-            <p>Typical interiors: 1–3 days. Full exteriors: 3–5 days depending on prep, size, and weather. We confirm timelines before work begins.</p>
-          </div>
-          <div class="faq-item">
-            <h3>Do you require a deposit?</h3>
-            <p>Yes. A small deposit (typically 30% or materials cost) reserves your start date and covers supplies. The balance is due at completion after your walk-through.</p>
-          </div>
-          <div class="faq-item">
-            <h3>Do you handle drywall repair and surface prep?</h3>
-            <p>Yes—patching, texture match, caulking, sanding, and primer for proper adhesion and a flawless finish.</p>
-          </div>
-          <div class="faq-item">
-            <h3>What payment methods do you accept?</h3>
-            <p>Cash, check, and major credit/debit cards. Secure digital invoices available.</p>
-          </div>
-          <div class="faq-item">
-            <h3>Can you color-match existing paint?</h3>
-            <p>Yes. We can match most colors with professional tinting tools for seamless touch-ups.</p>
-          </div>
-          <div class="faq-item">
-            <h3>What happens if it rains or the weather turns?</h3>
-            <p>We monitor weather closely and adjust scheduling to protect surfaces. If rain or high humidity would compromise quality, we pause and resume at the first safe window.</p>
-          </div>
-          <div class="faq-item">
-            <h3>Do you protect landscaping, floors, and furniture?</h3>
-            <p>Absolutely. We mask and cover, move light items as needed, and clean up daily. Final cleanup is part of completion.</p>
-          </div>
-          <div class="faq-item">
-            <h3>Do you offer warranties?</h3>
-            <p>Yes—workmanship warranty on labor and standard manufacturer warranties on coatings. Your proposal will outline coverage and term for your project.</p>
-          </div>
-          <div class="faq-item">
-            <h3>Do you use low-odor / low-VOC paints?</h3>
-            <p>Yes. On interiors we often specify low- or zero-VOC coatings for healthier indoor air.</p>
-          </div>
-          <div class="faq-item">
-            <h3>Can you help me choose colors or finishes?</h3>
-            <p>Yes. We offer basic color guidance at no charge and can provide full color consultations on request.</p>
-          </div>
-          <div class="faq-item">
-            <h3>Do you paint exterior materials like brick, stucco, and metal?</h3>
-            <p>Yes—wood siding, Hardie, brick (including limewash/painted brick), stucco, and metal substrates with the appropriate primers and systems.</p>
-          </div>
-          <div class="faq-item">
-            <h3>Do you pressure-wash exteriors before painting?</h3>
-            <p>Yes. We include washing and surface prep to remove chalking, mildew, and salt residue for better adhesion.</p>
-          </div>
-          <div class="faq-item">
-            <h3>Do you follow lead-safe practices for older homes?</h3>
-            <p>For homes built before 1978, we follow lead-safe prep and containment best practices and discuss options during your estimate if applicable.</p>
+            <h3>Are you licensed and insured in Conecuh County?</h3>
+            <p>Yes, Brown's Painting is fully licensed and insured to work throughout Conecuh County including Lenox. We carry comprehensive liability insurance and workers' compensation coverage, protecting both our team and your property. We're happy to provide proof of insurance upon request.</p>
           </div>
         </div>
       </div>
     </section>
-
-
 
     <!-- CTA Section -->
     <section class="cta-section">
       <div class="container">
-        <h2>Ready to Transform Your Lenox Property?</h2>
-        <p>Contact your local Lenox painter, Barry "Boomer" Brown, today for your free estimate. We're ready to bring 25+ years of painting expertise to your Lenox home or business.</p>
-        <div class="cta-buttons">
-          <a href="tel:+12512374545" class="btn btn-primary">Call (251) 237-4545</a>
-          <a href="/contact" class="btn btn-secondary">Get Free Estimate</a>
-        </div>
+        <h2>Ready for Professional Painting in Lenox?</h2>
+        <p>Contact Barry "Boomer" Brown today for a free estimate on your Lenox painting project.</p>
+        <a href="/contact" class="btn btn-primary">
+          <span class="btn-icon">📞</span>
+          Get Free Estimate
+        </a>
       </div>
     </section>
   </main>
 </BaseLayout>
 
 <style>
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* Hero Section */
   .hero {
-    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-    color: white;
-    padding: 2rem 0;
-    min-height: 80vh;
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
     display: flex;
     align-items: center;
+    color: white;
+  }
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .hero-slide.active {
+    opacity: 1;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 100%);
+    z-index: 2;
   }
 
   .hero-content {
-    max-width: 1200px;
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 800px;
     margin: 0 auto;
-    padding: 0 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+    padding: 2rem;
+  }
+
+  .hero-logo-image {
+    height: 300px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0;
   }
 
   .hero h1 {
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: clamp(3rem, 5vw, 4rem);
+    font-weight: 800;
+    margin: 0;
+    margin-top: -4rem;
     margin-bottom: 1rem;
-    line-height: 1.2;
+    line-height: 1.1;
+    color: white;
   }
 
-  .hero-subtitle {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
-  }
-
-  .hero-buttons {
+  .phone-number {
     display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .hero-form {
-    background: white;
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-  }
-
-  .hero-form-container h3 {
-    color: #1e3a8a;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    font-size: 1.5rem;
-  }
-
-  .hero-form-container form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .hero-form-container input,
-  .hero-form-container select,
-  .hero-form-container textarea {
-    padding: 0.75rem;
-    border: 2px solid #e5e7eb;
-    border-radius: 8px;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.9);
     font-size: 1rem;
+    justify-content: center;
+    margin: 0;
   }
 
-  .hero-form-container input:focus,
-  .hero-form-container select:focus,
-  .hero-form-container textarea:focus {
-    outline: none;
-    border-color: #3b82f6;
+  .phone-label {
+    font-weight: 500;
   }
 
-  .trust-signals {
-    padding: 2rem 0;
-    background: #f8fafc;
+  .phone-link {
+    color: #fbbf24;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.125rem;
   }
 
-  .trust-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+  .phone-link:hover {
+    color: #f59e0b;
+    text-decoration: underline;
   }
 
-  .trust-item {
-    text-align: center;
-    padding: 2rem;
-    background: white;
+  .hero-cta {
+    margin-top: 2rem;
+  }
+
+  .hero-trust-badges {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1.5rem;
+    z-index: 4;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.94rem 1.56rem;
+    background: transparent;
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  .trust-badge:hover {
+    transform: translateY(-2px);
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.9);
+  }
+
+  .trust-badge .trust-icon {
+    font-size: 1.56rem;
+    color: #fbbf24;
+  }
+
+  .trust-badge .trust-stars {
+    font-size: 1.56rem;
+    color: #fbbf24;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  .trust-badge .trust-text {
+    font-size: 1.06rem;
+    font-weight: 600;
+  }
+
+  .hero-dots {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 3;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .dot.active {
+    background: #fbbf24;
+    transform: scale(1.2);
+  }
+
+  .dot:hover {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.25rem 2.5rem;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
   }
 
-  .trust-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+  .btn-primary {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #1f2937;
+    box-shadow: 
+      0 8px 25px rgba(251, 191, 36, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
   }
 
-  .trust-item h3 {
-    color: #1e3a8a;
-    margin-bottom: 0.5rem;
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .btn-primary:hover::before {
+    left: 100%;
+  }
+
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    transform: translateY(-3px);
+    box-shadow: 
+      0 12px 35px rgba(251, 191, 36, 0.6),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  }
+
+  .btn-icon {
     font-size: 1.25rem;
+  }
+
+  /* Content Sections */
+  .services-section,
+  .service-areas-section,
+  .faq-section {
+    padding: 5rem 0;
   }
 
   .services-section {
-    padding: 2rem 0;
+    background: #f8fafc;
+  }
+
+  .service-areas-section {
+    background: white;
+  }
+
+  .faq-section {
+    background: #f8fafc;
+  }
+
+  .services-section h2,
+  .service-areas-section h2,
+  .faq-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+
+  .service-areas-section > .container > p {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #6b7280;
+    font-size: 1.125rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
   }
 
   .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 3rem;
   }
@@ -403,14 +487,27 @@ const keywords = "painters Lenox AL, painting contractor Lenox, Barry Brown pain
     background: white;
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #3b82f6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
   }
 
   .service-card h3 {
-    color: #1e3a8a;
+    color: #1e40af;
     margin-bottom: 1rem;
     font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .service-card p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    color: #4b5563;
   }
 
   .service-card ul {
@@ -420,66 +517,73 @@ const keywords = "painters Lenox AL, painting contractor Lenox, Barry Brown pain
 
   .service-card li {
     margin-bottom: 0.5rem;
+    color: #6b7280;
+    line-height: 1.6;
+  }
+
+  .areas-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .area-group {
+    background: #f8fafc;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+  }
+
+  .area-group:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-color: #3b82f6;
+  }
+
+  .area-group h3 {
+    color: #1e40af;
+    margin-bottom: 1.5rem;
+    font-size: 1.375rem;
+    font-weight: 700;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #3b82f6;
+  }
+
+  .area-group ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .area-group li {
+    padding: 0.625rem 0;
     color: #4b5563;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 1.25rem;
+    transition: all 0.2s ease;
   }
 
-  .why-choose {
-    padding: 2rem 0;
-    background: #f8fafc;
+  .area-group li::before {
+    content: "📍";
+    position: absolute;
+    left: 0;
+    font-size: 0.75rem;
+    opacity: 0.6;
   }
 
-  .why-grid {
+  .area-group li:hover {
+    color: #1e40af;
+    padding-left: 1.5rem;
+  }
+
+  .faq-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-  }
-
-  .why-item {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-  }
-
-  .why-item h3 {
-    color: #1e3a8a;
-    margin-bottom: 1rem;
-    font-size: 1.25rem;
-  }
-
-  .service-areas {
-    padding: 2rem 0;
-  }
-
-  .areas-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin-top: 3rem;
-  }
-
-  .area-item {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    border-left: 4px solid #3b82f6;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  }
-
-  .area-item h3 {
-    color: #1e3a8a;
-    margin-bottom: 0.5rem;
-    font-size: 1.125rem;
-  }
-  .faq {
-    padding: 2rem 0;
-    background: #f8fafc;
-  }
-
-  .faq-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 1.5rem;
     margin-top: 3rem;
   }
@@ -488,133 +592,161 @@ const keywords = "painters Lenox AL, painting contractor Lenox, Barry Brown pain
     background: white;
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     border-left: 4px solid #3b82f6;
+    transition: transform 0.3s ease;
+  }
+
+  .faq-item:hover {
+    transform: translateX(4px);
   }
 
   .faq-item h3 {
-    color: #1e3a8a;
+    color: #1e40af;
     margin-bottom: 1rem;
-    font-size: 1.125rem;
-    font-weight: 600;
+    font-size: 1.25rem;
+    font-weight: 700;
   }
 
   .faq-item p {
+    line-height: 1.7;
     color: #4b5563;
-    line-height: 1.6;
+    margin: 0;
   }
 
-
-
   .cta-section {
-    padding: 2rem 0;
-    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-    color: white;
     text-align: center;
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
   }
 
   .cta-section h2 {
-    font-size: 2.5rem;
     margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: 800;
   }
 
   .cta-section p {
-    font-size: 1.25rem;
     margin-bottom: 2rem;
-    opacity: 0.9;
+    font-size: 1.125rem;
+    opacity: 0.95;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .cta-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .btn {
-    display: inline-block;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-  }
-
-  .btn-primary {
-    background: #f59e0b;
-    color: white;
-  }
-
-  .btn-primary:hover {
-    background: #d97706;
-    transform: translateY(-2px);
-  }
-
-  .btn-secondary {
-    background: transparent;
-    color: white;
-    border-color: white;
-  }
-
-  .btn-secondary:hover {
-    background: white;
-    color: #1e3a8a;
-  }
-
-  .btn-outline {
-    background: transparent;
-    color: #3b82f6;
-    border-color: #3b82f6;
-  }
-
-  .btn-outline:hover {
-    background: #3b82f6;
-    color: white;
-  }
-
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-  }
-
-  h2 {
-    text-align: center;
-    color: #1e3a8a;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-
+  /* Mobile Responsive */
   @media (max-width: 768px) {
-    .hero-content {
-      grid-template-columns: 1fr;
-      gap: 2rem;
+    .hero {
+      height: 70vh;
+      min-height: 500px;
+    }
+
+    .hero-logo-image {
+      height: 200px;
     }
 
     .hero h1 {
       font-size: 2rem;
+      margin-top: -2rem;
     }
 
-    .hero-subtitle {
+    .hero-trust-badges {
+      top: 1rem;
+      gap: 0.75rem;
+      padding: 0 1rem;
+    }
+
+    .trust-badge {
+      padding: 0.63rem 1.25rem;
       font-size: 1rem;
     }
 
-    .hero-buttons {
-      justify-content: center;
+    .trust-badge .trust-icon,
+    .trust-badge .trust-stars {
+      font-size: 1.25rem;
     }
 
-    .trust-grid,
-    .services-grid,
-    .why-grid,
-    .areas-grid {
+    .trust-badge .trust-text {
+      font-size: 0.94rem;
+    }
+
+    .services-grid {
       grid-template-columns: 1fr;
     }
 
-    .cta-buttons {
-      flex-direction: column;
-      align-items: center;
+    .areas-list {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .area-group {
+      padding: 1.5rem;
+    }
+
+    .area-group h3 {
+      font-size: 1.25rem;
+    }
+
+    .btn {
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
+    }
+
+    .services-section,
+    .service-areas-section,
+    .faq-section {
+      padding: 3rem 0;
+    }
+
+    .cta-section {
+      padding: 3rem 1.5rem;
     }
   }
 </style>
+
+<script>
+  // Hero Slider Functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.dot');
+    let currentSlide = 0;
+    let slideInterval;
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
+      slides[index].classList.add('active');
+      dots[index].classList.add('active');
+      currentSlide = index;
+    }
+
+    function nextSlide() {
+      const next = (currentSlide + 1) % slides.length;
+      showSlide(next);
+    }
+
+    function startSlider() {
+      slideInterval = setInterval(nextSlide, 5000);
+    }
+
+    function stopSlider() {
+      clearInterval(slideInterval);
+    }
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        showSlide(index);
+        stopSlider();
+        startSlider();
+      });
+    });
+
+    startSlider();
+
+    const hero = document.querySelector('.hero');
+    hero.addEventListener('mouseenter', stopSlider);
+    hero.addEventListener('mouseleave', startSlider);
+  });
+</script>

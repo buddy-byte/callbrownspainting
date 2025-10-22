@@ -1,391 +1,594 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ServiceSchema from '../components/ServiceSchema.astro';
+
+const title = "House Painter in Foley AL | Professional Painting Services";
+const description = "Expert house painters in Foley, Alabama. Licensed, insured, locally owned.";
+const keywords = "house painter Foley AL, painters Foley Alabama";
 ---
 
 <BaseLayout
-  title="Painting Services in Foley AL - CallBrownsPainting.com"
-  description="Foley painting specialists: coastal home painting, deck staining, vacation rental maintenance. Expert in Baldwin County's unique coastal climate and agricultural properties. Free estimates."
-  keywords="painting contractor Foley AL, coastal home painting Foley AL, deck staining Foley AL, vacation rental repainting Foley AL, painters in Foley AL, Baldwin County painting contractors"
+  title={title}
+  description={description}
+  keywords={keywords}
 >
   <main>
-    <section class="city-hero">
+    <!-- Service Schema -->
+    <ServiceSchema
+      serviceName="Professional House Painting Services in Foley AL"
+      serviceDescription="Expert house painters in Foley, Alabama. Licensed, insured, locally owned."
+      serviceUrl="https://callbrownspainting.com/foley-painting"
+      serviceType="House Painting"
+      priceRange="$$"
+      serviceImage="https://callbrownspainting.com/assets/foley-painting-service.jpg"
+    />
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-background">
+        <div class="hero-slide active" style="background-image: url('/images/hero/hero-1-optimized.jpg')"></div>
+        <div class="hero-slide" style="background-image: url('/images/projects/projects-optimized/interior-painting-2-optimized.jpg')"></div>
+        <div class="hero-slide" style="background-image: url('/images/hero/hero-3-optimized.jpg'); background-position: center top;"></div>
+      </div>
+      
+      <div class="hero-overlay"></div>
+      
+      <div class="hero-trust-badges">
+        <div class="trust-badge">
+          <span class="trust-stars">★★★★★</span>
+          <span class="trust-text">5-Star Reviews</span>
+        </div>
+        <div class="trust-badge">
+          <span class="trust-icon">🏆</span>
+          <span class="trust-text">25+ Years</span>
+        </div>
+        <div class="trust-badge">
+          <span class="trust-icon">📋</span>
+          <span class="trust-text">Licensed & Insured</span>
+        </div>
+        <div class="trust-badge">
+          <span class="trust-icon">✅</span>
+          <span class="trust-text">100% Guaranteed</span>
+        </div>
+      </div>
+
       <div class="container">
-        <h1>Professional Painting Services in Foley, AL</h1>
-        <p class="lead">
-          Barry "Boomer" Brown brings 25+ years of professional painting expertise to Foley and Baldwin County. 
-          Specialized coastal home painting, deck staining, and vacation rental services.
-        </p>
-        <div class="cta-buttons">
-          <a href="/contact" class="btn btn-primary">Get Free Estimate</a>
-          <a href="#services" class="btn btn-secondary">View Services</a>
+        <div class="hero-content">
+          <div class="hero-text">
+            <img src="/images/logo/browns-painting-logo-hat.png" alt="Brown's Painting" class="hero-logo-image" />
+            <h1>Professional Painting Services in Foley, AL</h1>
+            <div class="phone-number">
+              <span class="phone-label">Call Us Today at</span>
+              <a href="tel:+12512374545" class="phone-link">(251) 237-4545</a>
+            </div>
+            <div class="hero-cta">
+              <a href="/contact" class="btn btn-primary">
+                <span class="btn-icon">📋</span>
+                Get A Free Quote
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-dots">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+      <div class="container">
+        <h2>Our Painting Services in Foley</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>🏠 Interior Painting</h3>
+            <p>Transform your Foley home's interior with professional painting services.</p>
+            <ul>
+              <li>Living rooms and bedrooms</li>
+              <li>Kitchen and bathroom painting</li>
+              <li>Cabinet refinishing</li>
+              <li>Drywall repair and texturing</li>
+              <li>Trim and molding painting</li>
+            </ul>
+          </div>
+          
+          <div class="service-card">
+            <h3>🎨 Exterior Painting</h3>
+            <p>Protect your Foley property with professional exterior painting designed for Alabama's climate.</p>
+            <ul>
+              <li>House siding and trim</li>
+              <li>Deck and porch painting</li>
+              <li>Fence painting and staining</li>
+              <li>Weather-resistant coatings</li>
+              <li>Pressure washing included</li>
+            </ul>
+          </div>
+          
+          <div class="service-card">
+            <h3>🏢 Commercial Painting</h3>
+            <p>Professional commercial painting services for Foley businesses of all sizes.</p>
+            <ul>
+              <li>Office buildings</li>
+              <li>Retail spaces</li>
+              <li>Restaurants and hospitality</li>
+              <li>After-hours scheduling</li>
+              <li>Minimal business disruption</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="services" class="city-services">
+    <!-- Service Areas Section -->
+    <section class="service-areas-section">
       <div class="container">
-        <h2>Painting Services in Foley</h2>
+        <h2>Foley Service Areas</h2>
+        <p>Professional painting services throughout Foley and surrounding Baldwin County communities.</p>
         
-        <div class="services-grid">
-          <article class="service-card">
-            <h3>Coastal Home Painting Foley</h3>
-            <p>
-              Specialized painting services for Foley's coastal properties. We use salt air resistant paints 
-              and techniques designed for Alabama's coastal climate.
-            </p>
+        <div class="areas-list">
+          <div class="area-group">
+            <h3>Foley Neighborhoods We Serve</h3>
             <ul>
-              <li>Salt air resistant paint systems</li>
-              <li>Coastal weather protection</li>
-              <li>Beach house exterior painting</li>
-              <li>Wind and sand damage protection</li>
-              <li>Moisture barrier applications</li>
+              <li>Downtown Foley</li>
+              <li>OWA Entertainment District</li>
+              <li>Tanger Outlets Area</li>
+              <li>Foley Beach Express</li>
+              <li>North Foley</li>
+              <li>South Foley</li>
+              <li>Magnolia Springs Road</li>
             </ul>
-          </article>
-
-          <article class="service-card">
-            <h3>Deck Staining Foley</h3>
-            <p>
-              Professional deck staining services for Foley properties. We use marine-grade stains 
-              that resist salt water and weather damage.
-            </p>
+          </div>
+          
+          <div class="area-group">
+            <h3>Nearby Communities</h3>
             <ul>
-              <li>Marine-grade stain systems</li>
-              <li>Salt water resistance</li>
-              <li>Slip-resistant finishes</li>
-              <li>Regular maintenance programs</li>
-              <li>Pressure washing preparation</li>
+              <li>Gulf Shores - 10 minutes</li>
+              <li>Orange Beach - 15 minutes</li>
+              <li>Fairhope - 20 minutes</li>
             </ul>
-          </article>
-
-          <article class="service-card">
-            <h3>Vacation Rental Repainting</h3>
-            <p>
-              Fast, efficient repainting services for Foley vacation rental properties. 
-              We work around rental schedules to minimize disruption.
-            </p>
-            <ul>
-              <li>Quick turnaround times</li>
-              <li>Durable, easy-maintenance finishes</li>
-              <li>Guest-friendly scheduling</li>
-              <li>Property management partnerships</li>
-              <li>Emergency touch-up services</li>
-            </ul>
-          </article>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <section class="foley-specialties">
-          <h2>Why Choose CallBrownsPainting.com for Foley Projects</h2>
-          
-          <div class="specialties-grid">
-            <div class="specialty-item">
-              <h3>Coastal Expertise</h3>
-              <p>
-                We understand the unique challenges of painting in Foley's coastal environment. 
-                Salt air, high humidity, and intense sun require specialized techniques and materials.
-              </p>
-            </div>
-
-            <div class="specialty-item">
-              <h3>Vacation Rental Experience</h3>
-              <p>
-                Extensive experience working with Foley vacation rental properties. 
-                We understand scheduling constraints and guest turnover requirements.
-              </p>
-            </div>
-
-            <div class="specialty-item">
-              <h3>Marine-Grade Materials</h3>
-              <p>
-                We use premium marine-grade paints and stains specifically designed for coastal environments. 
-                These materials resist salt corrosion and UV damage.
-              </p>
-            </div>
-
-            <div class="specialty-item">
-              <h3>Flexible Scheduling</h3>
-              <p>
-                We work around your rental schedule and guest bookings. 
-                Quick turnarounds and emergency services available.
-              </p>
-            </div>
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <h2>Frequently Asked Questions - Foley Painting</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <h3>How much does house painting cost in Foley?</h3>
+            <p>Painting costs in Foley typically range from $2.50 to $4.50 per square foot for interior work and $1.80 to $3.50 per square foot for exterior painting. The final price depends on factors like the size of your home, surface preparation needed, paint quality, and project complexity. We offer free, detailed estimates for all Foley area properties.</p>
           </div>
-        </section>
-
-        <section class="foley-areas">
-          <h2>Foley Service Areas</h2>
-          <p>
-            We provide professional painting services throughout Foley and surrounding Baldwin County communities:
-          </p>
-          
-          <div class="areas-list">
-            <div class="area-group">
-              <h3>Foley Neighborhoods</h3>
-              <ul>
-                <li>Downtown Foley</li>
-                <li>Foley Beach</li>
-                <li>Bon Secour</li>
-                <li>Magnolia Springs</li>
-                <li>Silver Hill</li>
-                <li>Robertsdale</li>
-              </ul>
-            </div>
-            
-            <div class="area-group">
-              <h3>Nearby Coastal Communities</h3>
-              <ul>
-                <li>Gulf Shores - 10 minutes</li>
-                <li>Orange Beach - 15 minutes</li>
-                <li>Fairhope - 20 minutes</li>
-                <li>Daphne - 25 minutes</li>
-                <li>Spanish Fort - 30 minutes</li>
-                <li>Bay Minette - 25 minutes</li>
-              </ul>
-            </div>
+          <div class="faq-item">
+            <h3>How long does it take to paint a house in Foley?</h3>
+            <p>Most residential painting projects in Foley take 3-7 days to complete. Interior painting typically takes 2-4 days for an average-sized home, while exterior painting usually requires 3-5 days depending on weather conditions. We'll provide you with a detailed timeline during your free estimate.</p>
           </div>
-        </section>
-
-        <section class="testimonial-section">
-          <h2>What Foley Customers Say</h2>
-          <div class="testimonial">
-            <blockquote>
-              "Barry did an amazing job painting our Foley vacation rental. He worked around our guest schedule 
-              and used the right coastal paints. The property looks fantastic and the paint is holding up great."
-            </blockquote>
-            <cite>- Jennifer L., Foley Property Owner</cite>
+          <div class="faq-item">
+            <h3>Do I need to be home during the painting?</h3>
+            <p>Not necessarily. Many Foley homeowners prefer to be away during painting to avoid the inconvenience. We're fully insured and trustworthy, and can work independently once access is arranged. For interior projects, some homeowners prefer to be present initially, but it's entirely your choice.</p>
           </div>
-        </section>
+          <div class="faq-item">
+            <h3>What brands of paint do you use in Foley?</h3>
+            <p>We primarily use premium brands like Sherwin-Williams and Benjamin Moore for Foley projects. These professional-grade paints offer superior coverage, durability, and color retention - essential for Alabama's humid climate. We can also accommodate specific brand preferences if you have particular requirements.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Are you licensed and insured in Baldwin County?</h3>
+            <p>Yes, Brown's Painting is fully licensed and insured to work throughout Baldwin County including Foley. We carry comprehensive liability insurance and workers' compensation coverage, protecting both our team and your property. We're happy to provide proof of insurance upon request.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <section class="cta-section">
-          <h2>Ready for Professional Painting in Foley?</h2>
-          <p>
-            Contact Barry "Boomer" Brown today for a free estimate on your Foley painting project. 
-            We specialize in coastal properties and vacation rental painting services.
-          </p>
-          <a href="/contact" class="btn btn-primary">Get Free Foley Painting Estimate</a>
-        </section>
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ready for Professional Painting in Foley?</h2>
+        <p>Contact Barry "Boomer" Brown today for a free estimate on your Foley painting project.</p>
+        <a href="/contact" class="btn btn-primary">
+          <span class="btn-icon">📞</span>
+          Get Free Estimate
+        </a>
       </div>
     </section>
   </main>
+</BaseLayout>
 
-  <style>
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
+<style>
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
 
-    .city-hero {
-      padding: 3rem 0 2rem;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      text-align: center;
-    }
+  /* Hero Section */
+  .hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    color: white;
+  }
 
-    .city-hero h1 {
-      font-size: clamp(2.5rem, 5vw, 3.5rem);
-      margin-bottom: 1.5rem;
-    }
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
 
-    .lead {
-      font-size: clamp(1.1rem, 2vw, 1.3rem);
-      margin-bottom: 2rem;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+  .hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
 
-    .cta-buttons {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+  .hero-slide.active {
+    opacity: 1;
+  }
 
-    .btn {
-      display: inline-block;
-      padding: 1rem 2rem;
-      border-radius: 0.5rem;
-      text-decoration: none;
-      font-weight: 600;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 100%);
+    z-index: 2;
+  }
 
-    .btn-primary {
-      background: white;
-      color: #667eea;
-      font-weight: 700;
-    }
+  .hero-content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    text-align: center;
+  }
 
-    .btn-secondary {
-      background: rgba(255, 255, 255, 0.2);
-      color: white;
-      border: 2px solid white;
-    }
+  .hero-text {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
 
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
+  .hero-logo-image {
+    height: 300px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0;
+  }
 
-    .city-services {
-      padding: 2rem 0;
-    }
+  .hero h1 {
+    font-size: clamp(3rem, 5vw, 4rem);
+    font-weight: 800;
+    margin: 0;
+    margin-top: -4rem;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    color: white;
+  }
 
-    .city-services h2 {
-      text-align: center;
-      font-size: clamp(2rem, 4vw, 2.5rem);
-      margin-bottom: 2rem;
-      color: #333;
-    }
+  .phone-number {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    justify-content: center;
+    margin: 0;
+  }
 
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-bottom: 2rem;
-    }
+  .phone-label {
+    font-weight: 500;
+  }
 
-    .service-card {
-      background: white;
-      padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      border-left: 4px solid #667eea;
-    }
+  .phone-link {
+    color: #fbbf24;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.125rem;
+  }
 
-    .service-card h3 {
-      color: #667eea;
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
-    }
+  .phone-link:hover {
+    color: #f59e0b;
+    text-decoration: underline;
+  }
 
-    .service-card p {
-      margin-bottom: 1rem;
-      line-height: 1.6;
-      color: #555;
-    }
+  .hero-cta {
+    margin-top: 2rem;
+  }
 
-    .service-card ul {
-      margin: 1rem 0;
-      padding-left: 1.5rem;
-    }
+  .hero-trust-badges {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1.5rem;
+    z-index: 4;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-    .service-card li {
-      margin-bottom: 0.5rem;
-      color: #555;
-    }
+  .trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.94rem 1.56rem;
+    background: transparent;
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
 
-    .foley-specialties {
-      background: #f8f9fa;
-      padding: 3rem 2rem;
-      border-radius: 1rem;
-      margin-bottom: 2rem;
-    }
+  .trust-badge:hover {
+    transform: translateY(-2px);
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.9);
+  }
 
-    .foley-specialties h2 {
-      text-align: center;
-      margin-bottom: 2rem;
-      color: #333;
-    }
+  .trust-badge .trust-icon {
+    font-size: 1.56rem;
+    color: #fbbf24;
+  }
 
-    .specialties-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
+  .trust-badge .trust-stars {
+    font-size: 1.56rem;
+    color: #fbbf24;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
 
-    .specialty-item {
-      background: white;
-      padding: 2rem;
-      border-radius: 0.5rem;
-    }
+  .trust-badge .trust-text {
+    font-size: 1.06rem;
+    font-weight: 600;
+  }
 
-    .specialty-item h3 {
-      color: #667eea;
-      margin-bottom: 1rem;
-    }
+  .hero-dots {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 3;
+  }
 
-    .specialty-item p {
-      line-height: 1.6;
-      color: #555;
-    }
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
 
-    .foley-areas {
-      margin-bottom: 2rem;
-    }
+  .dot.active {
+    background: #fbbf24;
+    transform: scale(1.2);
+  }
 
-    .foley-areas h2 {
-      text-align: center;
-      margin-bottom: 2rem;
-      color: #333;
-    }
+  .dot:hover {
+    background: rgba(255, 255, 255, 0.8);
+  }
 
-    .foley-areas > p {
-      text-align: center;
-      margin-bottom: 2rem;
-      color: #555;
-    }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.25rem 2.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
 
-    .areas-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
+  .btn-primary {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #1f2937;
+    box-shadow: 
+      0 8px 25px rgba(251, 191, 36, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
 
-    .area-group h3 {
-      color: #667eea;
-      margin-bottom: 1rem;
-      font-size: 1.2rem;
-    }
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+  }
 
-    .area-group ul {
-      list-style: none;
-      padding: 0;
-    }
+  .btn-primary:hover::before {
+    left: 100%;
+  }
 
-    .area-group li {
-      padding: 0.5rem 0;
-      color: #555;
-      border-bottom: 1px solid #e0e0e0;
-    }
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    transform: translateY(-3px);
+    box-shadow: 
+      0 12px 35px rgba(251, 191, 36, 0.6),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  }
 
-    .area-group li:last-child {
-      border-bottom: none;
-    }
+  .btn-icon {
+    font-size: 1.25rem;
+  }
 
-    .testimonial-section {
-      background: white;
-      padding: 3rem 2rem;
-      border-radius: 1rem;
-      margin-bottom: 2rem;
-      text-align: center;
-    }
+  /* Content Sections */
+  .services-section,
+  .service-areas-section,
+  .faq-section {
+    padding: 5rem 0;
+  }
 
-    .testimonial-section h2 {
-      margin-bottom: 2rem;
-      color: #333;
-    }
-
-    .testimonial blockquote {
-      font-size: 1.2rem;
-      font-style: italic;
-      color: #555;
-      margin-bottom: 1rem;
-      line-height: 1.6;
-    }
-
-    .testimonial cite {
-      color: #667eea;
-      font-weight: 600;
-    }
-  .faq {
-    padding: 2rem 0;
+  .services-section {
     background: #f8fafc;
   }
 
-  .faq-grid {
+  .service-areas-section {
+    background: white;
+  }
+
+  .faq-section {
+    background: #f8fafc;
+  }
+
+  .services-section h2,
+  .service-areas-section h2,
+  .faq-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+
+  .service-areas-section > .container > p {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #6b7280;
+    font-size: 1.125rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+  }
+
+  .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #3b82f6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .service-card h3 {
+    color: #1e40af;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .service-card p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    color: #4b5563;
+  }
+
+  .service-card ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .service-card li {
+    margin-bottom: 0.5rem;
+    color: #6b7280;
+    line-height: 1.6;
+  }
+
+  .areas-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .area-group {
+    background: #f8fafc;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+  }
+
+  .area-group:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-color: #3b82f6;
+  }
+
+  .area-group h3 {
+    color: #1e40af;
+    margin-bottom: 1.5rem;
+    font-size: 1.375rem;
+    font-weight: 700;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #3b82f6;
+  }
+
+  .area-group ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .area-group li {
+    padding: 0.625rem 0;
+    color: #4b5563;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 1.25rem;
+    transition: all 0.2s ease;
+  }
+
+  .area-group li::before {
+    content: "📍";
+    position: absolute;
+    left: 0;
+    font-size: 0.75rem;
+    opacity: 0.6;
+  }
+
+  .area-group li:hover {
+    color: #1e40af;
+    padding-left: 1.5rem;
+  }
+
+  .faq-container {
+    display: grid;
     gap: 1.5rem;
     margin-top: 3rem;
   }
@@ -394,61 +597,161 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     background: white;
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     border-left: 4px solid #3b82f6;
+    transition: transform 0.3s ease;
+  }
+
+  .faq-item:hover {
+    transform: translateX(4px);
   }
 
   .faq-item h3 {
-    color: #1e3a8a;
+    color: #1e40af;
     margin-bottom: 1rem;
-    font-size: 1.125rem;
-    font-weight: 600;
+    font-size: 1.25rem;
+    font-weight: 700;
   }
 
   .faq-item p {
+    line-height: 1.7;
     color: #4b5563;
-    line-height: 1.6;
+    margin: 0;
   }
 
+  .cta-section {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+  }
 
+  .cta-section h2 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: 800;
+  }
+
+  .cta-section p {
+    margin-bottom: 2rem;
+    font-size: 1.125rem;
+    opacity: 0.95;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .hero {
+      height: 70vh;
+      min-height: 500px;
+    }
+
+    .hero-logo-image {
+      height: 200px;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      margin-top: -2rem;
+    }
+
+    .hero-trust-badges {
+      top: 1rem;
+      gap: 0.75rem;
+      padding: 0 1rem;
+    }
+
+    .trust-badge {
+      padding: 0.63rem 1.25rem;
+      font-size: 1rem;
+    }
+
+    .trust-badge .trust-icon,
+    .trust-badge .trust-stars {
+      font-size: 1.25rem;
+    }
+
+    .trust-badge .trust-text {
+      font-size: 0.94rem;
+    }
+
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .areas-list {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .area-group {
+      padding: 1.5rem;
+    }
+
+    .area-group h3 {
+      font-size: 1.25rem;
+    }
+
+    .btn {
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
+    }
+
+    .services-section,
+    .service-areas-section,
+    .faq-section {
+      padding: 3rem 0;
+    }
 
     .cta-section {
-      text-align: center;
-      padding: 2rem 0;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      border-radius: 1rem;
+      padding: 3rem 1.5rem;
+    }
+  }
+</style>
+
+<script>
+  // Hero Slider Functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.dot');
+    let currentSlide = 0;
+    let slideInterval;
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
+      slides[index].classList.add('active');
+      dots[index].classList.add('active');
+      currentSlide = index;
     }
 
-    .cta-section h2 {
-      margin-bottom: 1rem;
-      font-size: 2rem;
+    function nextSlide() {
+      const next = (currentSlide + 1) % slides.length;
+      showSlide(next);
     }
 
-    .cta-section p {
-      margin-bottom: 2rem;
-      font-size: 1.1rem;
-      opacity: 0.95;
+    function startSlider() {
+      slideInterval = setInterval(nextSlide, 5000);
     }
 
-    @media (max-width: 768px) {
-      .city-hero {
-        padding: 4rem 0 2rem;
-      }
-
-      .city-services {
-        padding: 2rem 0;
-      }
-
-      .service-card {
-        padding: 1.5rem;
-      }
-
-      .foley-specialties {
-        padding: 2rem 1rem;
-      }
+    function stopSlider() {
+      clearInterval(slideInterval);
     }
-  </style>
-</BaseLayout>
 
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        showSlide(index);
+        stopSlider();
+        startSlider();
+      });
+    });
 
+    startSlider();
+
+    const hero = document.querySelector('.hero');
+    hero.addEventListener('mouseenter', stopSlider);
+    hero.addEventListener('mouseleave', startSlider);
+  });
+</script>

@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Test Images - CallBrownsPainting.com"
+  description="Testing image display"
+>
+  <main>
+    <h1>Testing Boomer Images</h1>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; padding: 2rem;">
+      <div>
+        <h3>Boomer 1</h3>
+        <img src="/images/boomer-photos/boomer-1-optimized.jpg" alt="Boomer 1" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" />
+      </div>
+      
+      <div>
+        <h3>Boomer 2</h3>
+        <img src="/images/boomer-photos/boomer-2-optimized.jpg" alt="Boomer 2" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" />
+      </div>
+      
+      <div>
+        <h3>Boomer 3</h3>
+        <img src="/images/boomer-photos/boomer-3-optimized.jpg" alt="Boomer 3" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" />
+      </div>
+      
+      <div>
+        <h3>Boomer 4</h3>
+        <img src="/images/boomer-photos/boomer-4-optimized.jpg" alt="Boomer 4" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" />
+      </div>
+      
+      <div>
+        <h3>Boomer 5</h3>
+        <img src="/images/boomer-photos/boomer-5-optimized.jpg" alt="Boomer 5" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" />
+      </div>
+    </div>
+  </main>
+</BaseLayout>
