@@ -220,7 +220,7 @@ Choosing the right paint finish is about balancing aesthetics, durability, and m
 
 Remember, the right finish can make your paint job last years longer and look more professional. When in doubt, consult with a professional painter who can assess your specific needs and recommend the best solution for your home.
 
-At Brown's Painting LLC, we've helped hundreds of South Alabama homeowners choose the perfect paint finishes for their projects. If you're planning a painting project and need expert guidance, we're here to help with free estimates and professional advice.
+At Browns Painting LLC, we've helped hundreds of South Alabama homeowners choose the perfect paint finishes for their projects. If you're planning a painting project and need expert guidance, we're here to help with free estimates and professional advice.
 
 
 
