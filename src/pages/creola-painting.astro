@@ -871,15 +871,17 @@ const keywords = "house painter Creola AL, painters Creola Alabama";
 
     // Add click/touch event listeners to dots
     dots.forEach((dot, index) => {
-      const handleDotClick = (e) => {
-        e.preventDefault();
+      const handleDotClick = () => {
         showSlide(index);
         stopSlider();
         startSlider(); // Restart the auto-slider
       };
       
       dot.addEventListener('click', handleDotClick);
-      dot.addEventListener('touchend', handleDotClick);
+      dot.addEventListener('touchend', (e) => {
+        e.preventDefault();
+        handleDotClick();
+      });
     });
 
     // Touch swipe support

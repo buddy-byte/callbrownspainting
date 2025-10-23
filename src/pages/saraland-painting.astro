@@ -872,15 +872,17 @@ const keywords = "house painter Saraland AL, painters Saraland Alabama";
 
     // Add click/touch event listeners to dots
     dots.forEach((dot, index) => {
-      const handleDotClick = (e) => {
-        e.preventDefault();
+      const handleDotClick = () => {
         showSlide(index);
         stopSlider();
         startSlider(); // Restart the auto-slider
       };
       
       dot.addEventListener('click', handleDotClick);
-      dot.addEventListener('touchend', handleDotClick);
+      dot.addEventListener('touchend', (e) => {
+        e.preventDefault();
+        handleDotClick();
+      });
     });
 
     // Touch swipe support
