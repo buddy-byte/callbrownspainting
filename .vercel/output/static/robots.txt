@@ -1,7 +1,0 @@
-# Allow all crawlers
-User-agent: *
-Allow: /
-
-# Sitemap location
-Sitemap: https://callbrownspainting.com/sitemap-index.xml
-
