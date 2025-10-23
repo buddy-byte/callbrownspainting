@@ -1398,6 +1398,8 @@ const keywords = 'painting contractor Brewton AL, residential painting Conecuh C
     let currentSlide = 0;
     let slideInterval;
 
+    if (!slides.length || !dots.length) return;
+
     function showSlide(index) {
       // Remove active class from all slides and dots
       slides.forEach(slide => slide.classList.remove('active'));
@@ -1416,28 +1418,65 @@ const keywords = 'painting contractor Brewton AL, residential painting Conecuh C
     }
 
     function startSlider() {
+      if (slideInterval) clearInterval(slideInterval);
       slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
     }
 
     function stopSlider() {
-      clearInterval(slideInterval);
+      if (slideInterval) clearInterval(slideInterval);
     }
 
-    // Add click event listeners to dots
+    // Add click/touch event listeners to dots
     dots.forEach((dot, index) => {
-      dot.addEventListener('click', () => {
+      const handleDotClick = (e) => {
+        e.preventDefault();
         showSlide(index);
         stopSlider();
         startSlider(); // Restart the auto-slider
-      });
+      };
+      
+      dot.addEventListener('click', handleDotClick);
+      dot.addEventListener('touchend', handleDotClick);
     });
+
+    // Touch swipe support
+    const hero = document.querySelector('.hero');
+    if (hero) {
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      hero.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      hero.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+      }, { passive: true });
+
+      function handleSwipe() {
+        const swipeThreshold = 50;
+        if (touchEndX < touchStartX - swipeThreshold) {
+          // Swipe left - next slide
+          nextSlide();
+          stopSlider();
+          startSlider();
+        }
+        if (touchEndX > touchStartX + swipeThreshold) {
+          // Swipe right - previous slide
+          const prev = (currentSlide - 1 + slides.length) % slides.length;
+          showSlide(prev);
+          stopSlider();
+          startSlider();
+        }
+      }
+
+      // Pause slider on hover (desktop only)
+      hero.addEventListener('mouseenter', stopSlider);
+      hero.addEventListener('mouseleave', startSlider);
+    }
 
     // Start the slider
     startSlider();
-
-    // Pause slider on hover
-    const hero = document.querySelector('.hero');
-    hero.addEventListener('mouseenter', stopSlider);
-    hero.addEventListener('mouseleave', startSlider);
   });
 </script>
