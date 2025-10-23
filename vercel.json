@@ -4,6 +4,9 @@
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "framework": "astro",
+  "functions": {
+    "runtime": "nodejs20.x"
+  },
   "headers": [
     {
       "source": "/(.*)",
