@@ -170,98 +170,133 @@ import RelatedServices from '../components/RelatedServices.astro';
     .container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 1.5rem;
+      padding: 0 2rem;
     }
 
     .services-hero {
-      padding: 4rem 0 2rem;
+      padding: 5rem 0 3rem;
       text-align: center;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
       color: white;
     }
 
     .services-hero h1 {
       font-size: clamp(2.5rem, 5vw, 3.5rem);
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      font-weight: 800;
+      line-height: 1.2;
     }
 
     .lead {
-      font-size: 1.3rem;
+      font-size: clamp(1.1rem, 2vw, 1.3rem);
       max-width: 800px;
       margin: 0 auto;
       opacity: 0.95;
+      line-height: 1.7;
     }
 
     .services-content {
-      padding: 3rem 0 5rem;
+      padding: 5rem 0;
+      background: #f8fafc;
     }
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-bottom: 4rem;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.5rem;
+      margin-bottom: 5rem;
     }
 
     .service-card {
       background: white;
-      padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      border-left: 4px solid #667eea;
+      padding: 2.5rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border-left: 4px solid #f59e0b;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
     }
 
     .service-card h2 {
-      color: #667eea;
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
+      color: #1e40af;
+      margin-bottom: 1.25rem;
+      font-size: 1.75rem;
+      font-weight: 700;
     }
 
     .service-card p {
-      margin-bottom: 1rem;
-      line-height: 1.6;
-      color: #555;
+      margin-bottom: 1.25rem;
+      line-height: 1.7;
+      color: #4b5563;
+      font-size: 1rem;
     }
 
     .service-card ul {
-      margin: 1rem 0;
-      padding-left: 1.5rem;
+      margin: 1.5rem 0;
+      padding-left: 0;
+      list-style: none;
     }
 
     .service-card li {
-      margin-bottom: 0.5rem;
-      color: #555;
+      margin-bottom: 0.75rem;
+      color: #4b5563;
+      padding-left: 1.5rem;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .service-card li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #10b981;
+      font-weight: bold;
     }
 
     .service-areas {
-      background: #f8f9fa;
-      padding: 3rem 2rem;
-      border-radius: 1rem;
-      margin-bottom: 3rem;
+      background: white;
+      padding: 4rem 3rem;
+      border-radius: 16px;
+      margin-bottom: 4rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
 
     .service-areas h2 {
       text-align: center;
-      margin-bottom: 2rem;
-      color: #333;
+      margin-bottom: 1rem;
+      color: #1f2937;
+      font-size: 2.25rem;
+      font-weight: 800;
     }
 
     .service-areas > p {
       text-align: center;
-      margin-bottom: 2rem;
-      color: #555;
+      margin-bottom: 3rem;
+      color: #6b7280;
+      font-size: 1.125rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .areas-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2.5rem;
     }
 
     .area-column h3 {
-      color: #667eea;
-      margin-bottom: 1rem;
-      font-size: 1.2rem;
+      color: #1e40af;
+      margin-bottom: 1.25rem;
+      font-size: 1.375rem;
+      font-weight: 700;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid #3b82f6;
     }
 
     .area-column ul {
@@ -270,63 +305,106 @@ import RelatedServices from '../components/RelatedServices.astro';
     }
 
     .area-column li {
-      padding: 0.5rem 0;
-      color: #555;
-      border-bottom: 1px solid #e0e0e0;
+      padding: 0.75rem 0;
+      color: #4b5563;
+      border-bottom: 1px solid #e5e7eb;
+      transition: all 0.2s ease;
     }
 
     .area-column li:last-child {
       border-bottom: none;
     }
 
+    .area-column li:hover {
+      color: #1e40af;
+      padding-left: 0.5rem;
+    }
+
     .cta-section {
       text-align: center;
-      padding: 3rem 0;
+      padding: 5rem 2rem;
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      border-radius: 16px;
+      color: white;
     }
 
     .cta-section h2 {
-      color: #333;
-      margin-bottom: 1rem;
-      font-size: 2rem;
+      color: white;
+      margin-bottom: 1.5rem;
+      font-size: 2.5rem;
+      font-weight: 800;
     }
 
     .cta-section p {
-      color: #555;
-      margin-bottom: 2rem;
-      font-size: 1.1rem;
+      color: white;
+      margin-bottom: 2.5rem;
+      font-size: 1.25rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      opacity: 0.95;
     }
 
     .btn {
       display: inline-block;
-      padding: 1rem 2rem;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 1.125rem 2.5rem;
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
       color: white;
       text-decoration: none;
-      border-radius: 0.5rem;
-      font-weight: 600;
-      transition: transform 0.2s, box-shadow 0.2s;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1.125rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
     }
 
     .btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 8px 20px rgba(245, 158, 11, 0.5);
+      background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
     }
 
     @media (max-width: 768px) {
+      .container {
+        padding: 0 1.5rem;
+      }
+
       .services-hero {
-        padding: 3rem 0 1.5rem;
+        padding: 3rem 0 2rem;
       }
 
       .services-content {
-        padding: 2rem 0 3rem;
+        padding: 3rem 0;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
       }
 
       .service-card {
-        padding: 1.5rem;
+        padding: 2rem;
       }
 
       .service-areas {
-        padding: 2rem 1rem;
+        padding: 2.5rem 1.5rem;
+      }
+
+      .areas-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .cta-section {
+        padding: 3rem 1.5rem;
+      }
+
+      .cta-section h2 {
+        font-size: 2rem;
+      }
+
+      .cta-section p {
+        font-size: 1.1rem;
       }
     }
   </style>
