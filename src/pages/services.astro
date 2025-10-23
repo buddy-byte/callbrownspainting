@@ -20,12 +20,64 @@ import RelatedServices from '../components/RelatedServices.astro';
       serviceImage="https://callbrownspainting.com/assets/painting-services-overview.jpg"
     />
 
-    <section class="services-hero">
+    <!-- Hero Section -->
+    <section class="hero">
+      <!-- Hero Background Images -->
+      <div class="hero-background">
+        <div class="hero-slide active" style="background-image: url('/images/hero/hero-1-optimized.jpg')"></div>
+        <div class="hero-slide" style="background-image: url('/images/projects/projects-optimized/interior-painting-2-optimized.jpg')"></div>
+        <div class="hero-slide" style="background-image: url('/images/hero/hero-3-optimized.jpg'); background-position: center top;"></div>
+      </div>
+      
+      <!-- Hero Overlay -->
+      <div class="hero-overlay"></div>
+      
+      <!-- Trust Badges Above the Fold -->
+      <div class="hero-trust-badges">
+        <div class="trust-badge">
+          <span class="trust-stars">★★★★★</span>
+          <span class="trust-text">5-Star Reviews</span>
+        </div>
+        <div class="trust-badge">
+          <span class="trust-icon">🏆</span>
+          <span class="trust-text">25+ Years</span>
+        </div>
+        <div class="trust-badge">
+          <span class="trust-icon">📋</span>
+          <span class="trust-text">Licensed & Insured</span>
+        </div>
+        <div class="trust-badge">
+          <span class="trust-icon">✅</span>
+          <span class="trust-text">100% Guaranteed</span>
+        </div>
+      </div>
+
+      <!-- Hero Content -->
       <div class="container">
-        <h1>Professional Painting Services</h1>
-        <p class="lead">
-          Complete interior and exterior painting services for homes, businesses, churches, schools, and gymnasiums throughout South Alabama.
-        </p>
+        <div class="hero-content">
+          <div class="hero-text">
+            <img src="/images/logo/browns-painting-logo-hat.png" alt="Browns Painting" class="hero-logo-image" />
+            <h1>Professional <span class="highlight">Painting Services</span></h1>
+            <p class="hero-subtitle">Complete interior and exterior painting services for homes, businesses, churches, schools, and gymnasiums throughout South Alabama.</p>
+            <div class="phone-number">
+              <span class="phone-label">Call Us Today at</span>
+              <a href="tel:+12512374545" class="phone-link">(251) 237-4545</a>
+            </div>
+            <div class="hero-cta">
+              <a href="/contact" class="btn btn-primary">
+                <span class="btn-icon">📋</span>
+                Get A Free Quote
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Hero Navigation Dots -->
+      <div class="hero-dots">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
       </div>
     </section>
 
@@ -173,26 +225,214 @@ import RelatedServices from '../components/RelatedServices.astro';
       padding: 0 2rem;
     }
 
-    .services-hero {
-      padding: 5rem 0 3rem;
-      text-align: center;
-      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    /* Hero Section - Full Width Background Images */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
       color: white;
     }
 
-    .services-hero h1 {
-      font-size: clamp(2.5rem, 5vw, 3.5rem);
-      margin-bottom: 1.5rem;
-      font-weight: 800;
-      line-height: 1.2;
+    .hero-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
     }
 
-    .lead {
-      font-size: clamp(1.1rem, 2vw, 1.3rem);
+    .hero-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .hero-slide.active {
+      opacity: 1;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 100%);
+      z-index: 2;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+      text-align: center;
+    }
+
+    .hero-text {
       max-width: 800px;
       margin: 0 auto;
-      opacity: 0.95;
-      line-height: 1.7;
+      padding: 2rem;
+    }
+
+    .hero-logo-image {
+      height: 300px;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 0;
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 5vw, 4rem);
+      font-weight: 800;
+      margin: 0;
+      margin-top: -4rem;
+      margin-bottom: 1rem;
+      line-height: 1.1;
+      color: white;
+    }
+
+    .highlight {
+      color: #fbbf24;
+      position: relative;
+    }
+
+    .highlight::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: #fbbf24;
+      border-radius: 2px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: rgba(255, 255, 255, 0.95);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .phone-number {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1rem;
+      justify-content: center;
+      margin: 0;
+    }
+
+    .phone-label {
+      font-weight: 500;
+    }
+
+    .phone-link {
+      color: #fbbf24;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.125rem;
+    }
+
+    .phone-link:hover {
+      color: #f59e0b;
+      text-decoration: underline;
+    }
+
+    .hero-cta {
+      margin-top: 2rem;
+    }
+
+    .hero-dots {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 0.5rem;
+      z-index: 3;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .dot.active {
+      background: #fbbf24;
+      transform: scale(1.2);
+    }
+
+    .dot:hover {
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    /* Hero Trust Badges - Above the Fold */
+    .hero-trust-badges {
+      position: absolute;
+      top: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 1.5rem;
+      z-index: 4;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.94rem 1.56rem;
+      background: transparent;
+      color: white;
+      font-size: 1.125rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .trust-badge:hover {
+      transform: translateY(-2px);
+      text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.9);
+    }
+
+    .trust-badge .trust-icon {
+      font-size: 1.56rem;
+      color: #fbbf24;
+    }
+
+    .trust-badge .trust-stars {
+      font-size: 1.56rem;
+      color: #fbbf24;
+      font-weight: 700;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .trust-badge .trust-text {
+      font-size: 1.06rem;
+      font-weight: 600;
     }
 
     .services-content {
@@ -346,68 +586,273 @@ import RelatedServices from '../components/RelatedServices.astro';
     }
 
     .btn {
-      display: inline-block;
-      padding: 1.125rem 2.5rem;
-      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-      color: white;
-      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1.25rem 2.5rem;
       border-radius: 12px;
+      text-decoration: none;
       font-weight: 700;
-      font-size: 1.125rem;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+      font-size: 1.125rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(245, 158, 11, 0.5);
-      background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+    .btn-primary {
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+      color: #1f2937;
+      box-shadow: 
+        0 8px 25px rgba(251, 191, 36, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .btn-primary:hover::before {
+      left: 100%;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      transform: translateY(-3px);
+      box-shadow: 
+        0 12px 35px rgba(251, 191, 36, 0.6),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    }
+
+    .btn-icon {
+      font-size: 1.25rem;
     }
 
     @media (max-width: 768px) {
       .container {
-        padding: 0 1.5rem;
+        padding: 0 1rem !important;
       }
 
-      .services-hero {
-        padding: 3rem 0 2rem;
+      .hero {
+        height: 80vh !important;
+        min-height: 500px !important;
+        padding: 8rem 0 4rem !important;
+      }
+
+      .hero-logo-image {
+        height: 180px !important;
+        margin-bottom: 1rem !important;
+      }
+
+      .hero h1 {
+        font-size: 2rem !important;
+        margin-top: -2rem !important;
+        margin-bottom: 1rem !important;
+      }
+
+      .hero-subtitle {
+        font-size: 1rem !important;
+        margin-bottom: 1rem !important;
+        padding: 0 0.5rem !important;
+      }
+
+      .hero-text {
+        padding: 1rem !important;
+      }
+
+      .phone-number {
+        font-size: 0.9rem !important;
+      }
+
+      .phone-link {
+        font-size: 1rem !important;
+      }
+
+      .hero-trust-badges {
+        top: 0.75rem !important;
+        gap: 0.5rem !important;
+        padding: 0 0.5rem !important;
+        max-width: 100% !important;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        justify-items: center !important;
+      }
+
+      .trust-badge {
+        padding: 0.5rem 0.75rem !important;
+        font-size: 0.75rem !important;
+        white-space: nowrap !important;
+        width: 100% !important;
+        max-width: 160px !important;
+        justify-content: center !important;
+      }
+
+      .trust-badge .trust-icon {
+        font-size: 1rem !important;
+      }
+
+      .trust-badge .trust-stars {
+        font-size: 1rem !important;
+      }
+
+      .trust-badge .trust-text {
+        font-size: 0.75rem !important;
       }
 
       .services-content {
-        padding: 3rem 0;
+        padding: 2.5rem 0 !important;
       }
 
       .services-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        margin-bottom: 3rem !important;
       }
 
       .service-card {
-        padding: 2rem;
+        padding: 1.5rem !important;
+      }
+
+      .service-card h2 {
+        font-size: 1.5rem !important;
       }
 
       .service-areas {
-        padding: 2.5rem 1.5rem;
+        padding: 2rem 1rem !important;
+        margin-bottom: 2.5rem !important;
+      }
+
+      .service-areas h2 {
+        font-size: 1.75rem !important;
       }
 
       .areas-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
       }
 
       .cta-section {
-        padding: 3rem 1.5rem;
+        padding: 2.5rem 1rem !important;
       }
 
       .cta-section h2 {
-        font-size: 2rem;
+        font-size: 1.75rem !important;
       }
 
       .cta-section p {
-        font-size: 1.1rem;
+        font-size: 1rem !important;
+        padding: 0 0.5rem !important;
+      }
+
+      .btn {
+        padding: 1rem 2rem !important;
+        font-size: 1rem !important;
+        width: 100% !important;
+        max-width: 280px !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 7rem 0 3rem !important;
+        min-height: 75vh !important;
+      }
+
+      .hero-logo-image {
+        height: 150px !important;
+      }
+
+      .hero h1 {
+        font-size: 1.75rem !important;
+        margin-top: -1.5rem !important;
+      }
+
+      .hero-trust-badges {
+        top: 0.5rem !important;
+        gap: 0.4rem !important;
+      }
+
+      .trust-badge {
+        padding: 0.4rem 0.6rem !important;
+        font-size: 0.7rem !important;
+        max-width: 140px !important;
+      }
+
+      .trust-badge .trust-icon,
+      .trust-badge .trust-stars {
+        font-size: 0.9rem !important;
+      }
+
+      .trust-badge .trust-text {
+        font-size: 0.7rem !important;
+      }
+
+      .service-card {
+        padding: 1.25rem !important;
+      }
+
+      .service-areas {
+        padding: 1.5rem 0.75rem !important;
+      }
+
+      .cta-section {
+        padding: 2rem 0.75rem !important;
       }
     }
   </style>
+
+  <script>
+    // Hero Slider Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const slides = document.querySelectorAll('.hero-slide');
+      const dots = document.querySelectorAll('.dot');
+      let currentSlide = 0;
+      let slideInterval;
+
+      function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        slides[index].classList.add('active');
+        dots[index].classList.add('active');
+        currentSlide = index;
+      }
+
+      function nextSlide() {
+        const next = (currentSlide + 1) % slides.length;
+        showSlide(next);
+      }
+
+      function startSlider() {
+        slideInterval = setInterval(nextSlide, 5000);
+      }
+
+      function stopSlider() {
+        clearInterval(slideInterval);
+      }
+
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          showSlide(index);
+          stopSlider();
+          startSlider();
+        });
+      });
+
+      startSlider();
+
+      const hero = document.querySelector('.hero');
+      hero.addEventListener('mouseenter', stopSlider);
+      hero.addEventListener('mouseleave', startSlider);
+    });
+  </script>
 </BaseLayout>
 
 

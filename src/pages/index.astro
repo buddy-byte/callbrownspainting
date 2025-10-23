@@ -823,31 +823,40 @@ const keywords = 'painting contractor Brewton AL, residential painting Conecuh C
   /* Mobile Responsive - A-Grade */
   @media (max-width: 768px) {
     .hero {
-      padding: 6rem 0 4rem;
+      padding: 8rem 0 4rem;
+      min-height: 80vh;
     }
 
     .hero-content {
       grid-template-columns: 1fr;
-      gap: 3rem;
+      gap: 2rem;
       text-align: center;
     }
 
     .hero-text {
       max-width: 100%;
+      padding: 1rem;
     }
 
     .hero-logo-image {
-      height: 300px;
+      height: 180px !important;
+      margin-bottom: 1rem !important;
     }
 
     .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1.5rem;
+      font-size: 2rem !important;
+      margin-top: -2rem !important;
+      margin-bottom: 1rem !important;
     }
 
       .phone-number {
         justify-content: center;
         margin-top: 1rem;
+        font-size: 0.9rem;
+      }
+
+      .phone-link {
+        font-size: 1rem !important;
       }
 
       .cta-center {
@@ -856,10 +865,10 @@ const keywords = 'painting contractor Brewton AL, residential painting Conecuh C
 
       .btn {
         width: 100%;
-        max-width: 300px;
+        max-width: 280px;
         justify-content: center;
-        padding: 1rem 2rem;
-        font-size: 1rem;
+        padding: 0.875rem 1.5rem;
+        font-size: 0.95rem;
       }
 
       .image-container {
@@ -881,11 +890,17 @@ const keywords = 'painting contractor Brewton AL, residential painting Conecuh C
 
     @media (max-width: 480px) {
       .hero {
-        padding: 4rem 0 3rem;
+        padding: 7rem 0 3rem;
+        min-height: 75vh;
+      }
+
+      .hero-logo-image {
+        height: 150px !important;
       }
 
       .hero h1 {
-        font-size: 2rem;
+        font-size: 1.75rem !important;
+        margin-top: -1.5rem !important;
       }
     }
 
@@ -1321,26 +1336,56 @@ const keywords = 'painting contractor Brewton AL, residential painting Conecuh C
     }
 
     .hero-trust-badges {
-      top: 1rem;
-      gap: 0.75rem;
-      padding: 0 1rem;
+      top: 0.75rem !important;
+      gap: 0.5rem !important;
+      padding: 0 0.5rem !important;
+      max-width: 100% !important;
+      display: grid !important;
+      grid-template-columns: 1fr 1fr !important;
+      justify-items: center !important;
     }
 
     .trust-badge {
-      padding: 0.63rem 1.25rem;
-      font-size: 1rem;
+      padding: 0.5rem 0.75rem !important;
+      font-size: 0.75rem !important;
+      white-space: nowrap !important;
+      width: 100% !important;
+      max-width: 160px !important;
+      justify-content: center !important;
     }
 
     .trust-badge .trust-icon {
-      font-size: 1.25rem;
+      font-size: 1rem !important;
     }
 
     .trust-badge .trust-stars {
-      font-size: 1.25rem;
+      font-size: 1rem !important;
     }
 
     .trust-badge .trust-text {
-      font-size: 0.94rem;
+      font-size: 0.75rem !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-trust-badges {
+      top: 0.5rem !important;
+      gap: 0.4rem !important;
+    }
+
+    .trust-badge {
+      padding: 0.4rem 0.6rem !important;
+      font-size: 0.7rem !important;
+      max-width: 140px !important;
+    }
+
+    .trust-badge .trust-icon,
+    .trust-badge .trust-stars {
+      font-size: 0.9rem !important;
+    }
+
+    .trust-badge .trust-text {
+      font-size: 0.7rem !important;
     }
   }
 </style>

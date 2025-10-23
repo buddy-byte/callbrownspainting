@@ -3,69 +3,258 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="404 - Page Not Found"
-  description="The page you're looking for doesn't exist. Return to our homepage to find what you need."
+  title="404 - Page Not Found | Browns Painting"
+  description="The page you're looking for doesn't exist. Call us at (251) 237-4545 or return to our homepage to find what you need."
 >
   <main>
     <section class="error-page">
+      <div class="error-background" style="background-image: url('/images/hero/hero-1-optimized.jpg')"></div>
+      <div class="error-overlay"></div>
+      
       <div class="container">
-        <h1>404</h1>
-        <h2>Page Not Found</h2>
+        <img src="/images/logo/browns-painting-logo-hat.png" alt="Browns Painting" class="error-logo" />
+        <h1>Oops! This Page Took a Paint Break</h1>
         <p>
-          Oops! The page you're looking for doesn't exist or has been moved.
+          The page you're looking for doesn't exist or has been moved. But don't worry—we're still here to help with all your painting needs!
         </p>
-        <a href="/" class="btn btn-primary">Go Back Home</a>
+
+        <div class="error-cta">
+          <a href="tel:+12512374545" class="btn btn-call">
+            <span class="btn-icon">📞</span>
+            Call Now: (251) 237-4545
+          </a>
+          <a href="/" class="btn btn-secondary">
+            <span class="btn-icon">🏠</span>
+            Go Home
+          </a>
+        </div>
+
+        <div class="quick-links">
+          <h3>Popular Pages</h3>
+          <div class="links-grid">
+            <a href="/services">Our Services</a>
+            <a href="/service-areas">Service Areas</a>
+            <a href="/contact">Get A Quote</a>
+            <a href="/about">About Us</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
   <style>
     .error-page {
-      min-height: 70vh;
+      position: relative;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 2rem;
+      padding: 6rem 1rem 4rem;
+      overflow: hidden;
+    }
+
+    .error-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 1;
+    }
+
+    .error-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        135deg,
+        rgba(30, 58, 138, 0.92) 0%,
+        rgba(59, 130, 246, 0.88) 100%
+      );
+      z-index: 2;
     }
 
     .container {
-      max-width: 600px;
+      position: relative;
+      z-index: 3;
+      max-width: 700px;
+    }
+
+    .error-logo {
+      height: 280px;
+      width: auto;
+      margin-bottom: 1.5rem;
+      filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4));
     }
 
     h1 {
-      font-size: clamp(6rem, 15vw, 10rem);
-      color: #667eea;
-      margin: 0;
-      line-height: 1;
-    }
-
-    h2 {
-      font-size: clamp(2rem, 5vw, 3rem);
-      color: #333;
-      margin: 1rem 0;
+      font-size: clamp(1.75rem, 5vw, 3rem);
+      color: white;
+      margin: 0 0 1.5rem 0;
+      font-weight: 700;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      line-height: 1.2;
     }
 
     p {
-      font-size: 1.2rem;
-      color: #666;
-      margin: 1.5rem 0 2rem;
+      font-size: 1.125rem;
+      color: rgba(255, 255, 255, 0.95);
+      margin: 0 auto 2rem auto;
+      line-height: 1.6;
+      max-width: 600px;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .error-cta {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
     }
 
     .btn {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
       padding: 1rem 2rem;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
       text-decoration: none;
-      border-radius: 0.5rem;
-      font-weight: 600;
-      transition: transform 0.2s, box-shadow 0.2s;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.125rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
     }
 
-    .btn:hover {
+    .btn-icon {
+      font-size: 1.25rem;
+    }
+
+    .btn-call {
+      background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+      color: #1f2937;
+    }
+
+    .btn-call:hover {
       transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    }
+
+    .btn-secondary {
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(30, 58, 138, 0.4);
+      background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%);
+    }
+
+    .quick-links {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .quick-links h3 {
+      color: white;
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .links-grid a {
+      padding: 0.875rem 1.25rem;
+      background: rgba(255, 255, 255, 0.95);
+      color: #1e3a8a;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .links-grid a:hover {
+      background: white;
+      color: #1e3a8a;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .error-page {
+        padding: 5rem 1rem 3rem;
+        min-height: 100vh;
+      }
+
+      .error-logo {
+        height: 200px;
+        margin-bottom: 1rem;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .error-cta {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+      }
+
+      .links-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+      }
+
+      .links-grid a {
+        padding: 0.75rem 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .error-page {
+        padding: 4rem 1rem 3rem;
+      }
+
+      .error-logo {
+        height: 160px;
+        margin-bottom: 0.75rem;
+      }
+
+      h1 {
+        font-size: 1.35rem;
+        margin-bottom: 0.75rem;
+      }
     }
   </style>
 </BaseLayout>

@@ -528,62 +528,208 @@ const keywords = "commercial painting Alabama, office painters, retail painting,
     margin-right: auto;
   }
 
-  /* Mobile Responsive */
+    /* Mobile Responsive */
   @media (max-width: 768px) {
+    .container {
+      padding: 0 1rem !important;
+    }
+
     .hero {
-      height: 70vh;
-      min-height: 500px;
+      height: 80vh !important;
+      min-height: 500px !important;
+      padding: 8rem 0 4rem !important;
     }
 
     .hero-logo-image {
-      height: 200px;
-    }
-
-    .hero h1 {
-      font-size: 2rem;
-      margin-top: -2rem;
+      height: 180px !important;
+      margin-bottom: 1rem !important;
     }
 
     .hero-subtitle {
-      font-size: 1.1rem;
+      font-size: 1rem !important;
+      margin-bottom: 1rem !important;
+      padding: 0 0.5rem !important;
+    }
+
+    .hero-text {
+      padding: 1rem !important;
+    }
+
+    .hero h1 {
+      font-size: 2rem !important;
+      margin-top: -2rem !important;
+      margin-bottom: 1rem !important;
+    }
+
+    .phone-number {
+      font-size: 0.9rem !important;
+    }
+
+    .phone-link {
+      font-size: 1rem !important;
     }
 
     .hero-trust-badges {
-      top: 1rem;
-      gap: 0.75rem;
-      padding: 0 1rem;
+      top: 0.75rem !important;
+      gap: 0.5rem !important;
+      padding: 0 0.5rem !important;
+      max-width: 100% !important;
+      display: grid !important;
+      grid-template-columns: 1fr 1fr !important;
+      justify-items: center !important;
     }
 
     .trust-badge {
-      padding: 0.63rem 1.25rem;
-      font-size: 1rem;
+      padding: 0.5rem 0.75rem !important;
+      font-size: 0.75rem !important;
+      white-space: nowrap !important;
+      width: 100% !important;
+      max-width: 160px !important;
+      justify-content: center !important;
+    }
+
+    .trust-badge .trust-icon {
+      font-size: 1rem !important;
+    }
+
+    .trust-badge .trust-stars {
+      font-size: 1rem !important;
+    }
+
+    .trust-badge .trust-text {
+      font-size: 0.75rem !important;
+    }
+
+    .intro-section h2,
+    .services-section h2,
+    .service-areas-section h2,
+    .faq-section h2 {
+      font-size: 1.75rem !important;
+    }
+
+    .intro-section p,
+    .service-areas-section > p {
+      font-size: 1rem !important;
+    }
+
+    .services-grid {
+      grid-template-columns: 1fr !important;
+      gap: 1.5rem !important;
+    }
+
+    .service-card {
+      padding: 1.5rem !important;
+    }
+
+    .service-card h3 {
+      font-size: 1.25rem !important;
+    }
+
+    .areas-list {
+      grid-template-columns: 1fr !important;
+      gap: 1.5rem !important;
+    }
+
+    .area-group {
+      padding: 1.5rem !important;
+    }
+
+    .area-group h3 {
+      font-size: 1.25rem !important;
+    }
+
+    .faq-grid {
+      gap: 1rem !important;
+    }
+
+    .faq-item {
+      padding: 1.5rem !important;
+    }
+
+    .faq-item h3 {
+      font-size: 1.125rem !important;
+    }
+
+    .btn {
+      padding: 1rem 2rem !important;
+      font-size: 1rem !important;
+      width: 100% !important;
+      max-width: 280px !important;
+    }
+
+    .services-section,
+    .service-areas-section,
+    .faq-section {
+      padding: 2.5rem 0 !important;
+    }
+
+    .intro-section {
+      padding: 2.5rem 0 !important;
+    }
+
+    .cta-section {
+      padding: 2.5rem 1rem !important;
+    }
+
+    .cta-section h2 {
+      font-size: 1.75rem !important;
+    }
+
+    .cta-section p {
+      font-size: 1rem !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero {
+      padding: 7rem 0 3rem !important;
+      min-height: 75vh !important;
+    }
+
+    .hero-logo-image {
+      height: 150px !important;
+    }
+
+    .hero h1 {
+      font-size: 1.75rem !important;
+      margin-top: -1.5rem !important;
+    }
+
+    .hero-trust-badges {
+      top: 0.5rem !important;
+      gap: 0.4rem !important;
+    }
+
+    .trust-badge {
+      padding: 0.4rem 0.6rem !important;
+      font-size: 0.7rem !important;
+      max-width: 140px !important;
     }
 
     .trust-badge .trust-icon,
     .trust-badge .trust-stars {
-      font-size: 1.25rem;
+      font-size: 0.9rem !important;
     }
 
     .trust-badge .trust-text {
-      font-size: 0.94rem;
+      font-size: 0.7rem !important;
     }
 
-    .services-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .btn {
-      padding: 1rem 1.5rem;
-      font-size: 1rem;
+    .service-card,
+    .area-group,
+    .faq-item {
+      padding: 1.25rem !important;
     }
 
     .services-section,
-    .faq-section {
-      padding: 3rem 0;
+    .service-areas-section,
+    .faq-section,
+    .intro-section {
+      padding: 2rem 0 !important;
     }
 
     .cta-section {
-      padding: 3rem 1.5rem;
+      padding: 2rem 0.75rem !important;
     }
   }
 </style>
