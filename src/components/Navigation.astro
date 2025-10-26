@@ -51,41 +51,44 @@ import Image from './Image.astro';
         </div>
       </div>
       
-      <div class="dropdown">
+      <!-- REBUILT SERVICE AREAS DROPDOWN - MULTI-COLUMN LAYOUT -->
+      <div class="dropdown" style="position: relative;">
         <a href="/service-areas" class="nav-link dropdown-toggle">Service Areas</a>
-        <div class="dropdown-content">
-          <div class="dropdown-section">
-            <h4>Escambia County</h4>
-            <a href="/brewton-painting">Brewton</a>
-            <a href="/atmore-painting">Atmore</a>
-            <a href="/flomaton-painting">Flomaton</a>
-          </div>
-          <div class="dropdown-section">
-            <h4>Baldwin County</h4>
-            <a href="/fairhope-painting">Fairhope</a>
-            <a href="/daphne-painting">Daphne</a>
-            <a href="/gulf-shores-painting">Gulf Shores</a>
-            <a href="/orange-beach-painting">Orange Beach</a>
-            <a href="/foley-painting">Foley</a>
-            <a href="/bay-minette-painting">Bay Minette</a>
-          </div>
-          <div class="dropdown-section">
-            <h4>Mobile County</h4>
-            <a href="/mobile-painting">Mobile</a>
-            <a href="/saraland-painting">Saraland</a>
-            <a href="/theodore-painting">Theodore</a>
-            <a href="/creola-painting">Creola</a>
-          </div>
-          <div class="dropdown-section">
-            <h4>Conecuh County</h4>
-            <a href="/evergreen-painting">Evergreen</a>
-            <a href="/castleberry-painting">Castleberry</a>
-            <a href="/lenox-painting">Lenox</a>
-            <a href="/repton-painting">Repton</a>
-          </div>
-          <div class="dropdown-section">
-            <h4>Monroe County</h4>
-            <a href="/monroeville-painting">Monroeville</a>
+        <div class="areas-dropdown-mega" style="position: absolute; top: 100%; left: 0; background: white; border-radius: 12px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); padding: 1.5rem; width: 750px; max-height: 85vh; overflow-y: auto; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 1000; border: 1px solid #e5e7eb;">
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; column-gap: 2rem;">
+            <div style="margin-bottom: 0;">
+              <h4 style="color: #1f2937; font-size: 0.8rem; font-weight: 700; margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 2px solid #3b82f6; padding-bottom: 0.4rem;">Escambia County</h4>
+              <a href="/brewton-painting" style="display: block; color: #6b7280; text-decoration: none; padding: 0.5rem; font-size: 0.8125rem; font-weight: 500; border-radius: 6px;">Brewton</a>
+              <a href="/atmore-painting" style="display: block; color: #6b7280; text-decoration: none; padding: 0.5rem; font-size: 0.8125rem; font-weight: 500; border-radius: 6px;">Atmore</a>
+              <a href="/flomaton-painting" style="display: block; color: #6b7280; text-decoration: none; padding: 0.5rem; font-size: 0.8125rem; font-weight: 500; border-radius: 6px;">Flomaton</a>
+            </div>
+            <div style="margin-bottom: 0;">
+              <h4 style="color: #1f2937; font-size: 0.8rem; font-weight: 700; margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 2px solid #3b82f6; padding-bottom: 0.4rem;">Baldwin County</h4>
+              <a href="/fairhope-painting" style="display: block; color: #6b7280; text-decoration: none; padding: 0.5rem; font-size: 0.8125rem; font-weight: 500; border-radius: 6px;">Fairhope</a>
+              <a href="/daphne-painting" style="display: block; color: #6b7280; text-decoration: none; padding: 0.5rem; font-size: 0.8125rem; font-weight: 500; border-radius: 6px;">Daphne</a>
+              <a href="/gulf-shores-painting" style="display: block; color: #6b7280; text-decoration: none; padding: 0.5rem; font-size: 0.8125rem; font-weight: 500; border-radius: 6px;">Gulf Shores</a>
+              <a href="/orange-beach-painting" style="display: block; color: #6b7280; text-decoration: none; padding: 0.5rem; font-size: 0.8125rem; font-weight: 500; border-radius: 6px;">Orange Beach</a>
+              <a href="/foley-painting" style="display: block; color: #6b7280; text-decoration: none; padding: 0.5rem; font-size: 0.8125rem; font-weight: 500; border-radius: 6px;">Foley</a>
+              <a href="/bay-minette-painting" style="display: block; color: #6b7280; text-decoration: none; padding: 0.5rem; font-size: 0.8125rem; font-weight: 500; border-radius: 6px;">Bay Minette</a>
+              <a href="/loxley-painting" style="display: block; color: #6b7280; text-decoration: none; padding: 0.5rem; font-size: 0.8125rem; font-weight: 500; border-radius: 6px;">Loxley</a>
+              <a href="/silverhill-painting" style="display: block; color: #6b7280; text-decoration: none; padding: 0.5rem; font-size: 0.8125rem; font-weight: 500; border-radius: 6px;">Silverhill</a>
+              <a href="/robertsdale-painting" style="display: block; color: #6b7280; text-decoration: none; padding: 0.5rem; font-size: 0.8125rem; font-weight: 500; border-radius: 6px;">Robertsdale</a>
+              <a href="/summerdale-painting" style="display: block; color: #6b7280; text-decoration: none; padding: 0.5rem; font-size: 0.8125rem; font-weight: 500; border-radius: 6px;">Summerdale</a>
+            </div>
+            <div style="margin-bottom: 0;">
+              <h4 style="color: #1f2937; font-size: 0.8rem; font-weight: 700; margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 2px solid #3b82f6; padding-bottom: 0.4rem;">Mobile County</h4>
+              <a href="/mobile-painting" style="display: block; color: #6b7280; text-decoration: none; padding: 0.5rem; font-size: 0.8125rem; font-weight: 500; border-radius: 6px;">Mobile</a>
+              <a href="/saraland-painting" style="display: block; color: #6b7280; text-decoration: none; padding: 0.5rem; font-size: 0.8125rem; font-weight: 500; border-radius: 6px;">Saraland</a>
+              <a href="/theodore-painting" style="display: block; color: #6b7280; text-decoration: none; padding: 0.5rem; font-size: 0.8125rem; font-weight: 500; border-radius: 6px;">Theodore</a>
+              <a href="/creola-painting" style="display: block; color: #6b7280; text-decoration: none; padding: 0.5rem; font-size: 0.8125rem; font-weight: 500; border-radius: 6px;">Creola</a>
+              <h4 style="color: #1f2937; font-size: 0.8rem; font-weight: 700; margin-bottom: 0.75rem; margin-top: 1rem; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 2px solid #3b82f6; padding-bottom: 0.4rem;">Conecuh County</h4>
+              <a href="/evergreen-painting" style="display: block; color: #6b7280; text-decoration: none; padding: 0.5rem; font-size: 0.8125rem; font-weight: 500; border-radius: 6px;">Evergreen</a>
+              <a href="/castleberry-painting" style="display: block; color: #6b7280; text-decoration: none; padding: 0.5rem; font-size: 0.8125rem; font-weight: 500; border-radius: 6px;">Castleberry</a>
+              <a href="/lenox-painting" style="display: block; color: #6b7280; text-decoration: none; padding: 0.5rem; font-size: 0.8125rem; font-weight: 500; border-radius: 6px;">Lenox</a>
+              <a href="/repton-painting" style="display: block; color: #6b7280; text-decoration: none; padding: 0.5rem; font-size: 0.8125rem; font-weight: 500; border-radius: 6px;">Repton</a>
+              <h4 style="color: #1f2937; font-size: 0.8rem; font-weight: 700; margin-bottom: 0.75rem; margin-top: 1rem; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 2px solid #3b82f6; padding-bottom: 0.4rem;">Monroe County</h4>
+              <a href="/monroeville-painting" style="display: block; color: #6b7280; text-decoration: none; padding: 0.5rem; font-size: 0.8125rem; font-weight: 500; border-radius: 6px;">Monroeville</a>
+            </div>
           </div>
         </div>
       </div>
@@ -98,6 +101,32 @@ import Image from './Image.astro';
 </nav>
 
 <style>
+  /* MEGA DROPDOWN HOVER STATE */
+  .dropdown:hover .areas-dropdown-mega {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+  }
+  
+  .areas-dropdown-mega a:hover {
+    color: #3b82f6 !important;
+    background: #f8fafc !important;
+    padding-left: 1rem !important;
+  }
+  
+  /* FORCE MULTI-COLUMN DROPDOWN - CRITICAL FIX */
+  .dropdown:hover .dropdown-content {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    min-width: 750px !important;
+    max-width: 800px !important;
+    gap: 1.5rem !important;
+    column-gap: 2rem !important;
+  }
+
   /* Top Bar */
   .top-bar {
     background: #1f2937;
@@ -279,9 +308,10 @@ import Image from './Image.astro';
     background: white;
     border-radius: 12px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-    padding: 2rem;
-    min-width: 350px;
-    max-height: 80vh;
+    padding: 1.5rem;
+    min-width: 700px;
+    max-width: 800px;
+    max-height: 85vh;
     overflow-y: auto;
     opacity: 0;
     visibility: hidden;
@@ -289,6 +319,10 @@ import Image from './Image.astro';
     transition: all 0.3s ease;
     z-index: 1000;
     border: 1px solid #e5e7eb;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    column-gap: 2rem;
   }
 
   .dropdown:hover .dropdown-content {
@@ -298,7 +332,8 @@ import Image from './Image.astro';
   }
 
   .dropdown-section {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0;
+    break-inside: avoid;
   }
 
   .dropdown-section:last-child {
@@ -307,25 +342,24 @@ import Image from './Image.astro';
 
   .dropdown-section h4 {
     color: #1f2937;
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     border-bottom: 2px solid #3b82f6;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.4rem;
   }
 
   .dropdown-content a {
     display: block;
     color: #6b7280;
     text-decoration: none;
-    padding: 0.75rem 0;
-    font-size: 0.875rem;
+    padding: 0.5rem 0.5rem;
+    font-size: 0.8125rem;
     font-weight: 500;
     transition: all 0.3s ease;
     border-radius: 6px;
-    padding-left: 0.5rem;
   }
 
   .dropdown-content a:hover {
@@ -356,6 +390,13 @@ import Image from './Image.astro';
     50% { box-shadow: 0 0 0 8px rgba(220, 38, 38, 0); }
   }
 
+  @media (max-width: 1024px) {
+    .dropdown:hover .dropdown-content {
+      grid-template-columns: repeat(2, 1fr) !important;
+      min-width: 500px !important;
+    }
+  }
+
   @media (max-width: 768px) {
     .top-bar {
       display: none;
@@ -367,6 +408,11 @@ import Image from './Image.astro';
     
     .container {
       padding: 0 1rem;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      grid-template-columns: 1fr !important;
+      min-width: 300px !important;
     }
   }
 </style>

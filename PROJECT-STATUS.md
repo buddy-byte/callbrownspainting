@@ -338,6 +338,25 @@ git push --force origin main  # Use with caution!
 - Clean, maintainable code structure
 - Git commit messages that explain the "why"
 
+**Critical Lesson Learned - Component File Discovery (Jan 26, 2025):**
+⚠️ **ALWAYS CHECK WHICH COMPONENT IS ACTUALLY BEING IMPORTED BEFORE EDITING!**
+
+**Issue:** Spent 30+ minutes editing `Navigation.astro` trying to fix the service areas dropdown menu, but changes never appeared in browser. Multiple attempts, cache clearing, browser testing - nothing worked.
+
+**Root Cause:** The site was using `MobileNavigation.astro` for BOTH mobile AND desktop navigation, not `Navigation.astro`. Discovered by checking `BaseLayout.astro`:
+```astro
+import Navigation from '../components/MobileNavigation.astro';
+```
+
+**Solution:** Always start by checking:
+1. Which component is imported in the layout files
+2. Use `grep` to search for imports: `grep -r "import.*ComponentName" src/`
+3. Verify the actual file being used BEFORE making edits
+4. Don't assume component naming matches usage
+
+**Time Saved in Future:** 30-60 minutes per similar incident  
+**Cost Saved:** $5-10 in wasted API calls per incident
+
 **Testing Checklist:**
 - [ ] Local build succeeds: `npm run build`
 - [ ] Dev server works: `npm run dev`

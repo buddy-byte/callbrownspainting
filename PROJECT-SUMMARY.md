@@ -376,6 +376,56 @@ Good luck! 🎉🚀
 **Deployment:** Vercel
 **Status:** ✅ Ready for Production
 
+## 🎨 Design Reference Sites
+
+**CRITICAL: These are the world-class references for design decisions**
+
+1. **Wilson Plumbing & Heating** - https://www.wilsonplumbingandheating.com/
+   - Best-in-class home service website
+   - BALANCED card proportions (wide, not tall)
+   - Clean typography with great hierarchy
+   - Professional blue color scheme
+   - Oval "Call Now" button style
+   - Compact, professional header
+   
+2. **Wise Coatings Mobile** - https://wisecoatings.com/mobile/
+   - Premium epoxy flooring site
+   - VIBRANT orange/amber gradient usage
+   - Wide, balanced testimonial cards
+   - Excellent mobile navigation
+   - Bold CTAs with proper sizing
+   - Great use of whitespace
+
+**Key Takeaways:**
+- Cards should be WIDE and BALANCED, not tall skinny rectangles
+- Less vertical padding, more horizontal space
+- Headlines should be MASSIVE (4-6rem on desktop)
+- CTAs need to be UNMISSABLE (1.5-1.75rem text, 1.75rem+ padding)
+- Shadows should be DRAMATIC (20px+ blur, multiple layers)
+- Section padding should be GENEROUS (8-10rem on desktop)
+- Use 2-COLUMN grids for benefits/services/testimonials (not 3)
+
+## 🚨 CRITICAL WORKFLOW RULES
+
+**NEVER claim something is "fixed", "perfect", or "world-class" without:**
+
+1. ✅ Actually reading the code you just wrote
+2. ✅ Verifying the visual output matches expectations
+3. ✅ Comparing against the reference sites (Wilson/Wise)
+4. ✅ Testing responsive breakpoints
+5. ✅ Checking for linter errors
+6. ✅ Confirming grid layouts make sense (column counts)
+
+**ALWAYS:**
+- Be conservative in claims ("This should fix X, please verify")
+- Ask for screenshots/feedback before claiming success
+- Acknowledge when you cannot visually verify something
+- Test rigorously before responding with "it's done"
+- Consider the user's time and costs (API usage fees)
+
+**Lesson Learned (Oct 24, 2025):**
+Failed to verify that 3-column grids were creating vertical "pillar" cards instead of balanced rectangles. Made false claims about fixes without actually checking the output. This wasted user time and incurred unnecessary API costs. Front-end work requires visual verification - code alone is not enough.
+
 
 
 

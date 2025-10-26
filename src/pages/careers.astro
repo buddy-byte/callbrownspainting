@@ -1,0 +1,969 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+// Breadcrumb navigation
+const breadcrumbItems = [
+  { name: 'Careers', url: '/careers', current: true }
+];
+---
+
+<BaseLayout
+  title="Careers - Join Browns Painting Team | Painters Wanted in South Alabama"
+  description="Join a 25+ year painting company that values quality, integrity, and its people. Competitive pay, steady work, and opportunities for growth. Now hiring experienced painters and crew leaders in South Alabama."
+>
+  <main>
+    <!-- Hero Section - Full Width -->
+    <section class="hero-section">
+      <div class="hero-background" style="background-image: url('/images/hero/hero-2-optimized.jpg')"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Join a <span class="highlight">Painting Company</span><br>That Values You</h1>
+        <p class="hero-subtitle">25+ years in business. Competitive pay. Room to grow.<br>We're looking for experienced painters who take pride in their work.</p>
+        <div class="hero-cta-group">
+          <a href="#apply" class="btn btn-primary btn-large">Apply Now</a>
+          <a href="tel:+12512374545" class="btn btn-secondary btn-large">Call: (251) 237-4545</a>
+        </div>
+      </div>
+    </section>
+
+    <Breadcrumbs items={breadcrumbItems} />
+
+    <!-- Quick Stats - White Section -->
+    <section class="stats-section">
+      <div class="container-wide">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number">25+</div>
+            <div class="stat-label">Years in Business</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">$18-28</div>
+            <div class="stat-label">Hourly Pay Range</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">Year-Round</div>
+            <div class="stat-label">Steady Work</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">Growing</div>
+            <div class="stat-label">Expanding Team</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us - Blue Section -->
+    <section class="why-section section-blue">
+      <div class="container-wide">
+        <div class="section-header-center">
+          <h2>Why Painters Choose Browns Painting</h2>
+          <p class="section-subtitle">We've been in business for 25+ years because we treat our people right</p>
+        </div>
+
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">💵</div>
+            <h3>Top Pay</h3>
+            <p>Competitive rates based on experience. Raises for performance.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">📅</div>
+            <h3>Steady Work</h3>
+            <p>Consistent jobs year-round. No wondering where your next paycheck comes from.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">🎯</div>
+            <h3>Quality Work</h3>
+            <p>Work on projects you're proud of. No cutting corners.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">🤝</div>
+            <h3>Family-Owned</h3>
+            <p>You're a person, not a number. Direct access to ownership.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">🛠️</div>
+            <h3>Pro Equipment</h3>
+            <p>Well-maintained tools and quality materials.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">📈</div>
+            <h3>Room to Grow</h3>
+            <p>Move up to crew leader or project manager roles.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Join - White Section with Image -->
+    <section class="how-to-join-section">
+      <div class="container-wide">
+        <div class="split-content">
+          <div class="content-left">
+            <h2>How to Join Our Team</h2>
+            <p class="intro-text">Getting started is simple. We move fast for the right candidates.</p>
+
+            <div class="steps-list">
+              <div class="step-item">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h3>Apply or Call</h3>
+                  <p>Fill out the quick form below or call Boomer directly at (251) 237-4545</p>
+                </div>
+              </div>
+
+              <div class="step-item">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h3>Quick Interview</h3>
+                  <p>We'll chat about your experience and what you're looking for</p>
+                </div>
+              </div>
+
+              <div class="step-item">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h3>Start Working</h3>
+                  <p>If it's a fit, you could start as soon as next week</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="#apply" class="btn btn-primary btn-large">Apply Now</a>
+          </div>
+
+          <div class="content-right">
+            <img src="/images/projects/projects-optimized/interior-painting-1-optimized.jpg" alt="Professional painting work" class="feature-image">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Positions - Amber Section -->
+    <section class="positions-section section-amber">
+      <div class="container-wide">
+        <div class="section-header-center">
+          <h2>Open Positions</h2>
+          <p class="section-subtitle">We're hiring for multiple roles across South Alabama</p>
+        </div>
+
+        <div class="positions-grid">
+          <div class="position-card">
+            <div class="position-header">
+              <h3>🎨 Experienced Painters</h3>
+              <div class="position-pay">$18-22/hour</div>
+            </div>
+            <div class="position-requirements">
+              <h4>What you need:</h4>
+              <ul>
+                <li>2+ years painting experience</li>
+                <li>Knowledge of proper prep techniques</li>
+                <li>Reliable transportation</li>
+                <li>Attention to detail</li>
+              </ul>
+            </div>
+            <a href="#apply" class="btn btn-dark">Apply for This Role</a>
+          </div>
+
+          <div class="position-card featured">
+            <div class="featured-badge">⭐ High Priority</div>
+            <div class="position-header">
+              <h3>👷 Crew Leaders</h3>
+              <div class="position-pay">$22-28/hour</div>
+            </div>
+            <div class="position-requirements">
+              <h4>What you need:</h4>
+              <ul>
+                <li>5+ years painting experience</li>
+                <li>Previous leadership experience</li>
+                <li>Strong communication skills</li>
+                <li>Customer service mindset</li>
+              </ul>
+            </div>
+            <a href="#apply" class="btn btn-dark">Apply for This Role</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What Makes Us Different - Dark Navy Section -->
+    <section class="difference-section section-dark">
+      <div class="container-wide">
+        <div class="section-header-center white-text">
+          <h2>What Makes Browns Painting Different</h2>
+          <p class="section-subtitle">25+ years of doing business the right way</p>
+        </div>
+
+        <div class="difference-grid">
+          <div class="difference-item">
+            <div class="difference-icon">🏠</div>
+            <h3>Family-Owned Since 1999</h3>
+            <p>Not a franchise. Boomer started this business and still runs it. You'll know who you work for.</p>
+          </div>
+
+          <div class="difference-item">
+            <div class="difference-icon">💪</div>
+            <h3>Quality is Everything</h3>
+            <p>We built our reputation on doing it right. Proper prep, quality materials, craftsman-level work.</p>
+          </div>
+
+          <div class="difference-item">
+            <div class="difference-icon">🌱</div>
+            <h3>We're Expanding</h3>
+            <p>After 25 years of success, we're growing across South Alabama. More opportunity for the right people.</p>
+          </div>
+
+          <div class="difference-item">
+            <div class="difference-icon">🎖️</div>
+            <h3>Professional Standards</h3>
+            <p>We show up on time, communicate clearly, and treat every home with respect. We expect the same from our team.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Application Form - White Section -->
+    <section class="application-section" id="apply">
+      <div class="container-narrow">
+        <div class="section-header-center">
+          <h2>Ready to Join Our Team?</h2>
+          <p class="section-subtitle">Fill out this quick form and we'll get back to you within 24 hours</p>
+        </div>
+
+        <form class="application-form" name="career-application" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="career-application" />
+          <p class="hidden">
+            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+          </p>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="firstName">First Name *</label>
+              <input type="text" id="firstName" name="firstName" required />
+            </div>
+            
+            <div class="form-group">
+              <label for="lastName">Last Name *</label>
+              <input type="text" id="lastName" name="lastName" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group full-width">
+              <label for="position">Position Interested In *</label>
+              <select id="position" name="position" required>
+                <option value="">-- Select Position --</option>
+                <option value="experienced-painter">Experienced Painter</option>
+                <option value="crew-leader">Crew Leader / Project Lead</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="experience">Years of Painting Experience *</label>
+              <select id="experience" name="experience" required>
+                <option value="">-- Select Years --</option>
+                <option value="1-2">1-2 years</option>
+                <option value="2-5">2-5 years</option>
+                <option value="5-10">5-10 years</option>
+                <option value="10+">10+ years</option>
+              </select>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="message">Tell us about your experience (optional)</label>
+              <textarea id="message" name="message" rows="4" placeholder="Previous employers, types of projects you've worked on, special skills..."></textarea>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn-large">
+              Submit Application
+            </button>
+            <p class="form-note">Or call Boomer directly: <a href="tel:+12512374545" class="phone-link">(251) 237-4545</a></p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Final CTA - Amber Section -->
+    <section class="final-cta-section section-amber">
+      <div class="container-wide">
+        <div class="cta-content-center">
+          <h2>Ready to Build a Career, Not Just a Job?</h2>
+          <p>Join South Alabama's most trusted painting company</p>
+          <div class="cta-buttons">
+            <a href="#apply" class="btn btn-dark btn-large">Apply Now</a>
+            <a href="tel:+12512374545" class="btn btn-secondary btn-large">Call: (251) 237-4545</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  /* ============================================
+     GLOBAL RESETS & VARIABLES
+     ============================================ */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --color-blue-dark: #1e3a8a;
+    --color-blue: #3b82f6;
+    --color-amber: #f59e0b;
+    --color-amber-light: #fbbf24;
+    --color-navy: #1f2937;
+    --color-dark: #111827;
+    --color-white: #ffffff;
+    --color-gray-50: #f9fafb;
+    --color-gray-100: #f3f4f6;
+    --color-gray-300: #d1d5db;
+    --color-gray-600: #4b5563;
+    --color-gray-900: #111827;
+  }
+
+  /* ============================================
+     TYPOGRAPHY - BOLD & CLEAR
+     ============================================ */
+  h1, h2, h3, h4 {
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--color-navy);
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    margin-bottom: 1.5rem;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    line-height: 1.7;
+    color: var(--color-gray-600);
+    font-size: 1.125rem;
+  }
+
+  /* ============================================
+     CONTAINER UTILITIES
+     ============================================ */
+  .container-wide {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .container-narrow {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  /* ============================================
+     SECTION SPACING - GENEROUS WHITESPACE
+     ============================================ */
+  section {
+    padding: 6rem 0;
+  }
+
+  @media (max-width: 768px) {
+    section {
+      padding: 4rem 0;
+    }
+  }
+
+  /* ============================================
+     SECTION BACKGROUNDS - FULL WIDTH ALTERNATING
+     ============================================ */
+  .section-blue {
+    background: linear-gradient(135deg, var(--color-blue-dark) 0%, var(--color-blue) 100%);
+    color: white;
+  }
+
+  .section-blue h2,
+  .section-blue h3 {
+    color: white;
+  }
+
+  .section-blue p {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .section-amber {
+    background: linear-gradient(135deg, var(--color-amber) 0%, var(--color-amber-light) 100%);
+  }
+
+  .section-dark {
+    background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-dark) 100%);
+    color: white;
+  }
+
+  .section-dark h2,
+  .section-dark h3 {
+    color: white;
+  }
+
+  .section-dark p {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .white-text h2,
+  .white-text p {
+    color: white !important;
+  }
+
+  /* ============================================
+     HERO SECTION - FULL WIDTH
+     ============================================ */
+  .hero-section {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      rgba(30, 58, 138, 0.9) 0%,
+      rgba(59, 130, 246, 0.85) 100%
+    );
+    z-index: 2;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 1000px;
+    padding: 2rem;
+    color: white;
+  }
+
+  .hero-content h1 {
+    color: white;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .highlight {
+    background: linear-gradient(135deg, var(--color-amber) 0%, var(--color-amber-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 2.5rem;
+    font-weight: 500;
+  }
+
+  .hero-cta-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* ============================================
+     BUTTONS - BOLD & CLEAR
+     ============================================ */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    white-space: nowrap;
+  }
+
+  .btn-large {
+    padding: 1.25rem 2.5rem;
+    font-size: 1.25rem;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--color-amber) 0%, var(--color-amber-light) 100%);
+    color: var(--color-navy);
+    box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.6);
+  }
+
+  .btn-secondary {
+    background: white;
+    color: var(--color-blue-dark);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  }
+
+  .btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .btn-dark {
+    background: var(--color-navy);
+    color: white;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  }
+
+  .btn-dark:hover {
+    background: var(--color-dark);
+    transform: translateY(-2px);
+  }
+
+  /* ============================================
+     STATS SECTION
+     ============================================ */
+  .stats-section {
+    background: white;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    color: var(--color-blue);
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    font-size: 1.125rem;
+    color: var(--color-gray-600);
+    font-weight: 600;
+  }
+
+  /* ============================================
+     SECTION HEADERS
+     ============================================ */
+  .section-header-center {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-gray-600);
+    margin-top: 1rem;
+  }
+
+  /* ============================================
+     BENEFITS GRID
+     ============================================ */
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .benefit-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .benefit-card:hover {
+    transform: translateY(-8px);
+  }
+
+  .benefit-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  .benefit-card h3 {
+    color: var(--color-blue-dark);
+    margin-bottom: 1rem;
+  }
+
+  .benefit-card p {
+    font-size: 1rem;
+  }
+
+  /* ============================================
+     SPLIT CONTENT (IMAGE + TEXT)
+     ============================================ */
+  .split-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  @media (max-width: 968px) {
+    .split-content {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .content-right {
+      order: -1;
+    }
+  }
+
+  .content-left h2 {
+    margin-bottom: 1rem;
+  }
+
+  .intro-text {
+    font-size: 1.25rem;
+    color: var(--color-gray-600);
+    margin-bottom: 2.5rem;
+  }
+
+  .feature-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  /* ============================================
+     STEPS LIST
+     ============================================ */
+  .steps-list {
+    margin-bottom: 2.5rem;
+  }
+
+  .step-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .step-number {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--color-blue-dark) 0%, var(--color-blue) 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    font-weight: 800;
+  }
+
+  .step-content h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  .step-content p {
+    font-size: 1rem;
+  }
+
+  /* ============================================
+     POSITIONS GRID
+     ============================================ */
+  .positions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .position-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+
+  .position-card.featured {
+    border: 3px solid var(--color-blue);
+  }
+
+  .featured-badge {
+    position: absolute;
+    top: -12px;
+    right: 2rem;
+    background: var(--color-blue);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 700;
+  }
+
+  .position-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--color-gray-100);
+  }
+
+  .position-header h3 {
+    margin-bottom: 0.75rem;
+  }
+
+  .position-pay {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-amber);
+  }
+
+  .position-requirements h4 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--color-navy);
+  }
+
+  .position-requirements ul {
+    list-style: none;
+    margin-bottom: 2rem;
+  }
+
+  .position-requirements li {
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    position: relative;
+    color: var(--color-gray-600);
+  }
+
+  .position-requirements li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--color-blue);
+    font-weight: 700;
+  }
+
+  /* ============================================
+     DIFFERENCE GRID
+     ============================================ */
+  .difference-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+  }
+
+  .difference-item {
+    text-align: center;
+  }
+
+  .difference-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  .difference-item h3 {
+    color: var(--color-amber);
+    margin-bottom: 1rem;
+  }
+
+  /* ============================================
+     APPLICATION FORM - CLEAN & SIMPLE
+     ============================================ */
+  .application-form {
+    background: var(--color-gray-50);
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 640px) {
+    .form-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group.full-width {
+    grid-column: 1 / -1;
+  }
+
+  .form-group label {
+    font-weight: 600;
+    color: var(--color-navy);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.875rem;
+    border: 2px solid var(--color-gray-300);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    background: white;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-blue);
+  }
+
+  .form-actions {
+    text-align: center;
+  }
+
+  .form-note {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: var(--color-gray-600);
+  }
+
+  .phone-link {
+    color: var(--color-blue);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .phone-link:hover {
+    text-decoration: underline;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  /* ============================================
+     FINAL CTA SECTION
+     ============================================ */
+  .cta-content-center {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .cta-content-center h2 {
+    color: var(--color-navy);
+    margin-bottom: 1rem;
+  }
+
+  .cta-content-center p {
+    font-size: 1.25rem;
+    color: var(--color-gray-600);
+    margin-bottom: 2.5rem;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* ============================================
+     MOBILE RESPONSIVE
+     ============================================ */
+  @media (max-width: 768px) {
+    .container-wide,
+    .container-narrow {
+      padding: 0 1rem;
+    }
+
+    .hero-content {
+      padding: 1rem;
+    }
+
+    .stats-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .benefits-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .positions-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .difference-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .application-form {
+      padding: 2rem 1.5rem;
+    }
+
+    .btn-large {
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
+      width: 100%;
+    }
+  }
+</style>

@@ -1,29 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ServiceSchema from '../components/ServiceSchema.astro';
 
-const title = "Commercial Painting Services | Business Painters South Alabama";
-const description = "Professional commercial painting for offices, retail, restaurants. Minimal disruption, after-hours scheduling. Serving Mobile, Baldwin County businesses.";
-const keywords = "commercial painting Alabama, office painters, retail painting, restaurant painting";
+const title = "Commercial Painting Services | Professional Painters South Alabama";
+const description = "Professional painting for businesses and commercial properties. Serving Mobile, Daphne, Fairhope, Gulf Shores, and surrounding South Alabama areas.";
 ---
 
-<BaseLayout
-  title={title}
-  description={description}
-  keywords={keywords}
->
+<BaseLayout title={title} description={description}>
   <main>
-    <!-- Service Schema -->
-    <ServiceSchema
-      serviceName="Commercial Painting Services"
-      serviceDescription="Professional commercial painting for offices, retail, restaurants. Minimal disruption, after-hours scheduling. Serving Mobile, Baldwin County businesses."
-      serviceUrl="https://callbrownspainting.com/commercial-painting"
-      serviceType="Commercial Painting"
-      priceRange="$$"
-      serviceImage="https://callbrownspainting.com/assets/commercial-painting-service.jpg"
-    />
-
-    <!-- Hero Section -->
+    <!-- Hero Section (Keep Existing) -->
     <section class="hero">
       <div class="hero-background">
         <div class="hero-slide active" style="background-image: url('/images/hero/hero-1-optimized.jpg')"></div>
@@ -56,8 +40,8 @@ const keywords = "commercial painting Alabama, office painters, retail painting,
         <div class="hero-content">
           <div class="hero-text">
             <img src="/images/logo/browns-painting-logo-hat.png" alt="Browns Painting" class="hero-logo-image" />
-            <h1>Professional Commercial Painting Services</h1>
-            <p class="hero-subtitle">Expert commercial painting for businesses throughout South Alabama with minimal disruption</p>
+            <h1>Commercial Painting Services</h1>
+            <p class="hero-subtitle">Professional painting for businesses and commercial properties</p>
             <div class="phone-number">
               <span class="phone-label">Call Us Today at</span>
               <a href="tel:+12512374545" class="phone-link">(251) 237-4545</a>
@@ -79,63 +63,65 @@ const keywords = "commercial painting Alabama, office painters, retail painting,
       </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services-section">
-      <div class="container">
-        <h2>Our Commercial Painting Services</h2>
-        <div class="services-grid">
-          <div class="service-card">
-            <h3>🏢 Office Buildings</h3>
-            <p>Professional office painting services with minimal disruption to your business operations.</p>
-            <ul>
-              <li>Interior office painting</li>
-              <li>Reception areas</li>
-              <li>Conference rooms</li>
-              <li>After-hours scheduling</li>
+    <!-- Services Section - Inline Styles -->
+    <section style="padding: 5rem 0; background: white;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+        <div style="text-align: center; margin-bottom: 4rem;">
+          <span style="display: inline-block; padding: 0.5rem 1.5rem; background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(37, 99, 235, 0.1)); color: #3b82f6; font-weight: 700; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 1px; border-radius: 50px; margin-bottom: 1rem; border: 1px solid rgba(59, 130, 246, 0.2);">What We Offer</span>
+          <h2 style="font-size: 3rem; font-weight: 900; color: #1f2937; margin-bottom: 1rem;">Our Services</h2>
+          <p style="font-size: 1.25rem; color: #6b7280;">Professional painting services backed by 25+ years of experience</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+          
+          <div style="background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 2px solid #f3f4f6;">
+            <div style="font-size: 4rem; margin-bottom: 1.5rem;">🏢</div>
+            <h3 style="font-size: 1.75rem; font-weight: 800; color: #1f2937; margin-bottom: 1rem;">Office Painting</h3>
+            <p style="color: #6b7280; line-height: 1.7; margin-bottom: 1.5rem;">Transform your workplace with minimal disruption</p>
+            <ul style="list-style: none; padding: 0; margin: 1.5rem 0;">
+              <li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ After-hours scheduling</li><li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Weekend availability</li><li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Quick turnaround</li><li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Clean work environment</li>
             </ul>
           </div>
-          
-          <div class="service-card">
-            <h3>🏪 Retail Spaces</h3>
-            <p>Transform your retail space with professional painting that attracts customers.</p>
-            <ul>
-              <li>Storefront painting</li>
-              <li>Display areas</li>
-              <li>Back-of-house spaces</li>
-              <li>Quick turnaround</li>
+          <div style="background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 2px solid #f3f4f6;">
+            <div style="font-size: 4rem; margin-bottom: 1.5rem;">🏪</div>
+            <h3 style="font-size: 1.75rem; font-weight: 800; color: #1f2937; margin-bottom: 1rem;">Retail Spaces</h3>
+            <p style="color: #6b7280; line-height: 1.7; margin-bottom: 1.5rem;">Keep your business looking fresh and inviting</p>
+            <ul style="list-style: none; padding: 0; margin: 1.5rem 0;">
+              <li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Storefronts</li><li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Interior remodels</li><li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Brand color matching</li><li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Fast project completion</li>
             </ul>
           </div>
-          
-          <div class="service-card">
-            <h3>🍽️ Restaurants & Hospitality</h3>
-            <p>Specialized painting for restaurants, hotels, and hospitality businesses.</p>
-            <ul>
-              <li>Dining room painting</li>
-              <li>Kitchen areas</li>
-              <li>Exterior refresh</li>
-              <li>Health code compliance</li>
+          <div style="background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 2px solid #f3f4f6;">
+            <div style="font-size: 4rem; margin-bottom: 1.5rem;">🔧</div>
+            <h3 style="font-size: 1.75rem; font-weight: 800; color: #1f2937; margin-bottom: 1rem;">Industrial Coatings</h3>
+            <p style="color: #6b7280; line-height: 1.7; margin-bottom: 1.5rem;">Durable coatings for high-traffic commercial spaces</p>
+            <ul style="list-style: none; padding: 0; margin: 1.5rem 0;">
+              <li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Warehouse floors</li><li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Industrial equipment</li><li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Safety markings</li><li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Protective coatings</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="faq-section">
-      <div class="container">
-        <h2>Frequently Asked Questions - Commercial Painting</h2>
-        <div class="faq-container">
-          <div class="faq-item">
-            <h3>Can you work after business hours?</h3>
-            <p>Yes! We offer flexible scheduling including evenings, weekends, and overnight shifts to minimize disruption to your business operations. We understand the importance of maintaining your daily business activities.</p>
+    <!-- FAQ Section - Inline Styles -->
+    <section style="padding: 5rem 0; background: #f8fafc;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+        <div style="text-align: center; margin-bottom: 4rem;">
+          <h2 style="font-size: 3rem; font-weight: 900; color: #1f2937; margin-bottom: 1rem;">Frequently Asked Questions</h2>
+        </div>
+
+        <div style="display: grid; gap: 1.5rem;">
+          
+          <div style="background: #f8fafc; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); border-left: 4px solid #3b82f6;">
+            <h3 style="color: #1e40af; margin-bottom: 1rem; font-size: 1.25rem; font-weight: 700;">Can you work after business hours?</h3>
+            <p style="line-height: 1.7; color: #4b5563; margin: 0;">Yes! We offer flexible scheduling including evenings and weekends to minimize disruption to your business operations. We work around your schedule to keep your business running smoothly.</p>
           </div>
-          <div class="faq-item">
-            <h3>How long does commercial painting take?</h3>
-            <p>Project timelines vary based on the size and scope. Small offices may take 2-3 days, while larger commercial spaces could take 1-2 weeks. We provide detailed schedules and can work in phases if needed to accommodate your business.</p>
+          <div style="background: #f8fafc; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); border-left: 4px solid #3b82f6;">
+            <h3 style="color: #1e40af; margin-bottom: 1rem; font-size: 1.25rem; font-weight: 700;">How long does commercial painting take?</h3>
+            <p style="line-height: 1.7; color: #4b5563; margin: 0;">Project timelines vary based on square footage and scope. A typical office suite takes 2-4 days, while larger commercial spaces may take 1-2 weeks. We provide detailed schedules with every estimate.</p>
           </div>
-          <div class="faq-item">
-            <h3>Do you have commercial insurance?</h3>
-            <p>Yes, we carry comprehensive commercial liability insurance and workers' compensation coverage. We're fully licensed and insured to work on commercial properties throughout Alabama and can provide certificates of insurance as needed.</p>
+          <div style="background: #f8fafc; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); border-left: 4px solid #3b82f6;">
+            <h3 style="color: #1e40af; margin-bottom: 1rem; font-size: 1.25rem; font-weight: 700;">Are you insured for commercial work?</h3>
+            <p style="line-height: 1.7; color: #4b5563; margin: 0;">Yes, we carry full commercial liability insurance and workers compensation coverage. We can provide certificates of insurance to your property manager or business owner.</p>
           </div>
         </div>
       </div>
@@ -144,8 +130,8 @@ const keywords = "commercial painting Alabama, office painters, retail painting,
     <!-- CTA Section -->
     <section class="cta-section">
       <div class="container">
-        <h2>Ready for Professional Commercial Painting?</h2>
-        <p>Contact Barry "Boomer" Brown today for a free estimate on your commercial painting project.</p>
+        <h2>Ready to Get Started?</h2>
+        <p>Contact Browns Painting today for a free estimate on your project.</p>
         <a href="/contact" class="btn btn-primary">
           <span class="btn-icon">📞</span>
           Get Free Estimate
@@ -162,7 +148,7 @@ const keywords = "commercial painting Alabama, office painters, retail painting,
     padding: 0 1.5rem;
   }
 
-  /* Hero Section */
+  /* Hero Section - Keep Existing Styles */
   .hero {
     position: relative;
     height: 100vh;
@@ -406,106 +392,6 @@ const keywords = "commercial painting Alabama, office painters, retail painting,
     font-size: 1.25rem;
   }
 
-  /* Content Sections */
-  .services-section,
-  .faq-section {
-    padding: 5rem 0;
-  }
-
-  .services-section {
-    background: #f8fafc;
-  }
-
-  .faq-section {
-    background: white;
-  }
-
-  .services-section h2,
-  .faq-section h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: #1f2937;
-    margin-bottom: 3rem;
-  }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 3rem;
-  }
-
-  .service-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-left: 4px solid #3b82f6;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .service-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-  }
-
-  .service-card h3 {
-    color: #1e40af;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    font-weight: 700;
-  }
-
-  .service-card p {
-    margin-bottom: 1rem;
-    line-height: 1.7;
-    color: #4b5563;
-  }
-
-  .service-card ul {
-    margin: 1rem 0;
-    padding-left: 1.5rem;
-  }
-
-  .service-card li {
-    margin-bottom: 0.5rem;
-    color: #6b7280;
-    line-height: 1.6;
-  }
-
-  .faq-container {
-    display: grid;
-    gap: 1.5rem;
-    margin-top: 3rem;
-  }
-
-  .faq-item {
-    background: #f8fafc;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    border-left: 4px solid #3b82f6;
-    transition: transform 0.3s ease;
-  }
-
-  .faq-item:hover {
-    transform: translateX(4px);
-  }
-
-  .faq-item h3 {
-    color: #1e40af;
-    margin-bottom: 1rem;
-    font-size: 1.25rem;
-    font-weight: 700;
-  }
-
-  .faq-item p {
-    line-height: 1.7;
-    color: #4b5563;
-    margin: 0;
-  }
-
   .cta-section {
     text-align: center;
     padding: 5rem 2rem;
@@ -528,208 +414,30 @@ const keywords = "commercial painting Alabama, office painters, retail painting,
     margin-right: auto;
   }
 
-    /* Mobile Responsive */
   @media (max-width: 768px) {
-    .container {
-      padding: 0 1rem !important;
-    }
-
     .hero {
-      height: 80vh !important;
-      min-height: 500px !important;
-      padding: 8rem 0 4rem !important;
+      height: 80vh;
+      min-height: 500px;
     }
-
+    
     .hero-logo-image {
-      height: 180px !important;
-      margin-bottom: 1rem !important;
+      height: 180px;
     }
-
-    .hero-subtitle {
-      font-size: 1rem !important;
-      margin-bottom: 1rem !important;
-      padding: 0 0.5rem !important;
-    }
-
-    .hero-text {
-      padding: 1rem !important;
-    }
-
+    
     .hero h1 {
-      font-size: 2rem !important;
-      margin-top: -2rem !important;
-      margin-bottom: 1rem !important;
+      font-size: 2rem;
+      margin-top: -2rem;
     }
-
-    .phone-number {
-      font-size: 0.9rem !important;
-    }
-
-    .phone-link {
-      font-size: 1rem !important;
-    }
-
+    
     .hero-trust-badges {
-      top: 0.75rem !important;
-      gap: 0.5rem !important;
-      padding: 0 0.5rem !important;
-      max-width: 100% !important;
-      display: grid !important;
-      grid-template-columns: 1fr 1fr !important;
-      justify-items: center !important;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+      top: 0.75rem;
     }
-
+    
     .trust-badge {
-      padding: 0.5rem 0.75rem !important;
-      font-size: 0.75rem !important;
-      white-space: nowrap !important;
-      width: 100% !important;
-      max-width: 160px !important;
-      justify-content: center !important;
-    }
-
-    .trust-badge .trust-icon {
-      font-size: 1rem !important;
-    }
-
-    .trust-badge .trust-stars {
-      font-size: 1rem !important;
-    }
-
-    .trust-badge .trust-text {
-      font-size: 0.75rem !important;
-    }
-
-    .intro-section h2,
-    .services-section h2,
-    .service-areas-section h2,
-    .faq-section h2 {
-      font-size: 1.75rem !important;
-    }
-
-    .intro-section p,
-    .service-areas-section > p {
-      font-size: 1rem !important;
-    }
-
-    .services-grid {
-      grid-template-columns: 1fr !important;
-      gap: 1.5rem !important;
-    }
-
-    .service-card {
-      padding: 1.5rem !important;
-    }
-
-    .service-card h3 {
-      font-size: 1.25rem !important;
-    }
-
-    .areas-list {
-      grid-template-columns: 1fr !important;
-      gap: 1.5rem !important;
-    }
-
-    .area-group {
-      padding: 1.5rem !important;
-    }
-
-    .area-group h3 {
-      font-size: 1.25rem !important;
-    }
-
-    .faq-grid {
-      gap: 1rem !important;
-    }
-
-    .faq-item {
-      padding: 1.5rem !important;
-    }
-
-    .faq-item h3 {
-      font-size: 1.125rem !important;
-    }
-
-    .btn {
-      padding: 1rem 2rem !important;
-      font-size: 1rem !important;
-      width: 100% !important;
-      max-width: 280px !important;
-    }
-
-    .services-section,
-    .service-areas-section,
-    .faq-section {
-      padding: 2.5rem 0 !important;
-    }
-
-    .intro-section {
-      padding: 2.5rem 0 !important;
-    }
-
-    .cta-section {
-      padding: 2.5rem 1rem !important;
-    }
-
-    .cta-section h2 {
-      font-size: 1.75rem !important;
-    }
-
-    .cta-section p {
-      font-size: 1rem !important;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .hero {
-      padding: 7rem 0 3rem !important;
-      min-height: 75vh !important;
-    }
-
-    .hero-logo-image {
-      height: 150px !important;
-    }
-
-    .hero h1 {
-      font-size: 1.75rem !important;
-      margin-top: -1.5rem !important;
-    }
-
-    .hero-trust-badges {
-      top: 0.5rem !important;
-      gap: 0.4rem !important;
-    }
-
-    .trust-badge {
-      padding: 0.4rem 0.6rem !important;
-      font-size: 0.7rem !important;
-      max-width: 140px !important;
-    }
-
-    .trust-badge .trust-icon,
-    .trust-badge .trust-stars {
-      font-size: 0.9rem !important;
-    }
-
-    .trust-badge .trust-text {
-      font-size: 0.7rem !important;
-    }
-
-    .service-card,
-    .area-group,
-    .faq-item {
-      padding: 1.25rem !important;
-    }
-
-    .services-section,
-    .service-areas-section,
-    .faq-section,
-    .intro-section {
-      padding: 2rem 0 !important;
-    }
-
-    .cta-section {
-      padding: 2rem 0.75rem !important;
+      font-size: 0.75rem;
+      padding: 0.5rem 0.75rem;
     }
   }
 </style>
@@ -742,12 +450,7 @@ const keywords = "commercial painting Alabama, office painters, retail painting,
     const slides = document.querySelectorAll('.hero-slide');
     const dots = document.querySelectorAll('.dot');
     
-    if (!slides || slides.length === 0 || !dots || dots.length === 0) {
-      console.log('Hero carousel: Elements not found');
-      return;
-    }
-    
-    console.log('Hero carousel: Initializing with', slides.length, 'slides');
+    if (!slides || slides.length === 0) return;
     
     let currentSlide = 0;
     let slideInterval = null;
@@ -772,65 +475,16 @@ const keywords = "commercial painting Alabama, office painters, retail painting,
       slideInterval = setInterval(nextSlide, 5000);
     }
 
-    function stopSlider() {
-      if (slideInterval) {
-        clearInterval(slideInterval);
-        slideInterval = null;
-      }
-    }
-
-    // Dot click handlers
     dots.forEach(function(dot, index) {
       dot.addEventListener('click', function() {
         showSlide(index);
-        stopSlider();
-        startSlider();
-      });
-      
-      dot.addEventListener('touchend', function(e) {
-        e.preventDefault();
-        showSlide(index);
-        stopSlider();
         startSlider();
       });
     });
 
-    // Touch swipe support
-    const hero = document.querySelector('.hero');
-    if (hero) {
-      let touchStartX = 0;
-      let touchEndX = 0;
-
-      hero.addEventListener('touchstart', function(e) {
-        touchStartX = e.changedTouches[0].screenX;
-      }, { passive: true });
-
-      hero.addEventListener('touchend', function(e) {
-        touchEndX = e.changedTouches[0].screenX;
-        const swipeThreshold = 50;
-        
-        if (touchEndX < touchStartX - swipeThreshold) {
-          nextSlide();
-          stopSlider();
-          startSlider();
-        } else if (touchEndX > touchStartX + swipeThreshold) {
-          const prev = (currentSlide - 1 + slides.length) % slides.length;
-          showSlide(prev);
-          stopSlider();
-          startSlider();
-        }
-      }, { passive: true });
-
-      // Pause on hover (desktop)
-      hero.addEventListener('mouseenter', stopSlider);
-      hero.addEventListener('mouseleave', startSlider);
-    }
-
-    // Start
     startSlider();
   }
 
-  // Initialize when DOM is ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initCarousel);
   } else {

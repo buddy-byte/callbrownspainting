@@ -160,12 +160,14 @@ const filteredLocations = locations.filter(location =>
 <style>
   .related-content {
     background: #f8fafc;
-    padding: 3rem 0;
-    margin: 3rem 0;
+    padding: 4rem 0;
+    margin: 0;
   }
 
   .related-content section {
-    margin-bottom: 3rem;
+    max-width: 1200px;
+    margin: 0 auto 4rem auto;
+    padding: 0 2rem;
   }
 
   .related-content section:last-child {
@@ -184,9 +186,6 @@ const filteredLocations = locations.filter(location =>
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
   }
 
   .service-item {
@@ -238,9 +237,6 @@ const filteredLocations = locations.filter(location =>
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
   }
 
   .location-item {
@@ -293,9 +289,6 @@ const filteredLocations = locations.filter(location =>
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
   }
 
   .blog-item {
@@ -349,11 +342,15 @@ const filteredLocations = locations.filter(location =>
     .locations-grid,
     .blog-grid {
       grid-template-columns: 1fr;
-      padding: 0 1rem;
     }
 
     .related-content {
-      padding: 2rem 0;
+      padding: 3rem 0;
+    }
+
+    .related-content section {
+      padding: 0 1rem;
+      margin-bottom: 3rem;
     }
 
     .related-content h3 {
