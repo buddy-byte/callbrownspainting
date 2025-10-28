@@ -21,7 +21,7 @@ export default async function handler(req, res) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        from: 'website@callbrownspainting.com',
+        from: 'onboarding@resend.dev',
         to: 'boomer@callbrownspainting.com',
         subject: `New Job Application: ${firstName} ${lastName} - ${position}`,
         html: `
@@ -43,8 +43,8 @@ export default async function handler(req, res) {
       return res.status(500).json({ error: 'Failed to send email' });
     }
 
-    // Redirect to careers page with success param
-    return res.redirect(303, '/careers?success=true');
+    // Redirect to careers success page
+    return res.redirect(303, '/careers-success');
 
   } catch (error) {
     console.error('Career application error:', error);

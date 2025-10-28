@@ -21,7 +21,7 @@ export default async function handler(req, res) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        from: 'website@callbrownspainting.com',
+        from: 'onboarding@resend.dev',
         to: 'boomer@callbrownspainting.com',
         subject: `New Contact Form: ${subject}`,
         html: `
