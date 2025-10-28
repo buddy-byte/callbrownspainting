@@ -5,7 +5,7 @@ import vercel from '@astrojs/vercel/serverless';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://callbrownspainting.com',
-  output: 'hybrid', // Enable API routes while keeping pages static
+  output: 'server', // Enable server-side rendering and API routes
   adapter: vercel(),
   integrations: [
     sitemap()
