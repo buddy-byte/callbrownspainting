@@ -6,6 +6,10 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
 const breadcrumbItems = [
   { name: 'Careers', url: '/careers', current: true }
 ];
+
+// Check for success parameter
+const url = Astro.url;
+const success = url.searchParams.get('success');
 ---
 
 <BaseLayout
@@ -236,11 +240,14 @@ const breadcrumbItems = [
           <p class="section-subtitle">Fill out this quick form and we'll get back to you within 24 hours</p>
         </div>
 
-        <form class="application-form" name="career-application" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="career-application" />
-          <p class="hidden">
-            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-          </p>
+        {success && (
+          <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; padding: 2rem; border-radius: 16px; text-align: center; margin-bottom: 2rem; box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);">
+            <h3 style="color: white; margin-bottom: 0.5rem; font-size: 1.5rem;">✓ Application Received!</h3>
+            <p style="margin: 0; font-size: 1.125rem; opacity: 0.95;">Thank you for your interest! Boomer will review your application and contact you within 24 hours.</p>
+          </div>
+        )}
+
+        <form class="application-form" method="POST" action="/api/careers">
 
           <div class="form-grid">
             <div class="form-group">

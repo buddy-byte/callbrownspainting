@@ -3,10 +3,12 @@ import type { APIRoute } from 'astro';
 export const POST: APIRoute = async ({ request }) => {
   try {
     const formData = await request.formData();
-    const name = formData.get('name')?.toString() || '';
-    const email = formData.get('email')?.toString() || '';
+    const firstName = formData.get('firstName')?.toString() || '';
+    const lastName = formData.get('lastName')?.toString() || '';
     const phone = formData.get('phone')?.toString() || '';
-    const subject = formData.get('subject')?.toString() || '';
+    const email = formData.get('email')?.toString() || '';
+    const position = formData.get('position')?.toString() || '';
+    const experience = formData.get('experience')?.toString() || '';
     const message = formData.get('message')?.toString() || '';
 
     // Resend API endpoint
@@ -30,15 +32,16 @@ export const POST: APIRoute = async ({ request }) => {
       body: JSON.stringify({
         from: 'website@callbrownspainting.com',
         to: 'boomer@callbrownspainting.com',
-        subject: `New Contact Form: ${subject}`,
+        subject: `New Job Application: ${firstName} ${lastName} - ${position}`,
         html: `
-          <h2>New Contact Form Submission</h2>
-          <p><strong>Name:</strong> ${name}</p>
+          <h2>New Job Application Received</h2>
+          <p><strong>Name:</strong> ${firstName} ${lastName}</p>
           <p><strong>Email:</strong> ${email}</p>
           <p><strong>Phone:</strong> ${phone}</p>
-          <p><strong>Subject:</strong> ${subject}</p>
-          <p><strong>Message:</strong></p>
-          <p>${message.replace(/\n/g, '<br>')}</p>
+          <p><strong>Position:</strong> ${position}</p>
+          <p><strong>Years of Experience:</strong> ${experience}</p>
+          <p><strong>Additional Information:</strong></p>
+          <p>${message ? message.replace(/\n/g, '<br>') : 'None provided'}</p>
         `
       })
     });
@@ -53,10 +56,10 @@ export const POST: APIRoute = async ({ request }) => {
     }
 
     // Redirect to success page
-    return Response.redirect(new URL('/contact-success', request.url), 303);
+    return Response.redirect(new URL('/careers?success=true', request.url), 303);
 
   } catch (error) {
-    console.error('Contact form error:', error);
+    console.error('Career application error:', error);
     return new Response(JSON.stringify({ error: 'Server error' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }
