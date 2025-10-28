@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 import PerformanceMonitor from '../components/PerformanceMonitor.astro';
 import MobilePerformanceMonitor from '../components/MobilePerformanceMonitor.astro';
 import CSSLoader from '../components/CSSLoader.astro';
+import '../styles/mobile-optimization.css';
 
 export interface Props {
   title: string;
@@ -14,7 +15,7 @@ export interface Props {
   type?: 'website' | 'article';
 }
 
-const { title, description, keywords, image, type } = Astro.props;
+const { title, description, keywords, image, type} = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -59,7 +60,7 @@ const { title, description, keywords, image, type } = Astro.props;
         "description": "Family-owned and operated, Browns Painting LLC provides professional residential and commercial painting services across South Alabama – interior, exterior, cabinets, drywall repair, deck & fence staining, pressure washing, and more.",
         "founder": "Barry \"Boomer\" Brown",
         "telephone": "+1-251-237-4545",
-        "email": "hello@callbrownspainting.com",
+        "email": "support@callbrownspainting.com",
         "priceRange": "$$",
         "paymentAccepted": "Cash, Check, Credit Card, Debit Card",
         "currenciesAccepted": "USD",
