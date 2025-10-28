@@ -1,12 +1,10 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import vercel from '@astrojs/vercel/serverless';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://callbrownspainting.com',
-  output: 'server', // Enable server-side rendering and API routes
-  adapter: vercel(),
+  output: 'static',
   integrations: [
     sitemap()
   ],
