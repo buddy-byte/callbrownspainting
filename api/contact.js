@@ -1,4 +1,13 @@
 export default async function handler(req, res) {
+  // Set CORS headers
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
@@ -31,7 +40,7 @@ export default async function handler(req, res) {
           <p><strong>Phone:</strong> ${phone}</p>
           <p><strong>Subject:</strong> ${subject}</p>
           <p><strong>Message:</strong></p>
-          <p>${message.replace(/\n/g, '<br>')}</p>
+          <p>${message ? message.replace(/\n/g, '<br>') : 'None provided'}</p>
         `
       })
     });
@@ -39,7 +48,7 @@ export default async function handler(req, res) {
     if (!response.ok) {
       const error = await response.text();
       console.error('Resend API error:', error);
-      return res.status(500).json({ error: 'Failed to send email' });
+      return res.status(500).json({ error: 'Failed to send email', details: error });
     }
 
     // Redirect to success page
@@ -47,7 +56,7 @@ export default async function handler(req, res) {
 
   } catch (error) {
     console.error('Contact form error:', error);
-    return res.status(500).json({ error: 'Server error' });
+    return res.status(500).json({ error: 'Server error', message: error.message });
   }
 }
 
