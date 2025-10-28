@@ -30,7 +30,7 @@ export default async function handler(req, res) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        from: 'onboarding@resend.dev',
+        from: 'website@callbrownspainting.com',
         to: 'boomer@callbrownspainting.com',
         subject: `New Job Application: ${firstName} ${lastName} - ${position}`,
         html: `
