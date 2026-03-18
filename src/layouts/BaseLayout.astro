@@ -296,6 +296,79 @@ const { title, description, keywords, image, type} = Astro.props;
           <!-- Performance Monitoring -->
           <PerformanceMonitor />
           <MobilePerformanceMonitor />
+
+    <!-- ══════════════════════════════════════════
+         CHATBOT WIDGET — swap script tag below to
+         activate Tidio / Intercom / Drift / GoHighLevel etc.
+         Current: native floating chat button → contact page
+    ═══════════════════════════════════════════════ -->
+    <!--
+      TO ACTIVATE TIDIO: replace the block below with:
+      <script src="//code.tidio.co/YOUR_TIDIO_KEY.js" async></script>
+
+      TO ACTIVATE INTERCOM / DRIFT / GHL: paste their embed snippet here.
+      Remove the native fallback button once a real widget is live.
+    -->
+    <div id="chat-bubble-wrap">
+      <button id="chat-bubble" aria-label="Chat with us" onclick="window.location.href='/contact'">
+        <svg id="chat-icon-open" width="26" height="26" viewBox="0 0 24 24" fill="none">
+          <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="chat-label">Free Estimate</span>
+        <span class="chat-ping"></span>
+      </button>
+    </div>
+
+    <style>
+      #chat-bubble-wrap {
+        position: fixed;
+        bottom: 1.5rem;
+        right: 1.5rem;
+        z-index: 9999;
+      }
+      #chat-bubble {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        background: #f97316;
+        color: #fff;
+        border: none;
+        border-radius: 50px;
+        padding: 0.875rem 1.25rem 0.875rem 1rem;
+        font-family: 'DM Sans', system-ui, sans-serif;
+        font-weight: 700;
+        font-size: 0.9rem;
+        cursor: pointer;
+        box-shadow: 0 8px 32px rgba(249,115,22,0.55), 0 2px 8px rgba(0,0,0,0.2);
+        position: relative;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      #chat-bubble:hover {
+        transform: translateY(-2px) scale(1.02);
+        box-shadow: 0 12px 40px rgba(249,115,22,0.65), 0 4px 12px rgba(0,0,0,0.25);
+      }
+      .chat-label { letter-spacing: 0.01em; }
+      .chat-ping {
+        position: absolute;
+        top: -3px;
+        right: -3px;
+        width: 12px;
+        height: 12px;
+        background: #22c55e;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        animation: ping-pulse 2s infinite;
+      }
+      @keyframes ping-pulse {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.3); opacity: 0.7; }
+      }
+      @media (max-width: 600px) {
+        #chat-bubble-wrap { bottom: 1rem; right: 1rem; }
+        .chat-label { display: none; }
+        #chat-bubble { padding: 1rem; border-radius: 50%; }
+      }
+    </style>
   </body>
 </html>
 

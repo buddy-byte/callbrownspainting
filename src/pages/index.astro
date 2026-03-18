@@ -45,31 +45,86 @@ const reviews = [
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <span class="hero-eyebrow">Industry's Best Satisfaction Guarantee!</span>
-    <h1 class="hero-h1">
-      Transform Your Home.<br>
-      <span class="hero-orange">Call Browns.</span>
-    </h1>
-    <p class="hero-sub">South Alabama's Professional Painting Contractor Since 1998.</p>
-    <div class="hero-cta-box">
-      <a href="/contact" class="hero-btn-orange">
-        Get a Free Estimate
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9h10.5M10.5 5.25L14.25 9l-3.75 3.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-      <a href="tel:+12512374545" class="hero-btn-phone">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.9 11.2c-.2-.2-2-1.4-2.3-1.4-.2 0-.5.1-1 .7-.2.3-.4.4-.5.4-.2 0-.5-.1-.8-.3-.9-.6-1.8-1.4-2.4-2.4-.3-.4-.4-.6-.4-.8 0-.1.1-.3.4-.5.6-.6.8-.8.8-1 0-.3-1.2-2.1-1.4-2.3-.2-.2-.4-.3-.6-.3-.4 0-1 .2-1.4.7-.4.4-.7 1.1-.7 1.8 0 1.1.5 2.4 1.5 3.6.8 1 2.1 2.2 3.3 2.9.9.5 2.1 1.1 3.1 1.1.6 0 1.2-.2 1.7-.7.4-.4.7-.9.7-1.4 0-.2-.1-.5-.6-.9z" fill="currentColor"/></svg>
-        (251) 237-4545
-      </a>
+
+    <!-- LEFT: Copy -->
+    <div class="hero-left">
+      <span class="hero-eyebrow">Industry's Best Satisfaction Guarantee!</span>
+      <h1 class="hero-h1">
+        Transform Your Home.<br>
+        <span class="hero-orange">Call Browns.</span>
+      </h1>
+      <p class="hero-sub">South Alabama's Professional Painting Contractor Since 1998.</p>
+      <div class="hero-cta-box">
+        <a href="tel:+12512374545" class="hero-btn-phone">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.9 11.2c-.2-.2-2-1.4-2.3-1.4-.2 0-.5.1-1 .7-.2.3-.4.4-.5.4-.2 0-.5-.1-.8-.3-.9-.6-1.8-1.4-2.4-2.4-.3-.4-.4-.6-.4-.8 0-.1.1-.3.4-.5.6-.6.8-.8.8-1 0-.3-1.2-2.1-1.4-2.3-.2-.2-.4-.3-.6-.3-.4 0-1 .2-1.4.7-.4.4-.7 1.1-.7 1.8 0 1.1.5 2.4 1.5 3.6.8 1 2.1 2.2 3.3 2.9.9.5 2.1 1.1 3.1 1.1.6 0 1.2-.2 1.7-.7.4-.4.7-.9.7-1.4 0-.2-.1-.5-.6-.9z" fill="currentColor"/></svg>
+          (251) 237-4545
+        </a>
+      </div>
+      <div class="hero-trust">
+        <span class="trust-item">★★★★★ 5-Star Rated</span>
+        <span class="trust-sep">·</span>
+        <span class="trust-item">25+ Years Experience</span>
+        <span class="trust-sep">·</span>
+        <span class="trust-item">Licensed &amp; Insured</span>
+        <span class="trust-sep">·</span>
+        <span class="trust-item">Free Estimates</span>
+      </div>
     </div>
-    <div class="hero-trust">
-      <span class="trust-item">★★★★★ 5-Star Rated</span>
-      <span class="trust-sep">·</span>
-      <span class="trust-item">25+ Years Experience</span>
-      <span class="trust-sep">·</span>
-      <span class="trust-item">Licensed &amp; Insured</span>
-      <span class="trust-sep">·</span>
-      <span class="trust-item">Free Estimates</span>
+
+    <!-- RIGHT: Instant Estimate Form -->
+    <div class="hero-form-card">
+      <div class="form-card-header">
+        <span class="form-card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12h6M9 16h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </span>
+        <div>
+          <h3 class="form-card-title">Get Your Free Estimate</h3>
+          <p class="form-card-sub">We respond within 2 hours</p>
+        </div>
+      </div>
+      <form class="estimate-form" name="hero-estimate" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="hero-estimate" />
+        <input type="hidden" name="bot-field" />
+        <div class="form-row">
+          <div class="form-field">
+            <label for="est-name">Your Name</label>
+            <input type="text" id="est-name" name="name" placeholder="John Smith" required autocomplete="name" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="est-phone">Phone Number</label>
+            <input type="tel" id="est-phone" name="phone" placeholder="(251) 555-1234" required autocomplete="tel" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="est-city">City / Location</label>
+            <input type="text" id="est-city" name="city" placeholder="Brewton, Evergreen, Fairhope…" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="est-service">Type of Work</label>
+            <select id="est-service" name="service" required>
+              <option value="" disabled selected>Select a service…</option>
+              <option value="exterior">Exterior Painting</option>
+              <option value="interior">Interior Painting</option>
+              <option value="commercial">Commercial Painting</option>
+              <option value="cabinet">Cabinet Refinishing</option>
+              <option value="deck">Deck / Fence Staining</option>
+              <option value="other">Other / Not Sure</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="form-submit-btn">
+          Get My Free Estimate
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9h10.5M10.5 5.25L14.25 9l-3.75 3.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <p class="form-privacy">No spam. No pressure. Just a free quote.</p>
+      </form>
     </div>
+
   </div>
   <!-- Wave at bottom -->
   <div class="hero-wave">
@@ -481,13 +536,22 @@ const reviews = [
   );
 }
 
-  .hero-content {
-    position: relative;
-    z-index: 2;
-    padding: 10rem 2rem 10rem;
-  max-width: 780px;
-  margin: 0 auto 0 calc((100vw - 1200px) / 2);
-  padding-left: max(2rem, calc((100vw - 1200px) / 2 + 1.5rem));
+/* Two-column hero grid */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 11rem 2rem 8rem;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-left {
+  max-width: 640px;
 }
 
 .hero-eyebrow {
@@ -591,6 +655,154 @@ const reviews = [
 }
 .trust-sep {
   color: rgba(255,255,255,0.3);
+}
+
+/* ── Hero Estimate Form Card ── */
+.hero-form-card {
+  background: rgba(10, 14, 22, 0.82);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  padding: 2rem 1.75rem;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.5), 0 0 0 1px rgba(249,115,22,0.15);
+}
+
+.form-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.form-card-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(249,115,22,0.15);
+  border: 1px solid rgba(249,115,22,0.3);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f97316;
+  flex-shrink: 0;
+}
+
+.form-card-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.form-card-sub {
+  font-size: 0.75rem;
+  color: #f97316;
+  font-weight: 600;
+  margin: 0.2rem 0 0;
+  font-family: var(--font-sans);
+}
+
+.estimate-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.form-row { width: 100%; }
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.form-field label {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.form-field input,
+.form-field select {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  padding: 0.75rem 1rem;
+  transition: border-color 0.2s, background 0.2s;
+  outline: none;
+  width: 100%;
+}
+
+.form-field input::placeholder {
+  color: rgba(255,255,255,0.35);
+}
+
+.form-field select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' stroke='rgba(255,255,255,0.4)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+.form-field select option {
+  background: #0d1219;
+  color: #fff;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+  border-color: #f97316;
+  background: rgba(249,115,22,0.08);
+}
+
+.form-submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: #f97316;
+  color: #fff;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 0.375rem;
+  box-shadow: 0 8px 24px rgba(249,115,22,0.4);
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  letter-spacing: 0.01em;
+}
+
+.form-submit-btn:hover {
+  background: #ea6c0a;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 32px rgba(249,115,22,0.55);
+}
+
+.form-privacy {
+  text-align: center;
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.35);
+  font-family: var(--font-sans);
+  margin: 0;
 }
 
 .hero-wave {
@@ -1342,9 +1554,13 @@ const reviews = [
 ═══════════════════════════════════════════════ */
 @media (max-width: 1024px) {
   .hero-content {
-    margin-left: 0;
-    padding-left: 2rem;
-    max-width: 640px;
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10rem 1.5rem 6rem;
+  }
+  .hero-form-card {
+    max-width: 100%;
   }
 }
 
