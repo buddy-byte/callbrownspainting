@@ -33,7 +33,7 @@ const { title, description, keywords, image, type} = Astro.props;
     <link rel="dns-prefetch" href="//fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
     
     <!-- Schema.org structured data -->
     <script type="application/ld+json">
@@ -140,18 +140,18 @@ const { title, description, keywords, image, type} = Astro.props;
       /* ── Design Tokens ── */
       :root {
         --ink:         #111827;
-        --ink-soft:    #1a2535;
-        --amber:       #f59e0b;
-        --amber-deep:  #d97706;
-        --amber-light: #fbbf24;
-        --cream:       #faf9f7;
-        --cream-dark:  #f3f0eb;
+        --ink-soft:    #1a2332;
+        --amber:       #f97316;
+        --amber-deep:  #ea6c0a;
+        --amber-light: #fb923c;
+        --cream:       #f8f9fa;
+        --cream-dark:  #eef0f2;
         --white:       #ffffff;
         --text:        #1f2937;
         --text-muted:  #6b7280;
         --text-faint:  #9ca3af;
         --border:      #e5e7eb;
-        --font-display: 'DM Serif Display', Georgia, serif;
+        --font-display: 'Oswald', 'Impact', sans-serif;
         --font-sans:    'DM Sans', system-ui, sans-serif;
         --shadow-sm:    0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
         --shadow-md:    0 4px 16px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04);
@@ -192,7 +192,8 @@ const { title, description, keywords, image, type} = Astro.props;
       /* ── Typography Scale ── */
       h1, h2, h3 {
         font-family: var(--font-display);
-        line-height: 1.15;
+        line-height: 1.1;
+        letter-spacing: -0.01em;
         color: var(--text);
       }
 

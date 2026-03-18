@@ -1,8 +1,34 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Testimonials from '../components/Testimonials.astro';
 
 const keywords = 'painting contractor Brewton AL, residential painting Conecuh County, commercial painting Escambia County, interior painting Baldwin County, exterior painting South Alabama, house painter Evergreen AL, painting services Atmore AL, professional painter Monroeville AL';
+
+const reviews = [
+  {
+    name: 'Jennifer M.',
+    location: 'Brewton, AL',
+    text: "Boomer and his team completely transformed our home. The prep work alone was more thorough than any painter we've used before. Colors turned out perfect and the cleanup was spotless. Couldn't recommend more.",
+    stars: 5,
+  },
+  {
+    name: 'David R.',
+    location: 'Evergreen, AL',
+    text: "Used Browns Painting for our commercial building exterior. They showed up on time every single day, communicated every step, and the finished result looks absolutely professional. We've had neighbors stop to ask who did the work.",
+    stars: 5,
+  },
+  {
+    name: 'Sandra & Tom K.',
+    location: 'Fairhope, AL',
+    text: "We had them repaint our entire interior — 4 bedrooms, living room, dining room, kitchen. The team was clean, respectful of our home, and the finish is flawless. Price was very fair for the quality.",
+    stars: 5,
+  },
+  {
+    name: 'Marcus B.',
+    location: 'Mobile, AL',
+    text: "Second time using Browns Painting and they keep getting better. On-time arrival, professional crew, zero drama. The exterior on our 1940s craftsman looks brand new.",
+    stars: 5,
+  },
+];
 ---
 
 <BaseLayout
@@ -10,1795 +36,1424 @@ const keywords = 'painting contractor Brewton AL, residential painting Conecuh C
   description="Browns Painting LLC — South Alabama's trusted painting contractor since 1998. Interior, exterior, and commercial painting in Brewton, Evergreen, Fairhope, Mobile, and 20+ cities. Family-owned. 25+ years. 100% satisfaction guarantee."
   keywords={keywords}
 >
-  <main>
+<main>
 
-    <!-- ══════════════════════════════════════════
-         HERO — full viewport, parallax, massive type
-    ══════════════════════════════════════════════ -->
-    <section class="hero" id="hero">
-      <div class="hero-parallax" id="hero-parallax">
-        <div class="slide active" style="background-image:url('/images/hero/hero-1-optimized.jpg')"></div>
-        <div class="slide" style="background-image:url('/images/projects/projects-optimized/interior-painting-2-optimized.jpg')"></div>
-        <div class="slide" style="background-image:url('/images/hero/hero-3-optimized.jpg');background-position:center top"></div>
+<!-- ═══════════════════════════════════════════
+     HERO — full bleed, massive headline
+═══════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-eyebrow">Industry's Best Satisfaction Guarantee!</span>
+    <h1 class="hero-h1">
+      Transform Your Home.<br>
+      <span class="hero-orange">Call Browns.</span>
+    </h1>
+    <p class="hero-sub">South Alabama's Professional Painting Contractor Since 1998.</p>
+    <div class="hero-cta-box">
+      <a href="/contact" class="hero-btn-orange">
+        Get a Free Estimate
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9h10.5M10.5 5.25L14.25 9l-3.75 3.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="tel:+12512374545" class="hero-btn-phone">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.9 11.2c-.2-.2-2-1.4-2.3-1.4-.2 0-.5.1-1 .7-.2.3-.4.4-.5.4-.2 0-.5-.1-.8-.3-.9-.6-1.8-1.4-2.4-2.4-.3-.4-.4-.6-.4-.8 0-.1.1-.3.4-.5.6-.6.8-.8.8-1 0-.3-1.2-2.1-1.4-2.3-.2-.2-.4-.3-.6-.3-.4 0-1 .2-1.4.7-.4.4-.7 1.1-.7 1.8 0 1.1.5 2.4 1.5 3.6.8 1 2.1 2.2 3.3 2.9.9.5 2.1 1.1 3.1 1.1.6 0 1.2-.2 1.7-.7.4-.4.7-.9.7-1.4 0-.2-.1-.5-.6-.9z" fill="currentColor"/></svg>
+        (251) 237-4545
+      </a>
+    </div>
+    <div class="hero-trust">
+      <span class="trust-item">★★★★★ 5-Star Rated</span>
+      <span class="trust-sep">·</span>
+      <span class="trust-item">25+ Years Experience</span>
+      <span class="trust-sep">·</span>
+      <span class="trust-item">Licensed &amp; Insured</span>
+      <span class="trust-sep">·</span>
+      <span class="trust-item">Free Estimates</span>
+    </div>
+  </div>
+  <!-- Wave at bottom -->
+  <div class="hero-wave">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0,50 C360,0 1080,80 1440,30 L1440,80 L0,80 Z" fill="#ffffff"/>
+    </svg>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     STATS STRIP — dark bar
+═══════════════════════════════════════════════ -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <strong>25+</strong>
+      <span>Years Experience</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <strong>500+</strong>
+      <span>Projects Complete</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <strong>20+</strong>
+      <span>Cities Served</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <strong>100%</strong>
+      <span>Satisfaction Guarantee</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     INTRO — split, paint splash left
+═══════════════════════════════════════════════ -->
+<section class="intro">
+  <div class="container intro-grid">
+    <div class="intro-left">
+      <!-- Decorative paint blob -->
+      <div class="paint-blob">
+        <svg viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="120" cy="140" rx="100" ry="85" fill="#f97316" opacity="0.10" transform="rotate(-20 120 140)"/>
+          <ellipse cx="155" cy="120" rx="65" ry="50" fill="#f97316" opacity="0.08" transform="rotate(15 155 120)"/>
+          <circle cx="85" cy="185" r="30" fill="#f97316" opacity="0.07"/>
+          <circle cx="190" cy="160" r="18" fill="#f97316" opacity="0.09"/>
+        </svg>
+      </div>
+      <div class="intro-photo">
+        <img src="/images/ai/ai-painter-at-work.jpg" alt="Browns Painting crew at work on a Southern home" loading="lazy" />
+      </div>
+    </div>
+    <div class="intro-right">
+      <span class="eyebrow-tag">Browns Painting LLC</span>
+      <h2 class="intro-h2">South Alabama Painters Who Get It Right —<br><em>Every Time.</em></h2>
+      <div class="orange-rule"></div>
+      <p class="intro-lead"><strong>Family-owned since 1998. Boomer Brown and his crew have painted hundreds of homes and businesses across South Alabama</strong> — from Brewton to Mobile, Evergreen to Gulf Shores.</p>
+      <p>We don't cut corners. Every job starts with proper surface prep, uses premium materials, and ends with a final walkthrough you approve before we pack up. Our work speaks for itself.</p>
+      <ul class="check-list">
+        <li>Free Consultation &amp; Color Guidance</li>
+        <li>Meticulous Surface Prep Before Every Job</li>
+        <li>Clean Crew, On Time, On Budget</li>
+        <li>100% Satisfaction — We Make It Right</li>
+        <li>Interior · Exterior · Commercial</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     SERVICES — dark, cards with photos
+═══════════════════════════════════════════════ -->
+<section class="services">
+  <!-- Wave top into dark -->
+  <div class="wave-into-dark">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0,30 C480,80 960,0 1440,50 L1440,0 L0,0 Z" fill="#ffffff"/>
+    </svg>
+  </div>
+  <div class="container">
+    <span class="eyebrow-tag light">What We Do</span>
+    <h2 class="section-h2 white">Get Ready for Amazing Service &amp;<br><em>Exceptional Results!</em></h2>
+    <p class="section-sub light">Browns Painting does more than just apply paint — we transform properties. Our craftsmen are licensed, insured, and obsessed with quality.</p>
+    <div class="service-cards">
+
+      <div class="svc-card">
+        <div class="svc-card-body">
+          <h3>Exterior Painting</h3>
+          <p>From historic cottages to modern estates, we bring expertise and premium paints to every exterior. Full prep, prime, and paint — the right way.</p>
+          <a href="/exterior-painting" class="svc-learn-more">Learn More →</a>
+        </div>
+        <div class="svc-card-photo">
+          <img src="/images/ai/ai-exterior-result.jpg" alt="Exterior painting - beautiful painted home" loading="lazy" />
+        </div>
       </div>
 
-      <!-- Cinematic gradient overlay -->
-      <div class="hero-grad"></div>
-      <!-- Noise texture for depth -->
-      <div class="hero-noise"></div>
-
-      <div class="hero-content">
-        <div class="hero-label">
-          <span class="hero-label-dot"></span>
-          Industry-Best Satisfaction Guarantee
+      <div class="svc-card">
+        <div class="svc-card-body">
+          <h3>Interior Painting</h3>
+          <p>Bedrooms, living rooms, kitchens, trim work — we tape carefully, prep meticulously, and deliver a finish you'll love for years. Clean crew, zero drama.</p>
+          <a href="/interior-painting" class="svc-learn-more">Learn More →</a>
         </div>
-
-        <img src="/images/logo/browns-painting-logo-hat.png" alt="Browns Painting LLC" class="hero-logo" />
-
-        <h1 class="hero-h1">
-          <span class="hero-line1">Quality.</span>
-          <em class="hero-line2">It's What We Do.</em>
-        </h1>
-
-        <p class="hero-sub">South Alabama's trusted painting contractor since 1998.<br/>Interior · Exterior · Commercial</p>
-
-        <div class="hero-actions">
-          <a href="/contact" class="hero-btn-primary">
-            Get a Free Quote
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <a href="tel:+12512374545" class="hero-btn-ghost">
-            <svg width="15" height="15" viewBox="0 0 13 13" fill="none"><path d="M11.9 9.2c-.2-.2-1.9-1.3-2.2-1.3-.2 0-.4.1-.9.7-.2.2-.3.3-.4.3-.2 0-.4-.1-.7-.3-.8-.5-1.6-1.3-2.1-2.1-.3-.4-.4-.6-.4-.7 0-.1.1-.2.3-.4.5-.5.7-.7.7-.9 0-.2-1.1-2-1.3-2.2-.2-.2-.3-.2-.5-.2-.4 0-.9.2-1.2.6-.4.4-.6 1-.6 1.6 0 1 .5 2.2 1.3 3.2.7.9 1.9 2 2.9 2.6.8.5 1.9 1 2.8 1 .5 0 1.1-.2 1.5-.6.3-.3.6-.8.6-1.2 0-.2-.1-.4-.5-.8z" fill="currentColor"/></svg>
-            (251) 237-4545
-          </a>
-        </div>
-
-        <div class="hero-trust">
-          <div class="trust-pill">★★★★★ 5-Star Rated</div>
-          <div class="trust-pill">25+ Years Experience</div>
-          <div class="trust-pill">Licensed &amp; Insured</div>
+        <div class="svc-card-photo">
+          <img src="/images/ai/ai-interior-result.jpg" alt="Interior painting - professional finish" loading="lazy" />
         </div>
       </div>
 
-      <!-- Diagonal cut at bottom -->
-      <div class="hero-cut"></div>
-
-      <div class="hero-dots">
-        <button class="dot active" data-idx="0"></button>
-        <button class="dot" data-idx="1"></button>
-        <button class="dot" data-idx="2"></button>
+      <div class="svc-card">
+        <div class="svc-card-body">
+          <h3>Commercial Painting</h3>
+          <p>Retail, office, industrial — we work around your schedule, use commercial-grade coatings, and deliver the professional look your business demands.</p>
+          <a href="/commercial-painting" class="svc-learn-more">Learn More →</a>
+        </div>
+        <div class="svc-card-photo">
+          <img src="/images/ai/ai-commercial-result.jpg" alt="Commercial painting project" loading="lazy" />
+        </div>
       </div>
-    </section>
+
+    </div>
+  </div>
+  <!-- Wave bottom out of dark -->
+  <div class="wave-out-of-dark">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0,50 C360,0 1080,80 1440,30 L1440,80 L0,80 Z" fill="#f8f9fa"/>
+    </svg>
+  </div>
+</section>
 
 
-    <!-- ══════════════════════════════════════════
-         STATS — compact dark strip
-    ══════════════════════════════════════════════ -->
-    <div class="stats-strip">
-      <div class="stats-inner">
-        <div class="stat">
-          <strong>25+</strong>
-          <span>Years in Business</span>
-        </div>
-        <div class="stat-rule"></div>
-        <div class="stat">
-          <strong>500+</strong>
-          <span>Projects Completed</span>
-        </div>
-        <div class="stat-rule"></div>
-        <div class="stat">
-          <strong>3–7</strong>
-          <span>Day Turnaround</span>
-        </div>
-        <div class="stat-rule"></div>
-        <div class="stat">
-          <strong>100%</strong>
-          <span>Satisfaction Guarantee</span>
-        </div>
+<!-- ═══════════════════════════════════════════
+     GALLERY STRIP — tight photo mosaic
+═══════════════════════════════════════════════ -->
+<section class="gallery-strip">
+  <div class="gallery-grid">
+    <div class="gallery-cell">
+      <img src="/images/ai/ai-hero-dramatic.jpg" alt="Beautiful Southern home after painting" loading="lazy" />
+    </div>
+    <div class="gallery-cell">
+      <img src="/images/projects/projects-optimized/exterior-paint-1-optimized.jpg" alt="Brewton exterior painting project" loading="lazy" />
+    </div>
+    <div class="gallery-cell">
+      <img src="/images/ai/ai-interior-result.jpg" alt="Interior painting result" loading="lazy" />
+    </div>
+    <div class="gallery-cell">
+      <img src="/images/projects/projects-optimized/brewton-exterior-1-optimized.jpg" alt="Historic home painting project" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     REVIEWS — split: framed photo + carousel
+═══════════════════════════════════════════════ -->
+<section class="reviews-section">
+  <div class="reviews-grid">
+
+    <!-- Left: large framed photo -->
+    <div class="reviews-photo-col">
+      <div class="framed-photo-wrap">
+        <img src="/images/ai/ai-exterior-result.jpg" alt="Browns Painting project result" class="framed-photo-img" loading="lazy" />
       </div>
     </div>
 
+    <!-- Right: review carousel -->
+    <div class="reviews-content-col">
+      <span class="eyebrow-tag light">We Love Feedback!</span>
+      <h2 class="section-h2 white">Reviews From Our Customers</h2>
 
-    <!-- ══════════════════════════════════════════
-         FEATURE — 2-col, framed photo, deep section
-    ══════════════════════════════════════════════ -->
-    <section class="feature-section">
-      <div class="container feature-grid">
-
-        <!-- Photo col with decorative frame -->
-        <div class="feature-photo-col">
-          <div class="feature-frame-accent"></div>
-          <div class="feature-photo-stack">
-            <img src="/images/Boomer/boomer-3-optimized.jpg" alt="Boomer Brown" class="feature-img-main" />
-            <div class="feature-img-badge">
-              <span class="badge-num">25+</span>
-              <span class="badge-label">Years of<br/>Craft</span>
-            </div>
-            <div class="feature-img-float">
-              <img src="/images/projects/projects-optimized/exterior-paint-1-optimized.jpg" alt="Finished project" />
-            </div>
+      <div class="review-carousel" id="review-carousel">
+        {reviews.map((r, i) => (
+          <div class:list={['review-slide', { active: i === 0 }]} data-index={i}>
+            <p class="review-name">{r.name}</p>
+            <p class="review-text">"{r.text}"</p>
+            <div class="review-stars">{'★'.repeat(r.stars)}</div>
+            <p class="review-location">{r.location}</p>
           </div>
+        ))}
+      </div>
+
+      <div class="review-controls">
+        <button class="review-arrow prev" id="review-prev" aria-label="Previous review">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="review-dots-row" id="review-dots">
+          {reviews.map((_, i) => (
+            <button class:list={['review-dot', { active: i === 0 }]} data-idx={i} aria-label={`Review ${i+1}`}></button>
+          ))}
         </div>
+        <button class="review-arrow next" id="review-next" aria-label="Next review">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
 
-        <!-- Content col -->
-        <div class="feature-content">
-          <span class="eyebrow">Who We Are</span>
-          <h2 class="feature-h2">
-            Professional Painting<br/>Results in As Little As
-            <em>One Week!</em>
-          </h2>
-          <p>Your dream home is only one call away. Boomer Brown and his crew have been transforming homes and businesses across South Alabama for over 25 years. Family-owned, fully insured, built on old-fashioned accountability.</p>
-          <p>We turn drab into dreamy — from your first call to the final walkthrough, quality is always top of mind. And it shows.</p>
+  </div>
+</section>
 
-          <div class="feature-checks">
-            <div class="fcheck">
-              <div class="fcheck-icon">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3 3 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-              Free color consultation &amp; estimate
-            </div>
-            <div class="fcheck">
-              <div class="fcheck-icon">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3 3 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-              Premium weather-resistant paints
-            </div>
-            <div class="fcheck">
-              <div class="fcheck-icon">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3 3 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-              Meticulous prep &amp; thorough cleanup
-            </div>
-            <div class="fcheck">
-              <div class="fcheck-icon">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3 3 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-              100% satisfaction — or we come back
-            </div>
-          </div>
 
-          <a href="/about" class="btn-solid">Our Story →</a>
+<!-- ═══════════════════════════════════════════
+     PROCESS — white bg, checklist + framed photo
+═══════════════════════════════════════════════ -->
+<section class="process-section">
+  <div class="container process-grid">
+
+    <div class="process-left">
+      <span class="eyebrow-tag">Our Proven Process</span>
+      <h2 class="process-h2">What to Expect From<br>Start to Finish.</h2>
+      <div class="orange-rule"></div>
+      <p class="process-lead"><strong>At Browns Painting, our job isn't just to paint — it's to enhance your property.</strong> Our experienced team works with you from the first call to the final walkthrough to ensure perfect results.</p>
+      <ul class="orange-check-list">
+        <li>
+          <span class="check-circle">✓</span>
+          <span>Free Consultation &amp; Color Assessment</span>
+        </li>
+        <li>
+          <span class="check-circle">✓</span>
+          <span>Full Surface Prep &amp; Priming</span>
+        </li>
+        <li>
+          <span class="check-circle">✓</span>
+          <span>Premium Paint Application (Sherwin-Williams &amp; Benjamin Moore)</span>
+        </li>
+        <li>
+          <span class="check-circle">✓</span>
+          <span>Detailed Cleanup &amp; Disposal</span>
+        </li>
+        <li>
+          <span class="check-circle">✓</span>
+          <span>Final Walkthrough — 100% Satisfaction, Every Time</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="process-right">
+      <div class="double-frame">
+        <img src="/images/ai/ai-exterior-result.jpg" alt="Professional painting project result" loading="lazy" />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     CTA STRIP — dark bg, big orange pill button
+═══════════════════════════════════════════════ -->
+<section class="cta-strip">
+  <div class="wave-into-dark-thin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,20 C480,60 960,0 1440,40 L1440,0 L0,0 Z" fill="#ffffff"/>
+    </svg>
+  </div>
+  <div class="container cta-inner">
+    <div class="cta-left">
+      <span class="eyebrow-tag light">Book Today</span>
+      <h2 class="section-h2 white" style="font-size: clamp(1.8rem, 3.5vw, 2.75rem);">Get Your Free Estimate Today!</h2>
+      <p class="cta-sub">Our crew is ready to transform your home or business. No pressure, no obligation — just an honest quote from South Alabama's most trusted painters.</p>
+    </div>
+    <div class="cta-right">
+      <a href="/contact" class="cta-pill-btn">
+        Get a Free Estimate
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     WHY BROWNS — light bg, differentiator cards
+═══════════════════════════════════════════════ -->
+<section class="why-section">
+  <div class="container">
+    <div class="why-header">
+      <span class="eyebrow-tag">Choose Browns Painting</span>
+      <h2 class="why-h2">What Makes <span class="text-orange">Browns</span> Different?</h2>
+      <div class="orange-rule centered"></div>
+    </div>
+    <div class="why-grid">
+
+      <div class="why-card">
+        <div class="why-check-circle">✓</div>
+        <div class="why-card-content">
+          <h4>100% Satisfaction Guarantee</h4>
+          <p>We don't call the job done until you love it. We'll come back and make it right — no questions asked.</p>
         </div>
       </div>
-    </section>
 
-
-    <!-- ══════════════════════════════════════════
-         SERVICES — dark, magazine divider bar, cards ARE the section
-    ══════════════════════════════════════════════ -->
-    <section class="services-section">
-      <div class="services-diag-top"></div>
-      <div class="container">
-        <!-- Minimal bar: eyebrow + title on ONE line, link on right — not a split -->
-        <div class="svc-bar">
-          <div class="svc-bar-left">
-            <span class="eyebrow">Our Services</span>
-            <h2 class="svc-bar-h2">What We Do</h2>
-          </div>
-          <a href="/services" class="svc-all-link">View All Services →</a>
-        </div>
-
-        <div class="svc-grid">
-
-          <a href="/interior-painting" class="svc-card">
-            <div class="svc-img-wrap">
-              <img src="/images/projects/projects-optimized/interior-detail-1-optimized.jpg" alt="Interior Painting" loading="lazy" />
-              <div class="svc-img-overlay"></div>
-            </div>
-            <div class="svc-body">
-              <div class="svc-type">Interior</div>
-              <h3 class="svc-title">Interior Painting</h3>
-              <p>Flawless finishes for walls, ceilings, trim, and cabinets. Done right the first time.</p>
-              <span class="svc-cta">Learn More <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            </div>
-          </a>
-
-          <a href="/exterior-painting" class="svc-card svc-card-featured">
-            <div class="svc-img-wrap">
-              <img src="/images/projects/projects-optimized/exterior-paint-1-optimized.jpg" alt="Exterior Painting" loading="lazy" />
-              <div class="svc-img-overlay"></div>
-            </div>
-            <div class="svc-body">
-              <div class="svc-type">Exterior</div>
-              <h3 class="svc-title">Exterior Painting</h3>
-              <p>Weather-resistant coatings built for Alabama's heat and humidity. Pressure washing, prep, and paint.</p>
-              <span class="svc-cta">Learn More <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            </div>
-          </a>
-
-          <a href="/commercial-painting" class="svc-card">
-            <div class="svc-img-wrap svc-commercial-graphic">
-              <!-- SVG paint stroke graphic background -->
-              <svg class="svc-comm-svg" viewBox="0 0 400 270" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-                <!-- diagonal geometric lines for commercial/industrial feel -->
-                <rect width="400" height="270" fill="#0a0d1a"/>
-                <line x1="0" y1="270" x2="200" y2="0" stroke="rgba(245,158,11,0.07)" stroke-width="40"/>
-                <line x1="100" y1="270" x2="300" y2="0" stroke="rgba(245,158,11,0.05)" stroke-width="40"/>
-                <line x1="200" y1="270" x2="400" y2="0" stroke="rgba(245,158,11,0.04)" stroke-width="40"/>
-                <line x1="300" y1="270" x2="500" y2="0" stroke="rgba(245,158,11,0.03)" stroke-width="40"/>
-                <!-- paint roller icon -->
-                <g transform="translate(150,90)">
-                  <rect x="0" y="0" width="80" height="22" rx="4" stroke="rgba(245,158,11,0.35)" stroke-width="2" fill="none"/>
-                  <rect x="5" y="5" width="70" height="12" rx="2" fill="rgba(245,158,11,0.12)"/>
-                  <line x1="40" y1="22" x2="40" y2="44" stroke="rgba(245,158,11,0.3)" stroke-width="2"/>
-                  <line x1="40" y1="44" x2="70" y2="44" stroke="rgba(245,158,11,0.3)" stroke-width="2"/>
-                  <line x1="70" y1="44" x2="70" y2="55" stroke="rgba(245,158,11,0.3)" stroke-width="2.5"/>
-                </g>
-                <text x="200" y="180" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" letter-spacing="4" fill="rgba(245,158,11,0.3)">COMMERCIAL</text>
-                <text x="200" y="197" text-anchor="middle" font-family="sans-serif" font-size="9" letter-spacing="2" fill="rgba(255,255,255,0.15)">LICENSED &amp; INSURED</text>
-              </svg>
-            </div>
-            <div class="svc-body">
-              <div class="svc-type">Commercial</div>
-              <h3 class="svc-title">Commercial Painting</h3>
-              <p>After-hours scheduling, minimal disruption, commercial-grade results for any business.</p>
-              <span class="svc-cta">Learn More <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            </div>
-          </a>
-
+      <div class="why-card">
+        <div class="why-check-circle">✓</div>
+        <div class="why-card-content">
+          <h4>Professional &amp; Friendly Crew</h4>
+          <p>Our team is experienced, courteous, and treats your property with respect. We clean up completely before we leave.</p>
         </div>
       </div>
-      <div class="services-diag-bottom"></div>
-    </section>
 
-
-    <!-- ══════════════════════════════════════════
-         TESTIMONIALS
-    ══════════════════════════════════════════════ -->
-    <Testimonials />
-
-
-    <!-- ══════════════════════════════════════════
-         WHY BROWNS — bold tile grid, big numbers, no split
-    ══════════════════════════════════════════════ -->
-    <section class="why-section">
-      <div class="container">
-
-        <!-- Section title: full-width, not a split, large and anchored -->
-        <div class="why-header">
-          <span class="eyebrow">Why Choose Browns</span>
-          <h2 class="why-h2">Six Reasons Our Clients <em>Come Back.</em></h2>
-          <a href="/about" class="why-learn-more">Meet the Team →</a>
-        </div>
-
-        <!-- 3×2 tile grid — big amber number + bold title + description -->
-        <div class="why-tiles">
-
-          <div class="why-tile">
-            <span class="why-tile-num">01</span>
-            <div class="why-tile-icon">
-              <svg width="26" height="26" viewBox="0 0 28 28" fill="none"><path d="M14 3l2.8 8.6H25l-7.2 5.2 2.8 8.6L14 20.1l-6.6 5.3 2.8-8.6L3 11.6h8.2L14 3z" fill="currentColor" opacity=".25"/><path d="M14 3l2.8 8.6H25l-7.2 5.2 2.8 8.6L14 20.1l-6.6 5.3 2.8-8.6L3 11.6h8.2L14 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
-            </div>
-            <h4>100% Satisfaction Guarantee</h4>
-            <p>We don't call it done until you're happy. We come back and make it right, no questions asked.</p>
-          </div>
-
-          <div class="why-tile">
-            <span class="why-tile-num">02</span>
-            <div class="why-tile-icon">
-              <svg width="26" height="26" viewBox="0 0 28 28" fill="none"><circle cx="11" cy="9" r="5" fill="currentColor" opacity=".25"/><circle cx="11" cy="9" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M2 24c0-4.4 4-8 9-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M19 17l2 2 4-4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <h4>Owner on Every Job</h4>
-            <p>Boomer personally oversees every project. You get the owner on-site, not a sub-crew.</p>
-          </div>
-
-          <div class="why-tile">
-            <span class="why-tile-num">03</span>
-            <div class="why-tile-icon">
-              <svg width="26" height="26" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.5"/><path d="M14 8v6.5l3.5 2" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg>
-            </div>
-            <h4>3–7 Day Turnaround</h4>
-            <p>Most projects done in one week. We show up when we say and finish when we say. Period.</p>
-          </div>
-
-          <div class="why-tile">
-            <span class="why-tile-num">04</span>
-            <div class="why-tile-icon">
-              <svg width="26" height="26" viewBox="0 0 28 28" fill="none"><path d="M14 3L4 8.5v10L14 24l10-5.5v-10L14 3z" fill="currentColor" opacity=".15"/><path d="M14 3L4 8.5v10L14 24l10-5.5v-10L14 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9.5 13.5l3 3 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <h4>Licensed &amp; Fully Insured</h4>
-            <p>Full Alabama licensing and liability on every job. Your home and investment are protected.</p>
-          </div>
-
-          <div class="why-tile">
-            <span class="why-tile-num">05</span>
-            <div class="why-tile-icon">
-              <svg width="26" height="26" viewBox="0 0 28 28" fill="none"><rect x="3" y="10" width="22" height="15" rx="2" fill="currentColor" opacity=".15"/><rect x="3" y="10" width="22" height="15" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M8 10V7a6 6 0 0 1 12 0v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </div>
-            <h4>Top-of-the-Line Paints</h4>
-            <p>Premium, low-VOC, weather-resistant paints for Alabama's climate. No cutting corners.</p>
-          </div>
-
-          <div class="why-tile">
-            <span class="why-tile-num">06</span>
-            <div class="why-tile-icon">
-              <svg width="26" height="26" viewBox="0 0 28 28" fill="none"><path d="M4 22V11L14 4l10 7v11H4z" fill="currentColor" opacity=".15"/><path d="M4 22V11L14 4l10 7v11H4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M10 22v-7h8v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </div>
-            <h4>25+ Years, Same Communities</h4>
-            <p>We've painted for the same neighbors for decades. Our reputation is everything here.</p>
-          </div>
-
+      <div class="why-card">
+        <div class="why-check-circle">✓</div>
+        <div class="why-card-content">
+          <h4>Expert Surface Preparation</h4>
+          <p>80% of a great paint job is prep work. We fill cracks, sand, prime, and repair before a single brush stroke hits your walls.</p>
         </div>
       </div>
-    </section>
 
-
-    <!-- ══════════════════════════════════════════
-         PROCESS — editorial large numbers, no centered header
-    ══════════════════════════════════════════════ -->
-    <section class="process-section">
-      <div class="process-diag-top"></div>
-      <div class="container">
-
-        <!-- Top bar: left label only, no centered structure -->
-        <div class="process-top-bar">
-          <span class="eyebrow">How It Works</span>
-          <h2 class="process-top-h2">Three Steps.<br/><em>Zero Stress.</em></h2>
-        </div>
-
-        <!-- Steps as editorial full-width cards -->
-        <div class="process-cards">
-
-          <div class="process-card">
-            <div class="process-card-num">01</div>
-            <div class="process-card-body">
-              <div class="process-card-icon">
-                <svg width="28" height="28" viewBox="0 0 30 30" fill="none"><rect x="3" y="5" width="24" height="21" rx="3" stroke="currentColor" stroke-width="2"/><path d="M9 3v4M21 3v4M3 13h24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M9 18h12M9 22h7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg>
-              </div>
-              <h3>Get Your Quote</h3>
-              <p>Call or fill out a form. We'll reach out within 24 hours for a free on-site estimate — no pressure, no obligation.</p>
-            </div>
-            <div class="process-card-cta">
-              <a href="/contact">Request Quote →</a>
-            </div>
-          </div>
-
-          <div class="process-card">
-            <div class="process-card-num">02</div>
-            <div class="process-card-body">
-              <div class="process-card-icon">
-                <svg width="28" height="28" viewBox="0 0 30 30" fill="none"><rect x="3" y="5" width="24" height="21" rx="3" stroke="currentColor" stroke-width="2"/><path d="M9 3v4M21 3v4M3 13h24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="19" r="2" fill="currentColor"/><circle cx="15" cy="19" r="2" fill="currentColor"/></svg>
-              </div>
-              <h3>Get Scheduled</h3>
-              <p>We work around your life. Confirm your date — we show up on time, protect your property, and get to work.</p>
-            </div>
-            <div class="process-card-cta process-card-cta--mid">
-              <span>Usually 3–7 days out</span>
-            </div>
-          </div>
-
-          <div class="process-card">
-            <div class="process-card-num">03</div>
-            <div class="process-card-body">
-              <div class="process-card-icon">
-                <svg width="28" height="28" viewBox="0 0 30 30" fill="none"><circle cx="15" cy="15" r="12" stroke="currentColor" stroke-width="2"/><path d="M9 15l4 4 8-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-              <h3>Relax &amp; Enjoy</h3>
-              <p>We handle all prep, painting, and complete cleanup. You walk through, approve, and enjoy the transformation.</p>
-            </div>
-            <div class="process-card-cta process-card-cta--done">
-              <span>100% satisfaction or we return</span>
-            </div>
-          </div>
-
+      <div class="why-card">
+        <div class="why-check-circle">✓</div>
+        <div class="why-card-content">
+          <h4>Premium Materials Only</h4>
+          <p>We use Sherwin-Williams and Benjamin Moore paints — the same premium brands used in luxury home builds.</p>
         </div>
       </div>
-    </section>
 
-
-    <!-- ══════════════════════════════════════════
-         AREAS — asymmetric: left tall label + right county grid
-    ══════════════════════════════════════════════ -->
-    <section class="areas-section">
-      <div class="container areas-split">
-
-        <!-- LEFT: county grid (content IS the section) -->
-        <div class="areas-grid">
-          <div class="area-card">
-            <h4>Escambia</h4>
-            <a href="/brewton-painting">Brewton</a>
-            <a href="/atmore-painting">Atmore</a>
-            <a href="/flomaton-painting">Flomaton</a>
-          </div>
-          <div class="area-card">
-            <h4>Conecuh</h4>
-            <a href="/evergreen-painting">Evergreen</a>
-            <a href="/castleberry-painting">Castleberry</a>
-            <a href="/evergreen-painting">Repton</a>
-          </div>
-          <div class="area-card">
-            <h4>Monroe</h4>
-            <a href="/monroeville-painting">Monroeville</a>
-            <a href="/monroeville-painting">Frisco City</a>
-          </div>
-          <div class="area-card">
-            <h4>Mobile</h4>
-            <a href="/mobile-painting">Mobile</a>
-            <a href="/saraland-painting">Saraland</a>
-            <a href="/theodore-painting">Theodore</a>
-            <a href="/creola-painting">Creola</a>
-          </div>
-          <div class="area-card area-card-wide">
-            <h4>Baldwin</h4>
-            <div class="area-cities-grid">
-              <a href="/fairhope-painting">Fairhope</a>
-              <a href="/daphne-painting">Daphne</a>
-              <a href="/gulf-shores-painting">Gulf Shores</a>
-              <a href="/orange-beach-painting">Orange Beach</a>
-              <a href="/foley-painting">Foley</a>
-              <a href="/bay-minette-painting">Bay Minette</a>
-            </div>
-          </div>
-        </div><!-- end areas-grid -->
-
-        <!-- RIGHT: label, stats, CTA (flipped from left-label pattern) -->
-        <div class="areas-right">
-          <span class="eyebrow">Where We Serve</span>
-          <h2 class="areas-big-h2">South<br/>Alabama's<br/><span class="h2-accent">Painters.</span></h2>
-          <div class="areas-stats">
-            <div class="areas-stat"><strong>5</strong><span>Counties</span></div>
-            <div class="areas-stat"><strong>20+</strong><span>Cities</span></div>
-          </div>
-          <p class="areas-right-desc">One crew you can trust — licensed, insured, and locally rooted for 25+ years.</p>
-          <a href="/service-areas" class="btn-outline-white areas-cta-btn">All Service Areas →</a>
+      <div class="why-card">
+        <div class="why-check-circle">✓</div>
+        <div class="why-card-content">
+          <h4>Family-Owned Since 1998</h4>
+          <p>Boomer Brown built this business on reputation and referrals. 25+ years means accountability and trust, every single job.</p>
         </div>
-
       </div>
-    </section>
 
-
-    <!-- ══════════════════════════════════════════
-         CTA STRIP — amber, full contrast
-    ══════════════════════════════════════════════ -->
-    <section class="cta-strip">
-      <div class="container cta-strip-inner">
-        <div class="cta-text-block">
-          <span class="cta-pre">Ready to Start?</span>
-          <h2 class="cta-h2">Get BROWNS Today!</h2>
-          <p>Our painters will turn the mundane into beautiful. Transform your home or business.</p>
+      <div class="why-card">
+        <div class="why-check-circle">✓</div>
+        <div class="why-card-content">
+          <h4>Licensed, Bonded &amp; Insured</h4>
+          <p>Fully licensed and insured for your protection. You'll never have to worry about liability on your property.</p>
         </div>
-        <a href="/contact" class="cta-dark-btn">
-          Get Free Estimate
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
       </div>
-    </section>
 
-  </main>
-</BaseLayout>
+    </div>
+  </div>
+</section>
 
+
+<!-- ═══════════════════════════════════════════
+     SERVICE AREAS — dark bg, city grid
+═══════════════════════════════════════════════ -->
+<section class="areas-section">
+  <div class="wave-into-dark-thin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,40 C480,0 960,60 1440,20 L1440,0 L0,0 Z" fill="#f8f9fa"/>
+    </svg>
+  </div>
+  <div class="container">
+    <span class="eyebrow-tag light">Service Area</span>
+    <h2 class="section-h2 white">We Paint Across South Alabama</h2>
+    <p class="section-sub light">From Conecuh County to the Gulf Coast — if you're in South Alabama, Browns Painting comes to you.</p>
+    <div class="areas-grid">
+      <a href="/brewton-painting" class="area-link">Brewton</a>
+      <a href="/evergreen-painting" class="area-link">Evergreen</a>
+      <a href="/atmore-painting" class="area-link">Atmore</a>
+      <a href="/flomaton-painting" class="area-link">Flomaton</a>
+      <a href="/monroeville-painting" class="area-link">Monroeville</a>
+      <a href="/bay-minette-painting" class="area-link">Bay Minette</a>
+      <a href="/fairhope-painting" class="area-link">Fairhope</a>
+      <a href="/daphne-painting" class="area-link">Daphne</a>
+      <a href="/mobile-painting" class="area-link">Mobile</a>
+      <a href="/gulf-shores-painting" class="area-link">Gulf Shores</a>
+      <a href="/orange-beach-painting" class="area-link">Orange Beach</a>
+      <a href="/foley-painting" class="area-link">Foley</a>
+      <a href="/saraland-painting" class="area-link">Saraland</a>
+      <a href="/theodore-painting" class="area-link">Theodore</a>
+      <a href="/creola-painting" class="area-link">Creola</a>
+      <a href="/service-areas" class="area-link area-all">View All Areas →</a>
+    </div>
+  </div>
+</section>
+
+</main>
 
 <style>
-  /* ════════════════════════════
-     HERO
-  ════════════════════════════ */
-  .hero {
-    position: relative;
-    height: 100svh;
-    min-height: 680px;
-    max-height: 1000px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-  }
 
-  /* Parallax bg */
-  .hero-parallax {
-    position: absolute;
-    inset: -15% 0;
-    z-index: 0;
-  }
+/* ═══════════════════════════════════════════════
+   HERO
+═══════════════════════════════════════════════ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
 
-  .slide {
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    transition: opacity 1.6s cubic-bezier(0.4,0,0.2,1);
-    will-change: transform;
-  }
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/ai/ai-hero-dramatic.jpg');
+  background-size: cover;
+  background-position: center 35%;
+  transform: scale(1.05);
+  transition: transform 12s ease-out;
+}
 
-  .slide.active { opacity: 1; }
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    rgba(10, 14, 22, 0.92) 0%,
+    rgba(10, 14, 22, 0.78) 40%,
+    rgba(10, 14, 22, 0.45) 65%,
+    rgba(10, 14, 22, 0.15) 100%
+  );
+}
 
-  /* Multi-layer gradient for cinematic depth */
-  .hero-grad {
-    position: absolute;
-    inset: 0;
-    background:
-      linear-gradient(to top, rgba(8,10,16,0.92) 0%, rgba(8,10,16,0.55) 40%, rgba(8,10,16,0.3) 70%, rgba(8,10,16,0.4) 100%);
-    z-index: 1;
-  }
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 8rem 2rem 10rem;
+  max-width: 780px;
+  margin: 0 auto 0 calc((100vw - 1200px) / 2);
+  padding-left: max(2rem, calc((100vw - 1200px) / 2 + 1.5rem));
+}
 
-  /* SVG noise texture overlay for depth */
-  .hero-noise {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    opacity: 0.045;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    background-size: 200px 200px;
-  }
+.hero-eyebrow {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--amber);
+  font-style: italic;
+  margin-bottom: 1.25rem;
+}
 
+.hero-h1 {
+  font-family: var(--font-display);
+  font-size: clamp(3.25rem, 7vw, 5.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.hero-orange {
+  color: var(--amber);
+}
+
+.hero-sub {
+  font-family: var(--font-sans);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 2.5rem;
+  font-weight: 500;
+}
+
+.hero-cta-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.hero-btn-orange {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--amber);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 6px 24px rgba(249,115,22,0.45);
+}
+.hero-btn-orange:hover {
+  background: var(--amber-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px rgba(249,115,22,0.55);
+}
+
+.hero-btn-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 1rem 1.75rem;
+  border-radius: 50px;
+  text-decoration: none;
+  border: 1.5px solid rgba(255,255,255,0.35);
+  backdrop-filter: blur(8px);
+  transition: background 0.2s, border-color 0.2s;
+}
+.hero-btn-phone:hover {
+  background: rgba(255,255,255,0.2);
+  border-color: rgba(255,255,255,0.6);
+}
+
+.hero-trust {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.trust-item {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.75);
+  letter-spacing: 0.02em;
+}
+.trust-sep {
+  color: rgba(255,255,255,0.3);
+}
+
+.hero-wave {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  line-height: 0;
+}
+.hero-wave svg {
+  width: 100%;
+  height: 80px;
+  display: block;
+}
+
+
+/* ═══════════════════════════════════════════════
+   STATS BAR
+═══════════════════════════════════════════════ */
+.stats-bar {
+  background: var(--ink-soft);
+  padding: 1.75rem 0;
+}
+.stats-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2.5rem;
+}
+.stat-item strong {
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--amber);
+  line-height: 1;
+}
+.stat-item span {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.65);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 0.25rem;
+}
+.stat-divider {
+  width: 1px;
+  height: 48px;
+  background: rgba(255,255,255,0.12);
+}
+
+
+/* ═══════════════════════════════════════════════
+   SHARED SECTION ELEMENTS
+═══════════════════════════════════════════════ */
+.eyebrow-tag {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 0.875rem;
+}
+.eyebrow-tag.light {
+  color: var(--amber-light);
+}
+
+.section-h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.08;
+  margin-bottom: 1rem;
+}
+.section-h2.white { color: #ffffff; }
+.section-h2 em { font-style: italic; color: var(--amber); }
+
+.section-sub {
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  max-width: 700px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+.section-sub.light { color: rgba(255,255,255,0.7); }
+
+.orange-rule {
+  width: 60px;
+  height: 3px;
+  background: var(--amber);
+  border-radius: 2px;
+  margin: 1rem 0 1.5rem;
+}
+.orange-rule.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-orange { color: var(--amber); }
+
+
+/* ═══════════════════════════════════════════════
+   INTRO SECTION
+═══════════════════════════════════════════════ */
+.intro {
+  background: #ffffff;
+  padding: 6rem 0 5rem;
+}
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+.intro-left {
+  position: relative;
+}
+.paint-blob {
+  position: absolute;
+  top: -20px;
+  left: -30px;
+  width: 220px;
+  height: 220px;
+  z-index: 0;
+  pointer-events: none;
+}
+.intro-photo {
+  position: relative;
+  z-index: 1;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.15);
+}
+.intro-photo img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+}
+.intro-right {}
+.intro-h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.1;
+  color: var(--ink);
+  margin-bottom: 0;
+}
+.intro-h2 em {
+  font-style: italic;
+  color: var(--amber);
+}
+.intro-lead {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+.intro-right p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.check-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.check-list li::before {
+  content: '✓';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  background: var(--amber);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+
+/* ═══════════════════════════════════════════════
+   SERVICES — dark section
+═══════════════════════════════════════════════ */
+.services {
+  background: var(--ink-soft);
+  padding: 0 0 5rem;
+  position: relative;
+}
+.wave-into-dark {
+  line-height: 0;
+  margin-bottom: 4rem;
+}
+.wave-into-dark svg {
+  width: 100%;
+  height: 80px;
+  display: block;
+}
+.wave-out-of-dark {
+  line-height: 0;
+  margin-top: 4rem;
+}
+.wave-out-of-dark svg {
+  width: 100%;
+  height: 80px;
+  display: block;
+}
+
+.services .container {
+  text-align: center;
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+  text-align: left;
+}
+
+.svc-card {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.svc-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 48px rgba(0,0,0,0.25);
+}
+
+.svc-card-body {
+  padding: 2rem 2rem 1.5rem;
+  flex: 1;
+}
+.svc-card-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 0.75rem;
+}
+.svc-card-body p {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+.svc-learn-more {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--ink);
+  text-decoration: none;
+  padding: 0.625rem 1.25rem;
+  border: 2px solid var(--ink);
+  border-radius: 50px;
+  letter-spacing: 0.02em;
+  transition: background 0.2s, color 0.2s;
+}
+.svc-learn-more:hover {
+  background: var(--ink);
+  color: #fff;
+}
+
+.svc-card-photo {
+  height: 220px;
+  overflow: hidden;
+}
+.svc-card-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.svc-card:hover .svc-card-photo img {
+  transform: scale(1.05);
+}
+
+
+/* ═══════════════════════════════════════════════
+   GALLERY STRIP
+═══════════════════════════════════════════════ */
+.gallery-strip {
+  background: var(--cream);
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.gallery-cell {
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  position: relative;
+}
+.gallery-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.gallery-cell:hover img {
+  transform: scale(1.06);
+}
+
+
+/* ═══════════════════════════════════════════════
+   REVIEWS SECTION
+═══════════════════════════════════════════════ */
+.reviews-section {
+  background: var(--ink-soft);
+  padding: 0;
+}
+.reviews-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 520px;
+}
+
+.reviews-photo-col {
+  position: relative;
+  overflow: hidden;
+}
+.framed-photo-wrap {
+  position: relative;
+  height: 100%;
+  min-height: 500px;
+}
+.framed-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* Orange border frame overlay */
+.framed-photo-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 20px;
+  border: 4px solid var(--amber);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.reviews-content-col {
+  padding: 4rem 3.5rem 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.review-carousel {
+  position: relative;
+  min-height: 200px;
+  margin: 1.5rem 0 1.5rem;
+}
+.review-slide {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+.review-slide.active {
+  display: block;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(12px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.review-name {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--amber);
+  margin-bottom: 0.75rem;
+}
+.review-text {
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+.review-stars {
+  color: var(--amber);
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+.review-location {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.5);
+}
+
+.review-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.review-arrow {
+  background: rgba(255,255,255,0.1);
+  border: 1.5px solid rgba(255,255,255,0.2);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #fff;
+  transition: background 0.2s, border-color 0.2s;
+}
+.review-arrow:hover {
+  background: var(--amber);
+  border-color: var(--amber);
+}
+.review-dots-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.review-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  padding: 0;
+}
+.review-dot.active {
+  background: var(--amber);
+  transform: scale(1.25);
+}
+
+
+/* ═══════════════════════════════════════════════
+   PROCESS SECTION
+═══════════════════════════════════════════════ */
+.process-section {
+  background: #ffffff;
+  padding: 6rem 0;
+}
+.process-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+.process-h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 0;
+}
+.process-lead {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+.orange-check-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.orange-check-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.875rem;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+.orange-check-list li span:not(.check-circle) {
+  color: #1f2937 !important;
+}
+.check-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 26px;
+  height: 26px;
+  background: var(--amber);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-top: 1px;
+}
+
+/* Double-frame photo effect */
+.double-frame {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+.double-frame::before {
+  content: '';
+  position: absolute;
+  top: -14px;
+  left: -14px;
+  right: 14px;
+  bottom: 14px;
+  border: 3px solid var(--amber);
+  border-radius: 4px;
+  z-index: 0;
+  pointer-events: none;
+}
+.double-frame::after {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: -14px;
+  bottom: -14px;
+  border: 3px solid rgba(26,35,50,0.4);
+  border-radius: 4px;
+  z-index: 0;
+  pointer-events: none;
+}
+.double-frame img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+
+
+/* ═══════════════════════════════════════════════
+   CTA STRIP
+═══════════════════════════════════════════════ */
+.cta-strip {
+  background: var(--ink-soft);
+  padding: 0 0 5rem;
+}
+.wave-into-dark-thin {
+  line-height: 0;
+  margin-bottom: 4rem;
+}
+.wave-into-dark-thin svg {
+  width: 100%;
+  height: 60px;
+  display: block;
+}
+.cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+.cta-left { flex: 1; min-width: 260px; }
+.cta-sub {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.7;
+  margin-top: 0.75rem;
+}
+.cta-right { flex-shrink: 0; }
+.cta-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  background: var(--amber);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1.125rem;
+  padding: 1.125rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 8px 28px rgba(249,115,22,0.45);
+}
+.cta-pill-btn:hover {
+  background: var(--amber-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px rgba(249,115,22,0.55);
+}
+
+
+/* ═══════════════════════════════════════════════
+   WHY BROWNS
+═══════════════════════════════════════════════ */
+.why-section {
+  background: var(--cream);
+  padding: 6rem 0;
+}
+.why-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+.why-h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 0;
+}
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.why-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.why-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.1);
+}
+.why-check-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 38px;
+  height: 38px;
+  background: var(--amber);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.why-card-content h4 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--ink);
+  margin-bottom: 0.375rem;
+}
+.why-card-content p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+
+/* ═══════════════════════════════════════════════
+   SERVICE AREAS
+═══════════════════════════════════════════════ */
+.areas-section {
+  background: var(--ink-soft);
+  padding: 0 0 5rem;
+}
+.areas-section .wave-into-dark-thin {
+  margin-bottom: 4rem;
+}
+.areas-section .container {
+  text-align: center;
+}
+.areas-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+.area-link {
+  display: inline-block;
+  padding: 0.625rem 1.375rem;
+  border: 1.5px solid rgba(255,255,255,0.18);
+  border-radius: 50px;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+.area-link:hover {
+  background: var(--amber);
+  border-color: var(--amber);
+  color: #fff;
+}
+.area-link.area-all {
+  background: rgba(249,115,22,0.15);
+  border-color: var(--amber);
+  color: var(--amber);
+  font-weight: 700;
+}
+.area-link.area-all:hover {
+  background: var(--amber);
+  color: #fff;
+}
+
+
+/* ═══════════════════════════════════════════════
+   MOBILE RESPONSIVE
+═══════════════════════════════════════════════ */
+@media (max-width: 1024px) {
   .hero-content {
-    position: relative;
-    z-index: 3;
-    display: flex;
+    margin-left: 0;
+    padding-left: 2rem;
+    max-width: 640px;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .intro-photo img { height: 320px; }
+
+  .service-cards {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+  .reviews-photo-col {
+    display: none;
+  }
+  .reviews-content-col {
+    padding: 3rem 1.5rem;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .cta-inner {
     flex-direction: column;
-    align-items: center;
-    padding: 0 1.5rem 4rem;
-    max-width: 900px;
-    margin: 0 auto;
+    text-align: center;
   }
 
-  /* Animated label pill */
-  .hero-label {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: rgba(245,158,11,0.15);
-    border: 1px solid rgba(245,158,11,0.35);
-    color: var(--amber-light);
-    font-family: var(--font-sans);
-    font-size: 0.75rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    padding: 0.375rem 1rem;
-    border-radius: 100px;
-    margin-bottom: 1.5rem;
-    backdrop-filter: blur(8px);
-  }
-
-  .hero-label-dot {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--amber);
-    box-shadow: 0 0 8px var(--amber);
-    animation: pulse-dot 2s ease-in-out infinite;
-  }
-
-  @keyframes pulse-dot {
-    0%, 100% { box-shadow: 0 0 6px var(--amber); }
-    50% { box-shadow: 0 0 16px var(--amber), 0 0 32px rgba(245,158,11,0.4); }
-  }
-
-  .hero-logo {
-    height: 100px;
-    width: auto;
-    object-fit: contain;
-    filter: drop-shadow(0 4px 24px rgba(0,0,0,0.6));
-    margin-bottom: 1.5rem;
-  }
-
-  /* MASSIVE headline — the star */
-  .hero-h1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.1em;
-    margin-bottom: 1.25rem;
-  }
-
-  .hero-line1 {
-    font-family: var(--font-sans);
-    font-size: clamp(4rem, 10vw, 8.5rem);
-    font-weight: 900;
-    letter-spacing: -0.04em;
-    line-height: 0.95;
-    color: #fff;
-    text-shadow: 0 4px 40px rgba(0,0,0,0.5);
-    text-transform: uppercase;
-  }
-
-  .hero-line2 {
-    font-family: var(--font-display);
-    font-size: clamp(2.5rem, 6vw, 5.5rem);
-    font-weight: 400;
-    font-style: italic;
-    letter-spacing: -0.02em;
-    line-height: 1.1;
-    color: var(--amber-light);
-    text-shadow: 0 4px 40px rgba(245,158,11,0.3);
-  }
-
-  .hero-sub {
-    font-family: var(--font-sans);
-    font-size: clamp(0.9375rem, 1.5vw, 1.125rem);
-    color: rgba(255,255,255,0.72);
-    margin-bottom: 2.25rem;
-    letter-spacing: 0.01em;
-    line-height: 1.6;
-  }
-
-  .hero-actions {
-    display: flex;
-    gap: 0.875rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 2rem;
-  }
-
-  .hero-btn-primary {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-family: var(--font-sans);
-    font-size: 0.9375rem;
-    font-weight: 800;
-    color: var(--ink);
-    background: var(--amber);
-    text-decoration: none;
-    padding: 0.875rem 1.875rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 24px rgba(245,158,11,0.5), 0 1px 4px rgba(0,0,0,0.2);
-    letter-spacing: -0.01em;
-  }
-
-  .hero-btn-primary:hover {
-    background: var(--amber-light);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 32px rgba(245,158,11,0.6);
-  }
-
-  .hero-btn-primary:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
-
-  .hero-btn-ghost {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-family: var(--font-sans);
-    font-size: 0.9375rem;
-    font-weight: 700;
-    color: rgba(255,255,255,0.9);
-    background: rgba(255,255,255,0.08);
-    border: 1.5px solid rgba(255,255,255,0.3);
-    text-decoration: none;
-    padding: 0.875rem 1.875rem;
-    border-radius: 8px;
-    backdrop-filter: blur(8px);
-    letter-spacing: -0.01em;
-  }
-
-  .hero-btn-ghost:hover {
-    background: rgba(255,255,255,0.14);
-    border-color: rgba(255,255,255,0.6);
-    transform: translateY(-3px);
-  }
-
-  .hero-btn-ghost:focus-visible { outline: 2px solid rgba(255,255,255,0.6); outline-offset: 3px; }
-
-  /* Trust pills */
-  .hero-trust {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .trust-pill {
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.15);
-    backdrop-filter: blur(8px);
-    color: rgba(255,255,255,0.8);
-    font-family: var(--font-sans);
-    font-size: 0.75rem;
-    font-weight: 600;
-    padding: 0.35rem 0.875rem;
-    border-radius: 100px;
-    letter-spacing: 0.02em;
-  }
-
-  /* Diagonal cut at bottom of hero */
-  .hero-cut {
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    right: 0;
-    height: 80px;
-    background: #fff;
-    clip-path: polygon(0 100%, 100% 0, 100% 100%);
-    z-index: 4;
-  }
-
-  /* Dots */
-  .hero-dots {
-    position: absolute;
-    bottom: 1.75rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 0.5rem;
-    z-index: 5;
-  }
-
-  .dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.3);
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    transition: background 0.3s, transform 0.3s;
-  }
-
-  .dot.active { background: var(--amber); transform: scale(1.35); }
-  .dot:hover { background: rgba(255,255,255,0.65); }
-  .dot:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
-
-
-  /* ════════════════════════════
-     STATS STRIP
-  ════════════════════════════ */
-  .stats-strip {
-    background: var(--ink);
-    position: relative;
-    z-index: 2;
+  .why-grid {
+    grid-template-columns: 1fr;
   }
 
   .stats-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-    display: flex;
-    align-items: stretch;
+    gap: 1rem;
   }
+  .stat-divider { display: none; }
+  .stat-item { padding: 0.75rem 1.5rem; }
+}
 
-  .stat {
-    flex: 1;
-    display: flex;
+@media (max-width: 480px) {
+  .hero-h1 {
+    font-size: clamp(2.5rem, 10vw, 3.5rem);
+  }
+  .hero-content {
+    padding: 7rem 1.25rem 8rem;
+  }
+  .hero-cta-box {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2.5rem 1rem;
-    gap: 0.375rem;
-    text-align: center;
+    align-items: flex-start;
   }
-
-  .stat strong {
-    font-family: var(--font-sans);
-    font-size: clamp(2rem, 3.5vw, 3rem);
-    font-weight: 900;
-    letter-spacing: -0.04em;
-    color: var(--amber);
-    line-height: 1;
-  }
-
-  .stat span {
-    font-family: var(--font-sans);
-    font-size: 0.6875rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: rgba(255,255,255,0.4);
-  }
-
-  .stat-rule {
-    width: 1px;
-    background: rgba(255,255,255,0.07);
-    align-self: stretch;
-    margin: 1.25rem 0;
-  }
-
-
-  /* ════════════════════════════
-     SHARED
-  ════════════════════════════ */
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-  }
-
-  .eyebrow {
-    display: inline-block;
-    font-family: var(--font-sans);
-    font-size: 0.6875rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: var(--amber);
-    margin-bottom: 0.75rem;
-  }
-
-  .section-head {
-    text-align: center;
-    max-width: 680px;
-    margin: 0 auto 4rem;
-  }
-
-  .light-head .section-h2 { color: #fff; }
-  .light-head p {
-    color: rgba(255,255,255,0.5);
-    font-family: var(--font-sans);
-    font-size: 1.0625rem;
-    line-height: 1.65;
-    margin-top: 0.875rem;
-  }
-
-  .section-h2 {
-    font-family: var(--font-sans);
-    font-size: clamp(2rem, 4vw, 3.25rem);
-    font-weight: 900;
-    letter-spacing: -0.04em;
-    line-height: 1.05;
-    color: var(--ink);
-  }
-
-  .section-h2 em {
-    font-family: var(--font-display);
-    font-style: italic;
-    font-weight: 400;
-    letter-spacing: -0.02em;
-  }
-
-  .h2-accent { color: var(--amber); }
-
-  .section-head p {
-    font-family: var(--font-sans);
-    font-size: 1.0625rem;
-    color: var(--text-muted);
-    line-height: 1.65;
-    margin-top: 0.875rem;
-  }
-
-
-  /* ════════════════════════════
-     FEATURE SECTION
-  ════════════════════════════ */
-  .feature-section {
-    background: #fff;
-    padding: 8rem 0 9rem;
-  }
-
-  .feature-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
-    align-items: center;
-  }
-
-  /* Decorative frame accent — offset colored block behind photo */
-  .feature-photo-col {
-    position: relative;
-  }
-
-  .feature-frame-accent {
-    position: absolute;
-    top: 1.5rem;
-    left: -1.5rem;
-    right: 2rem;
-    bottom: -1.5rem;
-    background: var(--amber);
-    border-radius: 1.5rem;
-    opacity: 0.12;
-    z-index: 0;
-  }
-
-  .feature-photo-stack {
-    position: relative;
-    z-index: 1;
-  }
-
-  .feature-img-main {
+  .hero-btn-orange, .hero-btn-phone {
     width: 100%;
-    height: 560px;
-    object-fit: cover;
-    border-radius: 1.25rem;
-    box-shadow: 0 24px 72px rgba(0,0,0,0.16), 0 6px 20px rgba(0,0,0,0.08);
-    display: block;
-  }
-
-  /* Floating stat badge */
-  .feature-img-badge {
-    position: absolute;
-    top: 1.5rem;
-    right: -2rem;
-    background: var(--ink);
-    border-radius: 1rem;
-    padding: 1.125rem 1.375rem;
-    display: flex;
-    align-items: center;
-    gap: 0.875rem;
-    box-shadow: 0 12px 40px rgba(0,0,0,0.3);
-    border: 1px solid rgba(255,255,255,0.06);
-  }
-
-  .badge-num {
-    font-family: var(--font-sans);
-    font-size: 2rem;
-    font-weight: 900;
-    color: var(--amber);
-    letter-spacing: -0.04em;
-    line-height: 1;
-  }
-
-  .badge-label {
-    font-family: var(--font-sans);
-    font-size: 0.6875rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: rgba(255,255,255,0.6);
-    line-height: 1.4;
-  }
-
-  /* Floating secondary photo */
-  .feature-img-float {
-    position: absolute;
-    bottom: -2.5rem;
-    left: -2rem;
-    width: 52%;
-    border-radius: 1rem;
-    overflow: hidden;
-    border: 4px solid #fff;
-    box-shadow: 0 16px 48px rgba(0,0,0,0.18);
-  }
-
-  .feature-img-float img {
-    width: 100%;
-    height: 190px;
-    object-fit: cover;
-    display: block;
-  }
-
-  /* Content */
-  .feature-content {
-    padding-top: 2rem;
-    padding-bottom: 3rem;
-  }
-
-  .feature-h2 {
-    font-family: var(--font-sans);
-    font-size: clamp(2.25rem, 4vw, 3.75rem);
-    font-weight: 900;
-    letter-spacing: -0.04em;
-    line-height: 1.05;
-    color: var(--ink);
-    margin-bottom: 1.25rem;
-  }
-
-  .feature-h2 em {
-    font-family: var(--font-display);
-    font-style: italic;
-    font-weight: 400;
-    color: var(--amber-deep);
-    letter-spacing: -0.02em;
-  }
-
-  .feature-content > p {
-    font-family: var(--font-sans);
-    font-size: 1.0625rem;
-    color: var(--text-muted);
-    line-height: 1.75;
-    margin-bottom: 0.875rem;
-  }
-
-  .feature-checks {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    margin: 1.75rem 0 2.25rem;
-  }
-
-  .fcheck {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    font-family: var(--font-sans);
-    font-size: 0.9375rem;
-    font-weight: 600;
-    color: var(--text);
-  }
-
-  .fcheck-icon {
-    width: 28px;
-    height: 28px;
-    background: var(--amber);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    color: var(--ink);
-    flex-shrink: 0;
-    box-shadow: 0 3px 10px rgba(245,158,11,0.35);
+    max-width: 320px;
   }
-
-  .btn-solid {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-family: var(--font-sans);
-    font-size: 0.9375rem;
-    font-weight: 800;
-    color: var(--ink);
-    background: var(--amber);
-    text-decoration: none;
-    padding: 0.875rem 1.875rem;
-    border-radius: 8px;
-    letter-spacing: -0.01em;
-    box-shadow: 0 4px 20px rgba(245,158,11,0.4);
-  }
-
-  .btn-solid:hover {
-    background: var(--amber-deep);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 28px rgba(245,158,11,0.5);
-  }
-
-  .btn-solid:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
-
-
-  /* ════════════════════════════
-     SERVICES — split header
-  ════════════════════════════ */
-  .services-section {
-    background: var(--ink);
-    padding: 0 0 7rem;
-    position: relative;
-  }
-
-  .services-diag-top {
-    height: 80px;
-    background: #fff;
-    clip-path: polygon(0 0, 100% 0, 0 100%);
-    position: relative;
-    z-index: 1;
-  }
-
-  .services-diag-bottom {
-    height: 80px;
-    background: var(--cream);
-    clip-path: polygon(0 0, 100% 100%, 0 100%);
-    margin-top: 4rem;
-  }
-
-  .services-section .container { position: relative; z-index: 2; }
-
-  /* Services bar: eyebrow+heading stacked left, link right */
-  .svc-bar {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    margin-bottom: 2.5rem;
-    padding-bottom: 1.75rem;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-  }
-
-  .svc-bar-left {
-    display: flex;
+  .hero-trust {
     flex-direction: column;
+    align-items: flex-start;
     gap: 0.4rem;
   }
+  .trust-sep { display: none; }
 
-  .svc-bar-h2 {
-    font-family: var(--font-sans);
-    font-size: clamp(1.75rem, 3vw, 2.75rem);
-    font-weight: 900;
-    letter-spacing: -0.04em;
-    color: #fff;
-    line-height: 1;
-  }
+  .gallery-grid { grid-template-columns: 1fr 1fr; }
 
-  .svc-all-link {
-    font-family: var(--font-sans);
-    font-size: 0.8125rem;
-    font-weight: 800;
-    color: rgba(255,255,255,0.35);
-    text-decoration: none;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    font-size: 0.6875rem;
-  }
+  .intro { padding: 3.5rem 0 3rem; }
+  .process-section { padding: 3.5rem 0; }
+  .why-section { padding: 3.5rem 0; }
+}
 
-  .svc-all-link:hover { color: var(--amber); }
-
-  .svc-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.25fr 1fr;
-    gap: 1.25rem;
-    align-items: end;
-  }
-
-  /* Full dark card — photo top, dark body bottom, all dark */
-  .svc-card {
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    border-radius: 1.25rem;
-    overflow: hidden;
-    background: #0d1020;
-    border: 1px solid rgba(255,255,255,0.06);
-    box-shadow: 0 8px 40px rgba(0,0,0,0.45);
-    transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.35s ease, border-color 0.2s ease;
-  }
-
-  .svc-card:hover {
-    transform: translateY(-12px) scale(1.01);
-    box-shadow: 0 24px 72px rgba(0,0,0,0.55);
-    border-color: rgba(245,158,11,0.25);
-  }
-
-  .svc-card:focus-visible { outline: 2px solid var(--amber); outline-offset: 4px; }
-
-  .svc-card-featured .svc-img-wrap { height: 380px; }
-  .svc-img-wrap { height: 270px; position: relative; overflow: hidden; background: #0d1020; flex-shrink: 0; }
-
-  .svc-commercial-graphic { background: #0a0d1a; }
-  .svc-comm-svg { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
-
-  .svc-img-wrap img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-    filter: brightness(1.15) saturate(1.2) contrast(1.05);
-  }
-
-  .svc-card:hover .svc-img-wrap img { transform: scale(1.08); }
-
-  .svc-img-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(13,16,32,0.9) 0%, rgba(13,16,32,0.3) 45%, rgba(13,16,32,0) 100%);
-  }
-
-  /* Dark card body */
-  .svc-body {
-    padding: 1.5rem 1.5rem 1.75rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .svc-type {
-    font-family: var(--font-sans);
-    font-size: 0.625rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 0.16em;
-    color: var(--amber);
-  }
-
-  .svc-title {
-    font-family: var(--font-sans);
-    font-size: 1.25rem;
-    font-weight: 900;
-    letter-spacing: -0.03em;
-    color: #fff;
-    line-height: 1.2;
-    margin: 0;
-  }
-
-  .svc-body p {
-    font-family: var(--font-sans);
-    font-size: 0.875rem;
-    color: rgba(255,255,255,0.45);
-    line-height: 1.65;
-    margin: 0.25rem 0 0.625rem;
-    flex: 1;
-  }
-
-  .svc-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.375rem;
-    font-family: var(--font-sans);
-    font-size: 0.8125rem;
-    font-weight: 800;
-    color: var(--amber);
-    letter-spacing: 0.01em;
-    margin-top: auto;
-  }
-
-  .svc-card:hover .svc-cta { color: var(--amber-light); }
-
-
-  /* ════════════════════════════
-     WHY SECTION — bold 3×2 tile grid
-  ════════════════════════════ */
-  .why-section {
-    background: var(--ink-soft);
-    padding: 6rem 0 7rem;
-    position: relative;
-  }
-
-  /* Full-width section header — big, anchored, not a split */
-  .why-header {
-    margin-bottom: 4rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    position: relative;
-  }
-
-  .why-h2 {
-    font-family: var(--font-sans);
-    font-size: clamp(2.25rem, 4.5vw, 4rem);
-    font-weight: 900;
-    letter-spacing: -0.04em;
-    line-height: 1.05;
-    color: var(--white);
-    max-width: 700px;
-  }
-
-  .why-h2 em {
-    font-family: var(--font-display);
-    font-style: italic;
-    font-weight: 400;
-    color: var(--amber);
-    letter-spacing: -0.02em;
-  }
-
-  .why-learn-more {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-family: var(--font-sans);
-    font-size: 0.75rem;
-    font-weight: 800;
-    color: rgba(255,255,255,0.35);
-    text-decoration: none;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    transition: color 0.2s;
-  }
-
-  .why-learn-more:hover { color: var(--amber); }
-
-  /* 3-column tile grid */
-  .why-tiles {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5px;
-    background: rgba(255,255,255,0.06);
-    border: 1.5px solid rgba(255,255,255,0.06);
-    border-radius: 18px;
-    overflow: hidden;
-  }
-
-  .why-tile {
-    background: var(--ink-soft);
-    padding: 2.5rem 2rem 2.25rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    position: relative;
-    transition: background 0.25s;
-  }
-
-  .why-tile:hover {
-    background: rgba(245,158,11,0.04);
-  }
-
-  .why-tile-num {
-    font-family: var(--font-sans);
-    font-size: 4rem;
-    font-weight: 900;
-    letter-spacing: -0.05em;
-    line-height: 1;
-    color: rgba(245,158,11,0.13);
-    position: absolute;
-    top: 1.5rem;
-    right: 1.75rem;
-    pointer-events: none;
-    user-select: none;
-  }
-
-  .why-tile-icon {
-    width: 52px;
-    height: 52px;
-    background: rgba(245,158,11,0.1);
-    border: 1px solid rgba(245,158,11,0.2);
-    border-radius: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--amber);
-    flex-shrink: 0;
-  }
-
-  .why-tile h4 {
-    font-family: var(--font-sans);
-    font-size: 1.125rem;
-    font-weight: 800;
-    color: #fff;
-    letter-spacing: -0.025em;
-    line-height: 1.3;
-    margin: 0;
-  }
-
-  .why-tile p {
-    font-family: var(--font-sans);
-    font-size: 0.9rem;
-    color: rgba(255,255,255,0.5);
-    line-height: 1.65;
-    margin: 0;
-  }
-
-
-  /* ════════════════════════════
-     PROCESS — editorial numbered cards
-  ════════════════════════════ */
-  .process-section {
-    background: var(--cream);
-    padding: 0 0 6rem;
-    position: relative;
-  }
-
-  .process-diag-top {
-    height: 80px;
-    background: var(--ink-soft);
-    clip-path: polygon(0 0, 100% 0, 100% 100%);
-  }
-
-  .process-section .container { padding-top: 3.5rem; }
-
-  /* Left-aligned top bar — NOT centered */
-  .process-top-bar {
-    display: flex;
-    align-items: baseline;
-    gap: 3rem;
-    margin-bottom: 3rem;
-    border-bottom: 1px solid rgba(17,24,39,0.08);
-    padding-bottom: 2rem;
-  }
-
-  .process-top-h2 {
-    font-family: var(--font-sans);
-    font-size: clamp(1.875rem, 3vw, 3rem);
-    font-weight: 900;
-    letter-spacing: -0.04em;
-    line-height: 1.05;
-    color: var(--ink);
-  }
-
-  .process-top-h2 em {
-    font-family: var(--font-display);
-    font-style: italic;
-    font-weight: 400;
-    color: var(--amber-deep);
-    letter-spacing: -0.02em;
-  }
-
-  /* Cards as horizontal rows, not circles */
-  .process-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0;
-    border: 1px solid rgba(17,24,39,0.08);
-    border-radius: 1.25rem;
-    overflow: hidden;
-    background: #fff;
-    box-shadow: 0 4px 24px rgba(17,24,39,0.06);
-  }
-
-  .process-card {
-    display: flex;
-    flex-direction: column;
-    padding: 2.5rem 2rem 2rem;
-    border-right: 1px solid rgba(17,24,39,0.08);
-    position: relative;
-  }
-
-  .process-card:last-child { border-right: none; }
-
-  .process-card-num {
-    font-family: var(--font-sans);
-    font-size: 5rem;
-    font-weight: 900;
-    letter-spacing: -0.06em;
-    line-height: 1;
-    color: rgba(245,158,11,0.12);
-    margin-bottom: 1.25rem;
-    line-height: 0.9;
-  }
-
-  .process-card-icon {
-    width: 48px;
-    height: 48px;
-    background: var(--ink);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--amber);
-    margin-bottom: 1rem;
-    flex-shrink: 0;
-  }
-
-  .process-card h3 {
-    font-family: var(--font-sans);
-    font-size: 1.125rem;
-    font-weight: 900;
-    color: var(--ink);
-    letter-spacing: -0.03em;
-    margin-bottom: 0.625rem;
-  }
-
-  .process-card p {
-    font-family: var(--font-sans);
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    line-height: 1.7;
-    flex: 1;
-    margin-bottom: 1.5rem;
-  }
-
-  .process-card-body {
-    flex: 1;
-  }
-
-  .process-card-cta {
-    font-family: var(--font-sans);
-    font-size: 0.8125rem;
-    font-weight: 700;
-    border-top: 1px solid rgba(17,24,39,0.08);
-    padding-top: 1rem;
-    margin-top: auto;
-  }
-
-  .process-card-cta a {
-    color: var(--amber-deep);
-    text-decoration: none;
-    font-weight: 800;
-  }
-
-  .process-card-cta a:hover { color: var(--amber); }
-
-  .process-card-cta--mid {
-    color: var(--text-muted);
-  }
-
-  .process-card-cta--done {
-    color: #16a34a;
-    font-weight: 700;
-  }
-
-
-  /* ════════════════════════════
-     AREAS — asymmetric split
-  ════════════════════════════ */
-  .areas-section {
-    background: var(--ink);
-    padding: 7rem 0;
-  }
-
-  /* Areas split: grid LEFT (content is the section) + label RIGHT */
-  .areas-split {
-    display: grid;
-    grid-template-columns: 1fr 220px;
-    gap: 4rem;
-    align-items: start;
-  }
-
-  .areas-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-  }
-
-  .area-card-wide {
-    grid-column: span 2;
-  }
-
-  .area-cities-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.25rem;
-  }
-
-  /* Right column: smaller, label + stats + CTA */
-  .areas-right {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding-top: 0.25rem;
-  }
-
-  .areas-big-h2 {
-    font-family: var(--font-sans);
-    font-size: clamp(2rem, 3.5vw, 3.25rem);
-    font-weight: 900;
-    letter-spacing: -0.04em;
-    line-height: 1.05;
-    color: #fff;
-    margin-top: 0.25rem;
-  }
-
-  .areas-stats {
-    display: flex;
-    gap: 1.5rem;
-    margin-top: 0.25rem;
-  }
-
-  .areas-stat {
-    display: flex;
-    flex-direction: column;
-    gap: 0.125rem;
-  }
-
-  .areas-stat strong {
-    font-family: var(--font-sans);
-    font-size: 2rem;
-    font-weight: 900;
-    letter-spacing: -0.04em;
-    color: var(--amber);
-    line-height: 1;
-  }
-
-  .areas-stat span {
-    font-family: var(--font-sans);
-    font-size: 0.6875rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: rgba(255,255,255,0.3);
-  }
-
-  .areas-right-desc {
-    font-family: var(--font-sans);
-    font-size: 0.875rem;
-    color: rgba(255,255,255,0.35);
-    line-height: 1.7;
-  }
-
-  .areas-cta-btn {
-    align-self: flex-start;
-    font-size: 0.8125rem;
-    padding: 0.625rem 1.25rem;
-  }
-
-  .area-card {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.07);
-    border-radius: 1rem;
-    padding: 1.5rem 1.25rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    transition: background 0.2s ease, border-color 0.2s ease;
-  }
-
-  .area-card:hover {
-    background: rgba(255,255,255,0.07);
-    border-color: rgba(245,158,11,0.2);
-  }
-
-  .area-card h4 {
-    font-family: var(--font-sans);
-    font-size: 0.6875rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--amber);
-    padding-bottom: 0.625rem;
-    border-bottom: 1px solid rgba(255,255,255,0.07);
-    margin-bottom: 0.25rem;
-  }
-
-  .area-card a {
-    font-family: var(--font-sans);
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: rgba(255,255,255,0.6);
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-
-  .area-card a:hover { color: var(--amber); }
-  .area-card a:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
-
-  .btn-outline-white {
-    display: inline-flex;
-    align-items: center;
-    font-family: var(--font-sans);
-    font-size: 0.9375rem;
-    font-weight: 700;
-    color: rgba(255,255,255,0.8);
-    border: 2px solid rgba(255,255,255,0.2);
-    text-decoration: none;
-    padding: 0.875rem 2rem;
-    border-radius: 8px;
-    letter-spacing: -0.01em;
-  }
-
-  .btn-outline-white:hover {
-    color: #fff;
-    border-color: rgba(255,255,255,0.55);
-    background: rgba(255,255,255,0.05);
-    transform: translateY(-2px);
-  }
-
-  .btn-outline-white:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
-
-
-  /* ════════════════════════════
-     CTA STRIP
-  ════════════════════════════ */
-  .cta-strip {
-    background: var(--amber);
-    padding: 5rem 0;
-  }
-
-  .cta-strip-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 3rem;
-    flex-wrap: wrap;
-  }
-
-  .cta-pre {
-    display: block;
-    font-family: var(--font-sans);
-    font-size: 0.6875rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: rgba(17,24,39,0.55);
-    margin-bottom: 0.5rem;
-  }
-
-  .cta-h2 {
-    font-family: var(--font-sans);
-    font-size: clamp(2rem, 4vw, 3.5rem);
-    font-weight: 900;
-    letter-spacing: -0.04em;
-    line-height: 1;
-    color: var(--ink);
-    margin-bottom: 0.625rem;
-  }
-
-  .cta-text-block > p {
-    font-family: var(--font-sans);
-    font-size: 1.0625rem;
-    color: rgba(17,24,39,0.6);
-    line-height: 1.55;
-  }
-
-  .cta-dark-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.625rem;
-    font-family: var(--font-sans);
-    font-size: 1rem;
-    font-weight: 800;
-    color: var(--white);
-    background: var(--ink);
-    text-decoration: none;
-    padding: 1rem 2.125rem;
-    border-radius: 10px;
-    letter-spacing: -0.02em;
-    box-shadow: 0 6px 24px rgba(0,0,0,0.25);
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
-
-  .cta-dark-btn:hover {
-    background: var(--ink-soft);
-    transform: translateY(-3px);
-    box-shadow: 0 12px 36px rgba(0,0,0,0.3);
-  }
-
-  .cta-dark-btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
-
-
-  /* ════════════════════════════
-     RESPONSIVE
-  ════════════════════════════ */
-  @media (max-width: 1100px) {
-    .feature-grid { gap: 4rem; }
-    .why-split { grid-template-columns: 260px 1fr; gap: 3.5rem; }
-    .svc-header-split { gap: 2.5rem; }
-    .areas-split { gap: 3rem; }
-  }
-
-  @media (max-width: 900px) {
-    .feature-grid { grid-template-columns: 1fr; }
-    .feature-img-float { display: none; }
-    .feature-img-badge { right: 1rem; }
-    .feature-img-main { height: 400px; }
-    .feature-frame-accent { left: -0.75rem; right: 0.75rem; }
-
-    .svc-grid { grid-template-columns: 1fr; }
-    .svc-card-featured .svc-img-wrap { height: 280px; }
-
-    .manifesto-row { grid-template-columns: 44px 1fr 1fr; gap: 0.5rem 1rem; }
-    .manifesto-num { display: none; }
-    .manifesto-tag { display: none; }
-
-    .process-cards { grid-template-columns: 1fr; }
-    .process-card { border-right: none; border-bottom: 1px solid rgba(17,24,39,0.08); }
-    .process-card:last-child { border-bottom: none; }
-    .process-top-bar { flex-direction: column; gap: 0.75rem; }
-
-    .areas-split { grid-template-columns: 1fr; gap: 2.5rem; }
-    .areas-grid { grid-template-columns: repeat(3, 1fr); }
-  }
-
-  @media (max-width: 700px) {
-    .hero-line1 { font-size: clamp(3rem, 12vw, 5rem); }
-    .hero-line2 { font-size: clamp(1.875rem, 7vw, 3rem); }
-    .hero-logo { height: 72px; }
-
-    .manifesto-row { grid-template-columns: 40px 1fr; }
-    .manifesto-desc { display: none; }
-    .areas-grid { grid-template-columns: repeat(2, 1fr); }
-    .area-card-wide { grid-column: span 2; }
-
-    .stats-inner { flex-wrap: wrap; }
-    .stat { flex: 0 0 50%; }
-    .stat-rule { display: none; }
-
-    .cta-strip-inner { flex-direction: column; text-align: center; }
-  }
-
-  @media (max-width: 480px) {
-    .areas-grid { grid-template-columns: 1fr; }
-    .area-card-wide { grid-column: span 1; }
-    .area-cities-grid { grid-template-columns: 1fr; }
-    .stat { flex: 0 0 100%; }
-    .hero-trust { gap: 0.375rem; }
-    .trust-pill { font-size: 0.6875rem; }
-    .process-card-num { font-size: 3.5rem; }
-    .hero-content { padding-bottom: 5rem; }
-  }
 </style>
 
+<script>
+// Hero BG subtle zoom
+const heroBg = document.querySelector('.hero-bg') as HTMLElement;
+if (heroBg) {
+  setTimeout(() => { heroBg.style.transform = 'scale(1)'; }, 100);
+}
 
-<script is:inline>
-(function(){
-  // ── Slideshow ──
-  var slides = document.querySelectorAll('.slide');
-  var dots = document.querySelectorAll('.dot');
-  var cur = 0, t;
-  if (!slides.length) return;
+// Review carousel
+const slides = document.querySelectorAll('.review-slide');
+const dots = document.querySelectorAll('.review-dot');
+let current = 0;
 
-  function show(n) {
-    slides[cur].classList.remove('active');
-    dots[cur] && dots[cur].classList.remove('active');
-    cur = n;
-    slides[cur].classList.add('active');
-    dots[cur] && dots[cur].classList.add('active');
-  }
+function goTo(n: number) {
+  slides[current].classList.remove('active');
+  dots[current].classList.remove('active');
+  current = (n + slides.length) % slides.length;
+  slides[current].classList.add('active');
+  dots[current].classList.add('active');
+}
 
-  function next(){ show((cur+1)%slides.length); }
-  function start(){ t = setInterval(next, 5500); }
-  function stop(){ clearInterval(t); }
+document.getElementById('review-next')?.addEventListener('click', () => goTo(current + 1));
+document.getElementById('review-prev')?.addEventListener('click', () => goTo(current - 1));
+dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
 
-  dots.forEach(function(d,i){
-    d.addEventListener('click', function(){ show(i); stop(); start(); });
-  });
-
-  // Touch swipe on hero
-  var hero = document.querySelector('.hero');
-  if(hero){
-    var tx=0;
-    hero.addEventListener('touchstart',function(e){tx=e.changedTouches[0].screenX;},{passive:true});
-    hero.addEventListener('touchend',function(e){
-      var dx=e.changedTouches[0].screenX-tx;
-      if(Math.abs(dx)>50){show(dx<0?(cur+1)%slides.length:(cur-1+slides.length)%slides.length);stop();start();}
-    },{passive:true});
-    hero.addEventListener('mouseenter',stop);
-    hero.addEventListener('mouseleave',start);
-  }
-
-  start();
-
-  // ── Parallax on hero background ──
-  var parallax = document.getElementById('hero-parallax');
-  if(parallax && window.matchMedia('(prefers-reduced-motion: no-preference)').matches){
-    window.addEventListener('scroll', function(){
-      var y = window.scrollY;
-      parallax.style.transform = 'translateY(' + (y * 0.35) + 'px)';
-    }, {passive: true});
-  }
-})();
+// Auto-advance
+setInterval(() => goTo(current + 1), 5500);
 </script>
+
+</BaseLayout>
