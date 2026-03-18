@@ -200,9 +200,9 @@
      MAIN NAV — dark transparent
   ═══════════════════════════════════ */
   .main-nav {
-    background: rgba(10, 14, 22, 0.48);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    background: rgba(10, 14, 22, 0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border-bottom: 1px solid rgba(255,255,255,0.08);
     position: fixed;
     top: 42px;
@@ -235,24 +235,25 @@
      The B mark overflows the nav height
      to create a sharp branded anchor
   ═══════════════════════════════════ */
-  /* Logo overflows nav height — WiseCoatings elephant effect */
+  /* Logo hangs below nav into hero — overflow downward */
   .nav-logo {
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
     gap: 0;
     text-decoration: none;
     flex-shrink: 0;
     position: relative;
     z-index: 2;
     overflow: visible;
-    margin-top: -10px;
+    padding-bottom: 0;
+    margin-bottom: -80px;
   }
 
   .nav-logo-img {
     height: 200px;
     width: auto;
     display: block;
-    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.5));
+    filter: drop-shadow(0 6px 16px rgba(0,0,0,0.6));
   }
 
 
