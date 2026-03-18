@@ -19,14 +19,9 @@
 <nav class="main-nav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
 
-    <!-- Logo: paint-drip B mark + wordmark -->
+    <!-- Logo -->
     <a href="/" class="nav-logo" aria-label="Browns Painting Home">
-      <!-- The B mark: AI brush-stroke B image on orange, with paint drips via clip-path -->
-      <span class="logo-mark" aria-hidden="true"></span>
-      <span class="logo-words">
-        <span class="logo-name">BROWNS</span>
-        <span class="logo-sub">PAINTING</span>
-      </span>
+      <img src="/images/logo/browns-logo-dark.png" alt="Browns Painting LLC" class="nav-logo-img" />
     </a>
 
     <div class="nav-links" id="nav-links">
@@ -251,57 +246,13 @@
     overflow: visible;
   }
 
-  /* Paint-drip B mark — white brushstroke B on orange background */
-  .logo-mark {
-    display: block;
-    flex-shrink: 0;
-    width: 64px;
-    height: 94px;
-    /* White brush-stroke B on orange — image already has correct colors */
-    background-color: #f97316;
-    background-image: url('/images/logo/b-mark-white-on-orange.png');
-    background-size: auto 100%;
-    background-position: 44% center;
-    background-repeat: no-repeat;
-    /* Three paint drips hanging below the main box */
-    clip-path: polygon(
-      0% 0%, 100% 0%,
-      100% 67%,
-      92% 67%, 88% 78%, 84% 91%, 80% 78%, 76% 67%,
-      62% 67%, 58% 79%, 54% 94%, 50% 79%, 46% 67%,
-      32% 67%, 28% 78%, 24% 91%, 20% 78%, 16% 67%,
-      0% 67%
-    );
-    /* Orange glow traces the drip contours */
-    filter: drop-shadow(0 8px 22px rgba(249,115,22,0.7));
+  /* Logo image — dark version blends with dark transparent nav */
+  .nav-logo-img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
   }
 
-  .logo-words {
-    display: flex;
-    flex-direction: column;
-    gap: 0.15rem;
-    line-height: 1;
-  }
-
-  .logo-name {
-    font-family: var(--font-display);
-    font-size: 1.7rem;
-    font-weight: 700;
-    color: #ffffff;
-    letter-spacing: 0.03em;
-    line-height: 1;
-    text-shadow: 0 1px 12px rgba(0,0,0,0.5);
-  }
-
-  .logo-sub {
-    font-family: var(--font-sans);
-    font-size: 0.6rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.22em;
-    color: var(--amber);
-    line-height: 1;
-  }
 
   /* ═══════════════════════════════════
      NAV LINKS — white on dark nav
