@@ -19,28 +19,10 @@
 <nav class="main-nav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
 
-    <!-- Logo: paint-drip B mark SVG + wordmark -->
+    <!-- Logo: paint-drip B mark + wordmark -->
     <a href="/" class="nav-logo" aria-label="Browns Painting Home">
-      <!-- Orange B with three paint drips — the mark overflows the nav height -->
-      <svg class="logo-mark-svg" viewBox="0 0 60 94" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <!-- Orange body + organic drip shapes hanging below -->
-        <path fill="#f97316" d="
-          M0 0 H60 V63
-          C57 63 55 67 54 72 C53 78 52.5 83 52 86
-          C51.5 83 51 78 50 72 C49 67 47 63 43 63
-          C39 63 37 67 36 73 C35 79 34.5 84 34 87
-          C33.5 84 33 79 32 73 C31 67 29 63 25 63
-          C21 63 19 67 18 72 C17 78 16.5 83 16 86
-          C15.5 83 15 78 14 72 C13 67 11 63 7 63
-          H0 Z
-        "/>
-        <!-- Drip teardrop tips -->
-        <ellipse cx="52" cy="89" rx="2.8" ry="4" fill="#f97316"/>
-        <ellipse cx="34" cy="91" rx="3.2" ry="4.5" fill="#f97316"/>
-        <ellipse cx="16" cy="89" rx="2.8" ry="4" fill="#f97316"/>
-        <!-- B letterform — white, bold, painted feel via Oswald weight -->
-        <text x="5" y="52" font-family="Oswald, Impact, sans-serif" font-size="50" font-weight="700" fill="white" letter-spacing="-1">B</text>
-      </svg>
+      <!-- The B mark: AI brush-stroke B image on orange, with paint drips via clip-path -->
+      <span class="logo-mark" aria-hidden="true"></span>
       <span class="logo-words">
         <span class="logo-name">BROWNS</span>
         <span class="logo-sub">PAINTING</span>
@@ -269,14 +251,31 @@
     overflow: visible;
   }
 
-  /* SVG paint-drip B mark */
-  .logo-mark-svg {
-    width: 60px;
-    height: 94px;  /* overflows 74px nav — drips hang into hero */
+  /* Paint-drip B mark — brush-stroke AI image on orange background,
+     clipped into a dripping paint shape */
+  .logo-mark {
     display: block;
     flex-shrink: 0;
-    overflow: visible;
-    filter: drop-shadow(0 8px 20px rgba(249,115,22,0.65));
+    width: 64px;
+    height: 94px;
+    /* Brush-stroke B: multiply removes white bg, leaves painted orange texture */
+    background-color: #f97316;
+    background-image: url('/images/logo/b-mark-v2.png');
+    background-blend-mode: multiply;
+    background-size: 270% auto;
+    background-position: 48% 30%;
+    background-repeat: no-repeat;
+    /* Three paint drips hanging below the box */
+    clip-path: polygon(
+      0% 0%, 100% 0%,
+      100% 67%,
+      92% 67%, 88% 78%, 84% 91%, 80% 78%, 76% 67%,
+      62% 67%, 58% 79%, 54% 94%, 50% 79%, 46% 67%,
+      32% 67%, 28% 78%, 24% 91%, 20% 78%, 16% 67%,
+      0% 67%
+    );
+    /* Orange glow follows the drip shape */
+    filter: drop-shadow(0 8px 22px rgba(249,115,22,0.7));
   }
 
   .logo-words {
