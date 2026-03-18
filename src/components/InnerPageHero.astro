@@ -187,9 +187,13 @@ const {
   }
 
   @media (max-width: 640px) {
-    .iph { min-height: 45vh; }
-    .iph-inner { padding: 4rem 1.25rem 3rem; }
-    .iph-actions { flex-direction: column; align-items: center; }
-    .iph-btn-primary, .iph-btn-ghost { width: 100%; justify-content: center; }
+    .iph { min-height: 48vh; }
+    .iph-inner { padding: 4.5rem 1.25rem 3.5rem; text-align: center; }
+    .iph-h1 { font-size: clamp(1.75rem, 7vw, 2.5rem); }
+    .iph-sub { font-size: 0.9375rem; }
+    .iph-actions { flex-direction: column; align-items: center; width: 100%; }
+    .iph-btn-primary, .iph-btn-ghost { width: 100%; justify-content: center; max-width: 320px; }
+    .iph-pills { gap: 0.4rem; }
+    .iph-pill { font-size: 0.625rem; padding: 0.25rem 0.625rem; }
   }
 </style>

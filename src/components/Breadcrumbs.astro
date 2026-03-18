@@ -1,7 +1,8 @@
 ---
 export interface Props {
   items: Array<{
-    name: string;
+    name?: string;
+    label?: string;
     url: string;
     current?: boolean;
   }>;
@@ -9,10 +10,14 @@ export interface Props {
 
 const { items } = Astro.props;
 
-// Always start with home
+// Normalize: accept both `name` and `label`, skip any item that is already 'Home'
+const normalized = items
+  .map(item => ({ ...item, name: item.name || item.label || '' }))
+  .filter(item => item.url !== '/');
+
 const breadcrumbItems = [
   { name: 'Home', url: '/', current: false },
-  ...items
+  ...normalized,
 ];
 ---
 
@@ -24,13 +29,9 @@ const breadcrumbItems = [
           <span class="breadcrumb-separator" aria-hidden="true">›</span>
         )}
         {item.current ? (
-          <span class="breadcrumb-current" aria-current="page">
-            {item.name}
-          </span>
+          <span class="breadcrumb-current" aria-current="page">{item.name}</span>
         ) : (
-          <a href={item.url} class="breadcrumb-link" title={`Go to ${item.name}`}>
-            {item.name}
-          </a>
+          <a href={item.url} class="breadcrumb-link">{item.name}</a>
         )}
       </li>
     ))}
@@ -39,9 +40,9 @@ const breadcrumbItems = [
 
 <style>
   .breadcrumbs {
-    background: #f8fafc;
-    padding: 1rem 0;
-    border-bottom: 1px solid #e5e7eb;
+    background: var(--cream, #faf9f7);
+    padding: 0.625rem 0;
+    border-bottom: 1px solid var(--border, #e5e7eb);
   }
 
   .breadcrumb-list {
@@ -49,58 +50,41 @@ const breadcrumbItems = [
     align-items: center;
     flex-wrap: wrap;
     list-style: none;
-    margin: 0;
-    padding: 0;
-    max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+    max-width: 1200px;
+    gap: 0;
   }
 
   .breadcrumb-item {
     display: flex;
     align-items: center;
-    font-size: 0.875rem;
+    font-family: var(--font-sans, system-ui);
+    font-size: 0.8125rem;
   }
 
   .breadcrumb-separator {
-    color: #6b7280;
-    margin: 0 0.75rem;
-    font-weight: 500;
+    color: var(--text-faint, #9ca3af);
+    margin: 0 0.5rem;
   }
 
   .breadcrumb-link {
-    color: #3b82f6;
+    color: var(--text-muted, #6b7280);
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    font-weight: 600;
+    transition: color 0.2s;
   }
 
-  .breadcrumb-link:hover {
-    color: #1e3a8a;
-    text-decoration: underline;
-  }
+  .breadcrumb-link:hover { color: var(--amber, #f59e0b); }
 
   .breadcrumb-current {
-    color: #6b7280;
-    font-weight: 500;
+    color: var(--ink, #111827);
+    font-weight: 700;
   }
 
-  @media (max-width: 768px) {
-    .breadcrumbs {
-      padding: 0.75rem 0;
-    }
-
-    .breadcrumb-list {
-      padding: 0 1rem;
-    }
-
-    .breadcrumb-item {
-      font-size: 0.8rem;
-    }
-
-    .breadcrumb-separator {
-      margin: 0 0.5rem;
-    }
+  @media (max-width: 640px) {
+    .breadcrumb-list { padding: 0 1.25rem; }
+    .breadcrumb-item { font-size: 0.75rem; }
   }
 </style>
 
