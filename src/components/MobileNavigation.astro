@@ -12,7 +12,6 @@
     <span class="util-tagline">Licensed &amp; Insured · Family-Owned Since 1998 · South Alabama's Painters</span>
     <span class="util-sep"></span>
     <a href="/service-areas" class="util-link">Service Areas</a>
-    <a href="/contact" class="util-cta">Free Estimate →</a>
   </div>
 </div>
 
@@ -21,11 +20,7 @@
   <div class="nav-inner">
 
     <a href="/" class="nav-logo" aria-label="Browns Painting Home">
-      <img src="/images/logo/browns-painting-logo-hat.png" alt="Browns Painting LLC" class="nav-logo-img" />
-      <div class="nav-logo-text">
-        <span class="nav-brand">Browns Painting</span>
-        <span class="nav-tagline">South Alabama's Painters</span>
-      </div>
+      <img src="/images/logo/browns-logo-light.png" alt="Browns Painting LLC" class="nav-logo-img" />
     </a>
 
     <div class="nav-links" id="nav-links">
@@ -80,11 +75,7 @@
     </div>
 
     <div class="nav-right">
-      <a href="tel:+12512374545" class="nav-phone-btn">
-        <svg width="14" height="14" viewBox="0 0 13 13" fill="none"><path d="M11.9 9.2c-.2-.2-1.9-1.3-2.2-1.3-.2 0-.4.1-.9.7-.2.2-.3.3-.4.3-.2 0-.4-.1-.7-.3-.8-.5-1.6-1.3-2.1-2.1-.3-.4-.4-.6-.4-.7 0-.1.1-.2.3-.4.5-.5.7-.7.7-.9 0-.2-1.1-2-1.3-2.2-.2-.2-.3-.2-.5-.2-.4 0-.9.2-1.2.6-.4.4-.6 1-.6 1.6 0 1 .5 2.2 1.3 3.2.7.9 1.9 2 2.9 2.6.8.5 1.9 1 2.8 1 .5 0 1.1-.2 1.5-.6.3-.3.6-.8.6-1.2 0-.2-.1-.4-.5-.8z" fill="currentColor"/></svg>
-        Call Now
-      </a>
-      <a href="/contact" class="nav-quote-btn">Get a Quote</a>
+      <a href="/contact" class="nav-quote-btn">Free Estimate →</a>
     </div>
 
     <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu" aria-expanded="false">
@@ -127,6 +118,12 @@
       }
     });
   });
+
+  // Scroll: solidify nav once hero is partially scrolled
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('.main-nav');
+    nav?.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
 </script>
 
 <style>
@@ -134,6 +131,11 @@
   .util-bar {
     background: var(--ink);
     border-bottom: 1px solid rgba(255,255,255,0.06);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
   }
 
   .util-inner {
@@ -192,30 +194,25 @@
 
   .util-link:hover { color: rgba(255,255,255,0.9); }
 
-  .util-cta {
-    font-family: var(--font-sans);
-    font-size: 0.6875rem;
-    font-weight: 800;
-    color: var(--ink);
-    background: var(--amber);
-    text-decoration: none;
-    padding: 0.2rem 0.875rem;
-    border-radius: 100px;
-    margin-left: 0.875rem;
-    white-space: nowrap;
-    letter-spacing: 0.03em;
-  }
-
-  .util-cta:hover { background: var(--amber-light); }
-
   /* ── MAIN NAV ── */
   .main-nav {
-    background: var(--white);
-    border-bottom: 1px solid var(--border);
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    box-shadow: 0 1px 0 rgba(0,0,0,0.05), 0 4px 16px rgba(0,0,0,0.04);
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    position: fixed;
+    top: 40px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.04), 0 4px 20px rgba(0,0,0,0.06);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .main-nav.scrolled {
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+    box-shadow: 0 2px 24px rgba(0,0,0,0.10);
   }
 
   .nav-inner {
@@ -238,32 +235,9 @@
   }
 
   .nav-logo-img {
-    height: 44px;
+    height: 46px;
     width: auto;
     object-fit: contain;
-  }
-
-  .nav-logo-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.2;
-  }
-
-  .nav-brand {
-    font-family: var(--font-sans);
-    font-size: 1rem;
-    font-weight: 900;
-    color: var(--ink);
-    letter-spacing: -0.03em;
-  }
-
-  .nav-tagline {
-    font-family: var(--font-sans);
-    font-size: 0.5625rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--amber-deep);
   }
 
   /* Links */
@@ -376,27 +350,8 @@
   .nav-right {
     display: none;
     align-items: center;
-    gap: 0.75rem;
     flex-shrink: 0;
   }
-
-  .nav-phone-btn {
-    display: flex;
-    align-items: center;
-    gap: 0.375rem;
-    font-family: var(--font-sans);
-    font-size: 0.8125rem;
-    font-weight: 700;
-    color: var(--ink);
-    text-decoration: none;
-    padding: 0.5rem 0.875rem;
-    border: 1.5px solid var(--border);
-    border-radius: 8px;
-    white-space: nowrap;
-  }
-
-  .nav-phone-btn:hover { border-color: var(--ink); background: var(--cream); }
-  .nav-phone-btn:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
 
   .nav-quote-btn {
     font-family: var(--font-sans);
@@ -465,7 +420,7 @@
     .util-link { display: none; }
 
     .nav-links {
-      position: absolute;
+      position: fixed;
       top: 112px; /* util-bar 40 + nav 72 */
       left: 0;
       right: 0;

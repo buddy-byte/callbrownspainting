@@ -132,6 +132,8 @@ const { title, description, keywords, image, type} = Astro.props;
   </head>
   <body>
     <Navigation />
+    <!-- Spacer for fixed nav (util-bar 40px + main-nav 72px = 112px). Hero pages override with margin-top: -112px -->
+    <div class="nav-spacer"></div>
     <slot />
     <Footer />
     
@@ -273,6 +275,11 @@ const { title, description, keywords, image, type} = Astro.props;
       .btn-ghost:focus-visible {
         outline: 2px solid var(--white);
         outline-offset: 3px;
+      }
+
+      /* ── Fixed Nav Spacer ── */
+      .nav-spacer {
+        height: 112px; /* util-bar 40 + main-nav 72 */
       }
 
       /* ── Reduce Motion ── */

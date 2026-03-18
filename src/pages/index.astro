@@ -124,7 +124,7 @@ const reviews = [
         </svg>
       </div>
       <div class="intro-photo">
-        <img src="/images/ai/ai-painter-at-work.jpg" alt="Browns Painting crew at work on a Southern home" loading="lazy" />
+        <img src="/images/ai/ai-boomer-on-lift.jpg" alt="Browns Painting professional crew with boom lift on Southern home" loading="lazy" />
       </div>
     </div>
     <div class="intro-right">
@@ -211,7 +211,7 @@ const reviews = [
 <section class="gallery-strip">
   <div class="gallery-grid">
     <div class="gallery-cell">
-      <img src="/images/ai/ai-hero-dramatic.jpg" alt="Beautiful Southern home after painting" loading="lazy" />
+      <img src="/images/hero/hero-3-optimized.jpg" alt="Browns Painting crew on JLG boom lift at Southern home" loading="lazy" />
     </div>
     <div class="gallery-cell">
       <img src="/images/projects/projects-optimized/exterior-paint-1-optimized.jpg" alt="Brewton exterior painting project" loading="lazy" />
@@ -450,10 +450,11 @@ const reviews = [
 /* ═══════════════════════════════════════════════
    HERO
 ═══════════════════════════════════════════════ */
-.hero {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    margin-top: -112px; /* pull hero behind fixed nav so photo shows through glassmorphism */
+    display: flex;
   align-items: center;
   overflow: hidden;
 }
@@ -480,10 +481,10 @@ const reviews = [
   );
 }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  padding: 8rem 2rem 10rem;
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 10rem 2rem 10rem;
   max-width: 780px;
   margin: 0 auto 0 calc((100vw - 1200px) / 2);
   padding-left: max(2rem, calc((100vw - 1200px) / 2 + 1.5rem));
@@ -1401,7 +1402,7 @@ const reviews = [
     font-size: clamp(2.5rem, 10vw, 3.5rem);
   }
   .hero-content {
-    padding: 7rem 1.25rem 8rem;
+    padding: 9rem 1.25rem 8rem;
   }
   .hero-cta-box {
     flex-direction: column;
