@@ -251,21 +251,19 @@
     overflow: visible;
   }
 
-  /* Paint-drip B mark — brush-stroke AI image on orange background,
-     clipped into a dripping paint shape */
+  /* Paint-drip B mark — white brushstroke B on orange background */
   .logo-mark {
     display: block;
     flex-shrink: 0;
     width: 64px;
     height: 94px;
-    /* Brush-stroke B: multiply removes white bg, leaves painted orange texture */
+    /* White brush-stroke B on orange — image already has correct colors */
     background-color: #f97316;
-    background-image: url('/images/logo/b-mark-v2.png');
-    background-blend-mode: multiply;
-    background-size: 270% auto;
-    background-position: 48% 30%;
+    background-image: url('/images/logo/b-mark-white-on-orange.png');
+    background-size: auto 100%;
+    background-position: 44% center;
     background-repeat: no-repeat;
-    /* Three paint drips hanging below the box */
+    /* Three paint drips hanging below the main box */
     clip-path: polygon(
       0% 0%, 100% 0%,
       100% 67%,
@@ -274,7 +272,7 @@
       32% 67%, 28% 78%, 24% 91%, 20% 78%, 16% 67%,
       0% 67%
     );
-    /* Orange glow follows the drip shape */
+    /* Orange glow traces the drip contours */
     filter: drop-shadow(0 8px 22px rgba(249,115,22,0.7));
   }
 
