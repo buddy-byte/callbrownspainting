@@ -1,0 +1,195 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  eyebrow?: string;
+  bg?: string;  // background image URL
+  ctaText?: string;
+  ctaHref?: string;
+}
+
+const {
+  title,
+  subtitle,
+  eyebrow = 'Browns Painting LLC',
+  bg = '/images/hero/hero-1-optimized.jpg',
+  ctaText = 'Get a Free Quote',
+  ctaHref = '/contact',
+} = Astro.props;
+---
+
+<section class="iph">
+  <div class="iph-bg" style={`background-image:url('${bg}')`}></div>
+  <div class="iph-overlay"></div>
+  <div class="iph-inner">
+    <span class="eyebrow iph-eyebrow">{eyebrow}</span>
+    <h1 class="iph-h1">{title}</h1>
+    {subtitle && <p class="iph-sub">{subtitle}</p>}
+    <div class="iph-actions">
+      <a href={ctaHref} class="iph-btn-primary">
+        {ctaText}
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="tel:+12512374545" class="iph-btn-ghost">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27 11.36 11.36 0 003.55.56 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.56 3.55 1 1 0 01-.27 1.11z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        (251) 237-4545
+      </a>
+    </div>
+    <div class="iph-pills">
+      <span class="iph-pill">★★★★★ 5-Star Rated</span>
+      <span class="iph-pill">25+ Years Experience</span>
+      <span class="iph-pill">Licensed &amp; Insured</span>
+      <span class="iph-pill">100% Satisfaction Guarantee</span>
+    </div>
+  </div>
+</section>
+
+<style>
+  .iph {
+    position: relative;
+    min-height: 52vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .iph-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1.04);
+    filter: brightness(0.6) saturate(0.9);
+    will-change: transform;
+  }
+
+  .iph-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(17,24,39,0.55) 0%,
+      rgba(17,24,39,0.75) 60%,
+      rgba(17,24,39,0.92) 100%
+    );
+  }
+
+  .iph-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 5rem 2rem 4rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .iph-eyebrow {
+    color: var(--amber);
+  }
+
+  .iph-h1 {
+    font-family: var(--font-sans);
+    font-size: clamp(2rem, 5vw, 3.75rem);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    color: #fff;
+    margin: 0;
+  }
+
+  .iph-sub {
+    font-family: var(--font-sans);
+    font-size: 1.125rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0;
+  }
+
+  .iph-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+
+  .iph-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 2rem;
+    background: var(--amber);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-size: 0.9375rem;
+    font-weight: 800;
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    letter-spacing: -0.01em;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: var(--shadow-amber);
+  }
+
+  .iph-btn-primary:hover {
+    background: var(--amber-deep);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(245,158,11,0.45);
+  }
+
+  .iph-btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    background: rgba(255,255,255,0.1);
+    border: 1.5px solid rgba(255,255,255,0.25);
+    color: #fff;
+    font-family: var(--font-sans);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    backdrop-filter: blur(8px);
+    transition: background 0.2s, border-color 0.2s;
+  }
+
+  .iph-btn-ghost:hover {
+    background: rgba(255,255,255,0.18);
+    border-color: rgba(255,255,255,0.4);
+  }
+
+  .iph-pills {
+    display: flex;
+    gap: 0.625rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0.25rem;
+  }
+
+  .iph-pill {
+    font-family: var(--font-sans);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.65);
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 100px;
+    padding: 0.3125rem 0.875rem;
+  }
+
+  @media (max-width: 640px) {
+    .iph { min-height: 45vh; }
+    .iph-inner { padding: 4rem 1.25rem 3rem; }
+    .iph-actions { flex-direction: column; align-items: center; }
+    .iph-btn-primary, .iph-btn-ghost { width: 100%; justify-content: center; }
+  }
+</style>

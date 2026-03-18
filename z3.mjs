@@ -1,0 +1,14 @@
+import puppeteer from 'puppeteer';
+const b = await puppeteer.launch({ headless:'new', args:['--no-sandbox'] });
+const p = await b.newPage();
+await p.setViewport({ width:1440, height:900 });
+await p.goto('http://localhost:4321', { waitUntil:'networkidle2', timeout:30000 });
+await new Promise(r=>setTimeout(r,2000));
+const h = await p.evaluate(()=>document.body.scrollHeight);
+await p.screenshot({ path:'temporary screenshots/v3-hero.png', clip:{x:0,y:0,width:1440,height:920} });
+await p.screenshot({ path:'temporary screenshots/v3-feature.png', clip:{x:0,y:920,width:1440,height:1000} });
+await p.screenshot({ path:'temporary screenshots/v3-services.png', clip:{x:0,y:1900,width:1440,height:900} });
+await p.screenshot({ path:'temporary screenshots/v3-why.png', clip:{x:0,y:3400,width:1440,height:900} });
+await p.screenshot({ path:'temporary screenshots/v3-cta.png', clip:{x:0,y:h-700,width:1440,height:700} });
+console.log(h);
+await b.close();

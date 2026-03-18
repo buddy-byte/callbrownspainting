@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import InnerPageHero from '../components/InnerPageHero.astro';
+import Testimonials from '../components/Testimonials.astro';
 
 const title = "Interior Painting Services | Professional Painters South Alabama";
 const description = "Transform your indoor spaces with expert interior painting. Serving Mobile, Daphne, Fairhope, Gulf Shores, and surrounding South Alabama areas.";
@@ -7,597 +9,284 @@ const description = "Transform your indoor spaces with expert interior painting.
 
 <BaseLayout title={title} description={description}>
   <main>
-    <!-- Hero Section (Keep Existing) -->
-    <section class="hero">
-      <div class="hero-background">
-        <div class="hero-slide active" style="background-image: url('/images/hero/hero-1-optimized.jpg')"></div>
-        <div class="hero-slide" style="background-image: url('/images/projects/projects-optimized/interior-painting-2-optimized.jpg')"></div>
-        <div class="hero-slide" style="background-image: url('/images/hero/hero-3-optimized.jpg'); background-position: center top;"></div>
-      </div>
-      
-      <div class="hero-overlay"></div>
-      
-      <div class="hero-trust-badges">
-        <div class="trust-badge">
-          <span class="trust-stars">★★★★★</span>
-          <span class="trust-text">5-Star Reviews</span>
-        </div>
-        <div class="trust-badge">
-          <span class="trust-icon">🏆</span>
-          <span class="trust-text">25+ Years</span>
-        </div>
-        <div class="trust-badge">
-          <span class="trust-icon">📋</span>
-          <span class="trust-text">Licensed & Insured</span>
-        </div>
-        <div class="trust-badge">
-          <span class="trust-icon">✅</span>
-          <span class="trust-text">100% Guaranteed</span>
-        </div>
-      </div>
 
+    <InnerPageHero
+      title="Interior Painting Services"
+      subtitle="Flawless walls, ceilings, trim, and cabinets — done right the first time."
+      eyebrow="Interior Painting"
+      bg="/images/projects/projects-optimized/interior-detail-1-optimized.jpg"
+    />
+
+    <!-- ── WHAT WE OFFER ── -->
+    <section class="ip-section ip-cream">
       <div class="container">
-        <div class="hero-content">
-          <div class="hero-text">
-            <img src="/images/logo/browns-painting-logo-hat.png" alt="Browns Painting" class="hero-logo-image" />
-            <h1>Interior Painting Services</h1>
-            <p class="hero-subtitle">Transform your indoor spaces with expert interior painting</p>
-            <div class="phone-number">
-              <span class="phone-label">Call Us Today at</span>
-              <a href="tel:+12512374545" class="phone-link">(251) 237-4545</a>
-            </div>
-            <div class="hero-cta">
-              <a href="/contact" class="btn btn-primary">
-                <span class="btn-icon">📋</span>
-                Get A Free Quote
-              </a>
+        <div class="ip-split">
+          <div class="ip-split-content">
+            <span class="eyebrow">What We Do</span>
+            <h2 class="ip-h2">Every Room, <em>Perfected.</em></h2>
+            <p>From prep work to final walkthrough, we treat your home like our own. We use premium, low-VOC paints and leave every job spotless.</p>
+            <ul class="ip-feature-list">
+              <li>
+                <div class="ip-feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/><polyline points="9 22 9 12 15 12 15 22" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></svg></div>
+                <div><strong>Living Rooms &amp; Bedrooms</strong><p>Complete wall, ceiling, and trim work with expert edge cutting and full prep.</p></div>
+              </li>
+              <li>
+                <div class="ip-feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <div><strong>Kitchens &amp; Bathrooms</strong><p>Moisture-resistant paints, precise masking, and smooth finishes in hard-to-reach areas.</p></div>
+              </li>
+              <li>
+                <div class="ip-feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.75"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg></div>
+                <div><strong>Cabinet Refinishing</strong><p>Transform dated cabinets with a smooth factory-like finish at a fraction of replacement cost.</p></div>
+              </li>
+              <li>
+                <div class="ip-feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.75"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg></div>
+                <div><strong>Free Color Consultation</strong><p>Not sure what color to choose? Boomer helps you find the perfect palette for your space.</p></div>
+              </li>
+            </ul>
+            <a href="/contact" class="btn-amber">Get a Free Interior Quote →</a>
+          </div>
+          <div class="ip-split-img">
+            <img src="/images/projects/projects-optimized/interior-painting-1-optimized.jpg" alt="Interior painting in progress" loading="lazy" />
+            <div class="ip-img-badge">
+              <strong>25+</strong>
+              <span>Years of Craft</span>
             </div>
           </div>
         </div>
       </div>
-      
-      <div class="hero-dots">
-        <span class="dot active" data-slide="0"></span>
-        <span class="dot" data-slide="1"></span>
-        <span class="dot" data-slide="2"></span>
-      </div>
     </section>
 
-    <!-- Services Section - Inline Styles -->
-    <section style="padding: 5rem 0; background: white;">
-      <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
-        <div style="text-align: center; margin-bottom: 4rem;">
-          <span style="display: inline-block; padding: 0.5rem 1.5rem; background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(37, 99, 235, 0.1)); color: #3b82f6; font-weight: 700; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 1px; border-radius: 50px; margin-bottom: 1rem; border: 1px solid rgba(59, 130, 246, 0.2);">What We Offer</span>
-          <h2 style="font-size: 3rem; font-weight: 900; color: #1f2937; margin-bottom: 1rem;">Our Services</h2>
-          <p style="font-size: 1.25rem; color: #6b7280;">Professional painting services backed by 25+ years of experience</p>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
-          
-          <div style="background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 2px solid #f3f4f6;">
-            <div style="font-size: 4rem; margin-bottom: 1.5rem;">🎨</div>
-            <h3 style="font-size: 1.75rem; font-weight: 800; color: #1f2937; margin-bottom: 1rem;">Color Consultation</h3>
-            <p style="color: #6b7280; line-height: 1.7; margin-bottom: 1.5rem;">Expert color advice tailored to your space, lighting, and personal style preferences</p>
-            <ul style="list-style: none; padding: 0; margin: 1.5rem 0;">
-              <li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Professional color matching</li><li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Sample testing on walls</li><li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Lighting considerations</li><li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Trend guidance</li>
-            </ul>
-          </div>
-          <div style="background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 2px solid #f3f4f6;">
-            <div style="font-size: 4rem; margin-bottom: 1.5rem;">🏠</div>
-            <h3 style="font-size: 1.75rem; font-weight: 800; color: #1f2937; margin-bottom: 1rem;">Room Painting</h3>
-            <p style="color: #6b7280; line-height: 1.7; margin-bottom: 1.5rem;">Complete room painting services for every space in your home or business</p>
-            <ul style="list-style: none; padding: 0; margin: 1.5rem 0;">
-              <li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Living rooms & bedrooms</li><li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Kitchens & bathrooms</li><li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Hallways & staircases</li><li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Ceiling painting</li>
-            </ul>
-          </div>
-          <div style="background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 2px solid #f3f4f6;">
-            <div style="font-size: 4rem; margin-bottom: 1.5rem;">🔧</div>
-            <h3 style="font-size: 1.75rem; font-weight: 800; color: #1f2937; margin-bottom: 1rem;">Cabinet Refinishing</h3>
-            <p style="color: #6b7280; line-height: 1.7; margin-bottom: 1.5rem;">Professional cabinet painting and refinishing with factory-quality results</p>
-            <ul style="list-style: none; padding: 0; margin: 1.5rem 0;">
-              <li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Kitchen cabinet painting</li><li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Bathroom vanity refinishing</li><li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Built-in cabinets</li><li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Hardware updates</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ Section - Inline Styles -->
-    <section style="padding: 5rem 0; background: #f8fafc;">
-      <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
-        <div style="text-align: center; margin-bottom: 4rem;">
-          <h2 style="font-size: 3rem; font-weight: 900; color: #1f2937; margin-bottom: 1rem;">Frequently Asked Questions</h2>
-        </div>
-
-        <div style="display: grid; gap: 1.5rem;">
-          
-          <div style="background: #f8fafc; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); border-left: 4px solid #3b82f6;">
-            <h3 style="color: #1e40af; margin-bottom: 1rem; font-size: 1.25rem; font-weight: 700;">How long does interior painting take?</h3>
-            <p style="line-height: 1.7; color: #4b5563; margin: 0;">Most interior painting projects take 2-4 days for an average-sized home. The timeline depends on the size of the space, number of rooms, and amount of prep work required. We provide detailed timelines with every estimate.</p>
-          </div>
-          <div style="background: #f8fafc; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); border-left: 4px solid #3b82f6;">
-            <h3 style="color: #1e40af; margin-bottom: 1rem; font-size: 1.25rem; font-weight: 700;">Do I need to move furniture before painting?</h3>
-            <p style="line-height: 1.7; color: #4b5563; margin: 0;">We can help move furniture to the center of rooms and cover it properly. However, we recommend removing small valuables, wall decorations, and delicate items beforehand. We will take care of protecting your floors and larger furniture.</p>
-          </div>
-          <div style="background: #f8fafc; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); border-left: 4px solid #3b82f6;">
-            <h3 style="color: #1e40af; margin-bottom: 1rem; font-size: 1.25rem; font-weight: 700;">What type of paint do you use for interior work?</h3>
-            <p style="line-height: 1.7; color: #4b5563; margin: 0;">We use premium brands like Sherwin-Williams and Benjamin Moore for interior projects. These paints offer excellent coverage, durability, and are low-VOC for healthier indoor air quality.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
+    <!-- ── WHAT SETS US APART ── -->
+    <section class="ip-section ip-dark">
       <div class="container">
-        <h2>Ready to Get Started?</h2>
-        <p>Contact Browns Painting today for a free estimate on your project.</p>
-        <a href="/contact" class="btn btn-primary">
-          <span class="btn-icon">📞</span>
-          Get Free Estimate
-        </a>
+        <div class="ip-section-top">
+          <span class="eyebrow">Why Browns</span>
+          <h2 class="ip-h2 ip-h2-white">Our Interior Painting <em>Standards.</em></h2>
+        </div>
+        <div class="ip-standards-grid">
+          <div class="ip-standard">
+            <div class="ip-std-num">01</div>
+            <h4>Meticulous Prep Work</h4>
+            <p>We fill holes, sand surfaces, tape off trim, and protect your floors before a single brush stroke. Proper prep = lasting results.</p>
+          </div>
+          <div class="ip-standard">
+            <div class="ip-std-num">02</div>
+            <h4>Premium Paint Only</h4>
+            <p>We use Sherwin-Williams and comparable top-tier paints. Low-VOC formulas safe for families and pets.</p>
+          </div>
+          <div class="ip-standard">
+            <div class="ip-std-num">03</div>
+            <h4>Clean Job Site, Every Time</h4>
+            <p>We clean up completely at the end of every day and do a full site cleanup before your walkthrough.</p>
+          </div>
+          <div class="ip-standard">
+            <div class="ip-std-num">04</div>
+            <h4>Owner on Every Job</h4>
+            <p>Boomer personally oversees every interior project. You're not getting a sub-crew — you're getting the owner.</p>
+          </div>
+          <div class="ip-standard">
+            <div class="ip-std-num">05</div>
+            <h4>100% Satisfaction</h4>
+            <p>We don't call it done until you're completely happy. We'll come back and touch up anything that's not right.</p>
+          </div>
+          <div class="ip-standard">
+            <div class="ip-std-num">06</div>
+            <h4>Competitive Pricing</h4>
+            <p>Free estimates, transparent pricing, no hidden fees. We work within your budget without sacrificing quality.</p>
+          </div>
+        </div>
       </div>
     </section>
+
+    <Testimonials />
+
+    <!-- ── CTA ── -->
+    <section class="ip-cta-strip">
+      <div class="container ip-cta-inner">
+        <div>
+          <h2 class="ip-cta-h2">Ready for a Fresh Interior?</h2>
+          <p>Call Boomer or fill out the quote form. Free estimates, fast scheduling.</p>
+        </div>
+        <div class="ip-cta-btns">
+          <a href="/contact" class="btn-amber">Get a Free Quote →</a>
+          <a href="tel:+12512374545" class="ip-phone">(251) 237-4545</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 </BaseLayout>
 
 <style>
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+  .eyebrow {
+    display: inline-block;
+    font-family: var(--font-sans); font-size: 0.6875rem; font-weight: 800;
+    text-transform: uppercase; letter-spacing: 0.12em; color: var(--amber);
   }
 
-  /* Hero Section - Keep Existing Styles */
-  .hero {
+  .btn-amber {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.9rem 2rem; background: var(--amber); color: var(--ink);
+    font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 800;
+    text-decoration: none; border-radius: var(--radius-md);
+    box-shadow: var(--shadow-amber); transition: background 0.2s, transform 0.2s;
+  }
+  .btn-amber:hover { background: var(--amber-deep); transform: translateY(-2px); }
+
+  .ip-section { padding: 5.5rem 0 6rem; }
+  .ip-cream { background: var(--cream); }
+  .ip-dark { background: var(--ink-soft); }
+
+  /* Split layout */
+  .ip-split {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 5rem; align-items: center;
+  }
+
+  .ip-split-content { display: flex; flex-direction: column; gap: 1.25rem; }
+
+  .ip-h2 {
+    font-family: var(--font-sans);
+    font-size: clamp(2rem, 4vw, 3.25rem); font-weight: 900;
+    letter-spacing: -0.04em; line-height: 1.05; color: var(--ink); margin: 0;
+  }
+
+  .ip-h2 em {
+    font-family: var(--font-display); font-style: italic; font-weight: 400;
+    color: var(--amber-deep); letter-spacing: -0.02em;
+  }
+
+  .ip-h2-white { color: #fff; }
+  .ip-h2-white em { color: var(--amber); }
+
+  .ip-split-content > p {
+    font-family: var(--font-sans); font-size: 1.0625rem;
+    color: var(--text-muted); line-height: 1.7; margin: 0;
+  }
+
+  .ip-feature-list {
+    list-style: none; padding: 0; margin: 0.5rem 0;
+    display: flex; flex-direction: column; gap: 1.25rem;
+  }
+
+  .ip-feature-list li {
+    display: flex; gap: 1rem; align-items: flex-start;
+  }
+
+  .ip-feat-icon {
+    width: 40px; height: 40px; flex-shrink: 0;
+    background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.2);
+    border-radius: 10px; display: flex; align-items: center; justify-content: center;
+    color: var(--amber); margin-top: 0.1rem;
+  }
+
+  .ip-feature-list strong {
+    font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 800;
+    color: var(--ink); display: block; margin-bottom: 0.2rem;
+  }
+
+  .ip-feature-list p {
+    font-family: var(--font-sans); font-size: 0.875rem;
+    color: var(--text-muted); line-height: 1.6; margin: 0;
+  }
+
+  .ip-split-img {
+    position: relative; border-radius: var(--radius-xl); overflow: hidden;
+    aspect-ratio: 4/5;
+  }
+
+  .ip-split-img img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: brightness(1.05) saturate(1.15);
+  }
+
+  .ip-img-badge {
+    position: absolute; bottom: 1.5rem; right: 1.5rem;
+    background: var(--amber); border-radius: var(--radius-md);
+    padding: 1rem 1.25rem; text-align: center;
+  }
+
+  .ip-img-badge strong {
+    display: block; font-family: var(--font-sans);
+    font-size: 2rem; font-weight: 900; letter-spacing: -0.04em; color: var(--ink);
+  }
+
+  .ip-img-badge span {
+    font-family: var(--font-sans); font-size: 0.6875rem; font-weight: 800;
+    text-transform: uppercase; letter-spacing: 0.08em; color: rgba(17,24,39,0.65);
+  }
+
+  /* Standards grid */
+  .ip-section-top { margin-bottom: 3rem; display: flex; flex-direction: column; gap: 0.75rem; }
+
+  .ip-standards-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: var(--radius-xl); overflow: hidden;
+  }
+
+  .ip-standard {
+    padding: 2rem 1.75rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    border-right: 1px solid rgba(255,255,255,0.05);
+    display: flex; flex-direction: column; gap: 0.75rem;
     position: relative;
-    height: 100vh;
-    min-height: 600px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    color: white;
   }
 
-  .hero-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+  .ip-std-num {
+    font-family: var(--font-sans); font-size: 0.625rem; font-weight: 900;
+    letter-spacing: 0.1em; color: var(--amber); opacity: 0.7;
   }
 
-  .hero-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+  .ip-standard h4 {
+    font-family: var(--font-sans); font-size: 1rem; font-weight: 800;
+    color: #fff; margin: 0; letter-spacing: -0.02em;
   }
 
-  .hero-slide.active {
-    opacity: 1;
+  .ip-standard p {
+    font-family: var(--font-sans); font-size: 0.875rem;
+    color: rgba(255,255,255,0.45); line-height: 1.65; margin: 0;
   }
 
-  .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 100%);
-    z-index: 2;
+  /* CTA strip */
+  .ip-cta-strip { background: var(--ink); padding: 4.5rem 0; }
+
+  .ip-cta-inner {
+    display: flex; align-items: center; justify-content: space-between; gap: 3rem;
   }
 
-  .hero-content {
-    position: relative;
-    z-index: 3;
-    width: 100%;
-    text-align: center;
+  .ip-cta-h2 {
+    font-family: var(--font-sans); font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-weight: 900; letter-spacing: -0.04em; color: #fff; margin: 0 0 0.5rem;
   }
 
-  .hero-text {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
+  .ip-cta-strip p {
+    font-family: var(--font-sans); font-size: 1rem;
+    color: rgba(255,255,255,0.45); margin: 0;
   }
 
-  .hero-logo-image {
-    height: 300px;
-    width: auto;
-    max-width: 100%;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 0;
+  .ip-cta-btns { display: flex; align-items: center; gap: 1.5rem; flex-shrink: 0; }
+
+  .ip-phone {
+    font-family: var(--font-sans); font-size: 1.125rem; font-weight: 900;
+    letter-spacing: -0.02em; color: rgba(255,255,255,0.35);
+    text-decoration: none; white-space: nowrap;
+  }
+  .ip-phone:hover { color: var(--amber); }
+
+  @media (max-width: 900px) {
+    .ip-split { grid-template-columns: 1fr; gap: 3rem; }
+    .ip-split-img { aspect-ratio: 16/9; max-height: 400px; }
+    .ip-standards-grid { grid-template-columns: repeat(2, 1fr); }
+    .ip-cta-inner { flex-direction: column; text-align: center; }
+    .ip-cta-btns { flex-direction: column; }
   }
 
-  .hero h1 {
-    font-size: clamp(3rem, 5vw, 4rem);
-    font-weight: 800;
-    margin: 0;
-    margin-top: -4rem;
-    margin-bottom: 1rem;
-    line-height: 1.1;
-    color: white;
-  }
-
-  .hero-subtitle {
-    font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.95);
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-  }
-
-  .phone-number {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 1rem;
-    justify-content: center;
-    margin: 0;
-  }
-
-  .phone-label {
-    font-weight: 500;
-  }
-
-  .phone-link {
-    color: #fbbf24;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.125rem;
-  }
-
-  .phone-link:hover {
-    color: #f59e0b;
-    text-decoration: underline;
-  }
-
-  .hero-cta {
-    margin-top: 2rem;
-  }
-
-  .hero-trust-badges {
-    position: absolute;
-    top: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 1.5rem;
-    z-index: 4;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .trust-badge {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.94rem 1.56rem;
-    background: transparent;
-    color: white;
-    font-size: 1.125rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-  }
-
-  .trust-badge:hover {
-    transform: translateY(-2px);
-    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.9);
-  }
-
-  .trust-badge .trust-icon {
-    font-size: 1.56rem;
-    color: #fbbf24;
-  }
-
-  .trust-badge .trust-stars {
-    font-size: 1.56rem;
-    color: #fbbf24;
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-  }
-
-  .trust-badge .trust-text {
-    font-size: 1.06rem;
-    font-weight: 600;
-  }
-
-  .hero-dots {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 0.5rem;
-    z-index: 3;
-  }
-
-  .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-
-  .dot.active {
-    background: #fbbf24;
-    transform: scale(1.2);
-  }
-
-  .dot:hover {
-    background: rgba(255, 255, 255, 0.8);
-  }
-
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 1.25rem 2.5rem;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: 700;
-    transition: all 0.3s ease;
-    font-size: 1.125rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-
-  .btn-primary {
-    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-    color: #1f2937;
-    box-shadow: 
-      0 8px 25px rgba(251, 191, 36, 0.4),
-      inset 0 1px 0 rgba(255, 255, 255, 0.3);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .btn-primary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    transition: left 0.5s ease;
-  }
-
-  .btn-primary:hover::before {
-    left: 100%;
-  }
-
-  .btn-primary:hover {
-    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-    transform: translateY(-3px);
-    box-shadow: 
-      0 12px 35px rgba(251, 191, 36, 0.6),
-      inset 0 1px 0 rgba(255, 255, 255, 0.4);
-  }
-
-  .btn-icon {
-    font-size: 1.25rem;
-  }
-
-  .cta-section {
-    text-align: center;
-    padding: 5rem 2rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-  }
-
-  .cta-section h2 {
-    margin-bottom: 1rem;
-    font-size: 2.5rem;
-    font-weight: 800;
-  }
-
-  .cta-section p {
-    margin-bottom: 2rem;
-    font-size: 1.125rem;
-    opacity: 0.95;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  @media (max-width: 768px) {
-    .hero {
-      height: auto;
-      min-height: 550px;
-      padding: 5rem 0 3rem;
-    }
-    
-    .hero-logo-image {
-      height: 120px;
-      margin-bottom: 0.5rem;
-    }
-    
-    .hero h1 {
-      font-size: 1.5rem;
-      margin-top: -1rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .hero-subtitle {
-      font-size: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero-text {
-      padding: 1rem;
-    }
-
-    .phone-number {
-      font-size: 0.9rem;
-      flex-direction: column;
-      gap: 0.25rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .phone-link {
-      font-size: 1rem;
-    }
-
-    .hero-cta {
-      margin-top: 1rem;
-    }
-
-    .btn {
-      padding: 1rem 1.75rem;
-      font-size: 1rem;
-    }
-    
-    .hero-trust-badges {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.5rem;
-      top: 0.5rem;
-      padding: 0 0.5rem;
-      width: 100%;
-      left: 0;
-      transform: none;
-    }
-    
-    .trust-badge {
-      font-size: 0.65rem;
-      padding: 0.4rem 0.5rem;
-      flex-direction: column;
-      text-align: center;
-      gap: 0.25rem;
-    }
-
-    .trust-icon,
-    .trust-stars {
-      font-size: 1.25rem;
-    }
-
-    .trust-text {
-      font-size: 0.65rem;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .hero {
-      min-height: 500px;
-      padding: 4rem 0 2rem;
-    }
-
-    .hero-logo-image {
-      height: 100px;
-      margin-bottom: 0.25rem;
-    }
-
-    .hero h1 {
-      font-size: 1.25rem;
-      margin-top: -0.75rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .hero-subtitle {
-      font-size: 0.9rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .hero-text {
-      padding: 0.75rem 0.5rem;
-    }
-
-    .phone-number {
-      font-size: 0.85rem;
-      margin-bottom: 1rem;
-    }
-
-    .phone-link {
-      font-size: 0.95rem;
-    }
-
-    .btn {
-      padding: 0.875rem 1.5rem;
-      font-size: 0.9rem;
-    }
-
-    .hero-trust-badges {
-      gap: 0.35rem;
-      padding: 0 0.35rem;
-    }
-
-    .trust-badge {
-      font-size: 0.6rem;
-      padding: 0.35rem 0.4rem;
-    }
-
-    .trust-icon,
-    .trust-stars {
-      font-size: 1.1rem;
-    }
-
-    .trust-text {
-      font-size: 0.6rem;
-    }
+  @media (max-width: 640px) {
+    .ip-standards-grid { grid-template-columns: 1fr; }
+    .container { padding: 0 1.25rem; }
   }
 </style>
-
-<script is:inline>
-(function() {
-  'use strict';
-  
-  function initCarousel() {
-    const slides = document.querySelectorAll('.hero-slide');
-    const dots = document.querySelectorAll('.dot');
-    
-    if (!slides || slides.length === 0) return;
-    
-    let currentSlide = 0;
-    let slideInterval = null;
-
-    function showSlide(index) {
-      slides.forEach(function(slide) { slide.classList.remove('active'); });
-      dots.forEach(function(dot) { dot.classList.remove('active'); });
-      
-      if (slides[index]) slides[index].classList.add('active');
-      if (dots[index]) dots[index].classList.add('active');
-      
-      currentSlide = index;
-    }
-
-    function nextSlide() {
-      const next = (currentSlide + 1) % slides.length;
-      showSlide(next);
-    }
-
-    function startSlider() {
-      if (slideInterval) clearInterval(slideInterval);
-      slideInterval = setInterval(nextSlide, 5000);
-    }
-
-    dots.forEach(function(dot, index) {
-      dot.addEventListener('click', function() {
-        showSlide(index);
-        startSlider();
-      });
-    });
-
-    startSlider();
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initCarousel);
-  } else {
-    initCarousel();
-  }
-})();
-</script>

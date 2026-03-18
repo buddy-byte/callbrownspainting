@@ -1,335 +1,249 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import InnerPageHero from '../components/InnerPageHero.astro';
 ---
 
 <BaseLayout
-  title="Contact CallBrownsPainting.com"
-  description="Contact Barry 'Boomer' Brown for professional painting services in Brewton, Evergreen, Atmore, Monroeville, Bay Minette, Foley, Fairhope, Daphne, Spanish Fort, Gulf Shores, Orange Beach and surrounding South Alabama areas. Free estimates available."
-  keywords="contact painting contractor Brewton AL, painting estimate South Alabama, Barry Boomer Brown painter, painting services contact"
+  title="Contact Browns Painting — Free Estimate"
+  description="Contact Barry 'Boomer' Brown for professional painting services in South Alabama. Free estimates. (251) 237-4545"
+  keywords="contact painting contractor Brewton AL, painting estimate South Alabama, Barry Boomer Brown painter"
 >
   <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-background" style="background-image: url('/images/boomer-photos/boomer-2-optimized.jpg'); background-position: center center;"></div>
-      <div class="hero-overlay"></div>
-      
-      <div class="hero-trust-badges">
-        <div class="trust-badge">
-          <span class="trust-stars">★★★★★</span>
-          <span class="trust-text">5-Star Reviews</span>
-        </div>
-        <div class="trust-badge">
-          <span class="trust-icon">🏆</span>
-          <span class="trust-text">25+ Years</span>
-        </div>
-        <div class="trust-badge">
-          <span class="trust-icon">📋</span>
-          <span class="trust-text">Licensed & Insured</span>
-        </div>
-        <div class="trust-badge">
-          <span class="trust-icon">✅</span>
-          <span class="trust-text">100% Guaranteed</span>
-        </div>
-      </div>
+    <InnerPageHero
+      title="Get Your Free Estimate"
+      subtitle="Call, text, or fill out the form — we respond within 24 hours."
+      eyebrow="Contact Us"
+      bg="/images/boomer-photos/boomer-2-optimized.jpg"
+      ctaText="Call Now"
+      ctaHref="tel:+12512374545"
+    />
 
+    <!-- ── CONTACT SECTION ── -->
+    <section class="contact-section">
       <div class="container">
-        <div class="hero-content">
-          <div class="hero-text">
-            <img src="/images/logo/browns-painting-logo-hat.png" alt="Browns Painting" class="hero-logo-image" />
-            <h1>Get Your Free Estimate</h1>
-            <p class="hero-subtitle">Ready for professional painting services? Contact Barry "Boomer" Brown today!</p>
-            <div class="phone-number">
-              <span class="phone-label">Call or Text</span>
-              <a href="tel:+12512374545" class="phone-link">(251) 237-4545</a>
+        <div class="contact-grid">
+
+          <!-- Form column -->
+          <div class="form-col">
+            <div class="form-header">
+              <span class="eyebrow">Free Estimate</span>
+              <h2 class="form-h2">Request a Quote</h2>
+              <p>Fill out the form and Boomer will get back to you within 24 hours.</p>
             </div>
+
+            <form class="contact-form" method="POST" action="/api/contact">
+              <div class="field-row">
+                <div class="field">
+                  <label for="name">Full Name *</label>
+                  <input type="text" id="name" name="name" required placeholder="John Smith" />
+                </div>
+                <div class="field">
+                  <label for="phone">Phone Number *</label>
+                  <input type="tel" id="phone" name="phone" required placeholder="(251) 555-0000" />
+                </div>
+              </div>
+              <div class="field">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required placeholder="you@example.com" />
+              </div>
+              <div class="field">
+                <label for="subject">Type of Work *</label>
+                <select id="subject" name="subject" required>
+                  <option value="">Select a service…</option>
+                  <option>Interior Painting</option>
+                  <option>Exterior Painting</option>
+                  <option>Commercial Painting</option>
+                  <option>Cabinet Refinishing</option>
+                  <option>Pressure Washing</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="message">Describe Your Project *</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project — size, current condition, timeline, any specific requirements…"></textarea>
+              </div>
+              <button type="submit" class="submit-btn">Send Request →</button>
+            </form>
+          </div>
+
+          <!-- Info column -->
+          <div class="info-col">
+
+            <div class="info-card">
+              <div class="info-card-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27 11.36 11.36 0 003.55.56 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.56 3.55 1 1 0 01-.27 1.11z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <h4>Phone &amp; Text</h4>
+                <a href="tel:+12512374545" class="info-link-big">(251) 237-4545</a>
+                <p>Fastest way to reach Boomer</p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.75"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="1.75"/></svg>
+              </div>
+              <div>
+                <h4>Email</h4>
+                <a href="mailto:boomer@callbrownspainting.com" class="info-link">boomer@callbrownspainting.com</a>
+                <p>We reply within 24 hours</p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.75"/><path d="M12 8v4l3 3" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg>
+              </div>
+              <div>
+                <h4>Business Hours</h4>
+                <p><strong>Mon–Fri:</strong> 7:00 AM – 4:00 PM</p>
+                <p><strong>Sat–Sun:</strong> By Appointment</p>
+                <p class="info-emerg">Emergency services available 7 days</p>
+              </div>
+            </div>
+
+            <div class="info-card info-card-dark">
+              <div class="info-card-icon info-icon-dark">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <h4>Service Area</h4>
+                <p>Serving Escambia, Conecuh, Monroe, Mobile, and Baldwin Counties — 20+ cities across South Alabama.</p>
+                <a href="/service-areas" class="info-areas-link">View All Service Areas →</a>
+              </div>
+            </div>
+
+            <!-- Trust tiles -->
+            <div class="trust-tiles">
+              <div class="trust-tile">
+                <strong>25+</strong>
+                <span>Years</span>
+              </div>
+              <div class="trust-tile">
+                <strong>500+</strong>
+                <span>Projects</span>
+              </div>
+              <div class="trust-tile">
+                <strong>5★</strong>
+                <span>Google</span>
+              </div>
+              <div class="trust-tile">
+                <strong>AL</strong>
+                <span>Licensed</span>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Form & Info Section -->
-    <section style="padding: 5rem 0; background: #f8fafc;">
-      <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
-        <div style="text-align: center; margin-bottom: 4rem;">
-          <span style="display: inline-block; padding: 0.5rem 1.5rem; background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(37, 99, 235, 0.1)); color: #3b82f6; font-weight: 700; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 1px; border-radius: 50px; margin-bottom: 1rem; border: 1px solid rgba(59, 130, 246, 0.2);">Let's Get Started</span>
-          <h2 style="font-size: 3rem; font-weight: 900; color: #1f2937; margin-bottom: 1rem;">Request Your Free Estimate</h2>
-          <p style="font-size: 1.25rem; color: #6b7280;">Fill out the form or give us a call - we'll get back to you within 24 hours</p>
-        </div>
-
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
-          <!-- Contact Form - LEAD WITH THIS -->
-          <form style="background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08); border: 2px solid #f3f4f6;" method="POST" action="/api/contact">
-            
-            <div style="margin-bottom: 1.5rem;">
-              <label for="name" style="display: block; margin-bottom: 0.5rem; color: #1f2937; font-weight: 700; font-size: 0.9375rem;">Name *</label>
-              <input type="text" id="name" name="name" required style="width: 100%; padding: 1rem; border: 2px solid #e5e7eb; border-radius: 12px; font-size: 1rem; font-family: inherit; transition: border-color 0.3s; box-sizing: border-box;" />
-            </div>
-
-            <div style="margin-bottom: 1.5rem;">
-              <label for="email" style="display: block; margin-bottom: 0.5rem; color: #1f2937; font-weight: 700; font-size: 0.9375rem;">Email *</label>
-              <input type="email" id="email" name="email" required style="width: 100%; padding: 1rem; border: 2px solid #e5e7eb; border-radius: 12px; font-size: 1rem; font-family: inherit; transition: border-color 0.3s; box-sizing: border-box;" />
-            </div>
-
-            <div style="margin-bottom: 1.5rem;">
-              <label for="phone" style="display: block; margin-bottom: 0.5rem; color: #1f2937; font-weight: 700; font-size: 0.9375rem;">Phone Number *</label>
-              <input type="tel" id="phone" name="phone" placeholder="(251) 237-4545" required style="width: 100%; padding: 1rem; border: 2px solid #e5e7eb; border-radius: 12px; font-size: 1rem; font-family: inherit; transition: border-color 0.3s; box-sizing: border-box;" />
-            </div>
-
-            <div style="margin-bottom: 1.5rem;">
-              <label for="subject" style="display: block; margin-bottom: 0.5rem; color: #1f2937; font-weight: 700; font-size: 0.9375rem;">Subject *</label>
-              <input type="text" id="subject" name="subject" required style="width: 100%; padding: 1rem; border: 2px solid #e5e7eb; border-radius: 12px; font-size: 1rem; font-family: inherit; transition: border-color 0.3s; box-sizing: border-box;" />
-            </div>
-
-            <div style="margin-bottom: 2rem;">
-              <label for="message" style="display: block; margin-bottom: 0.5rem; color: #1f2937; font-weight: 700; font-size: 0.9375rem;">Description of Job / Comments *</label>
-              <textarea id="message" name="message" rows="6" required style="width: 100%; padding: 1rem; border: 2px solid #e5e7eb; border-radius: 12px; font-size: 1rem; font-family: inherit; transition: border-color 0.3s; resize: vertical; box-sizing: border-box;"></textarea>
-            </div>
-
-            <button type="submit" style="width: 100%; padding: 1.25rem 2rem; background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); color: #1f2937; border: none; border-radius: 12px; font-size: 1.125rem; font-weight: 700; cursor: pointer; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 8px 25px rgba(251, 191, 36, 0.4);">Send Message</button>
-          </form>
-
-          <!-- Contact Info -->
-          <div>
-            <!-- Contact Methods -->
-            <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 2rem;">
-              <div style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); border-left: 4px solid #3b82f6;">
-                <h3 style="color: #1e40af; margin-bottom: 1rem; font-size: 1.25rem; font-weight: 700;">📱 Phone</h3>
-                <p style="margin: 0; font-size: 1.5rem;"><a href="tel:+12512374545" style="color: #3b82f6; text-decoration: none; font-weight: 700;">(251) 237-4545</a></p>
-                <p style="margin: 0.5rem 0 0 0; color: #6b7280; font-size: 0.9375rem;">Call or text for fastest response</p>
-              </div>
-              
-              <div style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); border-left: 4px solid #10b981;">
-                <h3 style="color: #059669; margin-bottom: 1rem; font-size: 1.25rem; font-weight: 700;">📧 Email</h3>
-                <p style="margin: 0; font-size: 1rem;"><a href="mailto:boomer@callbrownspainting.com" style="color: #10b981; text-decoration: none; font-weight: 600;">boomer@callbrownspainting.com</a></p>
-              </div>
-              
-              <div style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); border-left: 4px solid #f59e0b;">
-                <h3 style="color: #d97706; margin-bottom: 1rem; font-size: 1.25rem; font-weight: 700;">🕒 Business Hours</h3>
-                <p style="margin: 0 0 0.5rem 0; color: #1f2937; font-weight: 600;">Monday - Friday: <span style="font-weight: 400; color: #6b7280;">7:00 AM - 4:00 PM</span></p>
-                <p style="margin: 0 0 0.5rem 0; color: #1f2937; font-weight: 600;">Saturday: <span style="font-weight: 400; color: #6b7280;">By Appointment</span></p>
-                <p style="margin: 0 0 0.5rem 0; color: #1f2937; font-weight: 600;">Sunday: <span style="font-weight: 400; color: #6b7280;">By Appointment</span></p>
-                <p style="margin: 1rem 0 0 0; color: #059669; font-weight: 600; font-size: 0.9375rem;">✓ Emergency services available 7 days a week</p>
-              </div>
-            </div>
-
-            <!-- Trust Badges - Improved -->
-            <div style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); padding: 2rem; border-radius: 16px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); color: white;">
-              <h3 style="margin-bottom: 1.5rem; font-size: 1.25rem; font-weight: 700; text-align: center; color: white;">Why Choose Browns Painting</h3>
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
-                <div style="text-align: center; padding: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 12px; backdrop-filter: blur(10px);">
-                  <div style="font-size: 2rem; margin-bottom: 0.5rem; color: #fbbf24;">★★★★★</div>
-                  <div style="font-weight: 700; font-size: 1.125rem; margin-bottom: 0.25rem;">25+ Years</div>
-                  <div style="opacity: 0.9; font-size: 0.875rem;">Experience</div>
-                </div>
-                <div style="text-align: center; padding: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 12px; backdrop-filter: blur(10px);">
-                  <div style="font-size: 2rem; margin-bottom: 0.5rem; color: #fbbf24;">✓</div>
-                  <div style="font-weight: 700; font-size: 1.125rem; margin-bottom: 0.25rem;">Licensed</div>
-                  <div style="opacity: 0.9; font-size: 0.875rem;">& Insured</div>
-                </div>
-                <div style="text-align: center; padding: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 12px; backdrop-filter: blur(10px);">
-                  <div style="font-size: 2rem; margin-bottom: 0.5rem; color: #fbbf24;">★</div>
-                  <div style="font-weight: 700; font-size: 1.125rem; margin-bottom: 0.25rem;">5-Star</div>
-                  <div style="opacity: 0.9; font-size: 0.875rem;">Rated</div>
-                </div>
-                <div style="text-align: center; padding: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 12px; backdrop-filter: blur(10px);">
-                  <div style="font-size: 2rem; margin-bottom: 0.5rem; color: #fbbf24;">✓</div>
-                  <div style="font-weight: 700; font-size: 1.125rem; margin-bottom: 0.25rem;">100%</div>
-                  <div style="opacity: 0.9; font-size: 0.875rem;">Satisfaction</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
-
-  <style>
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
-    /* Hero Section */
-    .hero {
-      position: relative;
-      height: 70vh;
-      min-height: 500px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      color: white;
-    }
-
-    .hero-background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      z-index: 1;
-    }
-
-    .hero-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%);
-      z-index: 2;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 3;
-      width: 100%;
-      text-align: center;
-    }
-
-    .hero-text {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-
-    .hero-logo-image {
-      height: 250px;
-      width: auto;
-      max-width: 100%;
-      object-fit: contain;
-      display: block;
-      margin: 0 auto;
-      margin-bottom: 0;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      font-weight: 800;
-      margin: 0;
-      margin-top: -3rem;
-      margin-bottom: 1rem;
-      line-height: 1.1;
-      color: white;
-    }
-
-    .hero-subtitle {
-      font-size: 1.25rem;
-      color: rgba(255, 255, 255, 0.95);
-      margin-bottom: 1.5rem;
-      line-height: 1.6;
-    }
-
-    .phone-number {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: rgba(255, 255, 255, 0.9);
-      font-size: 1rem;
-      justify-content: center;
-      margin: 0;
-    }
-
-    .phone-label {
-      font-weight: 500;
-    }
-
-    .phone-link {
-      color: #fbbf24;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1.5rem;
-    }
-
-    .phone-link:hover {
-      color: #f59e0b;
-      text-decoration: underline;
-    }
-
-    .hero-trust-badges {
-      position: absolute;
-      top: 2rem;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 1.5rem;
-      z-index: 4;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .trust-badge {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.94rem 1.56rem;
-      background: transparent;
-      color: white;
-      font-size: 1.125rem;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      white-space: nowrap;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    }
-
-    .trust-badge:hover {
-      transform: translateY(-2px);
-      text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.9);
-    }
-
-    .trust-badge .trust-icon {
-      font-size: 1.56rem;
-      color: #fbbf24;
-    }
-
-    .trust-badge .trust-stars {
-      font-size: 1.56rem;
-      color: #fbbf24;
-      font-weight: 700;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    }
-
-    .trust-badge .trust-text {
-      font-size: 1.06rem;
-      font-weight: 600;
-    }
-
-    @media (max-width: 768px) {
-      .hero {
-        height: 60vh;
-        min-height: 450px;
-      }
-      
-      .hero-logo-image {
-        height: 150px;
-      }
-      
-      .hero h1 {
-        font-size: 2rem;
-        margin-top: -2rem;
-      }
-      
-      .hero-trust-badges {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0.5rem;
-        top: 0.75rem;
-        padding: 0 0.5rem;
-      }
-      
-      .trust-badge {
-        font-size: 0.75rem;
-        padding: 0.5rem 0.75rem;
-      }
-
-      .phone-link {
-        font-size: 1.25rem;
-      }
-    }
-  </style>
 </BaseLayout>
 
+<style>
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+  .eyebrow {
+    display: inline-block; font-family: var(--font-sans); font-size: 0.6875rem; font-weight: 800;
+    text-transform: uppercase; letter-spacing: 0.12em; color: var(--amber);
+  }
+
+  .contact-section { background: var(--cream); padding: 5.5rem 0 6rem; }
+
+  .contact-grid { display: grid; grid-template-columns: 1fr 420px; gap: 5rem; align-items: start; }
+
+  /* ── FORM ── */
+  .form-col { display: flex; flex-direction: column; gap: 2.5rem; }
+
+  .form-header { display: flex; flex-direction: column; gap: 0.625rem; }
+
+  .form-h2 { font-family: var(--font-sans); font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; letter-spacing: -0.04em; line-height: 1.05; color: var(--ink); margin: 0; }
+
+  .form-header p { font-family: var(--font-sans); font-size: 1.0625rem; color: var(--text-muted); line-height: 1.6; margin: 0; }
+
+  .contact-form { display: flex; flex-direction: column; gap: 1.25rem; }
+
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+
+  .field { display: flex; flex-direction: column; gap: 0.4rem; }
+
+  .field label { font-family: var(--font-sans); font-size: 0.8125rem; font-weight: 800; color: var(--ink); letter-spacing: 0.01em; }
+
+  .field input, .field select, .field textarea {
+    font-family: var(--font-sans); font-size: 0.9375rem; color: var(--ink);
+    background: var(--white); border: 1.5px solid var(--border);
+    border-radius: var(--radius-md); padding: 0.875rem 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s; outline: none; width: 100%; box-sizing: border-box;
+  }
+
+  .field input:focus, .field select:focus, .field textarea:focus {
+    border-color: var(--amber); box-shadow: 0 0 0 3px rgba(245,158,11,0.12);
+  }
+
+  .field textarea { resize: vertical; min-height: 130px; }
+
+  .submit-btn {
+    padding: 1rem 2.25rem; background: var(--amber); color: var(--ink);
+    font-family: var(--font-sans); font-size: 1rem; font-weight: 800;
+    border: none; border-radius: var(--radius-md); cursor: pointer;
+    box-shadow: var(--shadow-amber); transition: background 0.2s, transform 0.2s;
+    align-self: flex-start;
+  }
+  .submit-btn:hover { background: var(--amber-deep); transform: translateY(-2px); }
+
+  /* ── INFO ── */
+  .info-col { display: flex; flex-direction: column; gap: 1rem; padding-top: 6.5rem; }
+
+  .info-card {
+    background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg);
+    padding: 1.5rem 1.5rem; display: flex; gap: 1rem; align-items: flex-start;
+  }
+
+  .info-card-dark { background: var(--ink-soft); border-color: rgba(255,255,255,0.06); }
+  .info-card-dark h4 { color: #fff !important; }
+  .info-card-dark p { color: rgba(255,255,255,0.45) !important; }
+
+  .info-card-icon {
+    width: 44px; height: 44px; flex-shrink: 0;
+    background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.2);
+    border-radius: 12px; display: flex; align-items: center; justify-content: center;
+    color: var(--amber);
+  }
+
+  .info-icon-dark { background: rgba(245,158,11,0.08); }
+
+  .info-card h4 { font-family: var(--font-sans); font-size: 0.875rem; font-weight: 800; color: var(--ink); margin: 0 0 0.375rem; letter-spacing: -0.01em; }
+  .info-card p { font-family: var(--font-sans); font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; margin: 0.2rem 0 0; }
+
+  .info-link-big { font-family: var(--font-sans); font-size: 1.375rem; font-weight: 900; letter-spacing: -0.03em; color: var(--ink); text-decoration: none; display: block; }
+  .info-link-big:hover { color: var(--amber-deep); }
+
+  .info-link { font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 700; color: var(--amber-deep); text-decoration: none; display: block; }
+  .info-link:hover { text-decoration: underline; }
+
+  .info-emerg { color: var(--amber-deep) !important; font-weight: 700 !important; }
+
+  .info-areas-link { font-family: var(--font-sans); font-size: 0.8125rem; font-weight: 800; color: var(--amber); text-decoration: none; margin-top: 0.5rem; display: inline-block; }
+  .info-areas-link:hover { text-decoration: underline; }
+
+  .trust-tiles {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 1.5px; background: var(--border); border: 1.5px solid var(--border);
+    border-radius: var(--radius-lg); overflow: hidden;
+  }
+
+  .trust-tile { background: var(--white); padding: 1.25rem 0.5rem; text-align: center; display: flex; flex-direction: column; gap: 0.25rem; }
+  .trust-tile strong { font-family: var(--font-sans); font-size: 1.375rem; font-weight: 900; letter-spacing: -0.04em; color: var(--amber); line-height: 1; }
+  .trust-tile span { font-family: var(--font-sans); font-size: 0.5625rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-faint); }
+
+  @media (max-width: 960px) {
+    .contact-grid { grid-template-columns: 1fr; gap: 4rem; }
+    .info-col { padding-top: 0; }
+  }
+  @media (max-width: 640px) {
+    .field-row { grid-template-columns: 1fr; }
+    .container { padding: 0 1.25rem; }
+  }
+</style>

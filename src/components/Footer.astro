@@ -81,15 +81,15 @@ const recentPosts = [
       
       <div class="contact-info">
         <div class="contact-item">
-          <strong>📞 Phone:</strong>
+          <strong>Phone:</strong>
           <a href="tel:+12512374545" title="Call Browns Painting">(251) 237-4545</a>
         </div>
         <div class="contact-item">
-          <strong>📧 Email:</strong>
+          <strong>Email:</strong>
           <a href="mailto:boomer@callbrownspainting.com" title="Email Browns Painting">boomer@callbrownspainting.com</a>
         </div>
         <div class="contact-item">
-          <strong>📍 Service Area:</strong>
+          <strong>Service Area:</strong>
           <span>South Alabama</span>
         </div>
       </div>
@@ -198,10 +198,10 @@ const recentPosts = [
 
 <style>
   .footer {
-    background: #1e3a8a;
+    background: var(--ink);
     color: white;
     padding: 4rem 0 2rem;
-    margin-top: 4rem;
+    margin-top: 0;
   }
 
   .footer-content {
@@ -249,6 +249,12 @@ const recentPosts = [
   }
 
   /* Footer Columns */
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
   .footer-column h4,
   .footer-column h5 {
     color: white;
@@ -256,9 +262,26 @@ const recentPosts = [
     font-weight: 600;
   }
 
+  .footer-column a {
+    text-decoration: none;
+    color: #e5e7eb;
+  }
+
+  .footer-column li {
+    margin-bottom: 0.625rem;
+  }
+
+  .footer-column li a {
+    font-size: 0.875rem;
+  }
+
+  .footer-column li a:hover {
+    color: var(--amber);
+  }
+
   .footer-column h4 {
     font-size: 1.25rem;
-    border-bottom: 2px solid #3b82f6;
+    border-bottom: 2px solid var(--amber);
     padding-bottom: 0.5rem;
   }
 
@@ -362,46 +385,45 @@ const recentPosts = [
 
   /* Emergency Column */
   .emergency-column {
-    background: rgba(239, 68, 68, 0.1);
+    background: rgba(245, 158, 11, 0.06);
     padding: 1.5rem;
-    border-radius: 8px;
-    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: 12px;
+    border: 1px solid rgba(245, 158, 11, 0.15);
   }
 
   .emergency-link {
-    color: #fca5a5 !important;
+    color: #e5e7eb !important;
     font-weight: 500;
   }
 
   .emergency-link:hover {
-    color: #f59e0b !important;
+    color: var(--amber) !important;
   }
 
   .emergency-contact {
     margin-top: 2rem;
     padding-top: 1.5rem;
-    border-top: 1px solid rgba(239, 68, 68, 0.2);
+    border-top: 1px solid rgba(245, 158, 11, 0.15);
   }
 
   .btn-emergency {
-    background: #ef4444;
-    color: white;
+    background: var(--amber);
+    color: var(--ink);
     padding: 0.75rem 1rem;
     border-radius: 6px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     display: block;
     text-align: center;
-    transition: background-color 0.3s ease;
     margin-bottom: 0.5rem;
   }
 
   .btn-emergency:hover {
-    background: #dc2626;
+    background: var(--amber-deep);
   }
 
   .emergency-note {
-    color: #fca5a5;
+    color: rgba(255,255,255,0.45);
     font-size: 0.875rem;
     text-align: center;
     margin: 0;

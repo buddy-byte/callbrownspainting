@@ -1,780 +1,186 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import InnerPageHero from '../components/InnerPageHero.astro';
+
+const counties = [
+  {
+    name: 'Escambia County',
+    cities: [
+      { name: 'Brewton', url: '/brewton-painting' },
+      { name: 'Atmore', url: '/atmore-painting' },
+      { name: 'Flomaton', url: '/flomaton-painting' },
+    ]
+  },
+  {
+    name: 'Conecuh County',
+    cities: [
+      { name: 'Evergreen', url: '/evergreen-painting' },
+      { name: 'Castleberry', url: '/castleberry-painting' },
+      { name: 'Repton', url: '/repton-painting' },
+      { name: 'Lenox', url: '/lenox-painting' },
+    ]
+  },
+  {
+    name: 'Monroe County',
+    cities: [
+      { name: 'Monroeville', url: '/monroeville-painting' },
+      { name: 'Frisco City', url: '/service-areas' },
+    ]
+  },
+  {
+    name: 'Mobile County',
+    cities: [
+      { name: 'Mobile', url: '/mobile-painting' },
+      { name: 'Saraland', url: '/saraland-painting' },
+      { name: 'Theodore', url: '/theodore-painting' },
+      { name: 'Creola', url: '/creola-painting' },
+    ]
+  },
+  {
+    name: 'Baldwin County',
+    cities: [
+      { name: 'Fairhope', url: '/fairhope-painting' },
+      { name: 'Daphne', url: '/daphne-painting' },
+      { name: 'Gulf Shores', url: '/gulf-shores-painting' },
+      { name: 'Orange Beach', url: '/orange-beach-painting' },
+      { name: 'Foley', url: '/foley-painting' },
+      { name: 'Bay Minette', url: '/bay-minette-painting' },
+      { name: 'Loxley', url: '/loxley-painting' },
+      { name: 'Robertsdale', url: '/robertsdale-painting' },
+      { name: 'Silverhill', url: '/silverhill-painting' },
+      { name: 'Summerdale', url: '/summerdale-painting' },
+    ]
+  },
+];
 ---
 
 <BaseLayout
-  title="Service Areas - Browns Painting LLC | South Alabama"
-  description="Browns Painting serves Escambia, Baldwin, Mobile, Monroe, and Conecuh Counties across South Alabama. Professional painting services in Brewton, Fairhope, Mobile, and surrounding areas."
-  keywords="painting service areas Alabama, Escambia County painters, Baldwin County painters, Mobile County painters, Monroe County painters, Conecuh County painters"
+  title="Service Areas — Browns Painting LLC | South Alabama"
+  description="Browns Painting serves Escambia, Conecuh, Monroe, Mobile, and Baldwin Counties across South Alabama. 20+ cities. Licensed and insured."
 >
   <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <!-- Hero Background Images -->
-      <div class="hero-background">
-        <div class="hero-slide active" style="background-image: url('/images/hero/hero-1-optimized.jpg')"></div>
-        <div class="hero-slide" style="background-image: url('/images/projects/projects-optimized/interior-painting-2-optimized.jpg')"></div>
-        <div class="hero-slide" style="background-image: url('/images/hero/hero-3-optimized.jpg'); background-position: center top;"></div>
-      </div>
-      
-      <!-- Hero Overlay -->
-      <div class="hero-overlay"></div>
-      
-      <!-- Trust Badges Above the Fold -->
-      <div class="hero-trust-badges">
-        <div class="trust-badge">
-          <span class="trust-stars">★★★★★</span>
-          <span class="trust-text">5-Star Reviews</span>
-        </div>
-        <div class="trust-badge">
-          <span class="trust-icon">🏆</span>
-          <span class="trust-text">25+ Years</span>
-        </div>
-        <div class="trust-badge">
-          <span class="trust-icon">📋</span>
-          <span class="trust-text">Licensed & Insured</span>
-        </div>
-        <div class="trust-badge">
-          <span class="trust-icon">✅</span>
-          <span class="trust-text">100% Guaranteed</span>
-        </div>
-      </div>
+    <InnerPageHero
+      title="Where We Serve"
+      subtitle="One crew you can trust, across 5 counties and 20+ cities throughout South Alabama."
+      eyebrow="Service Areas"
+      bg="/images/hero/hero-1-optimized.jpg"
+    />
 
-      <!-- Hero Content -->
+    <!-- ── COUNTIES ── -->
+    <section class="areas-page-section">
       <div class="container">
-        <div class="hero-content">
-          <div class="hero-text">
-            <img src="/images/logo/browns-painting-logo-hat.png" alt="Browns Painting" class="hero-logo-image" />
-            <h1>Service Areas - <span class="highlight">South Alabama</span></h1>
-            <p class="hero-subtitle">Professional painting services throughout South Alabama. Currently expanding from Brewton to cover all major counties and cities.</p>
-            <div class="phone-number">
-              <span class="phone-label">Call Us Today at</span>
-              <a href="tel:+12512374545" class="phone-link">(251) 237-4545</a>
+        <div class="areas-page-header">
+          <span class="eyebrow">Coverage</span>
+          <h2 class="areas-page-h2">South Alabama's <em>Painters.</em></h2>
+          <p class="areas-page-intro">From Brewton to the Gulf Coast, we bring the same family-owned quality and personal accountability to every job.</p>
+        </div>
+
+        <div class="areas-counties-grid">
+          {counties.map((county) => (
+            <div class="county-block">
+              <div class="county-block-header">
+                <span class="county-name">{county.name}</span>
+              </div>
+              <ul class="county-cities">
+                {county.cities.map((city) => (
+                  <li><a href={city.url}>{city.name}</a></li>
+                ))}
+              </ul>
             </div>
-            <div class="hero-cta">
-              <a href="/contact" class="btn btn-primary">
-                <span class="btn-icon">📋</span>
-                Get A Free Quote
-              </a>
-            </div>
+          ))}
+        </div>
+
+        <!-- Stats strip -->
+        <div class="areas-stats-strip">
+          <div class="areas-stat">
+            <strong>5</strong>
+            <span>Counties</span>
+          </div>
+          <div class="areas-stat">
+            <strong>20+</strong>
+            <span>Cities</span>
+          </div>
+          <div class="areas-stat">
+            <strong>25+</strong>
+            <span>Years Serving AL</span>
+          </div>
+          <div class="areas-stat">
+            <strong>500+</strong>
+            <span>Projects Completed</span>
           </div>
         </div>
-      </div>
-      
-      <!-- Hero Navigation Dots -->
-      <div class="hero-dots">
-        <span class="dot active" data-slide="0"></span>
-        <span class="dot" data-slide="1"></span>
-        <span class="dot" data-slide="2"></span>
+
       </div>
     </section>
 
-    <section class="counties-section">
-      <div class="container">
-        <h2>Counties We Serve</h2>
-        
-        <div class="counties-grid">
-          <div class="county-card">
-            <h3>Escambia County</h3>
-            <p>Currently serving with immediate expansion plans</p>
-            <ul>
-              <li><a href="/brewton-painting">Brewton</a></li>
-              <li><a href="/atmore-painting">Atmore</a></li>
-              <li><a href="/flomaton-painting">Flomaton</a></li>
-            </ul>
-          </div>
-
-          <div class="county-card">
-            <h3>Baldwin County</h3>
-            <p>Eastern Shore and coastal areas</p>
-            <ul>
-              <li><a href="/fairhope-painting">Fairhope</a></li>
-              <li><a href="/daphne-painting">Daphne</a></li>
-              <li><a href="/gulf-shores-painting">Gulf Shores</a></li>
-              <li><a href="/orange-beach-painting">Orange Beach</a></li>
-            </ul>
-          </div>
-
-          <div class="county-card">
-            <h3>Mobile County</h3>
-            <p>Mobile metro area and surrounding communities</p>
-            <ul>
-              <li><a href="/mobile-painting">Mobile</a></li>
-              <li><a href="/saraland-painting">Saraland</a></li>
-              <li><a href="/theodore-painting">Theodore</a></li>
-              <li><a href="/creola-painting">Creola</a></li>
-            </ul>
-          </div>
-
-          <div class="county-card">
-            <h3>Monroe County</h3>
-            <p>Coming soon - expansion planned</p>
-            <ul>
-              <li><a href="/monroeville-painting">Monroeville</a></li>
-            </ul>
-          </div>
-
-          <div class="county-card">
-            <h3>Conecuh County</h3>
-            <p>Coming soon - expansion planned</p>
-            <ul>
-              <li><a href="/evergreen-painting">Evergreen</a></li>
-            </ul>
-          </div>
+    <!-- ── NOT YOUR CITY? ── -->
+    <section class="areas-ask-section">
+      <div class="container areas-ask-inner">
+        <div>
+          <span class="eyebrow">Don't see your city?</span>
+          <h2 class="areas-ask-h2">We May Still Serve You.</h2>
+          <p>Call Boomer directly — we frequently travel to surrounding areas and can often accommodate projects outside our standard coverage zone.</p>
+        </div>
+        <div class="areas-ask-btns">
+          <a href="/contact" class="btn-amber">Get in Touch →</a>
+          <a href="tel:+12512374545" class="areas-ask-phone">(251) 237-4545</a>
         </div>
       </div>
     </section>
 
-    <section class="cta-section">
-      <div class="container">
-        <h2>Ready to Get Started?</h2>
-        <p>Contact us today for a free estimate on your painting project.</p>
-        <a href="/contact" class="btn btn-primary">Get Free Estimate</a>
-      </div>
-    </section>
   </main>
-
-  <style>
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-
-    /* Hero Section - Full Width Background Images */
-    .hero {
-      position: relative;
-      height: 100vh;
-      min-height: 600px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      color: white;
-    }
-
-    .hero-background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-    }
-
-    .hero-slide {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-    }
-
-    .hero-slide.active {
-      opacity: 1;
-    }
-
-    .hero-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 100%);
-      z-index: 2;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 3;
-      width: 100%;
-      text-align: center;
-    }
-
-    .hero-text {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-
-    .hero-logo-image {
-      height: 300px;
-      width: auto;
-      max-width: 100%;
-      object-fit: contain;
-      display: block;
-      margin: 0 auto;
-      margin-bottom: 0;
-    }
-
-    .hero h1 {
-      font-size: clamp(3rem, 5vw, 4rem);
-      font-weight: 800;
-      margin: 0;
-      margin-top: -4rem;
-      margin-bottom: 1rem;
-      line-height: 1.1;
-      color: white;
-    }
-
-    .highlight {
-      color: #fbbf24;
-      position: relative;
-    }
-
-    .highlight::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: #fbbf24;
-      border-radius: 2px;
-    }
-
-    .hero-subtitle {
-      font-size: 1.25rem;
-      color: rgba(255, 255, 255, 0.95);
-      margin-bottom: 1.5rem;
-      line-height: 1.6;
-    }
-
-    .phone-number {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: rgba(255, 255, 255, 0.9);
-      font-size: 1rem;
-      justify-content: center;
-      margin: 0;
-    }
-
-    .phone-label {
-      font-weight: 500;
-    }
-
-    .phone-link {
-      color: #fbbf24;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1.125rem;
-    }
-
-    .phone-link:hover {
-      color: #f59e0b;
-      text-decoration: underline;
-    }
-
-    .hero-cta {
-      margin-top: 2rem;
-    }
-
-    .hero-dots {
-      position: absolute;
-      bottom: 2rem;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 0.5rem;
-      z-index: 3;
-    }
-
-    .dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.5);
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .dot.active {
-      background: #fbbf24;
-      transform: scale(1.2);
-    }
-
-    .dot:hover {
-      background: rgba(255, 255, 255, 0.8);
-    }
-
-    /* Hero Trust Badges - Above the Fold */
-    .hero-trust-badges {
-      position: absolute;
-      top: 2rem;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 1.5rem;
-      z-index: 4;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .trust-badge {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.94rem 1.56rem;
-      background: transparent;
-      color: white;
-      font-size: 1.125rem;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      white-space: nowrap;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    }
-
-    .trust-badge:hover {
-      transform: translateY(-2px);
-      text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.9);
-    }
-
-    .trust-badge .trust-icon {
-      font-size: 1.56rem;
-      color: #fbbf24;
-    }
-
-    .trust-badge .trust-stars {
-      font-size: 1.56rem;
-      color: #fbbf24;
-      font-weight: 700;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    }
-
-    .trust-badge .trust-text {
-      font-size: 1.06rem;
-      font-weight: 600;
-    }
-
-    .counties-section {
-      padding: 5rem 0;
-      background: #f8fafc;
-    }
-
-    .counties-section h2 {
-      text-align: center;
-      font-size: clamp(2rem, 4vw, 2.5rem);
-      margin-bottom: 4rem;
-      color: #1f2937;
-      font-weight: 800;
-    }
-
-    .counties-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2.5rem;
-    }
-
-    .county-card {
-      background: white;
-      padding: 2.5rem;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      border-left: 4px solid #f59e0b;
-      transition: all 0.3s ease;
-    }
-
-    .county-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-    }
-
-    .county-card h3 {
-      color: #1e40af;
-      margin-bottom: 1rem;
-      font-size: 1.75rem;
-      font-weight: 700;
-    }
-
-    .county-card p {
-      color: #6b7280;
-      margin-bottom: 1.5rem;
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-
-    .county-card ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .county-card li {
-      margin-bottom: 0.75rem;
-    }
-
-    .county-card a {
-      color: #3b82f6;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: all 0.2s ease;
-      display: inline-block;
-    }
-
-    .county-card a:hover {
-      color: #1e40af;
-      transform: translateX(4px);
-    }
-
-    .cta-section {
-      background: white;
-      padding: 5rem 2rem;
-      text-align: center;
-    }
-
-    .cta-section .container {
-      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-      padding: 5rem 2rem;
-      border-radius: 16px;
-      color: white;
-    }
-
-    .cta-section h2 {
-      font-size: clamp(2rem, 4vw, 2.5rem);
-      margin-bottom: 1.5rem;
-      color: white;
-      font-weight: 800;
-    }
-
-    .cta-section p {
-      font-size: 1.25rem;
-      color: white;
-      margin-bottom: 2.5rem;
-      opacity: 0.95;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 1.25rem 2.5rem;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 700;
-      transition: all 0.3s ease;
-      font-size: 1.125rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-      color: #1f2937;
-      box-shadow: 
-        0 8px 25px rgba(251, 191, 36, 0.4),
-        inset 0 1px 0 rgba(255, 255, 255, 0.3);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .btn-primary::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-      transition: left 0.5s ease;
-    }
-
-    .btn-primary:hover::before {
-      left: 100%;
-    }
-
-    .btn-primary:hover {
-      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-      transform: translateY(-3px);
-      box-shadow: 
-        0 12px 35px rgba(251, 191, 36, 0.6),
-        inset 0 1px 0 rgba(255, 255, 255, 0.4);
-    }
-
-    .btn-icon {
-      font-size: 1.25rem;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        padding: 0 1rem !important;
-      }
-
-      .hero {
-        height: 80vh !important;
-        min-height: 500px !important;
-        padding: 8rem 0 4rem !important;
-      }
-
-      .hero-logo-image {
-        height: 180px !important;
-        margin-bottom: 1rem !important;
-      }
-
-      .hero h1 {
-        font-size: 2rem !important;
-        margin-top: -2rem !important;
-        margin-bottom: 1rem !important;
-      }
-
-      .hero-subtitle {
-        font-size: 1rem !important;
-        margin-bottom: 1rem !important;
-        padding: 0 0.5rem !important;
-      }
-
-      .hero-text {
-        padding: 1rem !important;
-      }
-
-      .phone-number {
-        font-size: 0.9rem !important;
-      }
-
-      .phone-link {
-        font-size: 1rem !important;
-      }
-
-      .hero-trust-badges {
-        top: 0.75rem !important;
-        gap: 0.5rem !important;
-        padding: 0 0.5rem !important;
-        max-width: 100% !important;
-        display: grid !important;
-        grid-template-columns: 1fr 1fr !important;
-        justify-items: center !important;
-      }
-
-      .trust-badge {
-        padding: 0.5rem 0.75rem !important;
-        font-size: 0.75rem !important;
-        white-space: nowrap !important;
-        width: 100% !important;
-        max-width: 160px !important;
-        justify-content: center !important;
-      }
-
-      .trust-badge .trust-icon {
-        font-size: 1rem !important;
-      }
-
-      .trust-badge .trust-stars {
-        font-size: 1rem !important;
-      }
-
-      .trust-badge .trust-text {
-        font-size: 0.75rem !important;
-      }
-
-      .counties-section {
-        padding: 2.5rem 0 !important;
-      }
-
-      .counties-section h2 {
-        font-size: 1.75rem !important;
-        margin-bottom: 2.5rem !important;
-      }
-
-      .counties-grid {
-        grid-template-columns: 1fr !important;
-        gap: 1.5rem !important;
-      }
-
-      .county-card {
-        padding: 1.5rem !important;
-      }
-
-      .county-card h3 {
-        font-size: 1.5rem !important;
-      }
-
-      .cta-section {
-        padding: 2.5rem 1rem !important;
-      }
-
-      .cta-section .container {
-        padding: 2.5rem 1rem !important;
-      }
-
-      .cta-section h2 {
-        font-size: 1.75rem !important;
-      }
-
-      .cta-section p {
-        font-size: 1rem !important;
-        padding: 0 0.5rem !important;
-      }
-
-      .btn {
-        padding: 1rem 2rem !important;
-        font-size: 1rem !important;
-        width: 100% !important;
-        max-width: 280px !important;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .hero {
-        padding: 7rem 0 3rem !important;
-        min-height: 75vh !important;
-      }
-
-      .hero-logo-image {
-        height: 150px !important;
-      }
-
-      .hero h1 {
-        font-size: 1.75rem !important;
-        margin-top: -1.5rem !important;
-      }
-
-      .hero-trust-badges {
-        top: 0.5rem !important;
-        gap: 0.4rem !important;
-      }
-
-      .trust-badge {
-        padding: 0.4rem 0.6rem !important;
-        font-size: 0.7rem !important;
-        max-width: 140px !important;
-      }
-
-      .trust-badge .trust-icon,
-      .trust-badge .trust-stars {
-        font-size: 0.9rem !important;
-      }
-
-      .trust-badge .trust-text {
-        font-size: 0.7rem !important;
-      }
-
-      .county-card {
-        padding: 1.25rem !important;
-      }
-
-      .cta-section {
-        padding: 2rem 0.75rem !important;
-      }
-
-      .cta-section .container {
-        padding: 2rem 0.75rem !important;
-      }
-    }
-  </style>
-
-  <script is:inline>
-(function() {
-  'use strict';
-  
-  function initCarousel() {
-    const slides = document.querySelectorAll('.hero-slide');
-    const dots = document.querySelectorAll('.dot');
-    
-    if (!slides || slides.length === 0 || !dots || dots.length === 0) {
-      console.log('Hero carousel: Elements not found');
-      return;
-    }
-    
-    console.log('Hero carousel: Initializing with', slides.length, 'slides');
-    
-    let currentSlide = 0;
-    let slideInterval = null;
-
-    function showSlide(index) {
-      slides.forEach(function(slide) { slide.classList.remove('active'); });
-      dots.forEach(function(dot) { dot.classList.remove('active'); });
-      
-      if (slides[index]) slides[index].classList.add('active');
-      if (dots[index]) dots[index].classList.add('active');
-      
-      currentSlide = index;
-    }
-
-    function nextSlide() {
-      const next = (currentSlide + 1) % slides.length;
-      showSlide(next);
-    }
-
-    function startSlider() {
-      if (slideInterval) clearInterval(slideInterval);
-      slideInterval = setInterval(nextSlide, 5000);
-    }
-
-    function stopSlider() {
-      if (slideInterval) {
-        clearInterval(slideInterval);
-        slideInterval = null;
-      }
-    }
-
-    // Dot click handlers
-    dots.forEach(function(dot, index) {
-      dot.addEventListener('click', function() {
-        showSlide(index);
-        stopSlider();
-        startSlider();
-      });
-      
-      dot.addEventListener('touchend', function(e) {
-        e.preventDefault();
-        showSlide(index);
-        stopSlider();
-        startSlider();
-      });
-    });
-
-    // Touch swipe support
-    const hero = document.querySelector('.hero');
-    if (hero) {
-      let touchStartX = 0;
-      let touchEndX = 0;
-
-      hero.addEventListener('touchstart', function(e) {
-        touchStartX = e.changedTouches[0].screenX;
-      }, { passive: true });
-
-      hero.addEventListener('touchend', function(e) {
-        touchEndX = e.changedTouches[0].screenX;
-        const swipeThreshold = 50;
-        
-        if (touchEndX < touchStartX - swipeThreshold) {
-          nextSlide();
-          stopSlider();
-          startSlider();
-        } else if (touchEndX > touchStartX + swipeThreshold) {
-          const prev = (currentSlide - 1 + slides.length) % slides.length;
-          showSlide(prev);
-          stopSlider();
-          startSlider();
-        }
-      }, { passive: true });
-
-      // Pause on hover (desktop)
-      hero.addEventListener('mouseenter', stopSlider);
-      hero.addEventListener('mouseleave', startSlider);
-    }
-
-    // Start
-    startSlider();
-  }
-
-  // Initialize when DOM is ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initCarousel);
-  } else {
-    initCarousel();
-  }
-})();
-</script>
 </BaseLayout>
 
+<style>
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+  .eyebrow { display: inline-block; font-family: var(--font-sans); font-size: 0.6875rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; color: var(--amber); }
+  .btn-amber { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.9rem 2rem; background: var(--amber); color: var(--ink); font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 800; text-decoration: none; border-radius: var(--radius-md); box-shadow: var(--shadow-amber); transition: background 0.2s, transform 0.2s; }
+  .btn-amber:hover { background: var(--amber-deep); transform: translateY(-2px); }
 
+  .areas-page-section { background: var(--cream); padding: 5.5rem 0 5rem; }
 
+  .areas-page-header { max-width: 640px; margin-bottom: 3.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
+  .areas-page-h2 { font-family: var(--font-sans); font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 900; letter-spacing: -0.04em; line-height: 1.05; color: var(--ink); margin: 0; }
+  .areas-page-h2 em { font-family: var(--font-display); font-style: italic; font-weight: 400; color: var(--amber-deep); letter-spacing: -0.02em; }
+  .areas-page-intro { font-family: var(--font-sans); font-size: 1.0625rem; color: var(--text-muted); line-height: 1.7; margin: 0; }
 
+  .areas-counties-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; background: var(--border); border: 1.5px solid var(--border); border-radius: var(--radius-xl); overflow: hidden; margin-bottom: 2rem; }
+
+  .county-block { background: var(--white); padding: 2rem 1.75rem; }
+
+  .county-block-header { margin-bottom: 1.25rem; padding-bottom: 0.875rem; border-bottom: 1px solid var(--border); }
+
+  .county-name { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em; color: var(--amber); }
+
+  .county-cities { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+
+  .county-cities li a { font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 600; color: var(--text); text-decoration: none; transition: color 0.2s; display: flex; align-items: center; gap: 0.5rem; }
+  .county-cities li a::before { content: '→'; font-size: 0.75rem; color: var(--amber); opacity: 0; transition: opacity 0.2s, transform 0.2s; transform: translateX(-4px); }
+  .county-cities li a:hover { color: var(--amber-deep); }
+  .county-cities li a:hover::before { opacity: 1; transform: translateX(0); }
+
+  .areas-stats-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5px; background: var(--border); border: 1.5px solid var(--border); border-radius: var(--radius-xl); overflow: hidden; }
+
+  .areas-stat { background: var(--ink); padding: 2rem 1.5rem; text-align: center; display: flex; flex-direction: column; gap: 0.375rem; }
+  .areas-stat strong { font-family: var(--font-sans); font-size: 2.25rem; font-weight: 900; letter-spacing: -0.04em; color: var(--amber); line-height: 1; }
+  .areas-stat span { font-family: var(--font-sans); font-size: 0.6875rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.35); }
+
+  .areas-ask-section { background: var(--ink-soft); padding: 5rem 0; }
+  .areas-ask-inner { display: flex; align-items: center; justify-content: space-between; gap: 3rem; }
+  .areas-ask-h2 { font-family: var(--font-sans); font-size: clamp(1.75rem, 3.5vw, 2.75rem); font-weight: 900; letter-spacing: -0.04em; color: #fff; margin: 0.375rem 0 0.75rem; }
+  .areas-ask-section p { font-family: var(--font-sans); font-size: 1rem; color: rgba(255,255,255,0.45); line-height: 1.65; margin: 0; max-width: 540px; }
+  .areas-ask-btns { display: flex; align-items: center; gap: 1.5rem; flex-shrink: 0; }
+  .areas-ask-phone { font-family: var(--font-sans); font-size: 1.125rem; font-weight: 900; letter-spacing: -0.02em; color: rgba(255,255,255,0.35); text-decoration: none; white-space: nowrap; }
+  .areas-ask-phone:hover { color: var(--amber); }
+
+  @media (max-width: 900px) {
+    .areas-counties-grid { grid-template-columns: repeat(2, 1fr); }
+    .areas-stats-strip { grid-template-columns: repeat(2, 1fr); }
+    .areas-ask-inner { flex-direction: column; text-align: center; align-items: flex-start; }
+    .areas-ask-btns { flex-direction: column; }
+  }
+  @media (max-width: 640px) {
+    .areas-counties-grid { grid-template-columns: 1fr; }
+    .container { padding: 0 1.25rem; }
+  }
+</style>

@@ -1,2087 +1,1803 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ProjectGallery from '../components/ProjectGallery.astro';
 import Testimonials from '../components/Testimonials.astro';
 
-// SEO Keywords for CallBrownsPainting.com
-const keywords = 'painting contractor Brewton AL, residential painting Conecuh County, commercial painting Escambia County, interior painting Baldwin County, exterior painting South Alabama, house painter Evergreen AL, painting services Atmore AL, professional painter Monroeville AL, painting contractor Bay Minette AL, house painting Foley AL, commercial painter Fairhope AL, residential painter Daphne AL, painting services Spanish Fort AL, house painter Gulf Shores AL, painting contractor Orange Beach AL';
+const keywords = 'painting contractor Brewton AL, residential painting Conecuh County, commercial painting Escambia County, interior painting Baldwin County, exterior painting South Alabama, house painter Evergreen AL, painting services Atmore AL, professional painter Monroeville AL';
 ---
 
 <BaseLayout
-  title="Professional Painting Services"
-  description="CallBrownsPainting.com - 25+ years of professional painting services in Brewton, Evergreen, Atmore, Monroeville, Bay Minette, Foley, Fairhope, Daphne, Spanish Fort, Gulf Shores, Orange Beach and surrounding South Alabama areas. Interior & exterior residential and commercial painting."
+  title="Professional Painting Services — Browns Painting LLC"
+  description="Browns Painting LLC — South Alabama's trusted painting contractor since 1998. Interior, exterior, and commercial painting in Brewton, Evergreen, Fairhope, Mobile, and 20+ cities. Family-owned. 25+ years. 100% satisfaction guarantee."
   keywords={keywords}
 >
   <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <!-- Hero Background Images -->
-      <div class="hero-background">
-        <div class="hero-slide active" style="background-image: url('/images/hero/hero-1-optimized.jpg')"></div>
-        <div class="hero-slide" style="background-image: url('/images/projects/projects-optimized/interior-painting-2-optimized.jpg')"></div>
-        <div class="hero-slide" style="background-image: url('/images/hero/hero-3-optimized.jpg'); background-position: center top;"></div>
+
+    <!-- ══════════════════════════════════════════
+         HERO — full viewport, parallax, massive type
+    ══════════════════════════════════════════════ -->
+    <section class="hero" id="hero">
+      <div class="hero-parallax" id="hero-parallax">
+        <div class="slide active" style="background-image:url('/images/hero/hero-1-optimized.jpg')"></div>
+        <div class="slide" style="background-image:url('/images/projects/projects-optimized/interior-painting-2-optimized.jpg')"></div>
+        <div class="slide" style="background-image:url('/images/hero/hero-3-optimized.jpg');background-position:center top"></div>
       </div>
-      
-      <!-- Hero Overlay -->
-      <div class="hero-overlay"></div>
-      
-      <!-- Trust Badges Above the Fold -->
-      <div class="hero-trust-badges">
-        <div class="trust-badge">
-          <span class="trust-stars">★★★★★</span>
-          <span class="trust-text">5-Star Reviews</span>
+
+      <!-- Cinematic gradient overlay -->
+      <div class="hero-grad"></div>
+      <!-- Noise texture for depth -->
+      <div class="hero-noise"></div>
+
+      <div class="hero-content">
+        <div class="hero-label">
+          <span class="hero-label-dot"></span>
+          Industry-Best Satisfaction Guarantee
         </div>
-        <div class="trust-badge">
-          <span class="trust-icon">🏆</span>
-          <span class="trust-text">25+ Years</span>
+
+        <img src="/images/logo/browns-painting-logo-hat.png" alt="Browns Painting LLC" class="hero-logo" />
+
+        <h1 class="hero-h1">
+          <span class="hero-line1">Quality.</span>
+          <em class="hero-line2">It's What We Do.</em>
+        </h1>
+
+        <p class="hero-sub">South Alabama's trusted painting contractor since 1998.<br/>Interior · Exterior · Commercial</p>
+
+        <div class="hero-actions">
+          <a href="/contact" class="hero-btn-primary">
+            Get a Free Quote
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="tel:+12512374545" class="hero-btn-ghost">
+            <svg width="15" height="15" viewBox="0 0 13 13" fill="none"><path d="M11.9 9.2c-.2-.2-1.9-1.3-2.2-1.3-.2 0-.4.1-.9.7-.2.2-.3.3-.4.3-.2 0-.4-.1-.7-.3-.8-.5-1.6-1.3-2.1-2.1-.3-.4-.4-.6-.4-.7 0-.1.1-.2.3-.4.5-.5.7-.7.7-.9 0-.2-1.1-2-1.3-2.2-.2-.2-.3-.2-.5-.2-.4 0-.9.2-1.2.6-.4.4-.6 1-.6 1.6 0 1 .5 2.2 1.3 3.2.7.9 1.9 2 2.9 2.6.8.5 1.9 1 2.8 1 .5 0 1.1-.2 1.5-.6.3-.3.6-.8.6-1.2 0-.2-.1-.4-.5-.8z" fill="currentColor"/></svg>
+            (251) 237-4545
+          </a>
         </div>
-        <div class="trust-badge">
-          <span class="trust-icon">📋</span>
-          <span class="trust-text">Licensed & Insured</span>
-        </div>
-        <div class="trust-badge">
-          <span class="trust-icon">✅</span>
-          <span class="trust-text">100% Guaranteed</span>
+
+        <div class="hero-trust">
+          <div class="trust-pill">★★★★★ 5-Star Rated</div>
+          <div class="trust-pill">25+ Years Experience</div>
+          <div class="trust-pill">Licensed &amp; Insured</div>
         </div>
       </div>
 
-      <!-- Hero Content -->
-      <div class="container">
-        <div class="hero-content">
-          <div class="hero-text">
-            <img src="/images/logo/browns-painting-logo-hat.png" alt="Browns Painting" class="hero-logo-image" />
-            <h1>Quality, <span class="highlight">It's What We Do!</span></h1>
-            <div class="phone-number">
-              <span class="phone-label">Call Us Today at</span>
-              <a href="tel:+12512374545" class="phone-link">(251) 237-4545</a>
-            </div>
-            <div class="hero-cta">
-              <a href="/contact" class="btn btn-primary">
-                <span class="btn-icon">📋</span>
-                Get A Free Quote
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Hero Navigation Dots -->
+      <!-- Diagonal cut at bottom -->
+      <div class="hero-cut"></div>
+
       <div class="hero-dots">
-        <span class="dot active" data-slide="0"></span>
-        <span class="dot" data-slide="1"></span>
-        <span class="dot" data-slide="2"></span>
+        <button class="dot active" data-idx="0"></button>
+        <button class="dot" data-idx="1"></button>
+        <button class="dot" data-idx="2"></button>
       </div>
     </section>
 
 
-    <!-- Trust Stats Section -->
-    <section style="padding: 5rem 0; background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);">
-      <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
-        <!-- Header -->
-        <div style="text-align: center; margin-bottom: 4rem;">
-          <span style="display: inline-block; padding: 0.5rem 1.5rem; background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(37, 99, 235, 0.1)); color: #3b82f6; font-weight: 700; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 1px; border-radius: 50px; margin-bottom: 1rem; border: 1px solid rgba(59, 130, 246, 0.2);">Why Browns Painting</span>
-          <h2 style="font-size: 3rem; font-weight: 900; color: #1f2937; margin-bottom: 1rem;">Built on Trust & Excellence</h2>
-          <p style="font-size: 1.25rem; color: #6b7280; line-height: 1.6;">25+ years of delivering exceptional results across South Alabama</p>
+    <!-- ══════════════════════════════════════════
+         STATS — compact dark strip
+    ══════════════════════════════════════════════ -->
+    <div class="stats-strip">
+      <div class="stats-inner">
+        <div class="stat">
+          <strong>25+</strong>
+          <span>Years in Business</span>
         </div>
-
-        <!-- Stats Grid -->
-        <div class="stats-grid" style="margin-bottom: 4rem;">
-          <div style="background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); padding: 2rem 1.5rem; border-radius: 20px; border: 2px solid rgba(251, 191, 36, 0.3); text-align: center; transition: all 0.4s ease;">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">⭐</div>
-            <div style="font-size: 2.5rem; font-weight: 900; background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem;">25+</div>
-            <div style="font-size: 1rem; font-weight: 700; color: #1f2937; text-transform: uppercase;">Years Experience</div>
-          </div>
-          <div style="background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); padding: 2rem 1.5rem; border-radius: 20px; border: 2px solid rgba(251, 191, 36, 0.3); text-align: center; transition: all 0.4s ease;">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">🏠</div>
-            <div style="font-size: 2.5rem; font-weight: 900; background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem;">500+</div>
-            <div style="font-size: 1rem; font-weight: 700; color: #1f2937; text-transform: uppercase;">Homes Served</div>
-          </div>
-          <div style="background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); padding: 2rem 1.5rem; border-radius: 20px; border: 2px solid rgba(251, 191, 36, 0.3); text-align: center; transition: all 0.4s ease;">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">⚡</div>
-            <div style="font-size: 2.5rem; font-weight: 900; background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem;">3-7</div>
-            <div style="font-size: 1rem; font-weight: 700; color: #1f2937; text-transform: uppercase;">Days Most Projects</div>
-          </div>
-          <div style="background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); padding: 2rem 1.5rem; border-radius: 20px; border: 2px solid rgba(251, 191, 36, 0.3); text-align: center; transition: all 0.4s ease;">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">✅</div>
-            <div style="font-size: 2.5rem; font-weight: 900; background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem;">100%</div>
-            <div style="font-size: 1rem; font-weight: 700; color: #1f2937; text-transform: uppercase;">Satisfaction Guarantee</div>
-          </div>
+        <div class="stat-rule"></div>
+        <div class="stat">
+          <strong>500+</strong>
+          <span>Projects Completed</span>
         </div>
+        <div class="stat-rule"></div>
+        <div class="stat">
+          <strong>3–7</strong>
+          <span>Day Turnaround</span>
+        </div>
+        <div class="stat-rule"></div>
+        <div class="stat">
+          <strong>100%</strong>
+          <span>Satisfaction Guarantee</span>
+        </div>
+      </div>
+    </div>
 
-        <!-- Photo Grid -->
-        <div class="photo-grid">
-          <div style="position: relative; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.15);">
-            <img src="/images/Boomer/boomer-3-optimized.jpg" alt="Boomer Brown" style="width: 100%; height: 500px; object-fit: cover;" />
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.9)); padding: 2rem; color: white;">
-              <h4 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">Boomer Brown</h4>
-              <p style="font-size: 1rem; opacity: 0.9;">Owner & Master Craftsman</p>
+
+    <!-- ══════════════════════════════════════════
+         FEATURE — 2-col, framed photo, deep section
+    ══════════════════════════════════════════════ -->
+    <section class="feature-section">
+      <div class="container feature-grid">
+
+        <!-- Photo col with decorative frame -->
+        <div class="feature-photo-col">
+          <div class="feature-frame-accent"></div>
+          <div class="feature-photo-stack">
+            <img src="/images/Boomer/boomer-3-optimized.jpg" alt="Boomer Brown" class="feature-img-main" />
+            <div class="feature-img-badge">
+              <span class="badge-num">25+</span>
+              <span class="badge-label">Years of<br/>Craft</span>
             </div>
-          </div>
-          <div style="position: relative; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.15);">
-            <img src="/images/projects/projects-optimized/exterior-paint-1-optimized.jpg" alt="Professional Results" style="width: 100%; height: 500px; object-fit: cover;" />
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.9)); padding: 2rem; color: white;">
-              <h4 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">Professional Results</h4>
-              <p style="font-size: 1rem; opacity: 0.9;">Every project completed to perfection</p>
+            <div class="feature-img-float">
+              <img src="/images/projects/projects-optimized/exterior-paint-1-optimized.jpg" alt="Finished project" />
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Services Section -->
-    <section style="padding: 5rem 0; background: white;">
-      <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
-        <div style="text-align: center; margin-bottom: 4rem;">
-          <span style="display: inline-block; padding: 0.5rem 1.5rem; background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(37, 99, 235, 0.1)); color: #3b82f6; font-weight: 700; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 1px; border-radius: 50px; margin-bottom: 1rem; border: 1px solid rgba(59, 130, 246, 0.2);">What We Offer</span>
-          <h2 style="font-size: 3rem; font-weight: 900; color: #1f2937; margin-bottom: 1rem;">Complete Painting Solutions</h2>
-          <p style="font-size: 1.25rem; color: #6b7280;">Professional painting services for every project, backed by 25+ years of experience</p>
-        </div>
+        <!-- Content col -->
+        <div class="feature-content">
+          <span class="eyebrow">Who We Are</span>
+          <h2 class="feature-h2">
+            Professional Painting<br/>Results in As Little As
+            <em>One Week!</em>
+          </h2>
+          <p>Your dream home is only one call away. Boomer Brown and his crew have been transforming homes and businesses across South Alabama for over 25 years. Family-owned, fully insured, built on old-fashioned accountability.</p>
+          <p>We turn drab into dreamy — from your first call to the final walkthrough, quality is always top of mind. And it shows.</p>
 
-        <div class="services-grid-home">
-          <div style="background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 2px solid #f3f4f6;">
-            <div style="font-size: 4rem; margin-bottom: 1.5rem;">🏠</div>
-            <h3 style="font-size: 1.75rem; font-weight: 800; color: #1f2937; margin-bottom: 1rem;">Interior Painting</h3>
-            <p style="color: #6b7280; line-height: 1.7; margin-bottom: 1.5rem;">Transform your living spaces with professional interior painting services. From single rooms to entire homes, we deliver flawless finishes.</p>
-            <ul style="list-style: none; padding: 0; margin: 1.5rem 0;">
-              <li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Color consultation & selection</li>
-              <li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Complete surface preparation</li>
-              <li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Premium paint & materials</li>
-              <li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Furniture protection & cleanup</li>
-            </ul>
-            <a href="/interior-painting" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.875rem 1.75rem; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; text-decoration: none; font-weight: 700; border-radius: 12px;">Learn More →</a>
+          <div class="feature-checks">
+            <div class="fcheck">
+              <div class="fcheck-icon">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3 3 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              Free color consultation &amp; estimate
+            </div>
+            <div class="fcheck">
+              <div class="fcheck-icon">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3 3 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              Premium weather-resistant paints
+            </div>
+            <div class="fcheck">
+              <div class="fcheck-icon">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3 3 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              Meticulous prep &amp; thorough cleanup
+            </div>
+            <div class="fcheck">
+              <div class="fcheck-icon">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3 3 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              100% satisfaction — or we come back
+            </div>
           </div>
 
-          <div style="background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 2px solid #f3f4f6;">
-            <div style="font-size: 4rem; margin-bottom: 1.5rem;">🏡</div>
-            <h3 style="font-size: 1.75rem; font-weight: 800; color: #1f2937; margin-bottom: 1rem;">Exterior Painting</h3>
-            <p style="color: #6b7280; line-height: 1.7; margin-bottom: 1.5rem;">Protect and beautify your home's exterior with weather-resistant solutions designed for Alabama's humid climate.</p>
-            <ul style="list-style: none; padding: 0; margin: 1.5rem 0;">
-              <li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Pressure washing & prep</li>
-              <li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Wood rot repair & caulking</li>
-              <li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Weather-resistant coatings</li>
-              <li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Multi-year durability</li>
-            </ul>
-            <a href="/exterior-painting" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.875rem 1.75rem; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; text-decoration: none; font-weight: 700; border-radius: 12px;">Learn More →</a>
-          </div>
-
-          <div style="background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 2px solid #f3f4f6;">
-            <div style="font-size: 4rem; margin-bottom: 1.5rem;">🏢</div>
-            <h3 style="font-size: 1.75rem; font-weight: 800; color: #1f2937; margin-bottom: 1rem;">Commercial Painting</h3>
-            <p style="color: #6b7280; line-height: 1.7; margin-bottom: 1.5rem;">Professional services for businesses and commercial properties with flexible scheduling to minimize disruption.</p>
-            <ul style="list-style: none; padding: 0; margin: 1.5rem 0;">
-              <li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ After-hours scheduling</li>
-              <li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Minimal business disruption</li>
-              <li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Commercial-grade materials</li>
-              <li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Professional safety protocols</li>
-            </ul>
-            <a href="/commercial-painting" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.875rem 1.75rem; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; text-decoration: none; font-weight: 700; border-radius: 12px;">Learn More →</a>
-          </div>
+          <a href="/about" class="btn-solid">Our Story →</a>
         </div>
       </div>
     </section>
 
-    <!-- Project Gallery -->
-    <ProjectGallery />
 
-    <!-- Service Areas Section -->
-    <section style="padding: 5rem 0; background: #f8fafc;">
-      <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
-        <div style="text-align: center; margin-bottom: 4rem;">
-          <span style="display: inline-block; padding: 0.5rem 1.5rem; background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(37, 99, 235, 0.1)); color: #3b82f6; font-weight: 700; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 1px; border-radius: 50px; margin-bottom: 1rem; border: 1px solid rgba(59, 130, 246, 0.2);">Where We Serve</span>
-          <h2 style="font-size: 3rem; font-weight: 900; color: #1f2937; margin-bottom: 1rem;">Proudly Serving South Alabama</h2>
-          <p style="font-size: 1.25rem; color: #6b7280;">Professional painting services across 5 counties and 20+ cities</p>
+    <!-- ══════════════════════════════════════════
+         SERVICES — dark, magazine divider bar, cards ARE the section
+    ══════════════════════════════════════════════ -->
+    <section class="services-section">
+      <div class="services-diag-top"></div>
+      <div class="container">
+        <!-- Minimal bar: eyebrow + title on ONE line, link on right — not a split -->
+        <div class="svc-bar">
+          <div class="svc-bar-left">
+            <span class="eyebrow">Our Services</span>
+            <h2 class="svc-bar-h2">What We Do</h2>
+          </div>
+          <a href="/services" class="svc-all-link">View All Services →</a>
         </div>
 
-        <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: 3rem 0;">
-          <span style="padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; border-radius: 50px; font-weight: 600; border: 2px solid #3b82f6;">📍 Baldwin County</span>
-          <span style="padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; border-radius: 50px; font-weight: 600; border: 2px solid #3b82f6;">📍 Mobile County</span>
-          <span style="padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; border-radius: 50px; font-weight: 600; border: 2px solid #3b82f6;">📍 Escambia County</span>
-          <span style="padding: 0.75rem 1.5rem; background: white; color: #1f2937; border-radius: 50px; font-weight: 600; border: 2px solid #e5e7eb;">Fairhope</span>
-          <span style="padding: 0.75rem 1.5rem; background: white; color: #1f2937; border-radius: 50px; font-weight: 600; border: 2px solid #e5e7eb;">Daphne</span>
-          <span style="padding: 0.75rem 1.5rem; background: white; color: #1f2937; border-radius: 50px; font-weight: 600; border: 2px solid #e5e7eb;">Gulf Shores</span>
-          <span style="padding: 0.75rem 1.5rem; background: white; color: #1f2937; border-radius: 50px; font-weight: 600; border: 2px solid #e5e7eb;">Orange Beach</span>
-          <span style="padding: 0.75rem 1.5rem; background: white; color: #1f2937; border-radius: 50px; font-weight: 600; border: 2px solid #e5e7eb;">Foley</span>
-          <span style="padding: 0.75rem 1.5rem; background: white; color: #1f2937; border-radius: 50px; font-weight: 600; border: 2px solid #e5e7eb;">Mobile</span>
-          <span style="padding: 0.75rem 1.5rem; background: white; color: #1f2937; border-radius: 50px; font-weight: 600; border: 2px solid #e5e7eb;">Saraland</span>
-          <span style="padding: 0.75rem 1.5rem; background: white; color: #1f2937; border-radius: 50px; font-weight: 600; border: 2px solid #e5e7eb;">Theodore</span>
-          <span style="padding: 0.75rem 1.5rem; background: white; color: #1f2937; border-radius: 50px; font-weight: 600; border: 2px solid #e5e7eb;">Brewton</span>
-          <span style="padding: 0.75rem 1.5rem; background: white; color: #1f2937; border-radius: 50px; font-weight: 600; border: 2px solid #e5e7eb;">Atmore</span>
-          <span style="padding: 0.75rem 1.5rem; background: white; color: #1f2937; border-radius: 50px; font-weight: 600; border: 2px solid #e5e7eb;">Monroeville</span>
-          <span style="padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); color: #1f2937; border-radius: 50px; font-weight: 600; border: 2px solid #fbbf24;">And surrounding areas</span>
-        </div>
+        <div class="svc-grid">
 
-        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin: 3rem 0;">
-          <img src="/images/projects/projects-optimized/equipment-work-1-optimized.jpg" alt="Professional Equipment" style="width: 100%; height: 350px; object-fit: cover; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);" />
-          <img src="/images/projects/projects-optimized/project-2.jpg" alt="Commercial Projects" style="width: 100%; height: 350px; object-fit: cover; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);" />
-        </div>
+          <a href="/interior-painting" class="svc-card">
+            <div class="svc-img-wrap">
+              <img src="/images/projects/projects-optimized/interior-detail-1-optimized.jpg" alt="Interior Painting" loading="lazy" />
+              <div class="svc-img-overlay"></div>
+            </div>
+            <div class="svc-body">
+              <div class="svc-type">Interior</div>
+              <h3 class="svc-title">Interior Painting</h3>
+              <p>Flawless finishes for walls, ceilings, trim, and cabinets. Done right the first time.</p>
+              <span class="svc-cta">Learn More <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+          </a>
 
-        <div style="text-align: center; margin-top: 2rem;">
-          <a href="/service-areas" style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 1.25rem 2.5rem; background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); color: #1f2937; text-decoration: none; font-weight: 700; transition: all 0.3s ease; font-size: 1.125rem; text-transform: uppercase; letter-spacing: 0.5px; border-radius: 12px; box-shadow: 0 8px 25px rgba(251, 191, 36, 0.4);">View All Service Areas</a>
+          <a href="/exterior-painting" class="svc-card svc-card-featured">
+            <div class="svc-img-wrap">
+              <img src="/images/projects/projects-optimized/exterior-paint-1-optimized.jpg" alt="Exterior Painting" loading="lazy" />
+              <div class="svc-img-overlay"></div>
+            </div>
+            <div class="svc-body">
+              <div class="svc-type">Exterior</div>
+              <h3 class="svc-title">Exterior Painting</h3>
+              <p>Weather-resistant coatings built for Alabama's heat and humidity. Pressure washing, prep, and paint.</p>
+              <span class="svc-cta">Learn More <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+          </a>
+
+          <a href="/commercial-painting" class="svc-card">
+            <div class="svc-img-wrap svc-commercial-graphic">
+              <!-- SVG paint stroke graphic background -->
+              <svg class="svc-comm-svg" viewBox="0 0 400 270" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                <!-- diagonal geometric lines for commercial/industrial feel -->
+                <rect width="400" height="270" fill="#0a0d1a"/>
+                <line x1="0" y1="270" x2="200" y2="0" stroke="rgba(245,158,11,0.07)" stroke-width="40"/>
+                <line x1="100" y1="270" x2="300" y2="0" stroke="rgba(245,158,11,0.05)" stroke-width="40"/>
+                <line x1="200" y1="270" x2="400" y2="0" stroke="rgba(245,158,11,0.04)" stroke-width="40"/>
+                <line x1="300" y1="270" x2="500" y2="0" stroke="rgba(245,158,11,0.03)" stroke-width="40"/>
+                <!-- paint roller icon -->
+                <g transform="translate(150,90)">
+                  <rect x="0" y="0" width="80" height="22" rx="4" stroke="rgba(245,158,11,0.35)" stroke-width="2" fill="none"/>
+                  <rect x="5" y="5" width="70" height="12" rx="2" fill="rgba(245,158,11,0.12)"/>
+                  <line x1="40" y1="22" x2="40" y2="44" stroke="rgba(245,158,11,0.3)" stroke-width="2"/>
+                  <line x1="40" y1="44" x2="70" y2="44" stroke="rgba(245,158,11,0.3)" stroke-width="2"/>
+                  <line x1="70" y1="44" x2="70" y2="55" stroke="rgba(245,158,11,0.3)" stroke-width="2.5"/>
+                </g>
+                <text x="200" y="180" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" letter-spacing="4" fill="rgba(245,158,11,0.3)">COMMERCIAL</text>
+                <text x="200" y="197" text-anchor="middle" font-family="sans-serif" font-size="9" letter-spacing="2" fill="rgba(255,255,255,0.15)">LICENSED &amp; INSURED</text>
+              </svg>
+            </div>
+            <div class="svc-body">
+              <div class="svc-type">Commercial</div>
+              <h3 class="svc-title">Commercial Painting</h3>
+              <p>After-hours scheduling, minimal disruption, commercial-grade results for any business.</p>
+              <span class="svc-cta">Learn More <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+          </a>
+
         </div>
       </div>
+      <div class="services-diag-bottom"></div>
     </section>
 
-    <!-- Process Section -->
-    <section style="padding: 5rem 0; background: white;">
-      <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
-        <div style="text-align: center; margin-bottom: 4rem;">
-          <span style="display: inline-block; padding: 0.5rem 1.5rem; background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(37, 99, 235, 0.1)); color: #3b82f6; font-weight: 700; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 1px; border-radius: 50px; margin-bottom: 1rem; border: 1px solid rgba(59, 130, 246, 0.2);">Our Process</span>
-          <h2 style="font-size: 3rem; font-weight: 900; color: #1f2937; margin-bottom: 1rem;">How We Work</h2>
-          <p style="font-size: 1.25rem; color: #6b7280;">Professional approach ensuring exceptional results every time</p>
-        </div>
 
-        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-bottom: 4rem;">
-          <div style="text-align: center; padding: 2rem; background: #f8fafc; border-radius: 20px; border: 2px solid #e5e7eb; position: relative;">
-            <div style="position: absolute; top: -1rem; left: 50%; transform: translateX(-50%); width: 3rem; height: 3rem; background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); color: #1f2937; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; font-weight: 900; box-shadow: 0 4px 12px rgba(251, 191, 36, 0.4);">1</div>
-            <div style="font-size: 3rem; margin: 1.5rem 0 1rem;">📋</div>
-            <h3 style="font-size: 1.375rem; font-weight: 700; color: #1f2937; margin-bottom: 0.75rem;">Free Consultation</h3>
-            <p style="color: #6b7280; line-height: 1.6;">Detailed assessment, color consultation, and personalized recommendations for your project</p>
-          </div>
-
-          <div style="text-align: center; padding: 2rem; background: #f8fafc; border-radius: 20px; border: 2px solid #e5e7eb; position: relative;">
-            <div style="position: absolute; top: -1rem; left: 50%; transform: translateX(-50%); width: 3rem; height: 3rem; background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); color: #1f2937; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; font-weight: 900; box-shadow: 0 4px 12px rgba(251, 191, 36, 0.4);">2</div>
-            <div style="font-size: 3rem; margin: 1.5rem 0 1rem;">🛡️</div>
-            <h3 style="font-size: 1.375rem; font-weight: 700; color: #1f2937; margin-bottom: 0.75rem;">Preparation & Protection</h3>
-            <p style="color: #6b7280; line-height: 1.6;">Thorough surface prep, furniture protection, and complete area masking</p>
-          </div>
-
-          <div style="text-align: center; padding: 2rem; background: #f8fafc; border-radius: 20px; border: 2px solid #e5e7eb; position: relative;">
-            <div style="position: absolute; top: -1rem; left: 50%; transform: translateX(-50%); width: 3rem; height: 3rem; background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); color: #1f2937; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; font-weight: 900; box-shadow: 0 4px 12px rgba(251, 191, 36, 0.4);">3</div>
-            <div style="font-size: 3rem; margin: 1.5rem 0 1rem;">🎨</div>
-            <h3 style="font-size: 1.375rem; font-weight: 700; color: #1f2937; margin-bottom: 0.75rem;">Quality Application</h3>
-            <p style="color: #6b7280; line-height: 1.6;">Professional painting with premium materials and expert craftsmanship</p>
-          </div>
-
-          <div style="text-align: center; padding: 2rem; background: #f8fafc; border-radius: 20px; border: 2px solid #e5e7eb; position: relative;">
-            <div style="position: absolute; top: -1rem; left: 50%; transform: translateX(-50%); width: 3rem; height: 3rem; background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); color: #1f2937; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; font-weight: 900; box-shadow: 0 4px 12px rgba(251, 191, 36, 0.4);">4</div>
-            <div style="font-size: 3rem; margin: 1.5rem 0 1rem;">✨</div>
-            <h3 style="font-size: 1.375rem; font-weight: 700; color: #1f2937; margin-bottom: 0.75rem;">Final Inspection</h3>
-            <p style="color: #6b7280; line-height: 1.6;">Quality assurance, complete cleanup, and final walkthrough with you</p>
-          </div>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
-          <img src="/images/projects/projects-optimized/project-8.jpg" alt="Residential Painting" style="width: 100%; height: 300px; object-fit: cover; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" />
-          <img src="/images/projects/projects-optimized/interior-detail-1-optimized.jpg" alt="Interior Detail Work" style="width: 100%; height: 300px; object-fit: cover; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" />
-          <img src="/images/Boomer/boomer-5-optimized.jpg" alt="Professional Team" style="width: 100%; height: 300px; object-fit: cover; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" />
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
+    <!-- ══════════════════════════════════════════
+         TESTIMONIALS
+    ══════════════════════════════════════════════ -->
     <Testimonials />
 
-    <!-- CTA Section -->
-    <section class="cta-section">
+
+    <!-- ══════════════════════════════════════════
+         WHY BROWNS — bold tile grid, big numbers, no split
+    ══════════════════════════════════════════════ -->
+    <section class="why-section">
       <div class="container">
-        <h2>Ready to Transform Your Property?</h2>
-        <p>Contact Browns Painting LLC today for your free estimate. We serve all of South Alabama with professional, reliable service.</p>
-        <div class="cta-buttons">
-          <a href="/contact" class="btn btn-primary">Get Free Estimate</a>
-          <a href="tel:+12512374545" class="btn btn-secondary">Call (251) 237-4545</a>
+
+        <!-- Section title: full-width, not a split, large and anchored -->
+        <div class="why-header">
+          <span class="eyebrow">Why Choose Browns</span>
+          <h2 class="why-h2">Six Reasons Our Clients <em>Come Back.</em></h2>
+          <a href="/about" class="why-learn-more">Meet the Team →</a>
+        </div>
+
+        <!-- 3×2 tile grid — big amber number + bold title + description -->
+        <div class="why-tiles">
+
+          <div class="why-tile">
+            <span class="why-tile-num">01</span>
+            <div class="why-tile-icon">
+              <svg width="26" height="26" viewBox="0 0 28 28" fill="none"><path d="M14 3l2.8 8.6H25l-7.2 5.2 2.8 8.6L14 20.1l-6.6 5.3 2.8-8.6L3 11.6h8.2L14 3z" fill="currentColor" opacity=".25"/><path d="M14 3l2.8 8.6H25l-7.2 5.2 2.8 8.6L14 20.1l-6.6 5.3 2.8-8.6L3 11.6h8.2L14 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </div>
+            <h4>100% Satisfaction Guarantee</h4>
+            <p>We don't call it done until you're happy. We come back and make it right, no questions asked.</p>
+          </div>
+
+          <div class="why-tile">
+            <span class="why-tile-num">02</span>
+            <div class="why-tile-icon">
+              <svg width="26" height="26" viewBox="0 0 28 28" fill="none"><circle cx="11" cy="9" r="5" fill="currentColor" opacity=".25"/><circle cx="11" cy="9" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M2 24c0-4.4 4-8 9-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M19 17l2 2 4-4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h4>Owner on Every Job</h4>
+            <p>Boomer personally oversees every project. You get the owner on-site, not a sub-crew.</p>
+          </div>
+
+          <div class="why-tile">
+            <span class="why-tile-num">03</span>
+            <div class="why-tile-icon">
+              <svg width="26" height="26" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.5"/><path d="M14 8v6.5l3.5 2" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg>
+            </div>
+            <h4>3–7 Day Turnaround</h4>
+            <p>Most projects done in one week. We show up when we say and finish when we say. Period.</p>
+          </div>
+
+          <div class="why-tile">
+            <span class="why-tile-num">04</span>
+            <div class="why-tile-icon">
+              <svg width="26" height="26" viewBox="0 0 28 28" fill="none"><path d="M14 3L4 8.5v10L14 24l10-5.5v-10L14 3z" fill="currentColor" opacity=".15"/><path d="M14 3L4 8.5v10L14 24l10-5.5v-10L14 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9.5 13.5l3 3 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h4>Licensed &amp; Fully Insured</h4>
+            <p>Full Alabama licensing and liability on every job. Your home and investment are protected.</p>
+          </div>
+
+          <div class="why-tile">
+            <span class="why-tile-num">05</span>
+            <div class="why-tile-icon">
+              <svg width="26" height="26" viewBox="0 0 28 28" fill="none"><rect x="3" y="10" width="22" height="15" rx="2" fill="currentColor" opacity=".15"/><rect x="3" y="10" width="22" height="15" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M8 10V7a6 6 0 0 1 12 0v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h4>Top-of-the-Line Paints</h4>
+            <p>Premium, low-VOC, weather-resistant paints for Alabama's climate. No cutting corners.</p>
+          </div>
+
+          <div class="why-tile">
+            <span class="why-tile-num">06</span>
+            <div class="why-tile-icon">
+              <svg width="26" height="26" viewBox="0 0 28 28" fill="none"><path d="M4 22V11L14 4l10 7v11H4z" fill="currentColor" opacity=".15"/><path d="M4 22V11L14 4l10 7v11H4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M10 22v-7h8v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h4>25+ Years, Same Communities</h4>
+            <p>We've painted for the same neighbors for decades. Our reputation is everything here.</p>
+          </div>
+
         </div>
       </div>
     </section>
+
+
+    <!-- ══════════════════════════════════════════
+         PROCESS — editorial large numbers, no centered header
+    ══════════════════════════════════════════════ -->
+    <section class="process-section">
+      <div class="process-diag-top"></div>
+      <div class="container">
+
+        <!-- Top bar: left label only, no centered structure -->
+        <div class="process-top-bar">
+          <span class="eyebrow">How It Works</span>
+          <h2 class="process-top-h2">Three Steps.<br/><em>Zero Stress.</em></h2>
+        </div>
+
+        <!-- Steps as editorial full-width cards -->
+        <div class="process-cards">
+
+          <div class="process-card">
+            <div class="process-card-num">01</div>
+            <div class="process-card-body">
+              <div class="process-card-icon">
+                <svg width="28" height="28" viewBox="0 0 30 30" fill="none"><rect x="3" y="5" width="24" height="21" rx="3" stroke="currentColor" stroke-width="2"/><path d="M9 3v4M21 3v4M3 13h24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M9 18h12M9 22h7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg>
+              </div>
+              <h3>Get Your Quote</h3>
+              <p>Call or fill out a form. We'll reach out within 24 hours for a free on-site estimate — no pressure, no obligation.</p>
+            </div>
+            <div class="process-card-cta">
+              <a href="/contact">Request Quote →</a>
+            </div>
+          </div>
+
+          <div class="process-card">
+            <div class="process-card-num">02</div>
+            <div class="process-card-body">
+              <div class="process-card-icon">
+                <svg width="28" height="28" viewBox="0 0 30 30" fill="none"><rect x="3" y="5" width="24" height="21" rx="3" stroke="currentColor" stroke-width="2"/><path d="M9 3v4M21 3v4M3 13h24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="19" r="2" fill="currentColor"/><circle cx="15" cy="19" r="2" fill="currentColor"/></svg>
+              </div>
+              <h3>Get Scheduled</h3>
+              <p>We work around your life. Confirm your date — we show up on time, protect your property, and get to work.</p>
+            </div>
+            <div class="process-card-cta process-card-cta--mid">
+              <span>Usually 3–7 days out</span>
+            </div>
+          </div>
+
+          <div class="process-card">
+            <div class="process-card-num">03</div>
+            <div class="process-card-body">
+              <div class="process-card-icon">
+                <svg width="28" height="28" viewBox="0 0 30 30" fill="none"><circle cx="15" cy="15" r="12" stroke="currentColor" stroke-width="2"/><path d="M9 15l4 4 8-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <h3>Relax &amp; Enjoy</h3>
+              <p>We handle all prep, painting, and complete cleanup. You walk through, approve, and enjoy the transformation.</p>
+            </div>
+            <div class="process-card-cta process-card-cta--done">
+              <span>100% satisfaction or we return</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════
+         AREAS — asymmetric: left tall label + right county grid
+    ══════════════════════════════════════════════ -->
+    <section class="areas-section">
+      <div class="container areas-split">
+
+        <!-- LEFT: county grid (content IS the section) -->
+        <div class="areas-grid">
+          <div class="area-card">
+            <h4>Escambia</h4>
+            <a href="/brewton-painting">Brewton</a>
+            <a href="/atmore-painting">Atmore</a>
+            <a href="/flomaton-painting">Flomaton</a>
+          </div>
+          <div class="area-card">
+            <h4>Conecuh</h4>
+            <a href="/evergreen-painting">Evergreen</a>
+            <a href="/castleberry-painting">Castleberry</a>
+            <a href="/evergreen-painting">Repton</a>
+          </div>
+          <div class="area-card">
+            <h4>Monroe</h4>
+            <a href="/monroeville-painting">Monroeville</a>
+            <a href="/monroeville-painting">Frisco City</a>
+          </div>
+          <div class="area-card">
+            <h4>Mobile</h4>
+            <a href="/mobile-painting">Mobile</a>
+            <a href="/saraland-painting">Saraland</a>
+            <a href="/theodore-painting">Theodore</a>
+            <a href="/creola-painting">Creola</a>
+          </div>
+          <div class="area-card area-card-wide">
+            <h4>Baldwin</h4>
+            <div class="area-cities-grid">
+              <a href="/fairhope-painting">Fairhope</a>
+              <a href="/daphne-painting">Daphne</a>
+              <a href="/gulf-shores-painting">Gulf Shores</a>
+              <a href="/orange-beach-painting">Orange Beach</a>
+              <a href="/foley-painting">Foley</a>
+              <a href="/bay-minette-painting">Bay Minette</a>
+            </div>
+          </div>
+        </div><!-- end areas-grid -->
+
+        <!-- RIGHT: label, stats, CTA (flipped from left-label pattern) -->
+        <div class="areas-right">
+          <span class="eyebrow">Where We Serve</span>
+          <h2 class="areas-big-h2">South<br/>Alabama's<br/><span class="h2-accent">Painters.</span></h2>
+          <div class="areas-stats">
+            <div class="areas-stat"><strong>5</strong><span>Counties</span></div>
+            <div class="areas-stat"><strong>20+</strong><span>Cities</span></div>
+          </div>
+          <p class="areas-right-desc">One crew you can trust — licensed, insured, and locally rooted for 25+ years.</p>
+          <a href="/service-areas" class="btn-outline-white areas-cta-btn">All Service Areas →</a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════
+         CTA STRIP — amber, full contrast
+    ══════════════════════════════════════════════ -->
+    <section class="cta-strip">
+      <div class="container cta-strip-inner">
+        <div class="cta-text-block">
+          <span class="cta-pre">Ready to Start?</span>
+          <h2 class="cta-h2">Get BROWNS Today!</h2>
+          <p>Our painters will turn the mundane into beautiful. Transform your home or business.</p>
+        </div>
+        <a href="/contact" class="cta-dark-btn">
+          Get Free Estimate
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </section>
+
   </main>
 </BaseLayout>
 
+
 <style>
-  /* Grid Layouts */
-  .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-  }
-
-  .photo-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-
-  .services-grid-home {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-  }
-
-  /* Hero Section - Full Width Background Images */
+  /* ════════════════════════════
+     HERO
+  ════════════════════════════ */
   .hero {
     position: relative;
-    height: 100vh;
-    min-height: 600px;
+    height: 100svh;
+    min-height: 680px;
+    max-height: 1000px;
     overflow: hidden;
     display: flex;
     align-items: center;
-    color: white;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
   }
 
-  .hero-background {
+  /* Parallax bg */
+  .hero-parallax {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: -15% 0;
+    z-index: 0;
+  }
+
+  .slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.6s cubic-bezier(0.4,0,0.2,1);
+    will-change: transform;
+  }
+
+  .slide.active { opacity: 1; }
+
+  /* Multi-layer gradient for cinematic depth */
+  .hero-grad {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to top, rgba(8,10,16,0.92) 0%, rgba(8,10,16,0.55) 40%, rgba(8,10,16,0.3) 70%, rgba(8,10,16,0.4) 100%);
     z-index: 1;
   }
 
-  .hero-slide {
+  /* SVG noise texture overlay for depth */
+  .hero-noise {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-  }
-
-  .hero-slide.active {
-    opacity: 1;
-  }
-
-  .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 100%);
+    inset: 0;
     z-index: 2;
+    opacity: 0.045;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
   }
 
   .hero-content {
     position: relative;
     z-index: 3;
-    width: 100%;
-    text-align: center;
-  }
-
-  .hero-text {
-    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1.5rem 4rem;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 2rem;
   }
 
-  .hero-cta {
-    margin-top: 2rem;
+  /* Animated label pill */
+  .hero-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(245,158,11,0.15);
+    border: 1px solid rgba(245,158,11,0.35);
+    color: var(--amber-light);
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 0.375rem 1rem;
+    border-radius: 100px;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(8px);
   }
 
+  .hero-label-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--amber);
+    box-shadow: 0 0 8px var(--amber);
+    animation: pulse-dot 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-dot {
+    0%, 100% { box-shadow: 0 0 6px var(--amber); }
+    50% { box-shadow: 0 0 16px var(--amber), 0 0 32px rgba(245,158,11,0.4); }
+  }
+
+  .hero-logo {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 24px rgba(0,0,0,0.6));
+    margin-bottom: 1.5rem;
+  }
+
+  /* MASSIVE headline — the star */
+  .hero-h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.1em;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-line1 {
+    font-family: var(--font-sans);
+    font-size: clamp(4rem, 10vw, 8.5rem);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 0.95;
+    color: #fff;
+    text-shadow: 0 4px 40px rgba(0,0,0,0.5);
+    text-transform: uppercase;
+  }
+
+  .hero-line2 {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 6vw, 5.5rem);
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    color: var(--amber-light);
+    text-shadow: 0 4px 40px rgba(245,158,11,0.3);
+  }
+
+  .hero-sub {
+    font-family: var(--font-sans);
+    font-size: clamp(0.9375rem, 1.5vw, 1.125rem);
+    color: rgba(255,255,255,0.72);
+    margin-bottom: 2.25rem;
+    letter-spacing: 0.01em;
+    line-height: 1.6;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 0.875rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .hero-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-sans);
+    font-size: 0.9375rem;
+    font-weight: 800;
+    color: var(--ink);
+    background: var(--amber);
+    text-decoration: none;
+    padding: 0.875rem 1.875rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 24px rgba(245,158,11,0.5), 0 1px 4px rgba(0,0,0,0.2);
+    letter-spacing: -0.01em;
+  }
+
+  .hero-btn-primary:hover {
+    background: var(--amber-light);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 32px rgba(245,158,11,0.6);
+  }
+
+  .hero-btn-primary:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
+
+  .hero-btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-sans);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.08);
+    border: 1.5px solid rgba(255,255,255,0.3);
+    text-decoration: none;
+    padding: 0.875rem 1.875rem;
+    border-radius: 8px;
+    backdrop-filter: blur(8px);
+    letter-spacing: -0.01em;
+  }
+
+  .hero-btn-ghost:hover {
+    background: rgba(255,255,255,0.14);
+    border-color: rgba(255,255,255,0.6);
+    transform: translateY(-3px);
+  }
+
+  .hero-btn-ghost:focus-visible { outline: 2px solid rgba(255,255,255,0.6); outline-offset: 3px; }
+
+  /* Trust pills */
+  .hero-trust {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .trust-pill {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(8px);
+    color: rgba(255,255,255,0.8);
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.35rem 0.875rem;
+    border-radius: 100px;
+    letter-spacing: 0.02em;
+  }
+
+  /* Diagonal cut at bottom of hero */
+  .hero-cut {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: #fff;
+    clip-path: polygon(0 100%, 100% 0, 100% 100%);
+    z-index: 4;
+  }
+
+  /* Dots */
   .hero-dots {
     position: absolute;
-    bottom: 2rem;
+    bottom: 5rem;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 0.5rem;
-    z-index: 3;
+    z-index: 5;
   }
 
   .dot {
-    width: 12px;
-    height: 12px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-
-  .dot.active {
-    background: #fbbf24;
-    transform: scale(1.2);
-  }
-
-  .dot:hover {
-    background: rgba(255, 255, 255, 0.8);
-  }
-
-  /* Hero Trust Badges - Above the Fold */
-  .hero-trust-badges {
-    position: absolute;
-    top: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 1.5rem;
-    z-index: 4;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .trust-badge {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.94rem 1.56rem;
-    background: transparent;
-    color: white;
-    font-size: 1.125rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-  }
-
-  .trust-badge:hover {
-    transform: translateY(-2px);
-    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.9);
-  }
-
-  .trust-badge .trust-icon {
-    font-size: 1.56rem;
-    color: #fbbf24;
-  }
-
-  .trust-badge .trust-stars {
-    font-size: 1.56rem;
-    color: #fbbf24;
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-  }
-
-  .trust-badge .trust-text {
-    font-size: 1.06rem;
-    font-weight: 600;
-  }
-
-  .hero-logo-image {
-    height: 300px;
-    width: auto;
-    max-width: 100%;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 0;
-  }
-
-  .hero h1 {
-    font-size: clamp(3rem, 5vw, 4rem);
-    font-weight: 800;
-    margin: 0;
-    margin-top: -4rem;
-    margin-bottom: 1rem;
-    line-height: 1.1;
-    color: white;
-  }
-
-  .highlight {
-    color: #fbbf24;
-    position: relative;
-  }
-
-  .highlight::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: #fbbf24;
-    border-radius: 2px;
-  }
-
-  .lead {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.9);
-    font-weight: 400;
-  }
-
-
-  .phone-number {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 1rem;
-    justify-content: center;
-    margin: 0;
-  }
-
-  .cta-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    padding: 2rem 0;
-  }
-
-  .phone-label {
-    font-weight: 500;
-  }
-
-  .phone-link {
-    color: #fbbf24;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.125rem;
-  }
-
-  .phone-link:hover {
-    color: #f59e0b;
-    text-decoration: underline;
-  }
-
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 1.25rem 2.5rem;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: 700;
-    transition: all 0.3s ease;
-    font-size: 1.125rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-
-  .btn-primary {
-    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-    color: #1f2937;
-    box-shadow: 
-      0 8px 25px rgba(251, 191, 36, 0.4),
-      inset 0 1px 0 rgba(255, 255, 255, 0.3);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .btn-primary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    transition: left 0.5s ease;
-  }
-
-  .btn-primary:hover::before {
-    left: 100%;
-  }
-
-  .btn-primary:hover {
-    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-    transform: translateY(-3px);
-    box-shadow: 
-      0 12px 35px rgba(251, 191, 36, 0.6),
-      inset 0 1px 0 rgba(255, 255, 255, 0.4);
-  }
-
-  .btn-secondary {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(10px);
-  }
-
-  .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.5);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-  }
-
-  .btn-icon {
-    font-size: 1.25rem;
-  }
-
-
-  .hero-image {
-    position: relative;
-  }
-
-  .image-container {
-    background: 
-      linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #1d4ed8 100%),
-      url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500"><defs><pattern id="paint" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="40" height="40" fill="rgba(255,255,255,0.05)"/><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.08)"/><circle cx="30" cy="30" r="1" fill="rgba(255,255,255,0.08)"/></pattern></defs><rect width="400" height="500" fill="url(%23paint)"/></svg>');
-    border-radius: 24px;
-    height: 500px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 
-      0 25px 50px rgba(0, 0, 0, 0.3),
-      0 0 0 1px rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-  }
-
-  .image-container:hover {
-    transform: translateY(-5px);
-    box-shadow: 
-      0 35px 70px rgba(0, 0, 0, 0.4),
-      0 0 0 1px rgba(255, 255, 255, 0.2);
-  }
-
-  .image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(30, 64, 175, 0.8) 0%, rgba(59, 130, 246, 0.6) 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 2rem;
-  }
-
-  .service-badges {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .service-badge {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.1) 100%);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
-    font-size: 0.875rem;
-    font-weight: 600;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(15px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-  }
-
-  .service-badge:hover {
-    transform: translateY(-2px);
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.15) 100%);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-  }
-
-  .image-text {
-    text-align: center;
-    color: white;
-  }
-
-  .image-text h3 {
-    font-size: 2rem;
-    font-weight: 800;
-    margin-bottom: 0.5rem;
-  }
-
-  .image-text p {
-    font-size: 1.125rem;
-    opacity: 0.9;
-    font-weight: 500;
-  }
-
-  /* Hero Form */
-  .hero-form {
-    background: white;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  }
-
-  .quote-form h3 {
-    color: #333;
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
-    text-align: center;
-  }
-
-  .quote-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .quote-form input,
-  .quote-form select,
-  .quote-form textarea {
-    padding: 0.75rem;
-    border: 2px solid #e0e0e0;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    font-family: inherit;
-    transition: border-color 0.3s;
-  }
-
-  .quote-form input:focus,
-  .quote-form select:focus,
-  .quote-form textarea:focus {
-    outline: none;
-    border-color: #667eea;
-  }
-
-  .quote-form textarea {
-    resize: vertical;
-    min-height: 80px;
-  }
-
-  .btn-form {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background: rgba(255,255,255,0.3);
     border: none;
     cursor: pointer;
+    padding: 0;
+    transition: background 0.3s, transform 0.3s;
   }
 
-  /* Services Section */
-  .services {
-    padding: 4rem 0;
-    background: #f8fafc;
+  .dot.active { background: var(--amber); transform: scale(1.35); }
+  .dot:hover { background: rgba(255,255,255,0.65); }
+  .dot:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
+
+
+  /* ════════════════════════════
+     STATS STRIP
+  ════════════════════════════ */
+  .stats-strip {
+    background: var(--ink);
+    position: relative;
+    z-index: 2;
   }
 
+  .stats-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: stretch;
+  }
+
+  .stat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 1rem;
+    gap: 0.375rem;
+    text-align: center;
+  }
+
+  .stat strong {
+    font-family: var(--font-sans);
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    color: var(--amber);
+    line-height: 1;
+  }
+
+  .stat span {
+    font-family: var(--font-sans);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .stat-rule {
+    width: 1px;
+    background: rgba(255,255,255,0.07);
+    align-self: stretch;
+    margin: 1.25rem 0;
+  }
+
+
+  /* ════════════════════════════
+     SHARED
+  ════════════════════════════ */
   .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1.5rem;
   }
 
-  .services h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #333;
-  }
-
-  .section-subtitle {
-    text-align: center;
-    color: #6b7280;
-    font-size: 1.125rem;
-    margin-bottom: 3rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-  }
-
-  .service-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
-  }
-
-  .service-card:hover {
-    transform: translateY(-4px);
-  }
-
-  .service-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-
-  .service-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #333;
-  }
-
-  .service-card p {
-    color: #666;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-  }
-
-  .service-badges {
-    display: flex;
-    gap: 0.5rem;
-    margin: 1rem 0;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .service-badge {
-    background: #3b82f6;
-    color: white;
-    padding: 0.25rem 0.75rem;
-    border-radius: 12px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-
-  .btn-outline {
-    background: transparent;
-    color: #667eea;
-    border: 2px solid #667eea;
-  }
-
-  .btn-outline:hover {
-    background: #667eea;
-    color: white;
-  }
-
-  /* CTA Section */
-  .cta-section {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 4rem 0;
-    text-align: center;
-  }
-
-  .cta-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-  }
-
-  .cta-section p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    opacity: 0.95;
-  }
-
-  .cta-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  /* Mobile Responsive - A-Grade */
-  @media (max-width: 768px) {
-    .hero {
-      padding: 5rem 0 3rem;
-      min-height: 550px;
-      height: auto;
-    }
-
-    .hero-content {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-      text-align: center;
-    }
-
-    .hero-text {
-      max-width: 100%;
-      padding: 1rem;
-    }
-
-    .hero-logo-image {
-      height: 120px !important;
-      margin-bottom: 0.5rem !important;
-    }
-
-    .hero h1 {
-      font-size: 1.5rem !important;
-      margin-top: -1rem !important;
-      margin-bottom: 1rem !important;
-    }
-
-    .hero-trust-badges {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.5rem;
-      top: 0.5rem;
-      padding: 0 0.5rem;
-      width: 100%;
-      left: 0;
-      transform: none;
-    }
-
-    .trust-badge {
-      font-size: 0.65rem;
-      padding: 0.4rem 0.5rem;
-      flex-direction: column;
-      text-align: center;
-      gap: 0.25rem;
-    }
-
-    .trust-icon,
-    .trust-stars {
-      font-size: 1.25rem;
-    }
-
-    .trust-text {
-      font-size: 0.65rem;
-    }
-
-      .phone-number {
-        justify-content: center;
-        margin-top: 1rem;
-        font-size: 0.9rem;
-        flex-direction: column;
-        gap: 0.25rem;
-      }
-
-      .phone-link {
-        font-size: 1rem !important;
-      }
-
-      .cta-center {
-        padding: 1rem 0;
-      }
-
-      .hero-cta {
-        margin-top: 1rem;
-      }
-
-      .btn {
-        width: 100%;
-        max-width: 280px;
-        justify-content: center;
-        padding: 1rem 1.75rem;
-        font-size: 1rem;
-      }
-
-      .image-container {
-        height: 350px;
-      }
-
-      .service-badges {
-        justify-content: center;
-      }
-
-      .image-text h3 {
-        font-size: 1.5rem;
-      }
-
-      .image-text p {
-        font-size: 1rem;
-      }
-
-      .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-      }
-
-      .photo-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-
-      .services-grid-home {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .hero {
-        padding: 4rem 0 2rem;
-        min-height: 500px;
-        height: auto;
-      }
-
-      .hero-logo-image {
-        height: 100px !important;
-        margin-bottom: 0.25rem !important;
-      }
-
-      .hero h1 {
-        font-size: 1.25rem !important;
-        margin-top: -0.75rem !important;
-        margin-bottom: 0.75rem !important;
-      }
-
-      .hero-trust-badges {
-        gap: 0.35rem;
-        padding: 0 0.35rem;
-      }
-
-      .trust-badge {
-        font-size: 0.6rem;
-        padding: 0.35rem 0.4rem;
-      }
-
-      .trust-icon,
-      .trust-stars {
-        font-size: 1.1rem;
-      }
-
-      .trust-text {
-        font-size: 0.6rem;
-      }
-
-      .phone-number {
-        font-size: 0.85rem;
-      }
-
-      .phone-link {
-        font-size: 0.95rem !important;
-      }
-
-      .btn {
-        padding: 0.875rem 1.5rem;
-        font-size: 0.9rem;
-      }
-
-      .stats-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-      }
-    }
-
-  /* Horizontal Layout Sections */
-  .why-choose-us {
-    background: #f8fafc;
-    padding: 5rem 0;
-  }
-
-  .services {
-    background: white;
-    padding: 5rem 0;
-  }
-
-  .horizontal-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-  }
-
-  .content-left h2 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: #1f2937;
-    margin-bottom: 1rem;
-    line-height: 1.2;
-  }
-
-  .subtitle {
-    font-size: 1.25rem;
-    color: #6b7280;
-    font-weight: 500;
-    margin-bottom: 2.5rem;
-  }
-
-  .features-list, .services-list {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .feature-item, .service-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.5rem;
-  }
-
-  .feature-icon, .service-icon {
-    font-size: 2.5rem;
-    flex-shrink: 0;
-    margin-top: 0.5rem;
-  }
-
-  .feature-text h4, .service-text h4 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #1f2937;
-    margin-bottom: 0.5rem;
-  }
-
-  .feature-text p, .service-text p {
-    color: #6b7280;
-    line-height: 1.6;
-    font-size: 1rem;
-  }
-
-  .stats-box {
-    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-    padding: 3rem;
-    border-radius: 20px;
-    color: white;
-    text-align: center;
-  }
-
-  .stat-item {
-    margin-bottom: 2rem;
-  }
-
-  .stat-item:last-child {
-    margin-bottom: 0;
-  }
-
-  .stat-number {
-    font-size: 3rem;
-    font-weight: 800;
-    color: #fbbf24;
-    line-height: 1;
-    margin-bottom: 0.5rem;
-  }
-
-  .stat-label {
-    font-size: 1rem;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.9);
-  }
-
-  .service-image-large {
-    height: 400px;
-    border-radius: 20px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .service-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
-  }
-
-  .project-showcase {
-    height: 400px;
-    border-radius: 20px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .project-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
-  }
-
-  .image-placeholder {
-    font-size: 6rem;
-    color: rgba(255, 255, 255, 0.3);
-  }
-
-  .image-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-    padding: 2rem;
-    color: white;
-    text-align: center;
-  }
-
-  .image-overlay h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-  }
-
-  .image-overlay p {
-    font-size: 1rem;
-    opacity: 0.9;
-  }
-
-  /* Alternating Sections */
-  .alternating-section {
-    padding: 4rem 0;
-  }
-
-  .alternating-section:nth-child(even) {
-    background: #f8fafc;
-  }
-
-  .alternating-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-  }
-
-  .alternating-layout.reverse {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .alternating-layout.reverse .image-content {
-    order: 1;
-  }
-
-  .alternating-layout.reverse .text-content {
-    order: 2;
-  }
-
-  .text-content h2 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: #1f2937;
-    margin-bottom: 1rem;
-    line-height: 1.2;
-  }
-
-  .text-content .subtitle {
-    font-size: 1.25rem;
-    color: #6b7280;
-    margin-bottom: 2rem;
-    font-weight: 500;
-  }
-
-  .image-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  /* Service Areas Styles */
-  .areas-list {
-    margin-bottom: 2rem;
-  }
-
-  .area-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-  }
-
-  .area-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  }
-
-  .area-icon {
-    font-size: 1.5rem;
-    color: #3b82f6;
-    flex-shrink: 0;
-  }
-
-  .area-text h4 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #1f2937;
-    margin-bottom: 0.5rem;
-  }
-
-  .area-text p {
-    color: #6b7280;
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-
-  .cta-inline {
-    margin-top: 1rem;
-  }
-
-  .btn-outline {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    background: transparent;
-    color: #3b82f6;
-    border: 2px solid #3b82f6;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-  }
-
-  .btn-outline:hover {
-    background: #3b82f6;
-    color: white;
-    transform: translateY(-2px);
-  }
-
-  .map-visualization {
-    position: relative;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
-  }
-
-  .map-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .map-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-    padding: 2rem;
-    color: white;
-    text-align: center;
-  }
-
-  .map-overlay h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-  }
-
-  .map-overlay p {
-    font-size: 1rem;
-    opacity: 0.9;
-  }
-
-  /* Process & Quality Styles */
-  .process-list {
-    margin-bottom: 2rem;
-  }
-
-  .process-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-  }
-
-  .process-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  }
-
-  .process-number {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
-    color: white;
-    border-radius: 50%;
-    font-weight: 700;
-    font-size: 1.125rem;
-    flex-shrink: 0;
-  }
-
-  .process-text h4 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #1f2937;
-    margin-bottom: 0.5rem;
-  }
-
-  .process-text p {
-    color: #6b7280;
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-
-  .process-image {
-    position: relative;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
-  }
-
-  .process-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .process-image .image-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-    padding: 2rem;
-    color: white;
-    text-align: center;
-  }
-
-  .process-image .image-overlay h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-  }
-
-  .process-image .image-overlay p {
-    font-size: 1rem;
-    opacity: 0.9;
-  }
-
-  @media (max-width: 768px) {
-    .horizontal-layout {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-    
-    .content-left h2 {
-      font-size: 2rem;
-    }
-    
-    .stats-box {
-      padding: 2rem;
-    }
-    
-    .service-image-large {
-      height: 300px;
-    }
-
-    .alternating-layout {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-
-    .alternating-layout.reverse .image-content {
-      order: 0;
-    }
-
-    .alternating-layout.reverse .text-content {
-      order: 1;
-    }
-
-    .text-content h2 {
-      font-size: 2rem;
-    }
-
-    .area-item,
-    .process-item {
-      padding: 0.75rem;
-    }
-
-    .hero {
-      height: 70vh;
-      min-height: 500px;
-    }
-
-    .hero-logo-image {
-      height: 200px;
-    }
-
-    .hero-trust-badges {
-      top: 0.75rem !important;
-      gap: 0.5rem !important;
-      padding: 0 0.5rem !important;
-      max-width: 100% !important;
-      display: grid !important;
-      grid-template-columns: 1fr 1fr !important;
-      justify-items: center !important;
-    }
-
-    .trust-badge {
-      padding: 0.5rem 0.75rem !important;
-      font-size: 0.75rem !important;
-      white-space: nowrap !important;
-      width: 100% !important;
-      max-width: 160px !important;
-      justify-content: center !important;
-    }
-
-    .trust-badge .trust-icon {
-      font-size: 1rem !important;
-    }
-
-    .trust-badge .trust-stars {
-      font-size: 1rem !important;
-    }
-
-    .trust-badge .trust-text {
-      font-size: 0.75rem !important;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .hero-trust-badges {
-      top: 0.5rem !important;
-      gap: 0.4rem !important;
-    }
-
-    .trust-badge {
-      padding: 0.4rem 0.6rem !important;
-      font-size: 0.7rem !important;
-      max-width: 140px !important;
-    }
-
-    .trust-badge .trust-icon,
-    .trust-badge .trust-stars {
-      font-size: 0.9rem !important;
-    }
-
-    .trust-badge .trust-text {
-      font-size: 0.7rem !important;
-    }
-  }
-
-  /* ========== WORLD-CLASS MODERN SECTIONS ========== */
-
-  /* Section Headers - Top Centered */
-  .section-header-center {
-    text-align: center;
-    margin-bottom: 4rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .section-tag {
+  .eyebrow {
     display: inline-block;
-    padding: 0.5rem 1.5rem;
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(37, 99, 235, 0.1));
-    color: #3b82f6;
-    font-weight: 700;
-    font-size: 0.875rem;
+    font-family: var(--font-sans);
+    font-size: 0.6875rem;
+    font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    border-radius: 50px;
-    margin-bottom: 1rem;
-    border: 1px solid rgba(59, 130, 246, 0.2);
+    letter-spacing: 0.14em;
+    color: var(--amber);
+    margin-bottom: 0.75rem;
   }
 
-  .section-header-center h2 {
-    font-size: clamp(2rem, 4vw, 3rem);
+  .section-head {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 4rem;
+  }
+
+  .light-head .section-h2 { color: #fff; }
+  .light-head p {
+    color: rgba(255,255,255,0.5);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    margin-top: 0.875rem;
+  }
+
+  .section-h2 {
+    font-family: var(--font-sans);
+    font-size: clamp(2rem, 4vw, 3.25rem);
     font-weight: 900;
-    color: #1f2937;
-    margin-bottom: 1rem;
-    line-height: 1.2;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    color: var(--ink);
   }
 
-  .section-header-center .section-subtitle {
-    font-size: 1.25rem;
-    color: #6b7280;
-    line-height: 1.6;
-    margin-bottom: 0;
+  .section-h2 em {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: -0.02em;
   }
 
-  /* Trust Stats Section with Glassmorphic Badges */
-  .stats-showcase {
-    padding: 5rem 0;
-    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+  .h2-accent { color: var(--amber); }
+
+  .section-head p {
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin-top: 0.875rem;
   }
 
-  .stats-grid {
+
+  /* ════════════════════════════
+     FEATURE SECTION
+  ════════════════════════════ */
+  .feature-section {
+    background: #fff;
+    padding: 8rem 0 9rem;
+  }
+
+  .feature-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    margin-bottom: 4rem;
-  }
-
-  .stat-badge {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 2rem 1.5rem;
-    border-radius: 20px;
-    border: 2px solid rgba(251, 191, 36, 0.3);
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
     align-items: center;
-    gap: 1rem;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Decorative frame accent — offset colored block behind photo */
+  .feature-photo-col {
     position: relative;
-    overflow: hidden;
   }
 
-  .stat-badge::before {
-    content: '';
+  .feature-frame-accent {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(251, 191, 36, 0.1) 0%, transparent 100%);
-    opacity: 0;
-    transition: opacity 0.4s ease;
+    top: 1.5rem;
+    left: -1.5rem;
+    right: 2rem;
+    bottom: -1.5rem;
+    background: var(--amber);
+    border-radius: 1.5rem;
+    opacity: 0.12;
+    z-index: 0;
   }
 
-  .stat-badge:hover {
-    transform: translateY(-8px) scale(1.05);
-    border-color: #fbbf24;
-    box-shadow: 
-      0 20px 60px rgba(251, 191, 36, 0.3),
-      0 8px 20px rgba(0, 0, 0, 0.4),
-      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  .feature-photo-stack {
+    position: relative;
+    z-index: 1;
   }
 
-  .stat-badge:hover::before {
-    opacity: 1;
+  .feature-img-main {
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
+    border-radius: 1.25rem;
+    box-shadow: 0 24px 72px rgba(0,0,0,0.16), 0 6px 20px rgba(0,0,0,0.08);
+    display: block;
   }
 
-  .badge-icon {
-    font-size: 3rem;
-    filter: drop-shadow(0 4px 12px rgba(251, 191, 36, 0.5));
-    transition: transform 0.4s ease;
-    line-height: 1;
+  /* Floating stat badge */
+  .feature-img-badge {
+    position: absolute;
+    top: 1.5rem;
+    right: -2rem;
+    background: var(--ink);
+    border-radius: 1rem;
+    padding: 1.125rem 1.375rem;
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.06);
   }
 
-  .stat-badge:hover .badge-icon {
-    transform: scale(1.2) rotateZ(-5deg);
-  }
-
-  .badge-number {
-    font-size: 2.5rem;
+  .badge-num {
+    font-family: var(--font-sans);
+    font-size: 2rem;
     font-weight: 900;
-    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    line-height: 1.3;
-    margin-bottom: 0.5rem;
-    filter: drop-shadow(0 2px 8px rgba(251, 191, 36, 0.3));
+    color: var(--amber);
+    letter-spacing: -0.04em;
+    line-height: 1;
   }
 
   .badge-label {
-    font-size: 1rem;
+    font-family: var(--font-sans);
+    font-size: 0.6875rem;
     font-weight: 700;
-    color: rgba(31, 41, 55, 0.95);
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.6);
     line-height: 1.4;
-    text-align: center;
   }
 
-  /* Trust Photo Grid */
-  .trust-photo-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    margin-top: 3rem;
-  }
-
-  .trust-photo-large {
-    position: relative;
-    border-radius: 24px;
-    overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-  }
-
-  .trust-image {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-  }
-
-  .trust-photo-large:hover .trust-image {
-    transform: scale(1.05);
-  }
-
-  .photo-caption {
+  /* Floating secondary photo */
+  .feature-img-float {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(transparent, rgba(0,0,0,0.9));
-    padding: 2rem;
-    color: white;
+    bottom: -2.5rem;
+    left: -2rem;
+    width: 52%;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 4px solid #fff;
+    box-shadow: 0 16px 48px rgba(0,0,0,0.18);
   }
 
-  .photo-caption h4 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
+  .feature-img-float img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
   }
 
-  .photo-caption p {
-    font-size: 1rem;
-    opacity: 0.9;
+  /* Content */
+  .feature-content {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
   }
 
-  /* Services Modern Grid */
-  .services-modern {
-    padding: 5rem 0;
-    background: white;
+  .feature-h2 {
+    font-family: var(--font-sans);
+    font-size: clamp(2.25rem, 4vw, 3.75rem);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    color: var(--ink);
+    margin-bottom: 1.25rem;
   }
 
-  .services-grid-modern {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
+  .feature-h2 em {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--amber-deep);
+    letter-spacing: -0.02em;
   }
 
-  .service-card-modern {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-    border: 2px solid #f3f4f6;
-    transition: all 0.4s ease;
+  .feature-content > p {
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    color: var(--text-muted);
+    line-height: 1.75;
+    margin-bottom: 0.875rem;
+  }
+
+  .feature-checks {
     display: flex;
     flex-direction: column;
+    gap: 0.75rem;
+    margin: 1.75rem 0 2.25rem;
   }
 
-  .service-card-modern:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 60px rgba(59, 130, 246, 0.15);
-    border-color: #3b82f6;
-  }
-
-  .service-icon-large {
-    font-size: 4rem;
-    margin-bottom: 1.5rem;
-    filter: drop-shadow(0 4px 12px rgba(59, 130, 246, 0.3));
-  }
-
-  .service-card-modern h3 {
-    font-size: 1.75rem;
-    font-weight: 800;
-    color: #1f2937;
-    margin-bottom: 1rem;
-  }
-
-  .service-card-modern > p {
-    color: #6b7280;
-    line-height: 1.7;
-    margin-bottom: 1.5rem;
-  }
-
-  .service-features {
-    list-style: none;
-    padding: 0;
-    margin: 1.5rem 0;
-    flex-grow: 1;
-  }
-
-  .service-features li {
-    color: #10b981;
-    margin-bottom: 0.75rem;
-    font-size: 0.9375rem;
-    font-weight: 500;
-  }
-
-  .btn-service {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.875rem 1.75rem;
-    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-    color: white;
-    text-decoration: none;
-    font-weight: 700;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-    margin-top: auto;
-    align-self: flex-start;
-  }
-
-  .btn-service:hover {
-    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-    transform: translateX(4px);
-    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
-  }
-
-  /* Service Areas Modern */
-  .service-areas-modern {
-    padding: 5rem 0;
-    background: #f8fafc;
-  }
-
-  .areas-badge-cloud {
+  .fcheck {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    margin: 3rem 0;
-  }
-
-  .area-badge {
-    padding: 0.75rem 1.5rem;
-    background: white;
-    color: #1f2937;
-    border-radius: 50px;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-sans);
     font-size: 0.9375rem;
     font-weight: 600;
-    border: 2px solid #e5e7eb;
-    transition: all 0.3s ease;
-    white-space: nowrap;
+    color: var(--text);
   }
 
-  .area-badge.primary {
-    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-    color: white;
-    border-color: #3b82f6;
-    font-size: 1.0625rem;
-  }
-
-  .area-badge.secondary {
-    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-    color: #1f2937;
-    border-color: #fbbf24;
-  }
-
-  .area-badge:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  }
-
-  .areas-photo-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    margin: 3rem 0;
-  }
-
-  .areas-photo {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-    transition: transform 0.4s ease;
-  }
-
-  .areas-photo:hover {
-    transform: scale(1.02);
-  }
-
-  .cta-center {
-    text-align: center;
-    margin-top: 2rem;
-  }
-
-  /* Process Modern */
-  .process-modern {
-    padding: 5rem 0;
-    background: white;
-  }
-
-  .process-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 2rem;
-    margin-bottom: 4rem;
-  }
-
-  .process-step {
-    text-align: center;
-    padding: 2rem;
-    background: #f8fafc;
-    border-radius: 20px;
-    border: 2px solid #e5e7eb;
-    position: relative;
-    transition: all 0.4s ease;
-  }
-
-  .process-step:hover {
-    transform: translateY(-8px);
-    border-color: #3b82f6;
-    box-shadow: 0 12px 40px rgba(59, 130, 246, 0.15);
-  }
-
-  .step-number {
-    position: absolute;
-    top: -1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 3rem;
-    height: 3rem;
-    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-    color: #1f2937;
+  .fcheck-icon {
+    width: 28px;
+    height: 28px;
+    background: var(--amber);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--ink);
+    flex-shrink: 0;
+    box-shadow: 0 3px 10px rgba(245,158,11,0.35);
+  }
+
+  .btn-solid {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-sans);
+    font-size: 0.9375rem;
+    font-weight: 800;
+    color: var(--ink);
+    background: var(--amber);
+    text-decoration: none;
+    padding: 0.875rem 1.875rem;
+    border-radius: 8px;
+    letter-spacing: -0.01em;
+    box-shadow: 0 4px 20px rgba(245,158,11,0.4);
+  }
+
+  .btn-solid:hover {
+    background: var(--amber-deep);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(245,158,11,0.5);
+  }
+
+  .btn-solid:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
+
+
+  /* ════════════════════════════
+     SERVICES — split header
+  ════════════════════════════ */
+  .services-section {
+    background: var(--ink);
+    padding: 0 0 7rem;
+    position: relative;
+  }
+
+  .services-diag-top {
+    height: 80px;
+    background: #fff;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    position: relative;
+    z-index: 1;
+  }
+
+  .services-diag-bottom {
+    height: 80px;
+    background: var(--cream);
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+    margin-top: 4rem;
+  }
+
+  .services-section .container { position: relative; z-index: 2; }
+
+  /* Services bar: eyebrow+heading stacked left, link right */
+  .svc-bar {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.75rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .svc-bar-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .svc-bar-h2 {
+    font-family: var(--font-sans);
+    font-size: clamp(1.75rem, 3vw, 2.75rem);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    color: #fff;
+    line-height: 1;
+  }
+
+  .svc-all-link {
+    font-family: var(--font-sans);
+    font-size: 0.8125rem;
+    font-weight: 800;
+    color: rgba(255,255,255,0.35);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 0.6875rem;
+  }
+
+  .svc-all-link:hover { color: var(--amber); }
+
+  .svc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr 1fr;
+    gap: 1.25rem;
+    align-items: end;
+  }
+
+  /* Full dark card — photo top, dark body bottom, all dark */
+  .svc-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    background: #0d1020;
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.45);
+    transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.35s ease, border-color 0.2s ease;
+  }
+
+  .svc-card:hover {
+    transform: translateY(-12px) scale(1.01);
+    box-shadow: 0 24px 72px rgba(0,0,0,0.55);
+    border-color: rgba(245,158,11,0.25);
+  }
+
+  .svc-card:focus-visible { outline: 2px solid var(--amber); outline-offset: 4px; }
+
+  .svc-card-featured .svc-img-wrap { height: 380px; }
+  .svc-img-wrap { height: 270px; position: relative; overflow: hidden; background: #0d1020; flex-shrink: 0; }
+
+  .svc-commercial-graphic { background: #0a0d1a; }
+  .svc-comm-svg { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
+
+  .svc-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    filter: brightness(1.15) saturate(1.2) contrast(1.05);
+  }
+
+  .svc-card:hover .svc-img-wrap img { transform: scale(1.08); }
+
+  .svc-img-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(13,16,32,0.9) 0%, rgba(13,16,32,0.3) 45%, rgba(13,16,32,0) 100%);
+  }
+
+  /* Dark card body */
+  .svc-body {
+    padding: 1.5rem 1.5rem 1.75rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .svc-type {
+    font-family: var(--font-sans);
+    font-size: 0.625rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--amber);
+  }
+
+  .svc-title {
+    font-family: var(--font-sans);
     font-size: 1.25rem;
     font-weight: 900;
-    box-shadow: 0 4px 12px rgba(251, 191, 36, 0.4);
+    letter-spacing: -0.03em;
+    color: #fff;
+    line-height: 1.2;
+    margin: 0;
   }
 
-  .step-icon {
-    font-size: 3rem;
-    margin: 1.5rem 0 1rem;
-    filter: drop-shadow(0 4px 8px rgba(59, 130, 246, 0.3));
+  .svc-body p {
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.65;
+    margin: 0.25rem 0 0.625rem;
+    flex: 1;
   }
 
-  .process-step h3 {
-    font-size: 1.375rem;
-    font-weight: 700;
-    color: #1f2937;
-    margin-bottom: 0.75rem;
+  .svc-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-family: var(--font-sans);
+    font-size: 0.8125rem;
+    font-weight: 800;
+    color: var(--amber);
+    letter-spacing: 0.01em;
+    margin-top: auto;
   }
 
-  .process-step p {
-    color: #6b7280;
-    line-height: 1.6;
-    font-size: 0.9375rem;
+  .svc-card:hover .svc-cta { color: var(--amber-light); }
+
+
+  /* ════════════════════════════
+     WHY SECTION — bold 3×2 tile grid
+  ════════════════════════════ */
+  .why-section {
+    background: var(--ink-soft);
+    padding: 6rem 0 7rem;
+    position: relative;
   }
 
-  .process-photo-grid {
+  /* Full-width section header — big, anchored, not a split */
+  .why-header {
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+  }
+
+  .why-h2 {
+    font-family: var(--font-sans);
+    font-size: clamp(2.25rem, 4.5vw, 4rem);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    color: var(--white);
+    max-width: 700px;
+  }
+
+  .why-h2 em {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--amber);
+    letter-spacing: -0.02em;
+  }
+
+  .why-learn-more {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: rgba(255,255,255,0.35);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .why-learn-more:hover { color: var(--amber); }
+
+  /* 3-column tile grid */
+  .why-tiles {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 1.5px;
+    background: rgba(255,255,255,0.06);
+    border: 1.5px solid rgba(255,255,255,0.06);
+    border-radius: 18px;
+    overflow: hidden;
   }
 
-  .process-photo {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    transition: transform 0.4s ease;
+  .why-tile {
+    background: var(--ink-soft);
+    padding: 2.5rem 2rem 2.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    transition: background 0.25s;
   }
 
-  .process-photo:hover {
-    transform: scale(1.05);
+  .why-tile:hover {
+    background: rgba(245,158,11,0.04);
   }
 
-  /* Mobile Responsive for New Sections */
-  @media (max-width: 768px) {
-    .stats-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-    }
+  .why-tile-num {
+    font-family: var(--font-sans);
+    font-size: 4rem;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    line-height: 1;
+    color: rgba(245,158,11,0.13);
+    position: absolute;
+    top: 1.5rem;
+    right: 1.75rem;
+    pointer-events: none;
+    user-select: none;
+  }
 
-    .stat-badge {
-      padding: 1.5rem 1rem;
-    }
+  .why-tile-icon {
+    width: 52px;
+    height: 52px;
+    background: rgba(245,158,11,0.1);
+    border: 1px solid rgba(245,158,11,0.2);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--amber);
+    flex-shrink: 0;
+  }
 
-    .badge-icon {
-      font-size: 2.5rem;
-    }
+  .why-tile h4 {
+    font-family: var(--font-sans);
+    font-size: 1.125rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.025em;
+    line-height: 1.3;
+    margin: 0;
+  }
 
-    .badge-number {
-      font-size: 2rem;
-    }
+  .why-tile p {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.65;
+    margin: 0;
+  }
 
-    .badge-label {
-      font-size: 0.875rem;
-    }
 
-    .trust-photo-grid {
-      grid-template-columns: 1fr;
-    }
+  /* ════════════════════════════
+     PROCESS — editorial numbered cards
+  ════════════════════════════ */
+  .process-section {
+    background: var(--cream);
+    padding: 0 0 6rem;
+    position: relative;
+  }
 
-    .trust-image {
-      height: 300px;
-    }
+  .process-diag-top {
+    height: 80px;
+    background: var(--ink-soft);
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+  }
 
-    .services-grid-modern {
-      grid-template-columns: 1fr;
-    }
+  .process-section .container { padding-top: 3.5rem; }
 
-    .areas-photo-grid {
-      grid-template-columns: 1fr;
-    }
+  /* Left-aligned top bar — NOT centered */
+  .process-top-bar {
+    display: flex;
+    align-items: baseline;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid rgba(17,24,39,0.08);
+    padding-bottom: 2rem;
+  }
 
-    .areas-photo {
-      height: 250px;
-    }
+  .process-top-h2 {
+    font-family: var(--font-sans);
+    font-size: clamp(1.875rem, 3vw, 3rem);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    color: var(--ink);
+  }
 
-    .process-grid {
-      grid-template-columns: 1fr;
-    }
+  .process-top-h2 em {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--amber-deep);
+    letter-spacing: -0.02em;
+  }
 
-    .process-photo-grid {
-      grid-template-columns: 1fr;
-    }
+  /* Cards as horizontal rows, not circles */
+  .process-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border: 1px solid rgba(17,24,39,0.08);
+    border-radius: 1.25rem;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(17,24,39,0.06);
+  }
 
-    .process-photo {
-      height: 250px;
-    }
+  .process-card {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 2rem 2rem;
+    border-right: 1px solid rgba(17,24,39,0.08);
+    position: relative;
+  }
+
+  .process-card:last-child { border-right: none; }
+
+  .process-card-num {
+    font-family: var(--font-sans);
+    font-size: 5rem;
+    font-weight: 900;
+    letter-spacing: -0.06em;
+    line-height: 1;
+    color: rgba(245,158,11,0.12);
+    margin-bottom: 1.25rem;
+    line-height: 0.9;
+  }
+
+  .process-card-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--ink);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--amber);
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+  }
+
+  .process-card h3 {
+    font-family: var(--font-sans);
+    font-size: 1.125rem;
+    font-weight: 900;
+    color: var(--ink);
+    letter-spacing: -0.03em;
+    margin-bottom: 0.625rem;
+  }
+
+  .process-card p {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    flex: 1;
+    margin-bottom: 1.5rem;
+  }
+
+  .process-card-body {
+    flex: 1;
+  }
+
+  .process-card-cta {
+    font-family: var(--font-sans);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    border-top: 1px solid rgba(17,24,39,0.08);
+    padding-top: 1rem;
+    margin-top: auto;
+  }
+
+  .process-card-cta a {
+    color: var(--amber-deep);
+    text-decoration: none;
+    font-weight: 800;
+  }
+
+  .process-card-cta a:hover { color: var(--amber); }
+
+  .process-card-cta--mid {
+    color: var(--text-muted);
+  }
+
+  .process-card-cta--done {
+    color: #16a34a;
+    font-weight: 700;
+  }
+
+
+  /* ════════════════════════════
+     AREAS — asymmetric split
+  ════════════════════════════ */
+  .areas-section {
+    background: var(--ink);
+    padding: 7rem 0;
+  }
+
+  /* Areas split: grid LEFT (content is the section) + label RIGHT */
+  .areas-split {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .areas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .area-card-wide {
+    grid-column: span 2;
+  }
+
+  .area-cities-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.25rem;
+  }
+
+  /* Right column: smaller, label + stats + CTA */
+  .areas-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 0.25rem;
+  }
+
+  .areas-big-h2 {
+    font-family: var(--font-sans);
+    font-size: clamp(2rem, 3.5vw, 3.25rem);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    color: #fff;
+    margin-top: 0.25rem;
+  }
+
+  .areas-stats {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.25rem;
+  }
+
+  .areas-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+
+  .areas-stat strong {
+    font-family: var(--font-sans);
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    color: var(--amber);
+    line-height: 1;
+  }
+
+  .areas-stat span {
+    font-family: var(--font-sans);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.3);
+  }
+
+  .areas-right-desc {
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.35);
+    line-height: 1.7;
+  }
+
+  .areas-cta-btn {
+    align-self: flex-start;
+    font-size: 0.8125rem;
+    padding: 0.625rem 1.25rem;
+  }
+
+  .area-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 1rem;
+    padding: 1.5rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+
+  .area-card:hover {
+    background: rgba(255,255,255,0.07);
+    border-color: rgba(245,158,11,0.2);
+  }
+
+  .area-card h4 {
+    font-family: var(--font-sans);
+    font-size: 0.6875rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--amber);
+    padding-bottom: 0.625rem;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    margin-bottom: 0.25rem;
+  }
+
+  .area-card a {
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .area-card a:hover { color: var(--amber); }
+  .area-card a:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
+
+  .btn-outline-white {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--font-sans);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.8);
+    border: 2px solid rgba(255,255,255,0.2);
+    text-decoration: none;
+    padding: 0.875rem 2rem;
+    border-radius: 8px;
+    letter-spacing: -0.01em;
+  }
+
+  .btn-outline-white:hover {
+    color: #fff;
+    border-color: rgba(255,255,255,0.55);
+    background: rgba(255,255,255,0.05);
+    transform: translateY(-2px);
+  }
+
+  .btn-outline-white:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
+
+
+  /* ════════════════════════════
+     CTA STRIP
+  ════════════════════════════ */
+  .cta-strip {
+    background: var(--amber);
+    padding: 5rem 0;
+  }
+
+  .cta-strip-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .cta-pre {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 0.6875rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: rgba(17,24,39,0.55);
+    margin-bottom: 0.5rem;
+  }
+
+  .cta-h2 {
+    font-family: var(--font-sans);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    color: var(--ink);
+    margin-bottom: 0.625rem;
+  }
+
+  .cta-text-block > p {
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    color: rgba(17,24,39,0.6);
+    line-height: 1.55;
+  }
+
+  .cta-dark-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--white);
+    background: var(--ink);
+    text-decoration: none;
+    padding: 1rem 2.125rem;
+    border-radius: 10px;
+    letter-spacing: -0.02em;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .cta-dark-btn:hover {
+    background: var(--ink-soft);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 36px rgba(0,0,0,0.3);
+  }
+
+  .cta-dark-btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+
+
+  /* ════════════════════════════
+     RESPONSIVE
+  ════════════════════════════ */
+  @media (max-width: 1100px) {
+    .feature-grid { gap: 4rem; }
+    .why-split { grid-template-columns: 260px 1fr; gap: 3.5rem; }
+    .svc-header-split { gap: 2.5rem; }
+    .areas-split { gap: 3rem; }
+  }
+
+  @media (max-width: 900px) {
+    .feature-grid { grid-template-columns: 1fr; }
+    .feature-img-float { display: none; }
+    .feature-img-badge { right: 1rem; }
+    .feature-img-main { height: 400px; }
+    .feature-frame-accent { left: -0.75rem; right: 0.75rem; }
+
+    .svc-grid { grid-template-columns: 1fr; }
+    .svc-card-featured .svc-img-wrap { height: 280px; }
+
+    .manifesto-row { grid-template-columns: 44px 1fr 1fr; gap: 0.5rem 1rem; }
+    .manifesto-num { display: none; }
+    .manifesto-tag { display: none; }
+
+    .process-cards { grid-template-columns: 1fr; }
+    .process-card { border-right: none; border-bottom: 1px solid rgba(17,24,39,0.08); }
+    .process-card:last-child { border-bottom: none; }
+    .process-top-bar { flex-direction: column; gap: 0.75rem; }
+
+    .areas-split { grid-template-columns: 1fr; gap: 2.5rem; }
+    .areas-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  @media (max-width: 700px) {
+    .hero-line1 { font-size: clamp(3rem, 12vw, 5rem); }
+    .hero-line2 { font-size: clamp(1.875rem, 7vw, 3rem); }
+    .hero-logo { height: 72px; }
+
+    .manifesto-row { grid-template-columns: 40px 1fr; }
+    .manifesto-desc { display: none; }
+    .areas-grid { grid-template-columns: repeat(2, 1fr); }
+    .area-card-wide { grid-column: span 2; }
+
+    .stats-inner { flex-wrap: wrap; }
+    .stat { flex: 0 0 50%; }
+    .stat-rule { display: none; }
+
+    .cta-strip-inner { flex-direction: column; text-align: center; }
   }
 
   @media (max-width: 480px) {
-    .stats-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .section-header-center {
-      margin-bottom: 2.5rem;
-    }
+    .areas-grid { grid-template-columns: 1fr; }
+    .area-card-wide { grid-column: span 1; }
+    .area-cities-grid { grid-template-columns: 1fr; }
+    .stat { flex: 0 0 100%; }
+    .hero-trust { gap: 0.375rem; }
+    .trust-pill { font-size: 0.6875rem; }
+    .process-card-num { font-size: 3.5rem; }
   }
 </style>
 
+
 <script is:inline>
-(function() {
-  'use strict';
-  
-  function initCarousel() {
-    const slides = document.querySelectorAll('.hero-slide');
-    const dots = document.querySelectorAll('.dot');
-    
-    if (!slides || slides.length === 0 || !dots || dots.length === 0) {
-      console.log('Hero carousel: Elements not found');
-      return;
-    }
-    
-    console.log('Hero carousel: Initializing with', slides.length, 'slides');
-    
-    let currentSlide = 0;
-    let slideInterval = null;
+(function(){
+  // ── Slideshow ──
+  var slides = document.querySelectorAll('.slide');
+  var dots = document.querySelectorAll('.dot');
+  var cur = 0, t;
+  if (!slides.length) return;
 
-    function showSlide(index) {
-      slides.forEach(function(slide) { slide.classList.remove('active'); });
-      dots.forEach(function(dot) { dot.classList.remove('active'); });
-      
-      if (slides[index]) slides[index].classList.add('active');
-      if (dots[index]) dots[index].classList.add('active');
-      
-      currentSlide = index;
-    }
-
-    function nextSlide() {
-      const next = (currentSlide + 1) % slides.length;
-      showSlide(next);
-    }
-
-    function startSlider() {
-      if (slideInterval) clearInterval(slideInterval);
-      slideInterval = setInterval(nextSlide, 5000);
-    }
-
-    function stopSlider() {
-      if (slideInterval) {
-        clearInterval(slideInterval);
-        slideInterval = null;
-      }
-    }
-
-    // Dot click handlers
-    dots.forEach(function(dot, index) {
-      dot.addEventListener('click', function() {
-        showSlide(index);
-        stopSlider();
-        startSlider();
-      });
-      
-      dot.addEventListener('touchend', function(e) {
-        e.preventDefault();
-        showSlide(index);
-        stopSlider();
-        startSlider();
-      });
-    });
-
-    // Touch swipe support
-    const hero = document.querySelector('.hero');
-    if (hero) {
-      let touchStartX = 0;
-      let touchEndX = 0;
-
-      hero.addEventListener('touchstart', function(e) {
-        touchStartX = e.changedTouches[0].screenX;
-      }, { passive: true });
-
-      hero.addEventListener('touchend', function(e) {
-        touchEndX = e.changedTouches[0].screenX;
-        const swipeThreshold = 50;
-        
-        if (touchEndX < touchStartX - swipeThreshold) {
-          nextSlide();
-          stopSlider();
-          startSlider();
-        } else if (touchEndX > touchStartX + swipeThreshold) {
-          const prev = (currentSlide - 1 + slides.length) % slides.length;
-          showSlide(prev);
-          stopSlider();
-          startSlider();
-        }
-      }, { passive: true });
-
-      // Pause on hover (desktop)
-      hero.addEventListener('mouseenter', stopSlider);
-      hero.addEventListener('mouseleave', startSlider);
-    }
-
-    // Start
-    startSlider();
+  function show(n) {
+    slides[cur].classList.remove('active');
+    dots[cur] && dots[cur].classList.remove('active');
+    cur = n;
+    slides[cur].classList.add('active');
+    dots[cur] && dots[cur].classList.add('active');
   }
 
-  // Initialize when DOM is ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initCarousel);
-  } else {
-    initCarousel();
+  function next(){ show((cur+1)%slides.length); }
+  function start(){ t = setInterval(next, 5500); }
+  function stop(){ clearInterval(t); }
+
+  dots.forEach(function(d,i){
+    d.addEventListener('click', function(){ show(i); stop(); start(); });
+  });
+
+  // Touch swipe on hero
+  var hero = document.querySelector('.hero');
+  if(hero){
+    var tx=0;
+    hero.addEventListener('touchstart',function(e){tx=e.changedTouches[0].screenX;},{passive:true});
+    hero.addEventListener('touchend',function(e){
+      var dx=e.changedTouches[0].screenX-tx;
+      if(Math.abs(dx)>50){show(dx<0?(cur+1)%slides.length:(cur-1+slides.length)%slides.length);stop();start();}
+    },{passive:true});
+    hero.addEventListener('mouseenter',stop);
+    hero.addEventListener('mouseleave',start);
+  }
+
+  start();
+
+  // ── Parallax on hero background ──
+  var parallax = document.getElementById('hero-parallax');
+  if(parallax && window.matchMedia('(prefers-reduced-motion: no-preference)').matches){
+    window.addEventListener('scroll', function(){
+      var y = window.scrollY;
+      parallax.style.transform = 'translateY(' + (y * 0.35) + 'px)';
+    }, {passive: true});
   }
 })();
-</script>
 </script>

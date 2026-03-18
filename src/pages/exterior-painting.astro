@@ -1,494 +1,172 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import InnerPageHero from '../components/InnerPageHero.astro';
+import Testimonials from '../components/Testimonials.astro';
 
-const title = "Exterior Painting Services | Professional Painters South Alabama";
-const description = "Protect and beautify your home with professional exterior painting. Serving Mobile, Daphne, Fairhope, Gulf Shores, and surrounding South Alabama areas.";
+const title = "Exterior Painting Services | Browns Painting South Alabama";
+const description = "Weather-resistant exterior painting built for Alabama's climate. Pressure washing, prep, and premium paint. Serving South Alabama since 1998.";
 ---
 
 <BaseLayout title={title} description={description}>
   <main>
-    <!-- Hero Section (Keep Existing) -->
-    <section class="hero">
-      <div class="hero-background">
-        <div class="hero-slide active" style="background-image: url('/images/hero/hero-1-optimized.jpg')"></div>
-        <div class="hero-slide" style="background-image: url('/images/projects/projects-optimized/interior-painting-2-optimized.jpg')"></div>
-        <div class="hero-slide" style="background-image: url('/images/hero/hero-3-optimized.jpg'); background-position: center top;"></div>
-      </div>
-      
-      <div class="hero-overlay"></div>
-      
-      <div class="hero-trust-badges">
-        <div class="trust-badge">
-          <span class="trust-stars">★★★★★</span>
-          <span class="trust-text">5-Star Reviews</span>
-        </div>
-        <div class="trust-badge">
-          <span class="trust-icon">🏆</span>
-          <span class="trust-text">25+ Years</span>
-        </div>
-        <div class="trust-badge">
-          <span class="trust-icon">📋</span>
-          <span class="trust-text">Licensed & Insured</span>
-        </div>
-        <div class="trust-badge">
-          <span class="trust-icon">✅</span>
-          <span class="trust-text">100% Guaranteed</span>
-        </div>
-      </div>
 
+    <InnerPageHero
+      title="Exterior Painting Services"
+      subtitle="Weather-resistant coatings built for Alabama's heat and humidity. Pressure washing, prep, and premium paint."
+      eyebrow="Exterior Painting"
+      bg="/images/projects/projects-optimized/exterior-paint-1-optimized.jpg"
+    />
+
+    <!-- ── WHAT WE DO ── -->
+    <section class="ep-section ep-cream">
       <div class="container">
-        <div class="hero-content">
-          <div class="hero-text">
-            <img src="/images/logo/browns-painting-logo-hat.png" alt="Browns Painting" class="hero-logo-image" />
-            <h1>Exterior Painting Services</h1>
-            <p class="hero-subtitle">Protect and beautify your home with professional exterior painting</p>
-            <div class="phone-number">
-              <span class="phone-label">Call Us Today at</span>
-              <a href="tel:+12512374545" class="phone-link">(251) 237-4545</a>
-            </div>
-            <div class="hero-cta">
-              <a href="/contact" class="btn btn-primary">
-                <span class="btn-icon">📋</span>
-                Get A Free Quote
-              </a>
+        <div class="ep-split">
+          <div class="ep-split-img">
+            <img src="/images/projects/projects-optimized/brewton-exterior-1-optimized.jpg" alt="Exterior painting project" loading="lazy" />
+            <div class="ep-img-badge">
+              <strong>500+</strong>
+              <span>Exteriors Painted</span>
             </div>
           </div>
-        </div>
-      </div>
-      
-      <div class="hero-dots">
-        <span class="dot active" data-slide="0"></span>
-        <span class="dot" data-slide="1"></span>
-        <span class="dot" data-slide="2"></span>
-      </div>
-    </section>
-
-    <!-- Services Section - Inline Styles -->
-    <section style="padding: 5rem 0; background: white;">
-      <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
-        <div style="text-align: center; margin-bottom: 4rem;">
-          <span style="display: inline-block; padding: 0.5rem 1.5rem; background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(37, 99, 235, 0.1)); color: #3b82f6; font-weight: 700; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 1px; border-radius: 50px; margin-bottom: 1rem; border: 1px solid rgba(59, 130, 246, 0.2);">What We Offer</span>
-          <h2 style="font-size: 3rem; font-weight: 900; color: #1f2937; margin-bottom: 1rem;">Our Services</h2>
-          <p style="font-size: 1.25rem; color: #6b7280;">Professional painting services backed by 25+ years of experience</p>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
-          
-          <div style="background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 2px solid #f3f4f6;">
-            <div style="font-size: 4rem; margin-bottom: 1.5rem;">🏡</div>
-            <h3 style="font-size: 1.75rem; font-weight: 800; color: #1f2937; margin-bottom: 1rem;">House Painting</h3>
-            <p style="color: #6b7280; line-height: 1.7; margin-bottom: 1.5rem;">Complete exterior house painting with weather-resistant coatings</p>
-            <ul style="list-style: none; padding: 0; margin: 1.5rem 0;">
-              <li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Siding & trim painting</li><li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Deck & fence staining</li><li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Front door painting</li><li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Garage door refinishing</li>
+          <div class="ep-split-content">
+            <span class="eyebrow">What We Do</span>
+            <h2 class="ep-h2">Built to Last <em>Alabama Summers.</em></h2>
+            <p>South Alabama's heat, humidity, and storms are brutal on exterior paint. We use the right prep, primer, and premium paint to ensure your home stays protected and beautiful for years.</p>
+            <ul class="ep-feature-list">
+              <li>
+                <div class="ep-feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></svg></div>
+                <div><strong>Siding &amp; Trim</strong><p>Full exterior painting including siding, fascia boards, soffits, shutters, and trim for a cohesive look.</p></div>
+              </li>
+              <li>
+                <div class="ep-feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <div><strong>Pressure Washing</strong><p>Full surface cleaning before any paint hits the wall. Proper pressure washing extends paint life dramatically.</p></div>
+              </li>
+              <li>
+                <div class="ep-feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" stroke="currentColor" stroke-width="1.75"/></svg></div>
+                <div><strong>Deck &amp; Fence Staining</strong><p>UV-resistant stains and sealers that protect wood against Alabama's moisture and sun damage.</p></div>
+              </li>
+              <li>
+                <div class="ep-feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386z" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <div><strong>Storm Damage Repair</strong><p>Fast response for storm-damaged exteriors. We work with insurance claims and get your home protected quickly.</p></div>
+              </li>
             </ul>
-          </div>
-          <div style="background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 2px solid #f3f4f6;">
-            <div style="font-size: 4rem; margin-bottom: 1.5rem;">🛡️</div>
-            <h3 style="font-size: 1.75rem; font-weight: 800; color: #1f2937; margin-bottom: 1rem;">Surface Prep</h3>
-            <p style="color: #6b7280; line-height: 1.7; margin-bottom: 1.5rem;">Thorough preparation ensures long-lasting results</p>
-            <ul style="list-style: none; padding: 0; margin: 1.5rem 0;">
-              <li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Pressure washing</li><li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Wood rot repair</li><li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Caulking & sealing</li><li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Prime & paint</li>
-            </ul>
-          </div>
-          <div style="background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 2px solid #f3f4f6;">
-            <div style="font-size: 4rem; margin-bottom: 1.5rem;">🎨</div>
-            <h3 style="font-size: 1.75rem; font-weight: 800; color: #1f2937; margin-bottom: 1rem;">Weather Protection</h3>
-            <p style="color: #6b7280; line-height: 1.7; margin-bottom: 1.5rem;">Coatings designed for Alabama humid climate</p>
-            <ul style="list-style: none; padding: 0; margin: 1.5rem 0;">
-              <li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Moisture resistance</li><li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ UV protection</li><li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Mildew prevention</li><li style="color: #10b981; margin-bottom: 0.75rem; font-weight: 500;">✓ Multi-year durability</li>
-            </ul>
+            <a href="/contact" class="btn-amber">Get a Free Exterior Quote →</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FAQ Section - Inline Styles -->
-    <section style="padding: 5rem 0; background: #f8fafc;">
-      <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
-        <div style="text-align: center; margin-bottom: 4rem;">
-          <h2 style="font-size: 3rem; font-weight: 900; color: #1f2937; margin-bottom: 1rem;">Frequently Asked Questions</h2>
-        </div>
-
-        <div style="display: grid; gap: 1.5rem;">
-          
-          <div style="background: #f8fafc; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); border-left: 4px solid #3b82f6;">
-            <h3 style="color: #1e40af; margin-bottom: 1rem; font-size: 1.25rem; font-weight: 700;">How long does exterior painting take?</h3>
-            <p style="line-height: 1.7; color: #4b5563; margin: 0;">Most exterior painting projects take 3-7 days depending on the size of your home, weather conditions, and amount of prep work needed. We always provide a detailed timeline with your estimate.</p>
-          </div>
-          <div style="background: #f8fafc; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); border-left: 4px solid #3b82f6;">
-            <h3 style="color: #1e40af; margin-bottom: 1rem; font-size: 1.25rem; font-weight: 700;">What is the best time of year to paint exteriors in Alabama?</h3>
-            <p style="line-height: 1.7; color: #4b5563; margin: 0;">Spring and fall are ideal for exterior painting in Alabama. We need temperatures between 50-90°F and dry weather for at least 24 hours after painting. We monitor weather closely and schedule accordingly.</p>
-          </div>
-          <div style="background: #f8fafc; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); border-left: 4px solid #3b82f6;">
-            <h3 style="color: #1e40af; margin-bottom: 1rem; font-size: 1.25rem; font-weight: 700;">How long will exterior paint last?</h3>
-            <p style="line-height: 1.7; color: #4b5563; margin: 0;">With proper surface preparation and quality paint, exterior painting typically lasts 7-10 years in Alabama climate. Factors like sun exposure, moisture, and surface type affect longevity.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
+    <!-- ── PROCESS ── -->
+    <section class="ep-section ep-dark">
       <div class="container">
-        <h2>Ready to Get Started?</h2>
-        <p>Contact Browns Painting today for a free estimate on your project.</p>
-        <a href="/contact" class="btn btn-primary">
-          <span class="btn-icon">📞</span>
-          Get Free Estimate
-        </a>
+        <div class="ep-section-top">
+          <span class="eyebrow">Our Process</span>
+          <h2 class="ep-h2 ep-h2-white">How We Prep. <em>Why It Matters.</em></h2>
+          <p class="ep-intro-white">85% of paint failures are caused by improper surface preparation. We don't cut corners.</p>
+        </div>
+        <div class="ep-steps">
+          <div class="ep-step">
+            <div class="ep-step-num">01</div>
+            <h4>Pressure Wash</h4>
+            <p>Full exterior cleaning to remove dirt, mildew, chalking, and loose paint. We let surfaces dry completely before proceeding.</p>
+          </div>
+          <div class="ep-step">
+            <div class="ep-step-num">02</div>
+            <h4>Scrape &amp; Sand</h4>
+            <p>Manual scraping of all peeling or failing paint, followed by sanding to create a smooth, paintable surface.</p>
+          </div>
+          <div class="ep-step">
+            <div class="ep-step-num">03</div>
+            <h4>Caulk &amp; Fill</h4>
+            <p>All cracks, gaps, and holes sealed with high-quality exterior caulk to prevent moisture intrusion.</p>
+          </div>
+          <div class="ep-step">
+            <div class="ep-step-num">04</div>
+            <h4>Prime &amp; Paint</h4>
+            <p>Spot-prime bare wood and bare surfaces, then apply two finish coats of premium exterior paint.</p>
+          </div>
+        </div>
       </div>
     </section>
+
+    <Testimonials />
+
+    <!-- ── CTA ── -->
+    <section class="ep-cta-strip">
+      <div class="container ep-cta-inner">
+        <div>
+          <h2 class="ep-cta-h2">Protect Your Home.<br/><em>Start With a Free Estimate.</em></h2>
+          <p>Fast scheduling, transparent pricing, and results you'll be proud of.</p>
+        </div>
+        <div class="ep-cta-btns">
+          <a href="/contact" class="btn-amber">Get a Free Quote →</a>
+          <a href="tel:+12512374545" class="ep-phone">(251) 237-4545</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 </BaseLayout>
 
 <style>
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-  }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+  .eyebrow { display: inline-block; font-family: var(--font-sans); font-size: 0.6875rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; color: var(--amber); }
+  .btn-amber { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.9rem 2rem; background: var(--amber); color: var(--ink); font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 800; text-decoration: none; border-radius: var(--radius-md); box-shadow: var(--shadow-amber); transition: background 0.2s, transform 0.2s; }
+  .btn-amber:hover { background: var(--amber-deep); transform: translateY(-2px); }
 
-  /* Hero Section - Keep Existing Styles */
-  .hero {
-    position: relative;
-    height: 100vh;
-    min-height: 600px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    color: white;
-  }
+  .ep-section { padding: 5.5rem 0 6rem; }
+  .ep-cream { background: var(--cream); }
+  .ep-dark { background: var(--ink-soft); }
 
-  .hero-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
+  .ep-split { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+  .ep-split-content { display: flex; flex-direction: column; gap: 1.25rem; }
 
-  .hero-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-  }
+  .ep-h2 { font-family: var(--font-sans); font-size: clamp(2rem, 4vw, 3.25rem); font-weight: 900; letter-spacing: -0.04em; line-height: 1.05; color: var(--ink); margin: 0; }
+  .ep-h2 em { font-family: var(--font-display); font-style: italic; font-weight: 400; color: var(--amber-deep); letter-spacing: -0.02em; }
+  .ep-h2-white { color: #fff; }
+  .ep-h2-white em { color: var(--amber); }
 
-  .hero-slide.active {
-    opacity: 1;
-  }
+  .ep-split-content > p { font-family: var(--font-sans); font-size: 1.0625rem; color: var(--text-muted); line-height: 1.7; margin: 0; }
 
-  .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 100%);
-    z-index: 2;
-  }
+  .ep-feature-list { list-style: none; padding: 0; margin: 0.5rem 0; display: flex; flex-direction: column; gap: 1.25rem; }
+  .ep-feature-list li { display: flex; gap: 1rem; align-items: flex-start; }
+  .ep-feat-icon { width: 40px; height: 40px; flex-shrink: 0; background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--amber); margin-top: 0.1rem; }
+  .ep-feature-list strong { font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 800; color: var(--ink); display: block; margin-bottom: 0.2rem; }
+  .ep-feature-list p { font-family: var(--font-sans); font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; margin: 0; }
 
-  .hero-content {
-    position: relative;
-    z-index: 3;
-    width: 100%;
-    text-align: center;
-  }
+  .ep-split-img { position: relative; border-radius: var(--radius-xl); overflow: hidden; aspect-ratio: 4/5; }
+  .ep-split-img img { width: 100%; height: 100%; object-fit: cover; filter: brightness(1.05) saturate(1.15); }
+  .ep-img-badge { position: absolute; bottom: 1.5rem; left: 1.5rem; background: var(--amber); border-radius: var(--radius-md); padding: 1rem 1.25rem; text-align: center; }
+  .ep-img-badge strong { display: block; font-family: var(--font-sans); font-size: 2rem; font-weight: 900; letter-spacing: -0.04em; color: var(--ink); }
+  .ep-img-badge span { font-family: var(--font-sans); font-size: 0.6875rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(17,24,39,0.65); }
 
-  .hero-text {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
+  .ep-section-top { margin-bottom: 3rem; display: flex; flex-direction: column; gap: 0.75rem; }
+  .ep-intro-white { font-family: var(--font-sans); font-size: 1.0625rem; color: rgba(255,255,255,0.45); max-width: 560px; line-height: 1.7; margin: 0; }
 
-  .hero-logo-image {
-    height: 300px;
-    width: auto;
-    max-width: 100%;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 0;
-  }
+  .ep-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5px; background: rgba(255,255,255,0.06); border: 1.5px solid rgba(255,255,255,0.06); border-radius: var(--radius-xl); overflow: hidden; }
+  .ep-step { background: var(--ink-soft); padding: 2.25rem 1.75rem; display: flex; flex-direction: column; gap: 0.875rem; }
+  .ep-step-num { font-family: var(--font-sans); font-size: 0.625rem; font-weight: 900; letter-spacing: 0.12em; color: var(--amber); }
+  .ep-step h4 { font-family: var(--font-sans); font-size: 1.0625rem; font-weight: 800; color: #fff; margin: 0; letter-spacing: -0.02em; }
+  .ep-step p { font-family: var(--font-sans); font-size: 0.875rem; color: rgba(255,255,255,0.45); line-height: 1.65; margin: 0; }
 
-  .hero h1 {
-    font-size: clamp(3rem, 5vw, 4rem);
-    font-weight: 800;
-    margin: 0;
-    margin-top: -4rem;
-    margin-bottom: 1rem;
-    line-height: 1.1;
-    color: white;
-  }
+  .ep-cta-strip { background: var(--amber); padding: 4.5rem 0; }
+  .ep-cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 3rem; }
+  .ep-cta-h2 { font-family: var(--font-sans); font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 900; letter-spacing: -0.04em; line-height: 1.15; color: var(--ink); margin: 0 0 0.5rem; }
+  .ep-cta-h2 em { font-family: var(--font-display); font-style: italic; font-weight: 400; letter-spacing: -0.02em; }
+  .ep-cta-strip p { font-family: var(--font-sans); font-size: 1rem; color: rgba(17,24,39,0.65); margin: 0; }
+  .ep-cta-btns { display: flex; align-items: center; gap: 1.5rem; flex-shrink: 0; }
+  .ep-phone { font-family: var(--font-sans); font-size: 1.125rem; font-weight: 900; letter-spacing: -0.02em; color: rgba(17,24,39,0.5); text-decoration: none; white-space: nowrap; }
+  .ep-phone:hover { color: var(--ink); }
 
-  .hero-subtitle {
-    font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.95);
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
+  @media (max-width: 900px) {
+    .ep-split { grid-template-columns: 1fr; gap: 3rem; }
+    .ep-split-img { aspect-ratio: 16/9; max-height: 380px; order: -1; }
+    .ep-steps { grid-template-columns: repeat(2, 1fr); }
+    .ep-cta-inner { flex-direction: column; text-align: center; }
+    .ep-cta-btns { flex-direction: column; }
   }
-
-  .phone-number {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 1rem;
-    justify-content: center;
-    margin: 0;
-  }
-
-  .phone-label {
-    font-weight: 500;
-  }
-
-  .phone-link {
-    color: #fbbf24;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.125rem;
-  }
-
-  .phone-link:hover {
-    color: #f59e0b;
-    text-decoration: underline;
-  }
-
-  .hero-cta {
-    margin-top: 2rem;
-  }
-
-  .hero-trust-badges {
-    position: absolute;
-    top: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 1.5rem;
-    z-index: 4;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .trust-badge {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.94rem 1.56rem;
-    background: transparent;
-    color: white;
-    font-size: 1.125rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-  }
-
-  .trust-badge:hover {
-    transform: translateY(-2px);
-    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.9);
-  }
-
-  .trust-badge .trust-icon {
-    font-size: 1.56rem;
-    color: #fbbf24;
-  }
-
-  .trust-badge .trust-stars {
-    font-size: 1.56rem;
-    color: #fbbf24;
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-  }
-
-  .trust-badge .trust-text {
-    font-size: 1.06rem;
-    font-weight: 600;
-  }
-
-  .hero-dots {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 0.5rem;
-    z-index: 3;
-  }
-
-  .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-
-  .dot.active {
-    background: #fbbf24;
-    transform: scale(1.2);
-  }
-
-  .dot:hover {
-    background: rgba(255, 255, 255, 0.8);
-  }
-
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 1.25rem 2.5rem;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: 700;
-    transition: all 0.3s ease;
-    font-size: 1.125rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-
-  .btn-primary {
-    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-    color: #1f2937;
-    box-shadow: 
-      0 8px 25px rgba(251, 191, 36, 0.4),
-      inset 0 1px 0 rgba(255, 255, 255, 0.3);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .btn-primary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    transition: left 0.5s ease;
-  }
-
-  .btn-primary:hover::before {
-    left: 100%;
-  }
-
-  .btn-primary:hover {
-    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-    transform: translateY(-3px);
-    box-shadow: 
-      0 12px 35px rgba(251, 191, 36, 0.6),
-      inset 0 1px 0 rgba(255, 255, 255, 0.4);
-  }
-
-  .btn-icon {
-    font-size: 1.25rem;
-  }
-
-  .cta-section {
-    text-align: center;
-    padding: 5rem 2rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-  }
-
-  .cta-section h2 {
-    margin-bottom: 1rem;
-    font-size: 2.5rem;
-    font-weight: 800;
-  }
-
-  .cta-section p {
-    margin-bottom: 2rem;
-    font-size: 1.125rem;
-    opacity: 0.95;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  @media (max-width: 768px) {
-    .hero {
-      height: 80vh;
-      min-height: 500px;
-    }
-    
-    .hero-logo-image {
-      height: 180px;
-    }
-    
-    .hero h1 {
-      font-size: 2rem;
-      margin-top: -2rem;
-    }
-    
-    .hero-trust-badges {
-      grid-template-columns: 1fr 1fr;
-      gap: 0.5rem;
-      top: 0.75rem;
-    }
-    
-    .trust-badge {
-      font-size: 0.75rem;
-      padding: 0.5rem 0.75rem;
-    }
+  @media (max-width: 640px) {
+    .ep-steps { grid-template-columns: 1fr; }
+    .container { padding: 0 1.25rem; }
   }
 </style>
-
-<script is:inline>
-(function() {
-  'use strict';
-  
-  function initCarousel() {
-    const slides = document.querySelectorAll('.hero-slide');
-    const dots = document.querySelectorAll('.dot');
-    
-    if (!slides || slides.length === 0) return;
-    
-    let currentSlide = 0;
-    let slideInterval = null;
-
-    function showSlide(index) {
-      slides.forEach(function(slide) { slide.classList.remove('active'); });
-      dots.forEach(function(dot) { dot.classList.remove('active'); });
-      
-      if (slides[index]) slides[index].classList.add('active');
-      if (dots[index]) dots[index].classList.add('active');
-      
-      currentSlide = index;
-    }
-
-    function nextSlide() {
-      const next = (currentSlide + 1) % slides.length;
-      showSlide(next);
-    }
-
-    function startSlider() {
-      if (slideInterval) clearInterval(slideInterval);
-      slideInterval = setInterval(nextSlide, 5000);
-    }
-
-    dots.forEach(function(dot, index) {
-      dot.addEventListener('click', function() {
-        showSlide(index);
-        startSlider();
-      });
-    });
-
-    startSlider();
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initCarousel);
-  } else {
-    initCarousel();
-  }
-})();
-</script>

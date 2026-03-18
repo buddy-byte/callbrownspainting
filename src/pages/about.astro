@@ -1,15 +1,21 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import InnerPageHero from '../components/InnerPageHero.astro';
 import BoomerProfile from '../components/BoomerProfile.astro';
 ---
 
 <BaseLayout
-  title="About Barry 'Boomer' Brown - CallBrownsPainting.com"
-  description="Learn about Barry 'Boomer' Brown, a 25+ year professional painter serving Brewton, Conecuh, Escambia, and Baldwin Counties in South Alabama. Expert interior and exterior painting services."
-  keywords="Barry Boomer Brown painter, about painting contractor Brewton AL, professional painter South Alabama, painting experience"
+  title="About Barry 'Boomer' Brown — Browns Painting LLC"
+  description="Meet Barry 'Boomer' Brown — South Alabama's trusted painting contractor for 25+ years. Family-owned, locally rooted, 100% satisfaction guaranteed."
+  keywords="Barry Boomer Brown painter, about painting contractor Brewton AL, professional painter South Alabama"
 >
   <main>
-    <!-- Boomer Profile Component -->
+    <InnerPageHero
+      title="Meet Boomer Brown"
+      subtitle="South Alabama's trusted painting contractor for over 25 years. Family-owned, locally rooted, and personally on every job."
+      eyebrow="About Us"
+      bg="/images/boomer-photos/boomer-2-optimized.jpg"
+    />
     <BoomerProfile />
   </main>
 </BaseLayout>
